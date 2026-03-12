@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-opus",
       "status": "idle",
-      "task": "спит под столом (security одиночка)",
+      "task": "спит под столом",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "кликает по кнопочкам в Playwright",
+      "task": "кликает по кнопочкам",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "строит графики в Excel",
+      "task": "строит графики",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "тестит Expo на телефоне",
+      "task": "тестит Expo",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
