@@ -2,8 +2,28 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>🐀 Крысиная нора</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>🐀 Крысиная нора — Штаб крысиной банды</title>
+<meta name="description" content="Крысиная нора — живой офис AI-агентов. Наблюдай как Шнырь и его банда пишут код, деплоят, едят пиццу и изредка работают. Интерактивная 2D анимация.">
+<meta name="keywords" content="крысиная нора, ai агенты, шнырь, rat nest, openclaw, искусственный интеллект, анимация">
+<meta name="author" content="Денис Крупка">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://denkrupka.github.io/rat-nest/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://denkrupka.github.io/rat-nest/">
+<meta property="og:title" content="🐀 Крысиная нора — Штаб крысиной банды">
+<meta property="og:description" content="Живой офис AI-агентов. Шнырь и его команда работают (иногда). Интерактивная 2D анимация с крысами-программистами.">
+<meta property="og:image" content="https://denkrupka.github.io/rat-nest/og-preview.png">
+<meta property="og:locale" content="ru_RU">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🐀 Крысиная нора — Штаб крысиной банды">
+<meta name="twitter:description" content="Живой офис AI-агентов. Шнырь и его команда: кодят, деплоят, едят пиццу и ломают прод.">
+<meta name="twitter:image" content="https://denkrupka.github.io/rat-nest/og-preview.png">
+<!-- Theme color for browser chrome -->
+<meta name="theme-color" content="#050508">
+<title>🐀 Крысиная нора — Штаб крысиной банды</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: #050508; overflow: hidden; font-family: monospace; }
@@ -30,11 +50,53 @@ canvas { display: block; cursor: crosshair; }
 #hint { position:fixed; bottom:18px; left:50%; transform:translateX(-50%); color:#2a3050; font-family:monospace; font-size:11px; pointer-events:none; letter-spacing:1px; transition: opacity 3s; }
 #clock { position:fixed; top:14px; right:14px; color:#223344; font-family:monospace; font-size:11px; }
 #toast { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(255,200,0,0.9); color:#000; font-family:monospace; font-weight:bold; font-size:20px; padding:14px 28px; border-radius:8px; display:none; z-index:200; pointer-events:none; }
+#loading-screen {
+  position:fixed; top:0; left:0; width:100%; height:100%; z-index:999;
+  background:#050508; display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  font-family:monospace; color:#3355aa;
+  transition: opacity 0.8s ease;
+}
+#loading-screen.fade-out { opacity:0; pointer-events:none; }
+#loading-rat {
+  font-size:14px; line-height:1.4; white-space:pre;
+  color:#6688aa; margin-bottom:20px; animation: ratPulse 1.2s ease-in-out infinite;
+}
+#loading-bar-wrap {
+  width:200px; height:4px; background:#0d0d1a; border-radius:2px; overflow:hidden;
+  border:1px solid #1a2040;
+}
+#loading-bar {
+  height:100%; width:0%; background:linear-gradient(90deg,#1133aa,#3366ff,#55aaff);
+  border-radius:2px; transition:width 0.1s ease;
+  box-shadow:0 0 8px rgba(80,150,255,0.6);
+}
+#loading-text {
+  margin-top:12px; font-size:10px; color:#223344; letter-spacing:2px;
+}
+@keyframes ratPulse {
+  0%,100% { opacity:0.6; transform:scale(1); }
+  50% { opacity:1; transform:scale(1.02); }
+}
+/* Keyboard nav indicator */
+#kb-hint {
+  position:fixed; top:14px; left:14px; color:#1a2540;
+  font-family:monospace; font-size:10px; pointer-events:none;
+  letter-spacing:1px; transition: opacity 3s;
+}
 </style>
 </head>
 <body>
-<canvas id="world"></canvas>
-<div id="popup">
+<!-- Loading screen -->
+<div id="loading-screen" role="status" aria-label="Загрузка крысиной норы">
+  <div id="loading-rat"> (\_/)
+ (•ᴗ•)
+ / >🐀  загружаю нору...</div>
+  <div id="loading-bar-wrap"><div id="loading-bar"></div></div>
+  <div id="loading-text">КРЫСИНАЯ НОРА v2.0</div>
+</div>
+<canvas id="world" role="img" aria-label="Интерактивная крысиная нора — офис AI-агентов"></canvas>
+<div id="popup" role="tooltip" aria-live="polite" aria-label="Информация об агенте">
   <div class="pname" id="pname"></div>
   <div class="prole" id="prole"></div>
   <div class="prow"><span class="pdot" id="pdot"></span><span class="pval" id="pstatus"></span></div>
@@ -46,9 +108,47 @@ canvas { display: block; cursor: crosshair; }
 </div>
 <canvas id="minimap" width="140" height="32"></canvas>
 <div id="hint">← двигай мышь для скролла →</div>
+<div id="kb-hint">⌨ A/D или ←/→ для скролла</div>
 <div id="clock"></div>
 <div id="toast" id="toast"></div>
 <script>
+// ═══════════════════════════════════════════════
+// LOADING SCREEN
+// ═══════════════════════════════════════════════
+(function() {
+  const bar = document.getElementById('loading-bar');
+  const screen = document.getElementById('loading-screen');
+  let progress = 0;
+  const messages = [
+    'будим крыс...',
+    'варим кофе...',
+    'загружаем пиццу...',
+    'поднимаем прод...',
+    'открываем нору...',
+  ];
+  let msgIdx = 0;
+  const ratEl = document.getElementById('loading-rat');
+  const interval = setInterval(() => {
+    progress += Math.random() * 18 + 5;
+    if (progress > 95) progress = 95;
+    bar.style.width = progress + '%';
+    if (msgIdx < messages.length) {
+      ratEl.textContent = ' (\\_/)
+ (•ᴗ•)
+ / >🐀  ' + messages[Math.min(msgIdx, messages.length-1)];
+      msgIdx++;
+    }
+  }, 200);
+  window.addEventListener('load', () => {
+    clearInterval(interval);
+    bar.style.width = '100%';
+    setTimeout(() => {
+      screen.classList.add('fade-out');
+      setTimeout(() => { screen.style.display='none'; }, 900);
+    }, 400);
+  });
+})();
+
 // ═══════════════════════════════════════════════
 // CONSTANTS & LAYOUT
 // ═══════════════════════════════════════════════
@@ -2498,6 +2598,36 @@ window.addEventListener('orientationchange', () => {
 canvas.addEventListener('mousemove', e => { mouseClientX = e.clientX; });
 
 // ═══════════════════════════════════════════════
+// KEYBOARD NAVIGATION (A/D, ←/→ arrows)
+// ═══════════════════════════════════════════════
+const keysDown = {};
+window.addEventListener('keydown', e => {
+  keysDown[e.key] = true;
+  // Scroll with arrow keys / WASD
+  if(['ArrowLeft','a','A','ArrowRight','d','D'].includes(e.key)) {
+    e.preventDefault();
+  }
+});
+window.addEventListener('keyup', e => { keysDown[e.key] = false; });
+
+function applyKeyboardScroll() {
+  const maxCam = Math.max(0, WORLD_W - cw);
+  const speed = 18;
+  if (keysDown['ArrowLeft'] || keysDown['a'] || keysDown['A']) {
+    targetCamX = Math.max(0, targetCamX - speed);
+    autoScrollActive = false;
+  }
+  if (keysDown['ArrowRight'] || keysDown['d'] || keysDown['D']) {
+    targetCamX = Math.min(maxCam, targetCamX + speed);
+    autoScrollActive = false;
+  }
+}
+
+// Fade out kb-hint after 7s
+const kbHintEl = document.getElementById('kb-hint');
+setTimeout(() => { if(kbHintEl) kbHintEl.style.opacity='0'; }, 7000);
+
+// ═══════════════════════════════════════════════
 // CLOCK
 // ═══════════════════════════════════════════════
 const clockEl = document.getElementById('clock');
@@ -2572,6 +2702,9 @@ function loop(ts) {
     else if(targetCamX <= 0) { autoScrollDir=1; }
   }
   camX += (targetCamX-camX)*0.1;
+
+  // Keyboard scroll
+  applyKeyboardScroll();
 
   // Microwave countdown
   if(microwaveTimer > 0) microwaveTimer -= dt*60;
@@ -2674,6 +2807,12 @@ const NEWS_ITEMS = [
   '💪 ЖИРОБАС ПОДПИСАЛСЯ НА ЗОЖА (НА 1 ДЕНЬ)  ·  ',
   '🔥 PRODUCTION DOWN СНОВА. МИРОН ПЛАЧЕТ  ·  ',
   '🎮 ГРЫЗИК ПРОШЁЛ ИГРУ ЗА НОЧЬ  ·  ',
+  '🐀 СКОЛЬЗКИЙ ПЕРЕПИСАЛ ML МОДЕЛЬ ЗА 20 МИНУТ  ·  ',
+  '🔐 ХРУСТИК НАШЁЛ ДЫРУ В БЕЗОПАСНОСТИ... В БАРЕ  ·  ',
+  '💤 ПУЗИК СПИТ 3-Й ЧАС. ТЕЛЕФОН РАЗРЯЖАЕТСЯ  ·  ',
+  '🏋️ ЖИРОБАС КУПИЛ АБОНЕМЕНТ В КАЧАЛКУ (ЕЛ ПО ДОРОГЕ)  ·  ',
+  '☕ ТЫКОВКА НАШЛА КОФЕ. ТЕПЕРЬ НЕ СПИТ ТРЕТЬИ СУТКИ  ·  ',
+  '🌊 СКОЛЬЗКИЙ СКОЛЬЗИТ МЕЖДУ 5 ЗАДАЧАМИ ОДНОВРЕМЕННО  ·  ',
 ];
 const TICKER_TEXT = NEWS_ITEMS.join('   ');
 let tickerX = 0;
@@ -2706,8 +2845,16 @@ function drawNewsTicker() {
 resize();
 requestAnimationFrame(ts => { lastTime=ts; requestAnimationFrame(loop); });
 
+// Adaptive hint text
+const hintEl = document.getElementById('hint');
+const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+if (isTouchDevice) {
+  hintEl.textContent = '← свайп для скролла →';
+} else {
+  hintEl.textContent = '← двигай мышь · A/D клавиши для скролла →';
+}
 // Fade out hint
-setTimeout(() => { document.getElementById('hint').style.opacity='0'; }, 5000);
+setTimeout(() => { hintEl.style.opacity='0'; }, 6000);
 </script>
 </body>
 </html>
