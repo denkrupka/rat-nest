@@ -1,16 +1,93 @@
 {
-  "updated": "2026-03-12T07:30:00Z",
+  "updated": "2026-03-12T09:42:00Z",
   "agents": [
-    {"id": "shnyr", "name": "Шнырь", "role": "Координатор 👑", "status": "working", "activity": "typing", "task": "Раздаёт задачи суб-агентам, смотрит на всех с короной", "model": "claude-sonnet-4-6", "lastCommit": "feat: master plan v42", "commits": 42, "uptime": "8h 15m"},
-    {"id": "zhirobas", "name": "Жиробас", "role": "Backend 🐘", "status": "working", "activity": "coffee", "task": "Пишет SQL запросы, ест попутно", "model": "gpt-4o", "lastCommit": "fix: index on fat_table", "commits": 8, "uptime": "3h 20m"},
-    {"id": "shustrik", "name": "Шустрик", "role": "DevOps ⚡", "status": "working", "activity": "commit", "task": "Деплоит, деплоит, деплоит — не останавливается", "model": "claude-haiku-3-5", "lastCommit": "ci: deploy #47 FAST", "commits": 47, "uptime": "1h 05m"},
-    {"id": "pysklia", "name": "Пыськля", "role": "Frontend 💕", "status": "working", "activity": "typing", "task": "Делает красивые компоненты с любовью", "model": "gpt-4o-mini", "lastCommit": "feat: pink button with hearts", "commits": 15, "uptime": "4h 40m"},
-    {"id": "gryzik", "name": "Грызик", "role": "QA 🔍", "status": "idle", "activity": "sleep", "task": "Грызёт провода и баги одновременно", "model": "gemini-pro", "lastCommit": "test: bit through everything", "commits": 6, "uptime": "2h 10m"},
-    {"id": "tykovka", "name": "Тыковка", "role": "Finance 🟠", "status": "working", "activity": "think", "task": "Считает деньги, плачет", "model": "gpt-4o", "lastCommit": "fix: budget overflow error", "commits": 11, "uptime": "5h 00m"},
-    {"id": "chvyak", "name": "Чвяк", "role": "Data Science 🍕", "status": "working", "activity": "eat_pizza", "task": "Анализирует данные, жуёт попутно", "model": "claude-opus-4", "lastCommit": "feat: pizza consumption model", "commits": 3, "uptime": "1h 30m"},
-    {"id": "miron", "name": "Мирон", "role": "Architect 🤔", "status": "working", "activity": "debug", "task": "Думает над архитектурой уже 3 часа", "model": "claude-sonnet-4-6", "lastCommit": "docs: thinking about it", "commits": 2, "uptime": "6h 55m"},
-    {"id": "puzik", "name": "Пузик", "role": "Mobile 📱", "status": "idle", "activity": "sleep", "task": "Zzz... мобильное приложение подождёт", "model": "gemini-flash", "lastCommit": "nap: recharging battery", "commits": 4, "uptime": "0h 45m"},
-    {"id": "xrustik", "name": "Хрустик", "role": "Security 🔐", "status": "working", "activity": "beer", "task": "Пентест с чипсами и пивом", "model": "gpt-4o", "lastCommit": "sec: found 3 bugs, ate 2", "commits": 9, "uptime": "3h 15m"},
-    {"id": "skolzkiy", "name": "Скользкий", "role": "ML/AI 🌊", "status": "working", "activity": "typing", "task": "Скользит между моделями", "model": "mixtral-8x22b", "lastCommit": "feat: slippery gradient descent", "commits": 17, "uptime": "4h 20m"}
+    {
+      "id": "shnyir00",
+      "name": "Шнырь",
+      "role": "Главный кодер",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "ест пиццу и смотрит на код критическим взглядом",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "miron01",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet-4-6",
+      "status": "idle",
+      "task": "проектирует API endpoints для максимальной производительности",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "girobas",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "настраивает Docker контейнеры и Kubernetes классы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet-4-6",
+      "status": "idle",
+      "task": "создаёт красивый React интерфейс с Tailwind",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "sklzkly0",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus-4-1",
+      "status": "crashed",
+      "task": "охотился за уязвимостями, но что-то пошло не так",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tykovka0",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "тестирует функционал с маниакальной внимательностью",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "hrustik0",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-sonnet-4-6",
+      "status": "idle",
+      "task": "анализирует большие датасеты и строит модели",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "gryzik00",
+      "name": "Грызик",
+      "role": "Mobile",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "разрабатывает React Native приложение для мобилы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    }
   ]
 }
