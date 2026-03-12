@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T23:27:00Z",
+  "updated": "2026-03-12T23:29:31Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "00000001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Координирует команду, ест пиццу",
-      "commits": 247,
-      "workMinutes": 1840,
-      "totalMinutes": 1840
+      "task": "Координирует команду, готов к задачам",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron01",
+      "id": "00000002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Спит, готовится к спринту",
-      "commits": 156,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
+      "task": "Ест пиццу, ждёт API контрактов",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhiro02",
+      "id": "00000003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Проверяет инфраструктуру, ковыряется в конфигах",
-      "commits": 89,
-      "workMinutes": 680,
-      "totalMinutes": 680
+      "task": "Спит на сервере, инфра в норме",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shust03",
+      "id": "00000004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Скроллит фигму, пьёт кофе",
-      "commits": 203,
-      "workMinutes": 1620,
-      "totalMinutes": 1620
+      "task": "Компонент кэшируется, ждёт макетов",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skol04",
+      "id": "00000005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Искал уязвимости, остался доволен",
-      "commits": 67,
-      "workMinutes": 520,
-      "totalMinutes": 520
+      "task": "На перерыве, аудит запланирован",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tyk05",
+      "id": "00000006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Тестирует, ломает фичи, радуется",
-      "commits": 124,
-      "workMinutes": 960,
-      "totalMinutes": 960
+      "task": "Всё зелёное, тестов хватает",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrust06",
+      "id": "00000007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Строит сложные SQL запросы",
-      "commits": 98,
-      "workMinutes": 740,
-      "totalMinutes": 740
+      "task": "Данные синхронизированы, ждёт запроса",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryz07",
+      "id": "00000008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Адаптирует под мобильные, шарится в React Native",
-      "commits": 143,
-      "workMinutes": 1100,
-      "totalMinutes": 1100
+      "task": "Приложение собирается, готов к сборке",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
