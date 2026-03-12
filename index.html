@@ -133,9 +133,7 @@ canvas { display: block; cursor: crosshair; }
     if (progress > 95) progress = 95;
     bar.style.width = progress + '%';
     if (msgIdx < messages.length) {
-      ratEl.textContent = ' (\\_/)
- (•ᴗ•)
- / >🐀  ' + messages[Math.min(msgIdx, messages.length-1)];
+      ratEl.textContent = ' (\\_/)\n (•ᴗ•)\n / >🐀  ' + messages[Math.min(msgIdx, messages.length-1)];
       msgIdx++;
     }
   }, 200);
