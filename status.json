@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Координирует команду мышей",
+      "task": "Координирует команду мышей и управляет портал",
       "commits": 124,
       "workMinutes": 0,
       "totalMinutes": 8640
@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пишет Edge Functions для Supabase",
+      "task": "Разрабатывает Edge Functions и API endpoints",
       "commits": 87,
       "workMinutes": 0,
       "totalMinutes": 5280
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Настраивает CI/CD пайплайны",
+      "task": "Администрирует инфраструктуру и CI/CD пайпла",
       "commits": 56,
       "workMinutes": 0,
       "totalMinutes": 3360
@@ -40,7 +40,7 @@
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Делает React компоненты для UI",
+      "task": "Разработка React компонентов и UI интерфейса",
       "commits": 142,
       "workMinutes": 0,
       "totalMinutes": 7200
@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Проверяет API безопасность",
+      "task": "Аудит безопасности API и аутентификации",
       "commits": 34,
       "workMinutes": 0,
       "totalMinutes": 2400
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет Playwright тесты",
+      "task": "Автоматизация тестирования и Playwright e2e",
       "commits": 98,
       "workMinutes": 0,
       "totalMinutes": 4800
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует SQL и оптимизирует запросы",
+      "task": "Оптимизация SQL запросов и аналитика базы",
       "commits": 62,
       "workMinutes": 0,
       "totalMinutes": 3600
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Готовит мобильное приложение на React Native",
+      "task": "Мобильное приложение React Native и Expo",
       "commits": 45,
       "workMinutes": 0,
       "totalMinutes": 2880
