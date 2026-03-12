@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T16:38:00Z",
+  "updated": "2026-03-12T16:42:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "50fb2591",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "разбирает код Дениса в поисках ошибок...",
-      "commits": 47,
-      "workMinutes": 340,
-      "totalMinutes": 340
+      "model": "claude-sonnet-4-6",
+      "status": "working",
+      "task": "Analyze rat-nest repository structure and report fi",
+      "commits": 6,
+      "workMinutes": 1,
+      "totalMinutes": 1
     },
     {
-      "id": "miron001",
+      "id": "idle-01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "пишет микросервис для обработки пицц...",
-      "commits": 23,
-      "workMinutes": 180,
-      "totalMinutes": 180
+      "task": "Делает кофе и ждёт заказов",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhirob01",
+      "id": "idle-02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "настраивает Docker контейнеры...",
-      "commits": 15,
-      "workMinutes": 120,
-      "totalMinutes": 120
+      "task": "Ест пиццу на сервере",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustri1",
+      "id": "idle-03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "верстает очередной компонент React...",
-      "commits": 38,
-      "workMinutes": 260,
-      "totalMinutes": 260
+      "task": "Отдыхает в CSS гриде",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skolzki1",
+      "id": "idle-04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku-4-5",
       "status": "crashed",
-      "task": "нашел баг в авторизации (фиксит)",
-      "commits": 8,
+      "task": "Обслуживает брандмауэр после сбоя",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 45
+      "totalMinutes": 0
     },
     {
-      "id": "tykovka1",
+      "id": "idle-05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "тестирует все подряд...",
-      "commits": 12,
-      "workMinutes": 95,
-      "totalMinutes": 95
+      "task": "Проверяет баги в тестировщике",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustic1",
+      "id": "idle-06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "анализирует данные портала...",
-      "commits": 19,
-      "workMinutes": 150,
-      "totalMinutes": 150
+      "task": "Спит под кучей CSV файлов",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik01",
+      "id": "idle-07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "собирает мобильное приложение...",
-      "commits": 11,
-      "workMinutes": 85,
-      "totalMinutes": 85
+      "task": "Танцует в React Native",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
