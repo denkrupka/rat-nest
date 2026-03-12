@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T13:01:00Z",
+  "updated": "2026-03-12T13:03:00Z",
   "agents": [
     {
-      "id": "SHNYR00",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу",
+      "task": "Читает код, планирует следующую итерацию",
       "commits": 42,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
+      "workMinutes": 315,
+      "totalMinutes": 315
     },
     {
-      "id": "MIRON01",
+      "id": "miron000",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "пишет SQL запросы",
+      "task": "Оптимизирует SQL queries для портала",
       "commits": 28,
-      "workMinutes": 890,
-      "totalMinutes": 890
+      "workMinutes": 180,
+      "totalMinutes": 180
     },
     {
-      "id": "ZHIRO02",
+      "id": "zhiroba0",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "смотрит логи",
+      "task": "Мониторит инфраструктуру VPS, проверяет логи",
       "commits": 15,
-      "workMinutes": 450,
-      "totalMinutes": 450
-    },
-    {
-      "id": "SHUST03",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "мучается с CSS",
-      "commits": 67,
-      "workMinutes": 1920,
-      "totalMinutes": 1920
-    },
-    {
-      "id": "SKOL04",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "снимает охрану",
-      "commits": 5,
       "workMinutes": 120,
       "totalMinutes": 120
     },
     {
-      "id": "TYKA05",
-      "name": "Тыковка",
-      "role": "QA",
+      "id": "shustri0",
+      "name": "Шустрик",
+      "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "ищет баги",
-      "commits": 34,
-      "workMinutes": 980,
-      "totalMinutes": 980
+      "task": "Рефакторит React компоненты, улучшает UI",
+      "commits": 35,
+      "workMinutes": 210,
+      "totalMinutes": 210
     },
     {
-      "id": "HRUST06",
+      "id": "skol000",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Проводит security audit API endpoints",
+      "commits": 8,
+      "workMinutes": 90,
+      "totalMinutes": 90
+    },
+    {
+      "id": "tykova0",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Пишет Playwright тесты, проверяет функционал",
+      "commits": 22,
+      "workMinutes": 140,
+      "totalMinutes": 140
+    },
+    {
+      "id": "hrustic0",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "считает цифры",
-      "commits": 22,
-      "workMinutes": 640,
-      "totalMinutes": 640
+      "task": "Анализирует логи, генерирует отчёты",
+      "commits": 12,
+      "workMinutes": 95,
+      "totalMinutes": 95
     },
     {
-      "id": "GRYZI07",
+      "id": "gryzic0",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит",
+      "task": "Обновляет Expo приложение, тестирует на iOS",
       "commits": 18,
-      "workMinutes": 520,
-      "totalMinutes": 520
+      "workMinutes": 125,
+      "totalMinutes": 125
     }
   ]
 }
