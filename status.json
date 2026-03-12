@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T15:38:25.602554+00:00",
+  "updated": "2026-03-12T15:40:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует команду, анализирует требования к фичам",
-      "commits": 156,
-      "workMinutes": 480,
-      "totalMinutes": 2400
+      "task": "Координирует команду мышей",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron02",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Разработка Edge Functions, SQL оптимизация",
-      "commits": 89,
-      "workMinutes": 240,
-      "totalMinutes": 1800
+      "task": "Ест пиццу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "ziroba03",
+      "id": "zirovas2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настройка GitHub Actions, мониторинг Sentry",
-      "commits": 34,
-      "workMinutes": 180,
-      "totalMinutes": 1200
+      "task": "Спит",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shust04",
+      "id": "shustri3",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "React компоненты, Tailwind стили, Playwright тесты",
-      "commits": 127,
-      "workMinutes": 360,
-      "totalMinutes": 2100
+      "task": "Отдыхает",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skol05",
+      "id": "sklezki4",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-sonnet",
       "status": "crashed",
-      "task": "Audit API endpoints, проверка RLS в БД",
-      "commits": 12,
+      "task": "Контрольная",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 600
+      "totalMinutes": 0
     },
     {
-      "id": "tykov06",
+      "id": "tykovka5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Написание E2E тестов, проверка регрессии",
-      "commits": 64,
-      "workMinutes": 120,
-      "totalMinutes": 900
+      "task": "Проверяет сыр",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrust07",
+      "id": "hrustic6",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализ логов, отчёты по метрикам",
-      "commits": 23,
-      "workMinutes": 90,
-      "totalMinutes": 600
+      "task": "Анализирует крошки",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik08",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Expo/React Native, iOS/Android юнит-тесты",
-      "commits": 41,
-      "workMinutes": 150,
-      "totalMinutes": 1500
+      "task": "Чинит телефон",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
