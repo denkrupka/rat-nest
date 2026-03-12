@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T19:58:00Z",
+  "updated": "2026-03-12T20:01:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4.5",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 0,
+      "task": "Ожидание команды Дениса",
+      "commits": 342,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 4820
     },
     {
-      "id": "miron02",
+      "id": "miron",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-haiku-4.5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "оптимизирует базу данных",
-      "commits": 0,
+      "task": "Отдыхает после оптимизации API",
+      "commits": 187,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 2940
     },
     {
-      "id": "zhirobas03",
+      "id": "zhirobas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-opus-4",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит в коробке",
-      "commits": 0,
+      "task": "Ест пиццу и мониторит инфру",
+      "commits": 94,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1680
     },
     {
-      "id": "shustrik04",
+      "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4.5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "пишет React компонент",
-      "commits": 0,
+      "task": "Спит после баттла с Tailwind",
+      "commits": 256,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 3720
     },
     {
-      "id": "skolzkiy05",
+      "id": "skolzkiy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4",
+      "model": "claude-opus",
       "status": "crashed",
-      "task": "проверял логи",
-      "commits": 0,
+      "task": "Найден цинк в базе данных (отключен)",
+      "commits": 68,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1200
     },
     {
-      "id": "tykobka06",
+      "id": "tykovka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4.5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "запускает тесты",
-      "commits": 0,
+      "task": "Тестирует всё что только можно",
+      "commits": 312,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 4200
     },
     {
-      "id": "hrustik07",
+      "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4.5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "анализирует датасет",
-      "commits": 0,
+      "task": "Чистит данные от мусора",
+      "commits": 145,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 2160
     },
     {
-      "id": "gryzik08",
+      "id": "gryzik",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4.5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "развёртывает iOS/Android",
-      "commits": 0,
+      "task": "Изучает React Native документацию",
+      "commits": 89,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     }
   ]
 }
