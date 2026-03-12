@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T17:27:00Z",
+  "updated": "2026-03-12T17:30:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "agent0001",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Координирует команду мышей и делегирует задачи",
+      "commits": 47,
+      "workMinutes": 180,
+      "totalMinutes": 420
     },
     {
-      "id": "miron001",
+      "id": "agent0002",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разрабатывает Edge Functions и SQL миграции",
+      "commits": 23,
+      "workMinutes": 150,
+      "totalMinutes": 360
     },
     {
-      "id": "zhiroBA",
+      "id": "agent0003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "качает мышцы",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "shustri",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "прыгает по проводам",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает Docker и Kubernetes конфиги",
+      "commits": 15,
+      "workMinutes": 120,
+      "totalMinutes": 300
     },
     {
-      "id": "skozlyi",
-      "name": "Скользкий",
-      "role": "Security",
+      "id": "agent0004",
+      "name": "Шустрик",
+      "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "анализирует баги",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет React компоненты и Tailwind стили",
+      "commits": 34,
+      "workMinutes": 165,
+      "totalMinutes": 390
     },
     {
-      "id": "tykovna",
+      "id": "agent0005",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Проводит аудиты безопасности и исправляет уязвимости",
+      "commits": 8,
+      "workMinutes": 90,
+      "totalMinutes": 240
+    },
+    {
+      "id": "agent0006",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "тестирует код",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет Playwright тесты и проверяет качество",
+      "commits": 19,
+      "workMinutes": 140,
+      "totalMinutes": 320
     },
     {
-      "id": "chrustic",
+      "id": "agent0007",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "хрустит орехами",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует данные и оптимизирует SQL запросы",
+      "commits": 12,
+      "workMinutes": 110,
+      "totalMinutes": 280
     },
     {
-      "id": "gryzik0",
+      "id": "agent0008",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "кодит мобилку",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разрабатывает React Native и Expo приложения",
+      "commits": 21,
+      "workMinutes": 130,
+      "totalMinutes": 310
     }
   ]
 }
