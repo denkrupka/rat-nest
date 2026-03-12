@@ -358,6 +358,33 @@ const STARS = Array.from({length:80}, () => ({
 }));
 
 // ═══════════════════════════════════════════════
+// AMBIENT DUST PARTICLES (den atmosphere)
+// ═══════════════════════════════════════════════
+const DUST = Array.from({length:60}, () => ({
+  x: Math.random()*WORLD_W, y: 0,
+  vy: 0.1+Math.random()*0.3, vx: (Math.random()-0.5)*0.4,
+  r: 0.5+Math.random(), a: Math.random(),
+  phase: Math.random()*Math.PI*2
+}));
+
+function updateDust() {
+  DUST.forEach(d => {
+    d.x += d.vx; d.y += d.vy;
+    if(d.y > ch) { d.y = DEN_Y; d.x = Math.random()*WORLD_W; }
+    d.x = (d.x + WORLD_W) % WORLD_W;
+  });
+}
+
+function drawDust() {
+  DUST.forEach(d => {
+    if(d.y < DEN_Y || d.y > ch-10) return;
+    const a = (0.08+Math.sin(tick*0.02+d.phase)*0.04);
+    ctx.fillStyle=`rgba(200,160,80,${a})`;
+    ctx.beginPath(); ctx.arc(px(d.x), d.y, d.r, 0, Math.PI*2); ctx.fill();
+  });
+}
+
+// ═══════════════════════════════════════════════
 // DRAW HELPERS
 // ═══════════════════════════════════════════════
 function px(x) { return x - camX; }
@@ -602,6 +629,27 @@ function drawCatScare() {
   floorGrad.addColorStop(1,'#1a0c04');
   ctx.fillStyle=floorGrad; ctx.fillRect(0, FLOOR_BASE-20, cw, ch-FLOOR_BASE+20);
 
+  // Help Wanted sign in den entrance
+  const hwx = px(68), hwy = DEN_Y + 14;
+  ctx.fillStyle='rgba(255,200,50,0.9)'; ctx.strokeStyle='#aa8800'; ctx.lineWidth=1;
+  ctx.fillRect(hwx, hwy, 55, 26); ctx.strokeRect(hwx, hwy, 55, 26);
+  ctx.fillStyle='#660000'; ctx.font='bold 7px monospace';
+  ctx.fillText('РАБОТА!', hwx+3, hwy+10);
+  ctx.fillStyle='#330000'; ctx.font='6px monospace';
+  ctx.fillText('крысы нужны', hwx+2, hwy+20);
+
+  // Broken flickering light in office
+  const brokenLightX = 1840;
+  const flicker = Math.sin(tick*0.8) > 0.3 || tick%60 < 5;
+  if(flicker) {
+    ctx.shadowColor='rgba(255,220,150,0.4)'; ctx.shadowBlur=30;
+    ctx.fillStyle='rgba(255,200,100,0.06)';
+    ctx.fillRect(px(brokenLightX-80),0,160,FLOOR_Y);
+    ctx.shadowBlur=0;
+    ctx.fillStyle='rgba(255,200,100,0.8)';
+    ctx.fillRect(px(brokenLightX-22),5,44,3);
+  }
+
   // Scattered items in den
   em('🧀',160,dFloor()-12,10); em('🧀',660,dFloor()-14,11);
   em('🧀',1020,dFloor()-11,10); em('🍕',2450,dFloor()-12,11);
@@ -705,6 +753,12 @@ function drawDen() {
 
   // ── HANGOUT AREA RUG ──
   drawRug(2780, dY(0.65));
+
+  // ── PING PONG TABLE ──
+  drawPingPong(2700, dY(0.55));
+
+  // ── ARCADE CABINET ──
+  drawArcade(3420, dY(0.30));
 
   // ── DARTBOARD ──
   drawDartboard(3080, DEN_Y + 15);
@@ -1020,6 +1074,85 @@ function drawBar(x, y) {
   // Ambiance
   ctx.fillStyle='rgba(200,100,0,0.05)';
   ctx.fillRect(px(x-10), y, 180, h+30);
+}
+
+function drawPingPong(x, y) {
+  const tw=160, th=80;
+  // Table surface
+  fr(x, y, tw, th, '#1a6622'); sr(x, y, tw, th, '#2a8833', 2);
+  // Net
+  fr(x+tw/2-2, y-8, 4, th+8, '#ccc'); sr(x+tw/2-2, y-8, 4, th+8, '#aaa', 0.5);
+  fr(x, y-8, tw, 2, '#555');
+  // Lines
+  ctx.strokeStyle='rgba(255,255,255,0.4)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(px(x+tw/2),y); ctx.lineTo(px(x+tw/2),y+th); ctx.stroke();
+  ctx.beginPath(); ctx.rect(px(x+4),y+4,tw-8,th-8); ctx.stroke();
+  // Table legs
+  fr(x+4, y+th, 8, 20, '#4a2800'); fr(x+tw-12, y+th, 8, 20, '#4a2800');
+  fr(x+4, y+th+8, tw-8, 4, '#5a3800');
+  // Ball
+  const ballPX = x + tw*0.25 + Math.abs(Math.sin(tick*0.08))*tw*0.5;
+  const ballPY = y + th*0.3 + Math.sin(tick*0.16)*th*0.2;
+  ctx.fillStyle='#fff'; ctx.shadowColor='rgba(255,255,255,0.5)'; ctx.shadowBlur=4;
+  ctx.beginPath(); ctx.arc(px(ballPX), ballPY, 4, 0, Math.PI*2); ctx.fill();
+  ctx.shadowBlur=0;
+  // Paddles
+  ctx.fillStyle='#cc2222'; ctx.strokeStyle='#881111'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.ellipse(px(x+12), y+th/2, 8, 12, 0.3, 0, Math.PI*2);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle='#2222cc'; ctx.strokeStyle='#111188';
+  ctx.beginPath(); ctx.ellipse(px(x+tw-12), y+th/2, 8, 12, -0.3, 0, Math.PI*2);
+  ctx.fill(); ctx.stroke();
+}
+
+function drawArcade(x, y) {
+  const h = Math.min(ch - y - 20, 120);
+  // Cabinet
+  fr(x, y, 66, h, '#1a0a2e'); sr(x, y, 66, h, '#2e1a44', 2);
+  // Screen
+  fr(x+4, y+4, 58, h*0.45, '#000'); sr(x+4, y+4, 58, h*0.45, '#441a66', 1);
+  // Game display
+  const gameFrame = Math.floor(tick/6)%8;
+  ctx.fillStyle='rgba(100,0,200,0.3)'; ctx.fillRect(px(x+5),y+5,56,h*0.45-2);
+  // Pixel art scene
+  ctx.fillStyle='#ff44ff'; ctx.font='6px monospace'; ctx.textAlign='center';
+  ctx.fillText('🐀 RAT BLAST', px(x+33), y+14);
+  // Score
+  ctx.fillStyle='#44ff44'; ctx.font='5px monospace';
+  ctx.fillText('SCORE: '+((tick*7)%99999), px(x+33), y+22);
+  // Game entities
+  for(let e=0;e<4;e++) {
+    ctx.fillStyle=['#ff0000','#ff8800','#ffff00','#00ff00'][e];
+    const ex=12+e*14, ey=h*0.2+(gameFrame>3?2:-2);
+    ctx.fillRect(px(x+4+ex),y+ey,8,6);
+  }
+  // Player ship
+  ctx.fillStyle='#ffffff';
+  const shipX = x+4+12+(Math.sin(tick*0.07))*20;
+  ctx.beginPath(); ctx.moveTo(px(shipX+4),y+h*0.38);
+  ctx.lineTo(px(shipX),y+h*0.44); ctx.lineTo(px(shipX+8),y+h*0.44); ctx.closePath(); ctx.fill();
+  ctx.textAlign='left';
+  // Control panel
+  fr(x+4, y+h*0.5, 58, h*0.42, '#1a1a2e');
+  // Joystick
+  fr(x+16, y+h*0.56, 12, 16, '#222'); fr(x+20, y+h*0.52, 4, 8, '#888');
+  fr(x+17, y+h*0.56-2, 10, 6, '#555'); // top of joystick
+  // Buttons
+  const btnColors=['#ff2222','#2222ff','#22ff22','#ffcc00'];
+  btnColors.forEach((c,i) => {
+    ctx.fillStyle=c; ctx.shadowColor=c; ctx.shadowBlur=3;
+    ctx.beginPath(); ctx.arc(px(x+38+i%2*16), y+h*0.57+Math.floor(i/2)*12, 5, 0, Math.PI*2); ctx.fill();
+    ctx.shadowBlur=0;
+  });
+  // Coin slot
+  fr(x+24, y+h-20, 18, 4, '#111');
+  ctx.fillStyle='rgba(255,200,0,0.7)'; ctx.font='6px monospace'; ctx.textAlign='center';
+  ctx.fillText('INSERT COIN', px(x+33), y+h-8); ctx.textAlign='left';
+  // Coin
+  if(Math.floor(tick/45)%2===0) {
+    ctx.fillStyle='rgba(255,200,0,0.8)';
+    ctx.beginPath(); ctx.arc(px(x+33), y+h-16, 3, 0, Math.PI*2); ctx.fill();
+  }
 }
 
 function drawDartboard(x, y) {
@@ -2167,6 +2300,9 @@ function loop(ts) {
   // Server blips
   serverBlip = serverBlip.filter(b => b.life-- > 0);
 
+  // Update dust
+  updateDust();
+
   // Update rats
   rats.forEach(r => {
     r.update(dt);
@@ -2226,6 +2362,9 @@ function loop(ts) {
     ctx.fillStyle=`rgba(0,255,100,${b.life/40})`;
     ctx.beginPath(); ctx.arc(px(b.x), b.y, (40-b.life)*0.5, 0, Math.PI*2); ctx.fill();
   });
+
+  // Dust particles
+  drawDust();
 
   // Rats sorted by Y
   [...rats].sort((a,b2)=>a.y-b2.y).forEach(r=>drawRat(r));
