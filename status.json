@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T17:02:00Z",
+  "updated": "2026-03-12T17:04:00Z",
   "agents": [
     {
       "id": "50fb2591",
@@ -8,72 +8,72 @@
       "model": "haiku-4-5",
       "status": "idle",
       "task": "Analyze rat-nest repository structure and report findings",
-      "commits": 42,
+      "commits": 0,
       "workMinutes": 1,
       "totalMinutes": 1
     },
     {
-      "id": "mironid01",
+      "id": "mironXX",
       "name": "Мирон",
       "role": "Backend",
       "model": "sonnet-4-6",
       "status": "idle",
-      "task": "Чинит Redis кэш на боевом сервере",
+      "task": "Крепко спит — мыши видят сны про спагетти",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "zhirobas2",
+      "id": "zirobasX",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "opus-4-6",
-      "status": "idle",
-      "task": "Управляет докер контейнерами и CI/CD",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "shustrik3",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "sonnet-4-6",
       "status": "idle",
-      "task": "Рисует красивые React компоненты и фиксит CSS",
+      "task": "Ест пиццу с пепперони у серверной",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "skoznyk4",
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "haiku-4-5",
+      "status": "idle",
+      "task": "Прыгает по клавиатуре, играет в Zzz",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skozliy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "opus-4-6",
+      "model": "sonnet-4-6",
       "status": "crashed",
-      "task": "Снял выходной спать, шпион на больничном",
+      "task": "Неизвестно — надо его разбудить",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykochka5",
+      "id": "tykovka",
       "name": "Тыковка",
       "role": "QA",
       "model": "haiku-4-5",
       "status": "idle",
-      "task": "Ловит баги и пишет тесты",
+      "task": "Проверяет сыр на качество",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "hrustik66",
+      "id": "hrustik1",
       "name": "Хрустик",
       "role": "Data",
       "model": "sonnet-4-6",
       "status": "idle",
-      "task": "Обрабатывает большие данные и рисует графики",
+      "task": "Грызёт отчёты в спикершейере",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "haiku-4-5",
       "status": "idle",
-      "task": "Пишет мобильные приложения на React Native",
+      "task": "Оптимизирует app для мобилок, сидя в норе",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
