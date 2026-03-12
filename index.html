@@ -31,21 +31,28 @@ canvas { display: block; cursor: crosshair; }
 #popup {
   position: fixed; display: none;
   background: rgba(5,5,12,0.97); border: 2px solid #3355aa;
-  border-radius: 6px; padding: 14px; color: #99bbdd;
+  border-radius: 8px; padding: 16px; color: #99bbdd;
   font-family: monospace; font-size: 12px; z-index: 100;
-  min-width: 240px; max-width: 300px;
-  box-shadow: 0 0 20px rgba(50,100,255,0.3); pointer-events: none;
+  min-width: 260px; max-width: 320px;
+  box-shadow: 0 0 25px rgba(50,100,255,0.4);
+  pointer-events: none;
 }
-#popup .pname { color: #ffcc44; font-size: 15px; font-weight: bold; margin-bottom: 2px; }
-#popup .prole { color: #6688aa; font-size: 11px; margin-bottom: 8px; }
-#popup .prow { margin: 3px 0; }
+#popup .pname { color: #ffcc44; font-size: 16px; font-weight: bold; margin-bottom: 2px; }
+#popup .prole { color: #6688aa; font-size: 11px; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
+#popup .prow { margin: 4px 0; display: flex; justify-content: space-between; }
 #popup .plabel { color: #445566; }
 #popup .pval { color: #aaccee; }
-#popup .pdot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:5px; vertical-align:middle; }
-#popup .s-working { background:#44ee88; box-shadow:0 0 5px #44ee88; }
+#popup .pdivider { border-top: 1px solid #1a2540; margin: 8px 0; }
+#popup .pdot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+#popup .s-working { background:#44ee88; box-shadow:0 0 6px #44ee88; animation: statusPulse 1s infinite; }
 #popup .s-idle { background:#ffaa44; }
-#popup .s-done { background:#44aaff; }
+#popup .s-crashed { background:#ff4444; box-shadow:0 0 6px #ff4444; }
 #popup .s-reserve { background:#444466; }
+#popup .pstatus-working { color: #44ee88; }
+#popup .pstatus-idle { color: #ffaa44; }
+#popup .pstatus-crashed { color: #ff4444; }
+#popup .pmodel { color: #7766bb; font-size: 10px; }
+@keyframes statusPulse { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
 #minimap { position:fixed; bottom:14px; right:14px; border:1px solid #223; border-radius:3px; background:rgba(0,0,10,0.7); }
 #hint { position:fixed; bottom:18px; left:50%; transform:translateX(-50%); color:#2a3050; font-family:monospace; font-size:11px; pointer-events:none; letter-spacing:1px; transition: opacity 3s; }
 #clock { position:fixed; top:14px; right:14px; color:#223344; font-family:monospace; font-size:11px; }
@@ -146,16 +153,7 @@ body.light-mode #typewriter-wrap {
   <div id="loading-text">КРЫСИНАЯ НОРА v2.0</div>
 </div>
 <canvas id="world" role="img" aria-label="Интерактивная крысиная нора — офис AI-агентов"></canvas>
-<div id="popup" role="tooltip" aria-live="polite" aria-label="Информация об агенте">
-  <div class="pname" id="pname"></div>
-  <div class="prole" id="prole"></div>
-  <div class="prow"><span class="pdot" id="pdot"></span><span class="pval" id="pstatus"></span></div>
-  <div class="prow"><span class="plabel">задача: </span><span class="pval" id="ptask"></span></div>
-  <div class="prow"><span class="plabel">модель: </span><span class="pval" id="pmodel"></span></div>
-  <div class="prow"><span class="plabel">коммит: </span><span class="pval" id="pcommit"></span></div>
-  <div class="prow"><span class="plabel">коммитов: </span><span class="pval" id="pcommits"></span></div>
-  <div class="prow"><span class="plabel">аптайм: </span><span class="pval" id="puptime"></span></div>
-</div>
+<div id="popup" role="tooltip" aria-live="polite" aria-label="Информация об агенте"></div>
 <canvas id="minimap" width="140" height="32"></canvas>
 <div id="hint">← двигай мышь для скролла →</div>
 <div id="kb-hint">⌨ A/D или ←/→ для скролла</div>
@@ -2767,24 +2765,65 @@ function drawMinimap() {
 // ═══════════════════════════════════════════════
 // POPUP
 // ═══════════════════════════════════════════════
-const popup = document.getElementById('popup');
+const popupEl = document.getElementById('popup');
 
-function showPopup(rat, sx, sy) {
-  const d = statusMap[rat.id] || {};
-  document.getElementById('pname').textContent = d.name || rat.name;
-  document.getElementById('prole').textContent = d.role || rat.id;
-  const st = d.status || 'idle';
-  const dot = document.getElementById('pdot');
-  dot.className = 'pdot s-' + st;
-  document.getElementById('pstatus').textContent = st.toUpperCase();
-  document.getElementById('ptask').textContent = d.task || '—';
-  document.getElementById('pmodel').textContent = d.model || '—';
-  document.getElementById('pcommit').textContent = d.lastCommit || '—';
-  document.getElementById('pcommits').textContent = (d.commits||0)+' commits';
-  document.getElementById('puptime').textContent = d.uptime || '—';
-  popup.style.display = 'block';
-  popup.style.left = Math.min(sx+16, window.innerWidth-315)+'px';
-  popup.style.top = Math.min(sy-8, window.innerHeight-210)+'px';
+function showPopup(rat, mx, my) {
+  const statusData = statusMap[rat.agentId] || {};
+  const status = statusData.status || rat.status || 'idle';
+  const statusLabel = {working:'Работает 💻', idle:'Отдыхает 🍕', crashed:'Вырубился 💀'}[status] || status;
+  const statusClass = {working:'working', idle:'idle', crashed:'crashed'}[status] || 'idle';
+
+  const task = statusData.task || rat.task || '—';
+  const model = statusData.model || rat.model || '—';
+  const commits = statusData.commits ?? rat.commits ?? 0;
+  const workMin = statusData.workMinutes ?? rat.workMinutes ?? 0;
+  const totalMin = statusData.totalMinutes ?? rat.totalMinutes ?? 0;
+
+  const formatTime = (mins) => {
+    if (mins < 60) return mins + ' мин';
+    const h = Math.floor(mins/60), m = mins%60;
+    return h + 'ч ' + (m > 0 ? m + 'м' : '');
+  };
+
+  popupEl.innerHTML = `
+    <div class="pname">${rat.name}</div>
+    <div class="prole">${rat.role || rat.id}</div>
+    <div class="pdivider"></div>
+    <div class="prow">
+      <span class="plabel">Статус:</span>
+      <span class="pval pstatus-${statusClass}"><span class="pdot s-${statusClass}"></span>${statusLabel}</span>
+    </div>
+    <div class="prow">
+      <span class="plabel">Задача:</span>
+      <span class="pval" style="max-width:180px;text-align:right;font-size:11px">${task}</span>
+    </div>
+    <div class="pdivider"></div>
+    <div class="prow">
+      <span class="plabel">Модель:</span>
+      <span class="pmodel">${model}</span>
+    </div>
+    <div class="prow">
+      <span class="plabel">Коммиты:</span>
+      <span class="pval">🔧 ${commits}</span>
+    </div>
+    <div class="prow">
+      <span class="plabel">В работе:</span>
+      <span class="pval">⏱ ${formatTime(workMin)}</span>
+    </div>
+    <div class="prow">
+      <span class="plabel">В норе всего:</span>
+      <span class="pval">🐀 ${formatTime(totalMin)}</span>
+    </div>
+  `;
+
+  // Позиционирование popup
+  const pw = 320, ph = 220;
+  let px2 = mx + 15, py2 = my - 10;
+  if (px2 + pw > window.innerWidth) px2 = mx - pw - 15;
+  if (py2 + ph > window.innerHeight) py2 = my - ph;
+  popupEl.style.left = px2 + 'px';
+  popupEl.style.top = py2 + 'px';
+  popupEl.style.display = 'block';
 }
 
 // ═══════════════════════════════════════════════
@@ -2851,7 +2890,7 @@ function handleClick(wx, wy, sx, sy) {
       showPopup(r, sx, sy); found = true;
     }
   });
-  if(!found) popup.style.display='none';
+  if(!found) popupEl.style.display='none';
 }
 
 canvas.addEventListener('click', e => {
@@ -3498,6 +3537,37 @@ if (isTouchDevice) {
 }
 // Fade out hint
 setTimeout(() => { hintEl.style.opacity='0'; }, 6000);
+
+/* ═══════════════════════════════════════════════
+   TODO LIST (rat-nest improvements)
+   ═══════════════════════════════════════════════
+   DONE:
+   [x] Ночной режим
+   [x] Мини-события (pizza, boss, birthday, power_outage)
+   [x] Слот-машина (кликабельная)
+   [x] Rave пасхалка (Konami code)
+   [x] Счётчик визитов
+   [x] Звуковые эффекты (Web Audio)
+   [x] SEO мета-теги
+   [x] Загрузочный экран
+   [x] status.json интеграция
+   [x] Попап при клике на крысу
+   [x] Скорая помощь для crashed агентов
+   [x] Кибер-крысы двуногие (v2)
+   [x] Статус-driven поведение (working→desk, idle→den)
+
+   TODO:
+   [ ] Мобильная версия (тач, pinch-zoom)
+   [ ] Звук сирены скорой (Web Audio)
+   [ ] Анимация реанимации (электрошок ⚡⚡)
+   [ ] Тёмная нора: случайные тени, мигающие лампы
+   [ ] Кодогрыз отображает текущую задачу в пузыре чата
+   [ ] Термометр сервера в офисе (растёт при 5 active agents)
+   [ ] "Доска почёта" — топ по коммитам
+   [ ] Дождь снаружи (случайный)
+   [ ] Крыса-почтальон доставляет сообщения между столами
+   [ ] Мини-игра: кликни крысу за работой — получи +1 commit
+   ═══════════════════════════════════════════════ */
 </script>
 </body>
 </html>
