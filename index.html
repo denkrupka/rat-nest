@@ -430,11 +430,23 @@ function drawBG() {
   ctx.strokeStyle='#2a2a2a'; ctx.lineWidth=3;
   ctx.beginPath(); ctx.moveTo(572,140); ctx.quadraticCurveTo(600,110,628,140); ctx.stroke();
 
-  // Office floor
+  // Office floor - tile pattern (40x40 with alternating shading)
   ctx.fillStyle='#0b1020'; ctx.fillRect(635,75,565,545);
-  ctx.strokeStyle='#0e1528'; ctx.lineWidth=0.5;
-  for(let y=75;y<620;y+=20){ ctx.beginPath(); ctx.moveTo(635,y); ctx.lineTo(1200,y); ctx.stroke(); }
-  for(let x=635;x<1200;x+=20){ ctx.beginPath(); ctx.moveTo(x,75); ctx.lineTo(x,620); ctx.stroke(); }
+  for(let ty=75;ty<620;ty+=40){
+    for(let tx=635;tx<1200;tx+=40){
+      const even=((Math.floor((tx-635)/40)+Math.floor((ty-75)/40))%2)===0;
+      ctx.fillStyle=even?'rgba(255,255,255,0.013)':'rgba(0,0,0,0.022)';
+      ctx.fillRect(tx,ty,40,40);
+    }
+  }
+  // Main tile grid (40px, visible)
+  ctx.strokeStyle='#0e1830'; ctx.lineWidth=0.7;
+  for(let ty=75;ty<620;ty+=40){ ctx.beginPath(); ctx.moveTo(635,ty); ctx.lineTo(1200,ty); ctx.stroke(); }
+  for(let tx=635;tx<1200;tx+=40){ ctx.beginPath(); ctx.moveTo(tx,75); ctx.lineTo(tx,620); ctx.stroke(); }
+  // Sub-grid (20px, faint)
+  ctx.strokeStyle='rgba(13,20,42,0.45)'; ctx.lineWidth=0.3;
+  for(let ty=75;ty<620;ty+=20){ ctx.beginPath(); ctx.moveTo(635,ty); ctx.lineTo(1200,ty); ctx.stroke(); }
+  for(let tx=635;tx<1200;tx+=20){ ctx.beginPath(); ctx.moveTo(tx,75); ctx.lineTo(tx,620); ctx.stroke(); }
   ctx.fillStyle='#060e1a'; ctx.fillRect(635,62,565,14);
 
   // Zone labels
@@ -719,6 +731,82 @@ function drawCoffeeMachine(x,y) {
 function drawOfficeDecor(dt) {
   fanAngle += dt * 0.005;
   const t = Date.now();
+
+  // === FLOOR MATS UNDER DESKS ===
+  for(let i=0;i<5;i++){
+    const mx=700+i*90;
+    ctx.fillStyle='rgba(16,26,46,0.72)';
+    ctx.beginPath(); ctx.roundRect(mx-44,296,88,36,6); ctx.fill();
+    ctx.strokeStyle='rgba(38,62,98,0.50)'; ctx.lineWidth=1;
+    ctx.stroke();
+    // Weave pattern on mat
+    ctx.strokeStyle='rgba(28,48,80,0.32)'; ctx.lineWidth=0.5;
+    for(let j=0;j<4;j++) ctx.strokeRect(mx-42+j*21,298,19,30);
+    // Mat center highlight
+    ctx.fillStyle='rgba(50,90,150,0.08)';
+    ctx.fillRect(mx-20,300,40,18);
+  }
+
+  // === FLOOR CABLES ROUTING TO SERVER RACK ===
+  ctx.strokeStyle='rgba(12,16,30,0.82)'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(1070,320); ctx.bezierCurveTo(1112,354,1144,392,1156,442); ctx.stroke();
+  ctx.strokeStyle='rgba(10,14,28,0.75)'; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(700,322); ctx.bezierCurveTo(820,392,960,422,1156,448); ctx.stroke();
+  ctx.strokeStyle='rgba(12,18,34,0.70)'; ctx.lineWidth=1.5;
+  ctx.beginPath(); ctx.moveTo(790,324); ctx.bezierCurveTo(862,382,942,412,1156,436); ctx.stroke();
+  // Cable conduit on floor near wall
+  ctx.strokeStyle='rgba(20,28,48,0.60)'; ctx.lineWidth=3; ctx.lineCap='round';
+  ctx.beginPath(); ctx.moveTo(1170,334); ctx.lineTo(1170,508); ctx.stroke();
+  ctx.strokeStyle='rgba(30,40,65,0.40)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(1170,334); ctx.lineTo(1170,508); ctx.stroke();
+
+  // === FOOTPRINTS NEAR COFFEE MACHINE ===
+  const fpPairs=[{x:691,y:420},{x:688,y:408},{x:692,y:396},{x:688,y:384},{x:692,y:372}];
+  fpPairs.forEach((fp,i)=>{
+    ctx.fillStyle=`rgba(10,16,30,${0.36-i*0.06})`;
+    ctx.save(); ctx.translate(fp.x,fp.y); ctx.rotate(0.22);
+    ctx.beginPath(); ctx.ellipse(0,0,3,5,0,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.ellipse(9,-5,3,5,0,0,Math.PI*2); ctx.fill();
+    ctx.restore();
+  });
+
+  // === WHITEBOARD ON OFFICE WALL ===
+  ctx.fillStyle='#dde0e8'; ctx.fillRect(1008,78,138,74);
+  ctx.strokeStyle='#8899ab'; ctx.lineWidth=2; ctx.strokeRect(1008,78,138,74);
+  ctx.fillStyle='#b0b8c4'; ctx.fillRect(1008,78,138,6);   // top rail
+  ctx.fillStyle='#c8cdd6'; ctx.fillRect(1008,146,138,6);  // bottom tray / ledge
+  // Whiteboard content
+  ctx.font='bold 7.5px Courier New'; ctx.textAlign='left';
+  ctx.fillStyle='#1a44aa'; ctx.fillText('◀ SPRINT 47 ▶',1014,94);
+  ctx.strokeStyle='#aab0bc'; ctx.lineWidth=0.6;
+  ctx.beginPath(); ctx.moveTo(1014,97); ctx.lineTo(1140,97); ctx.stroke();
+  ctx.fillStyle='#228822'; ctx.fillText('✓ Portal v2.1',1014,108);
+  ctx.fillStyle='#228822'; ctx.fillText('✓ DB migration',1014,118);
+  ctx.fillStyle='#cc3322'; ctx.fillText('→ Auth (Рыжий)',1014,128);
+  ctx.fillStyle='#6644cc'; ctx.fillText('→ Deploy Mon',1014,138);
+  // Whiteboard markers on tray
+  ctx.fillStyle='#2244aa'; ctx.fillRect(1022,147,16,3);
+  ctx.fillStyle='#228822'; ctx.fillRect(1042,147,14,3);
+  ctx.fillStyle='#cc3322'; ctx.fillRect(1060,147,14,3);
+
+  // === STICKY NOTES ON MONITOR BEZELS ===
+  const stickyData=[
+    {t:'fix\nCORS',col:'#ffe566'},{t:'TODO\nauth',col:'#ff9966'},{t:'💡\nidea',col:'#aaff99'},
+    {t:'PROD\n🔴',col:'#ff9090'},{t:'test\nOK✓',col:'#aaddff'}
+  ];
+  stickyData.forEach((s,i)=>{
+    const sx=700+i*90+15, sy=232;
+    ctx.save();
+    ctx.translate(sx+11,sy+10);
+    ctx.rotate(-0.14+i*0.07);
+    ctx.shadowBlur=3; ctx.shadowColor='rgba(0,0,0,0.45)';
+    ctx.fillStyle=s.col; ctx.fillRect(-11,-10,22,20);
+    ctx.shadowBlur=0;
+    ctx.fillStyle='rgba(0,0,0,0.10)'; ctx.fillRect(-11,-10,22,3); // fold shadow
+    ctx.fillStyle='rgba(0,0,0,0.55)'; ctx.font='bold 5.5px Courier New'; ctx.textAlign='center';
+    s.t.split('\n').forEach((ln,li)=>ctx.fillText(ln,0,-2+li*7));
+    ctx.restore();
+  });
 
   // === CABLES BETWEEN MONITORS ===
   ctx.strokeStyle='rgba(25,25,45,0.85)'; ctx.lineWidth=1.5;
@@ -1086,13 +1174,21 @@ function drawRat(rat) {
   // NAME + STATUS DOT
   const sd=statusData[d.id];
   const sdCfg=sd?(STATUS_CFG[sd.status]||STATUS_CFG.reserve):STATUS_CFG.reserve;
-  const nameY=y+30+6*(sc-1);
-  ctx.font=`bold ${d.boss?9:8}px Courier New`; ctx.textAlign='center';
-  ctx.strokeStyle='rgba(0,0,0,0.9)'; ctx.lineWidth=3;
+  const inOffice=rat.x>630;
+  const nameY=y+32+6*(sc-1);
+  const nameSz=d.boss?13:(inOffice?12:10);
+  ctx.font=`bold ${nameSz}px Courier New`; ctx.textAlign='center';
+  const nmW=ctx.measureText(d.name).width;
+  // Semi-transparent pill background for readability in office zone
+  if(inOffice){
+    ctx.fillStyle='rgba(4,7,18,0.75)';
+    ctx.beginPath(); ctx.roundRect(x-nmW/2-5,nameY-nameSz,nmW+10,nameSz+5,4); ctx.fill();
+  }
+  ctx.strokeStyle='rgba(0,0,0,0.95)'; ctx.lineWidth=4;
   ctx.strokeText(d.name,x,nameY);
-  ctx.fillStyle=d.boss?'#f5a623':'#cccccc'; ctx.fillText(d.name,x,nameY);
+  ctx.fillStyle=d.boss?'#f5d060':(inOffice?'#ddeeff':'#cccccc'); ctx.fillText(d.name,x,nameY);
   ctx.fillStyle=sdCfg.col;
-  ctx.beginPath(); ctx.arc(x+ctx.measureText(d.name).width*0.5+6,nameY-4,3.5,0,Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.arc(x+nmW*0.5+7,nameY-5,3.5,0,Math.PI*2); ctx.fill();
 }
 
 // ─── STATS ────────────────────────────────────────────────────────────────────
