@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T11:29:00Z",
+  "updated": "2026-03-12T11:31:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir-00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "отдыхает после предыдущей задачи",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит. Готов к боевому заданию 🐀",
+      "commits": 42,
+      "workMinutes": 1240,
+      "totalMinutes": 1240
     },
     {
-      "id": "miron01",
+      "id": "miron-01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "спит, ждёт API задач",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Оптимизирует API сервисы",
+      "commits": 18,
+      "workMinutes": 320,
+      "totalMinutes": 320
     },
     {
-      "id": "zhyrobas",
+      "id": "zhirobas-02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-opus",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "ест пиццу, следит за серверами",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Чистит логи и кэши",
+      "commits": 12,
+      "workMinutes": 180,
+      "totalMinutes": 180
     },
     {
-      "id": "shustrik",
+      "id": "shustrik-03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "подправляет CSS по привычке",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Наводит красоту в React компонентах",
+      "commits": 25,
+      "workMinutes": 560,
+      "totalMinutes": 560
     },
     {
-      "id": "skozlsk",
+      "id": "skol-04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-opus-1-6",
       "status": "idle",
-      "task": "ищет дыры в коде мышей",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Сканирует уязвимости",
+      "commits": 8,
+      "workMinutes": 120,
+      "totalMinutes": 120
     },
     {
-      "id": "tykovka",
+      "id": "tykovna-05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "кликает по кнопкам в разных браузерах",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирует и жалуется на баги",
+      "commits": 5,
+      "workMinutes": 100,
+      "totalMinutes": 100
     },
     {
-      "id": "hrustik01",
+      "id": "hrustic-06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "занимается SQL запросами",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует метрики",
+      "commits": 3,
+      "workMinutes": 60,
+      "totalMinutes": 60
     },
     {
-      "id": "gryzik01",
+      "id": "gryzik-07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "портит Expo и React Native",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Портирует на мобильный",
+      "commits": 7,
+      "workMinutes": 140,
+      "totalMinutes": 140
     }
   ]
 }
