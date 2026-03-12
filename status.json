@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T15:10:00Z",
+  "updated": "2026-03-12T15:12:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,62 +7,62 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу",
+      "task": "ест пиццу и слушает гранж",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "miron000",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "отправляет HTTP запросы в никуда",
+      "task": "оптимизирует SQL запросы",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "zirogas0",
+      "id": "zhirob00",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "потеет над Docker конфигами",
+      "task": "чинит инфраструктуру в Kubernetes",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "shustri0",
+      "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "кликает по кнопкам в Figma",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "skozski0",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-sonnet",
-      "status": "crashed",
-      "task": "упал ловя SQL injection",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "tykotka0",
-      "name": "Тыковка",
-      "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "жует тестовые сценарии",
+      "task": "конструирует React компоненты",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skolin00",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "ищет уязвимости",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tykova00",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "запускает Playwright тесты",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -71,9 +71,9 @@
       "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "сортирует дельта-таблицы",
+      "task": "анализирует датасеты",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "спит под React Native",
+      "task": "портирует приложение на iOS",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
