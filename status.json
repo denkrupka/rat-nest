@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T21:40:00Z",
+  "updated": "2026-03-12T21:42:00Z",
   "agents": [
     {
-      "id": "shnyir",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Ждёт задачи от Дениса",
-      "commits": 342,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
-    },
-    {
-      "id": "miron",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Оптимизирует базу данных",
-      "commits": 156,
-      "workMinutes": 520,
-      "totalMinutes": 520
-    },
-    {
-      "id": "zhiro",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Настраивает Docker контейнеры",
-      "commits": 89,
-      "workMinutes": 340,
-      "totalMinutes": 340
-    },
-    {
-      "id": "shustr",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Пилит React компоненты",
-      "commits": 234,
-      "workMinutes": 890,
-      "totalMinutes": 890
-    },
-    {
-      "id": "sclizk",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "crashed",
-      "task": "Проверяет уязвимости (offline)",
-      "commits": 42,
+      "task": "спит после хардворка",
+      "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykova",
+      "id": "miron01",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "ест пиццу в перерыве",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "zhirobas",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "переводит дыхание после деплоя",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "смотрит новое на Twitter",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skozlkiy",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "отошёл прогуляться",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tyk0vka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Тестирует фичи, ест пиццу",
-      "commits": 98,
-      "workMinutes": 280,
-      "totalMinutes": 280
+      "task": "пробует новые фичи",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
       "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует метрики, спит",
-      "commits": 67,
-      "workMinutes": 180,
-      "totalMinutes": 180
+      "task": "анализирует CSV с данными",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik",
+      "id": "gryzik01",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Собирает React Native, мотивирует себя",
-      "commits": 123,
-      "workMinutes": 410,
-      "totalMinutes": 410
+      "task": "интегрирует API в мобилку",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
