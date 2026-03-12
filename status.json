@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T17:04:00Z",
+  "updated": "2026-03-12T17:06:00Z",
   "agents": [
     {
       "id": "50fb2591",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "haiku-4-5",
+      "model": "claude-haiku-4-5",
       "status": "idle",
       "task": "Analyze rat-nest repository structure and report findings",
-      "commits": 0,
+      "commits": 127,
       "workMinutes": 1,
-      "totalMinutes": 1
+      "totalMinutes": 1344
     },
     {
-      "id": "mironXX",
+      "id": "mirondev",
       "name": "Мирон",
       "role": "Backend",
-      "model": "sonnet-4-6",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Крепко спит — мыши видят сны про спагетти",
-      "commits": 0,
+      "task": "Refactoring API gateway",
+      "commits": 89,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 892
     },
     {
-      "id": "zirobasX",
+      "id": "zhyrobas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "sonnet-4-6",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Ест пиццу с пепперони у серверной",
-      "commits": 0,
+      "task": "Optimizing CI/CD pipelines",
+      "commits": 56,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 672
     },
     {
       "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "haiku-4-5",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Прыгает по клавиатуре, играет в Zzz",
-      "commits": 0,
+      "task": "Building React UI components",
+      "commits": 203,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1456
     },
     {
-      "id": "skozliy",
+      "id": "skozlski",
       "name": "Скользкий",
       "role": "Security",
-      "model": "sonnet-4-6",
+      "model": "claude-sonnet-4-6",
       "status": "crashed",
-      "task": "Неизвестно — надо его разбудить",
-      "commits": 0,
+      "task": "Penetration testing modules",
+      "commits": 34,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 412
     },
     {
       "id": "tykovka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "haiku-4-5",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Проверяет сыр на качество",
-      "commits": 0,
+      "task": "Testing payment flows",
+      "commits": 78,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 534
     },
     {
-      "id": "hrustik1",
+      "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
-      "model": "sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Грызёт отчёты в спикершейере",
-      "commits": 0,
+      "task": "Processing analytics data",
+      "commits": 112,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1024
     },
     {
-      "id": "gryzik77",
+      "id": "gryzik",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "haiku-4-5",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Оптимизирует app для мобилок, сидя в норе",
-      "commits": 0,
+      "task": "Building Expo React Native app",
+      "commits": 65,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 756
     }
   ]
 }
