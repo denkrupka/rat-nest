@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T11:39:00Z",
+  "updated": "2026-03-12T11:41:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4-6",
       "status": "idle",
-      "task": "Ест пиццу и ждёт задач",
-      "commits": 42,
-      "workMinutes": 240,
-      "totalMinutes": 240
+      "task": "Дремлет в уголке",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron00",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Спит в базе данных",
-      "commits": 28,
-      "workMinutes": 180,
-      "totalMinutes": 180
+      "task": "Разбирает SQL запросы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhiro00",
+      "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Контролирует сервера в облаке",
-      "commits": 15,
-      "workMinutes": 120,
-      "totalMinutes": 120
+      "task": "Ест пиццу в серверной",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustr00",
+      "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Рисует кнопки и кормит котика",
-      "commits": 35,
-      "workMinutes": 200,
-      "totalMinutes": 200
+      "task": "Шлифует CSS в тишине",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozan00",
+      "id": "skolz05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku",
-      "status": "crashed",
-      "task": "Ловит баги в тёмном коридоре",
-      "commits": 8,
-      "workMinutes": 90,
-      "totalMinutes": 90
+      "model": "claude-opus-4-6",
+      "status": "idle",
+      "task": "Сканирует на уязвимости",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykova00",
+      "id": "tykova06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Кликает по всему подряд и проверяет",
-      "commits": 22,
-      "workMinutes": 150,
-      "totalMinutes": 150
+      "task": "Кликает по кнопкам",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik00",
+      "id": "hrustik07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Считает миллионы чисел в таблицах",
-      "commits": 12,
-      "workMinutes": 100,
-      "totalMinutes": 100
+      "task": "Чистит данные",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik00",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Гонит реакт и байтит иф-синтаксис",
-      "commits": 18,
-      "workMinutes": 110,
-      "totalMinutes": 110
+      "task": "Портирует на мобилку",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
