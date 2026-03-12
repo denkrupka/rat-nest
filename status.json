@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T22:46:00Z",
+  "updated": "2026-03-12T22:48:00Z",
   "agents": [
     {
-      "id": "shnyir-01",
+      "id": "shnyir_00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу, стоит на посту",
-      "commits": 147,
-      "workMinutes": 1240,
-      "totalMinutes": 2480
+      "task": "Организовывает беспорядок в /tmp/rat-nest",
+      "commits": 42,
+      "workMinutes": 240,
+      "totalMinutes": 480
     },
     {
-      "id": "miron-02",
+      "id": "miron_01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит на виртуальной кровати",
-      "commits": 89,
-      "workMinutes": 680,
-      "totalMinutes": 1360
+      "task": "Писает SQL запросы в темноте",
+      "commits": 38,
+      "workMinutes": 180,
+      "totalMinutes": 420
     },
     {
-      "id": "zhiro-03",
+      "id": "zirob_02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Следит за сервёрами",
-      "commits": 63,
-      "workMinutes": 520,
-      "totalMinutes": 1040
+      "task": "Пилит инфра и пьёт кофе",
+      "commits": 25,
+      "workMinutes": 150,
+      "totalMinutes": 360
     },
     {
-      "id": "shust-04",
+      "id": "shust_03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Рисует кнопочки в Figma",
-      "commits": 125,
-      "workMinutes": 980,
-      "totalMinutes": 1960
+      "task": "Кликает кнопки в браузере",
+      "commits": 56,
+      "workMinutes": 200,
+      "totalMinutes": 500
     },
     {
-      "id": "skol-05",
+      "id": "skol_04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Ищет дыры в коде",
-      "commits": 41,
-      "workMinutes": 340,
-      "totalMinutes": 680
+      "task": "Ломает костяшками пароли",
+      "commits": 18,
+      "workMinutes": 120,
+      "totalMinutes": 300
     },
     {
-      "id": "tyko-06",
+      "id": "tyko_05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Ломает приложение по новому",
-      "commits": 53,
-      "workMinutes": 420,
-      "totalMinutes": 840
+      "task": "Крошит баги маленькими зубками",
+      "commits": 31,
+      "workMinutes": 160,
+      "totalMinutes": 380
     },
     {
-      "id": "hrust-07",
+      "id": "hrus_06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Считает миллионы строк",
-      "commits": 37,
-      "workMinutes": 260,
-      "totalMinutes": 520
+      "task": "Грызёт big data зубами",
+      "commits": 22,
+      "workMinutes": 140,
+      "totalMinutes": 340
     },
     {
-      "id": "gryz-08",
+      "id": "griz_07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Портирует на iOS и Android",
-      "commits": 71,
-      "workMinutes": 580,
-      "totalMinutes": 1160
+      "task": "Кодит iOS на мобильнике",
+      "commits": 19,
+      "workMinutes": 130,
+      "totalMinutes": 320
     }
   ]
 }
