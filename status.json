@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T10:12:00Z",
+  "updated": "2026-03-12T10:14:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "рефакторинг компонентов и оптимизация производительности",
-      "commits": 42,
+      "task": "ест пиццу и наблюдает за процессом",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 120
+      "totalMinutes": 0
     },
     {
-      "id": "miron02",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "оптимизация API endpoints и кэширование запросов",
-      "commits": 18,
+      "task": "писал SQL запрос для миграции БД",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 85
+      "totalMinutes": 0
     },
     {
-      "id": "zhiro03",
+      "id": "zhiroba2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "обновление инфраструктуры и Docker конфигов",
-      "commits": 12,
+      "task": "настраивает Docker образ для production",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 60
+      "totalMinutes": 0
     },
     {
-      "id": "shust04",
+      "id": "shustri3",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "стилизация интерфейса и адаптивный дизайн",
-      "commits": 28,
+      "task": "дизайнит React компонент с Tailwind CSS",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 95
+      "totalMinutes": 0
     },
     {
-      "id": "skozu05",
+      "id": "sklozki4",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4",
-      "status": "crashed",
-      "task": "security audit и pentest инфраструктуры",
-      "commits": 5,
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "анализирует API на уязвимости и XSS",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 15
+      "totalMinutes": 0
     },
     {
-      "id": "tykob06",
+      "id": "tykovka5",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "тестирование функциональности и регрессионные тесты",
-      "commits": 8,
+      "task": "проверяет Playwright тесты и е2е сценарии",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 50
+      "totalMinutes": 0
     },
     {
-      "id": "hrusk07",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "анализ данных и построение дашбордов",
-      "commits": 15,
+      "task": "парсит и трансформирует CSV в JSON",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 70
+      "totalMinutes": 0
     },
     {
-      "id": "gryzk08",
+      "id": "gryzik77",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "мобильное приложение и React Native компоненты",
-      "commits": 10,
+      "task": "тестирует React Native приложение на iOS",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 55
+      "totalMinutes": 0
     }
   ]
 }
