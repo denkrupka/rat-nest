@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T10:26:00Z",
+  "updated": "2026-03-12T10:28:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "sh_0001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Ест пиццу и планирует следующий спринт",
-      "commits": 847,
+      "task": "Дежурит в консоли, готов к боевым задачам",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 2156
+      "totalMinutes": 0
     },
     {
-      "id": "miron02",
+      "id": "mr_0002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Спит после ночной смены по фиксам API",
-      "commits": 423,
+      "task": "Спит в подвале, ждёт API задач",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1847
+      "totalMinutes": 0
     },
     {
-      "id": "zhiro03",
+      "id": "zh_0003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Тестирует новую конфигурацию Docker контейнеров",
-      "commits": 312,
+      "task": "Ест пиццу и мониторит логи",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1523
+      "totalMinutes": 0
     },
     {
-      "id": "shust04",
+      "id": "sh_0004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Отлаживает CSS переходы в новой UI библиотеке",
-      "commits": 564,
+      "task": "Рисует компоненты в Figma",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1634
+      "totalMinutes": 0
     },
     {
-      "id": "skol05",
+      "id": "sk_0005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует логи на предмет уязвимостей",
-      "commits": 189,
+      "task": "Ищет уязвимости в коде",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 892
+      "totalMinutes": 0
     },
     {
-      "id": "tyko06",
+      "id": "ty_0006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Пишет новые Playwright тесты для коритических путей",
-      "commits": 276,
+      "task": "Тестирует и ищет баги",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1245
+      "totalMinutes": 0
     },
     {
-      "id": "hrust07",
+      "id": "hr_0007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Разбирает API ответы для миграции баз данных",
-      "commits": 201,
+      "task": "Анализирует датасеты и метрики",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 934
+      "totalMinutes": 0
     },
     {
-      "id": "gryzi08",
+      "id": "gr_0008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Проверяет UI на iPhone 15 и Samsung Galaxy",
-      "commits": 154,
+      "task": "Делает мобильное приложение",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 687
+      "totalMinutes": 0
     }
   ]
 }
