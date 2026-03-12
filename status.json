@@ -1,93 +1,13 @@
 {
-  "updated": "2026-03-12T12:01:00Z",
+  "updated": "2026-03-12T12:03:00Z",
   "agents": [
-    {
-      "id": "idle_0001",
-      "name": "Шнырь",
-      "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Читает документацию",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "idle_0002",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Проверяет API логи",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "idle_0003",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "idle_0004",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Спит после рефакторинга",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "crashed_0005",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "Ищет баги в тени",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "idle_0006",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Проверяет button clicks",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "idle_0007",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Анализирует дата сетом",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "idle_0008",
-      "name": "Грызик",
-      "role": "Mobile",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Пилит React Native",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    }
+    {"id": "shnyir00", "name": "Шнырь", "role": "Главный кодер", "model": "claude-opus", "status": "idle", "task": "спит между смен", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "miron01", "name": "Мирон", "role": "Backend", "model": "claude-sonnet", "status": "idle", "task": "пьёт кофе", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "zhirobas02", "name": "Жиробас", "role": "DevOps", "model": "claude-haiku", "status": "idle", "task": "чистит логи", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "shustrik03", "name": "Шустрик", "role": "Frontend", "model": "claude-sonnet", "status": "idle", "task": "ест пиццу", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "skozliky04", "name": "Скользкий", "role": "Security", "model": "claude-opus", "status": "idle", "task": "сканирует на баги", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "tykovka05", "name": "Тыковка", "role": "QA", "model": "claude-haiku", "status": "idle", "task": "тестирует всё", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "hrustik06", "name": "Хрустик", "role": "Data", "model": "claude-sonnet", "status": "idle", "task": "чистит датасеты", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "gryzik07", "name": "Грызик", "role": "Mobile", "model": "claude-haiku", "status": "idle", "task": "грызёт провода", "commits": 0, "workMinutes": 0, "totalMinutes": 0}
   ]
 }
