@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T16:13:00Z",
+  "updated": "2026-03-12T16:15:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "sh000001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Ест пиццу (жид...",
-      "commits": 847,
-      "workMinutes": 2340,
+      "task": "Координирует команду, читает задачи",
+      "commits": 47,
+      "workMinutes": 890,
+      "totalMinutes": 890
+    },
+    {
+      "id": "mr000002",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-opus-4",
+      "status": "idle",
+      "task": "Спит, ест пиццу",
+      "commits": 34,
+      "workMinutes": 0,
       "totalMinutes": 2340
     },
     {
-      "id": "miron001",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Спит после ночного ...",
-      "commits": 234,
-      "workMinutes": 1890,
-      "totalMinutes": 1890
-    },
-    {
-      "id": "zhirobo2",
+      "id": "zh000003",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизирует сервер ...",
-      "commits": 156,
-      "workMinutes": 1245,
-      "totalMinutes": 1245
+      "task": "Чистит сервера",
+      "commits": 21,
+      "workMinutes": 0,
+      "totalMinutes": 1560
     },
     {
-      "id": "shustri3",
+      "id": "sh000004",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Рисует новый дизайн ...",
-      "commits": 512,
-      "workMinutes": 3120,
+      "task": "Верстает, любит React",
+      "commits": 56,
+      "workMinutes": 0,
       "totalMinutes": 3120
     },
     {
-      "id": "sklizki4",
+      "id": "sk000005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Проверяет бэкдоры ...",
-      "commits": 89,
-      "workMinutes": 670,
-      "totalMinutes": 670
+      "task": "Проверяет уязвимости",
+      "commits": 12,
+      "workMinutes": 0,
+      "totalMinutes": 890
     },
     {
-      "id": "tykovka5",
+      "id": "ty000006",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет тесты для фро ...",
-      "commits": 203,
-      "workMinutes": 1560,
-      "totalMinutes": 1560
+      "task": "Ломает приложение",
+      "commits": 28,
+      "workMinutes": 0,
+      "totalMinutes": 1680
     },
     {
-      "id": "hrustic6",
+      "id": "hr000007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Готовит отчет анали ...",
-      "commits": 94,
-      "workMinutes": 780,
-      "totalMinutes": 780
+      "task": "Анализирует базы данных",
+      "commits": 19,
+      "workMinutes": 0,
+      "totalMinutes": 1200
     },
     {
-      "id": "gryzik07",
+      "id": "gr000008",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Фиксит баг в мобил ...",
-      "commits": 127,
-      "workMinutes": 945,
-      "totalMinutes": 945
+      "task": "Порет мобильное приложение",
+      "commits": 15,
+      "workMinutes": 0,
+      "totalMinutes": 920
     }
   ]
 }
