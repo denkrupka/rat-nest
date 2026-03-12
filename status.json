@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T09:42:00Z",
+  "updated": "2026-03-12T09:44:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyr01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "haiku-4-5",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "ест пиццу и смотрит на код критическим взглядом",
-      "commits": 0,
+      "task": "Готовит обновление портала MaxMaster",
+      "commits": 42,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 127
     },
     {
-      "id": "miron01",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "sonnet-4-6",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "проектирует API endpoints для максимальной производительности",
-      "commits": 0,
+      "task": "Рефакторит Edge Functions для Supabase",
+      "commits": 18,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 85
     },
     {
-      "id": "girobas",
+      "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "opus-4-1",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "настраивает Docker контейнеры и Kubernetes классы",
-      "commits": 0,
+      "task": "Настраивает GitHub Actions CI/CD pipeline",
+      "commits": 9,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 52
     },
     {
-      "id": "shustrik",
+      "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "sonnet-4-6",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "создаёт красивый React интерфейс с Tailwind",
-      "commits": 0,
+      "task": "Пилит React компоненты для дашборда",
+      "commits": 31,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 94
     },
     {
-      "id": "sklzkly0",
+      "id": "skolk05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "opus-4-1",
-      "status": "crashed",
-      "task": "охотился за уязвимостями, но что-то пошло не так",
-      "commits": 0,
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Проводит аудит JWT и RLS политик",
+      "commits": 12,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 67
     },
     {
-      "id": "tykovka0",
+      "id": "tykvo06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "haiku-4-5",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "тестирует функционал с маниакальной внимательностью",
-      "commits": 0,
+      "task": "Пишет E2E тесты на Playwright",
+      "commits": 24,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 73
     },
     {
-      "id": "hrustik0",
+      "id": "hrusk07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "sonnet-4-6",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "анализирует большие датасеты и строит модели",
-      "commits": 0,
+      "task": "Анализирует юзер метрики и строит запросы",
+      "commits": 8,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 41
     },
     {
-      "id": "gryzik00",
+      "id": "gryzk08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "haiku-4-5",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "разрабатывает React Native приложение для мобилы",
-      "commits": 0,
+      "task": "Портирует фичи на мобильный Expo",
+      "commits": 15,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 58
     }
   ]
 }
