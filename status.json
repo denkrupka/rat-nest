@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T11:05:00Z",
+  "updated": "2026-03-12T11:07:00Z",
   "agents": [
     {
-      "id": "session1",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "ест пиццу, ждёт приказов",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "спит",
+      "commits": 342,
+      "workMinutes": 1205,
+      "totalMinutes": 1205
     },
     {
-      "id": "session2",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "спит на сервере, отдыхает",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "session3",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "смотрит логи, всё спокойно",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "session4",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "обновляет CSS, шумит клавишами",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "ест пиццу",
+      "commits": 187,
+      "workMinutes": 834,
+      "totalMinutes": 834
     },
     {
-      "id": "session5",
+      "id": "zirobes",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet-4-6",
+      "status": "idle",
+      "task": "пьёт кофе",
+      "commits": 94,
+      "workMinutes": 456,
+      "totalMinutes": 456
+    },
+    {
+      "id": "shustri",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "чистит код",
+      "commits": 256,
+      "workMinutes": 789,
+      "totalMinutes": 789
+    },
+    {
+      "id": "sklz042",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus-4-1",
-      "status": "crashed",
-      "task": "потерялся в сетях, восстанавливается",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "status": "idle",
+      "task": "спит",
+      "commits": 128,
+      "workMinutes": 345,
+      "totalMinutes": 345
     },
     {
-      "id": "session6",
+      "id": "tykova5",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "пишет тесты, ищет баги",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "session7",
-      "name": "Хрустик",
-      "role": "Data",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "анализирует JSON, жует рапану",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "проверяет тесты",
+      "commits": 203,
+      "workMinutes": 612,
+      "totalMinutes": 612
     },
     {
-      "id": "session8",
-      "name": "Грызик",
-      "role": "Mobile",
+      "id": "hrustik",
+      "name": "Хрустик",
+      "role": "Data",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "собирает Android, кусает кабели",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "анализирует данные",
+      "commits": 156,
+      "workMinutes": 523,
+      "totalMinutes": 523
+    },
+    {
+      "id": "gryzik7",
+      "name": "Грызик",
+      "role": "Mobile",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "строит APK",
+      "commits": 89,
+      "workMinutes": 267,
+      "totalMinutes": 267
     }
   ]
 }
