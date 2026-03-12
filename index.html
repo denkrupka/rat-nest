@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐀 Крысиная нора | AI Ecosystem</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', monospace; overflow-x: hidden; min-height: 100vh; }
+    .header { text-align: center; padding: 20px; border-bottom: 2px solid #f5a623; background: linear-gradient(180deg, #1a0a00 0%, #0a0a0a 100%); }
+    .header h1 { font-size: 2em; color: #f5a623; text-shadow: 0 0 20px #f5a62377; letter-spacing: 4px; }
+    .header p { color: #888; font-size: 0.85em; margin-top: 5px; }
+    .stats-bar { display: flex; justify-content: center; gap: 30px; padding: 12px 20px; background: #111; border-bottom: 1px solid #222; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-value { font-size: 1.5em; font-weight: bold; color: #f5a623; }
+    .stat-label { font-size: 0.7em; color: #666; text-transform: uppercase; }
+    .ticker { background: #111; padding: 6px 0; overflow: hidden; border-bottom: 1px solid #1a1a1a; white-space: nowrap; }
+    .ticker-inner { display: inline-block; animation: ticker 35s linear infinite; color: #444; font-size: 0.75em; }
+    @keyframes ticker { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
+    .ecosystem { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 150px); }
+    .nest { background: linear-gradient(135deg, #0f0800 0%, #1a0f00 100%); border-right: 3px solid #f5a623; padding: 20px; }
+    .office { background: linear-gradient(135deg, #000a1a 0%, #00111f 100%); padding: 20px; }
+    .zone-title { font-size: 1em; color: #f5a623; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+    .zone-title::after { content: ''; flex: 1; height: 1px; background: #f5a62344; }
+    .office .zone-title { color: #23a6f5; }
+    .office .zone-title::after { background: #23a6f544; }
+    .rats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+    .rat-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(245,166,35,0.2); border-radius: 12px; padding: 12px 8px; text-align: center; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .rat-card:hover { border-color: #f5a623; background: rgba(245,166,35,0.08); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(245,166,35,0.2); }
+    .rat-card.boss { border-color: #f5a623; background: rgba(245,166,35,0.06); grid-column: span 2; }
+    .office .rat-card { border-color: rgba(35,166,245,0.2); }
+    .office .rat-card:hover { border-color: #23a6f5; background: rgba(35,166,245,0.08); box-shadow: 0 8px 25px rgba(35,166,245,0.2); }
+    .office .rat-card.boss { border-color: #23a6f5; }
+    .rat-emoji { font-size: 2.2em; display: block; margin-bottom: 5px; }
+    .rat-card.boss .rat-emoji { font-size: 2.8em; }
+    .rat-name { font-size: 0.8em; font-weight: bold; color: #f5a623; display: block; }
+    .office .rat-name { color: #23a6f5; }
+    .rat-card.boss .rat-name { font-size: 0.95em; }
+    .rat-role { font-size: 0.65em; color: #666; display: block; margin-top: 2px; }
+    .rat-activity { font-size: 0.7em; color: #888; display: block; margin-top: 5px; min-height: 16px; }
+    .bubble { position: absolute; top: 5px; right: 5px; font-size: 0.85em; animation: float 2s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    @keyframes working-anim { 0%,100% { transform: translateY(0) rotate(0); } 25% { transform: translateY(-2px) rotate(-3deg); } 75% { transform: translateY(-2px) rotate(3deg); } }
+    @keyframes sleeping-anim { 0%,100% { transform: rotate(20deg); opacity:0.7; } 50% { transform: rotate(20deg); opacity:1; } }
+    @keyframes eating-anim { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(0.9) translateY(2px); } }
+    @keyframes dancing-anim { 0% { transform: rotate(-15deg) scale(1.1); } 50% { transform: rotate(15deg) scale(1.1); } 100% { transform: rotate(-15deg) scale(1.1); } }
+    @keyframes celebrating { 0%,100% { transform: scale(1) rotate(0); } 25% { transform: scale(1.2) rotate(-10deg); } 75% { transform: scale(1.2) rotate(10deg); } }
+    @keyframes glow-pulse { 0%,100% { box-shadow: 0 0 10px rgba(245,166,35,0.3); } 50% { box-shadow: 0 0 30px rgba(245,166,35,0.7); } }
+    .anim-working { animation: working-anim 0.5s ease-in-out infinite; }
+    .anim-sleeping { animation: sleeping-anim 2s ease-in-out infinite; }
+    .anim-eating { animation: eating-anim 0.8s ease-in-out infinite; }
+    .anim-dancing { animation: dancing-anim 0.6s ease-in-out infinite; }
+    .anim-celebrating { animation: celebrating 0.7s ease-in-out infinite; }
+    .boss-glow { animation: glow-pulse 2s ease-in-out infinite; }
+    .popup-overlay { display: none; position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; }
+    .popup-overlay.active { display: flex; }
+    .popup { background: #111; border: 2px solid #f5a623; border-radius: 16px; padding: 25px; max-width: 380px; width: 90%; position: relative; box-shadow: 0 0 50px rgba(245,166,35,0.3); }
+    .popup.office-popup { border-color: #23a6f5; box-shadow: 0 0 50px rgba(35,166,245,0.3); }
+    .popup-close { position: absolute; top:12px; right:15px; background:none; border:none; color:#666; font-size:1.3em; cursor:pointer; }
+    .popup-close:hover { color: #f5a623; }
+    .popup-rat { font-size: 3.5em; text-align: center; display: block; margin-bottom: 10px; }
+    .popup-name { font-size: 1.3em; font-weight: bold; color: #f5a623; text-align: center; }
+    .popup.office-popup .popup-name { color: #23a6f5; }
+    .popup-role { color: #888; font-size: 0.85em; text-align: center; margin-bottom: 15px; }
+    .popup-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+    .popup-stat { background: rgba(255,255,255,0.04); border-radius: 8px; padding: 10px; text-align: center; }
+    .popup-stat-value { font-size: 1.1em; font-weight: bold; color: #f5a623; }
+    .popup.office-popup .popup-stat-value { color: #23a6f5; }
+    .popup-stat-label { font-size: 0.7em; color: #555; }
+    .popup-last-action { background: rgba(245,166,35,0.08); border-left: 3px solid #f5a623; padding: 10px; border-radius: 0 8px 8px 0; font-size: 0.8em; color: #aaa; }
+    .popup.office-popup .popup-last-action { background: rgba(35,166,245,0.08); border-color: #23a6f5; }
+    .footer { text-align: center; padding: 10px; color: #333; font-size: 0.75em; border-top: 1px solid #1a1a1a; }
+    @media (max-width: 600px) {
+      .ecosystem { grid-template-columns: 1fr; }
+      .nest { border-right: none; border-bottom: 3px solid #f5a623; }
+      .rats-grid { grid-template-columns: repeat(3, 1fr); }
+      .rat-card.boss { grid-column: span 3; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🐀 КРЫСИНАЯ НОРА</h1>
+  <p>MaxMaster AI Ecosystem — работаем круглосуточно без выходных</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-value" id="stat-working">0</div><div class="stat-label">🖥️ Работают</div></div>
+  <div class="stat"><div class="stat-value" id="stat-resting">0</div><div class="stat-label">🛋️ Отдыхают</div></div>
+  <div class="stat"><div class="stat-value" id="stat-sleeping">0</div><div class="stat-label">💤 Спят</div></div>
+  <div class="stat"><div class="stat-value" id="stat-commits">47</div><div class="stat-label">📦 Коммитов</div></div>
+  <div class="stat"><div class="stat-value" id="stat-uptime">0ч</div><div class="stat-label">⏱️ Онлайн</div></div>
+</div>
+
+<div class="ticker">
+  <span class="ticker-inner">
+    🐀 Пышка: "Кто съел мой сыр?!" &nbsp;•&nbsp;
+    🐀 Рыжий запушил 12 коммитов &nbsp;•&nbsp;
+    🐀 Жиробас заказал 4-ю пиццу за ночь &nbsp;•&nbsp;
+    🐀 Шнырь: всё под контролем, спокойно &nbsp;•&nbsp;
+    🐀 Хвостик застрял в бесконечном цикле for &nbsp;•&nbsp;
+    🐀 Клык победил CORS баг в 3:47 ночи 🎉 &nbsp;•&nbsp;
+    🐀 Пискля смотрит YouTube пока никто не видит &nbsp;•&nbsp;
+    🐀 Серый читает документацию (да, серьёзно) &nbsp;•&nbsp;
+    🐀 Лысый: "Это не баг, это фича" (снова) &nbsp;•&nbsp;
+    🐀 Бандит украл 3 куска сыра со склада &nbsp;•&nbsp;
+    🐀 Шустрик написал 800 строк кода за ночь &nbsp;•&nbsp;
+    🐀 Deliveroo курьер уже 3-й раз за ночь 🛵 &nbsp;•&nbsp;
+  </span>
+</div>
+
+<div class="ecosystem">
+  <div class="nest">
+    <div class="zone-title">🏠 Нора — зона отдыха</div>
+    <div class="rats-grid" id="nest-grid"></div>
+  </div>
+  <div class="office">
+    <div class="zone-title">💻 Офис — зона работы</div>
+    <div class="rats-grid" id="office-grid"></div>
+  </div>
+</div>
+
+<div class="footer">🐀 MaxMaster AI Ecosystem • Крысы не спят • Портал строится нон-стоп</div>
+
+<div class="popup-overlay" id="popup-overlay" onclick="closePopupOverlay(event)">
+  <div class="popup" id="popup">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <span class="popup-rat" id="p-emoji"></span>
+    <div class="popup-name" id="p-name"></div>
+    <div class="popup-role" id="p-role"></div>
+    <div class="popup-stats">
+      <div class="popup-stat"><div class="popup-stat-value" id="p-status"></div><div class="popup-stat-label">Статус</div></div>
+      <div class="popup-stat"><div class="popup-stat-value" id="p-time"></div><div class="popup-stat-label">В статусе</div></div>
+      <div class="popup-stat"><div class="popup-stat-value" id="p-commits"></div><div class="popup-stat-label">Коммитов</div></div>
+      <div class="popup-stat"><div class="popup-stat-value" id="p-tasks"></div><div class="popup-stat-label">Задач</div></div>
+    </div>
+    <div class="popup-last-action" id="p-action"></div>
+  </div>
+</div>
+
+<script>
+const RATS = [
+  { id:'shnyr', name:'Шнырь', role:'Главный координатор', emoji:'🐀', boss:true,
+    quotes:['Координирует 4 агента одновременно','Мониторит GitHub Actions каждые 5 мин','Планирует следующую волну задач','Пишет утренний рапорт для Дениса'] },
+  { id:'pyshka', name:'Пышка', role:'Frontend разработчик', emoji:'🐭',
+    quotes:['Написала Kanban компонент за 2 часа','Съела 3-й кусок сыра 🧀','Задремала над TypeScript ошибкой','Задизайнила красивую форму'] },
+  { id:'ryzhy', name:'Рыжий', role:'Backend / Supabase', emoji:'🦊',
+    quotes:['Написал 5 SQL миграций подряд','Сделал git push и пошёл за пивом 🍺','Дебажит RLS политики уже час','Оптимизировал запрос на 40%'] },
+  { id:'hvostik', name:'Хвостик', role:'TypeScript аудитор', emoji:'🦔',
+    quotes:['Нашёл 47 TypeScript ошибок','Застрял в бесконечном цикле','Смотрит мемы вместо работы 📺','Исправил критический null pointer'] },
+  { id:'klyik', name:'Клык', role:'Edge Functions', emoji:'⚡',
+    quotes:['Задеплоил 3 Edge Functions','Победил CORS в 4 утра 🎉','Ест пиццу с доставки 🍕','Пишет WebSocket сервер'] },
+  { id:'sery', name:'Серый', role:'QA / Playwright', emoji:'🔍',
+    quotes:['Прогнал 20 автотестов','Нашёл баг который никто не видел 2 месяца','Делает скриншоты всех страниц','Читает документацию (серьёзно!)'] },
+  { id:'pisklia', name:'Пискля', role:'UI/UX дизайнер', emoji:'✨',
+    quotes:['Улучшила мобильный вид','Смотрит YouTube вместо работы 🎮','Добавила плавные анимации','Спорит с Клыком насчёт цветов'] },
+  { id:'zhirobas', name:'Жиробас', role:'DevOps / GitHub', emoji:'🐹',
+    quotes:['Заказал 4-ю пиццу за ночь 🍕🍕🍕🍕','Настроил GitHub Actions','Оптимизировал Docker образ','Принял душ (наконец-то) 🛁'] },
+  { id:'shustrik', name:'Шустрик', role:'Full-stack быстрый', emoji:'🐇',
+    quotes:['Написал 800 строк за ночь','Бежит из норы в офис 🏃','Закоммитил и танцует 💃','Случайно сломал build (фиксит)'] },
+  { id:'lysyi', name:'Лысый', role:'Архитектор', emoji:'🦧',
+    quotes:['Придумал новую архитектуру БД','Говорит "это не баг, это фича" снова','Медитирует над схемой 💭','Рефакторит всё с нуля в 5 утра'] },
+  { id:'bandit', name:'Бандит', role:'Интеграции / API', emoji:'🦝',
+    quotes:['Подключил 3 внешних API за ночь','Украл кусок сыра со склада 🧀','Сломал и починил Stripe интеграцию','Выпил чужое пиво пока никто не смотрел 🍺'] },
+];
+
+const REST = [
+  {text:'🍕 Ест пиццу',anim:'anim-eating',bubble:'🍕'},
+  {text:'🍺 Пьёт пиво',anim:'anim-eating',bubble:'🍺'},
+  {text:'🧀 Грызёт сыр',anim:'anim-eating',bubble:'🧀'},
+  {text:'💤 Дрыхнет',anim:'anim-sleeping',bubble:'💤'},
+  {text:'📺 Смотрит ТВ',anim:'',bubble:'📺'},
+  {text:'🎮 Играет',anim:'',bubble:'🎮'},
+  {text:'🛁 В ванной',anim:'',bubble:'🛁'},
+  {text:'💃 Танцует',anim:'anim-dancing',bubble:'💃'},
+  {text:'🎵 Слушает музыку',anim:'anim-dancing',bubble:'🎵'},
+  {text:'📱 Сидит в телефоне',anim:'',bubble:'📱'},
+  {text:'☕ Пьёт кофе',anim:'anim-eating',bubble:'☕'},
+];
+
+const WORK = [
+  {text:'⌨️ Пишет код',anim:'anim-working',bubble:'💻'},
+  {text:'🐛 Дебажит',anim:'anim-working',bubble:'🐛'},
+  {text:'📝 Пишет тесты',anim:'anim-working',bubble:'✅'},
+  {text:'🤔 Думает...',anim:'',bubble:'💭'},
+  {text:'🚀 Git push!',anim:'anim-celebrating',bubble:'🚀'},
+  {text:'🔍 Code review',anim:'anim-working',bubble:'🔍'},
+  {text:'☕ Кофе + код',anim:'anim-working',bubble:'☕'},
+  {text:'📊 Читает логи',anim:'anim-working',bubble:'📊'},
+  {text:'🏗️ Рефакторит',anim:'anim-working',bubble:'🔧'},
+];
+
+const state = {};
+const startMs = Date.now();
+let totalCommits = 47;
+
+function rand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+// Init
+RATS.forEach(r => {
+  const working = r.boss || Math.random() > 0.4;
+  const act = working ? rand(WORK) : rand(REST);
+  state[r.id] = {
+    working,
+    sleeping: !working && act.bubble === '💤',
+    act,
+    mins: Math.floor(Math.random() * 25),
+    commits: r.boss ? 120 + Math.floor(Math.random()*50) : Math.floor(Math.random()*30),
+    tasks: Math.floor(Math.random()*15)+2
+  };
+});
+
+function render() {
+  const nest = document.getElementById('nest-grid');
+  const office = document.getElementById('office-grid');
+  nest.innerHTML = ''; office.innerHTML = '';
+  let w=0,r=0,s=0;
+
+  RATS.forEach(rat => {
+    const st = state[rat.id];
+    if (st.working) w++; else if (st.sleeping) s++; else r++;
+
+    const card = document.createElement('div');
+    card.className = 'rat-card' + (rat.boss ? ' boss' : '');
+    if (rat.boss && st.working) card.classList.add('boss-glow');
+    card.onclick = () => openPopup(rat, st);
+    card.innerHTML = `
+      <span class="bubble">${st.act.bubble}</span>
+      <span class="rat-emoji ${st.act.anim}">${rat.emoji}</span>
+      <span class="rat-name">${rat.name}</span>
+      <span class="rat-role">${rat.role}</span>
+      <span class="rat-activity">${st.act.text}</span>
+    `;
+    (st.working ? office : nest).appendChild(card);
+  });
+
+  document.getElementById('stat-working').textContent = w;
+  document.getElementById('stat-resting').textContent = r;
+  document.getElementById('stat-sleeping').textContent = s;
+  document.getElementById('stat-commits').textContent = totalCommits;
+  const h = Math.floor((Date.now()-startMs)/3600000);
+  document.getElementById('stat-uptime').textContent = h + 'ч';
+}
+
+function openPopup(rat, st) {
+  const popup = document.getElementById('popup');
+  popup.className = 'popup' + (st.working ? ' office-popup' : '');
+  document.getElementById('p-emoji').textContent = rat.emoji;
+  document.getElementById('p-name').textContent = rat.name;
+  document.getElementById('p-role').textContent = rat.role;
+  document.getElementById('p-status').textContent = st.working ? '🖥️ Работает' : (st.sleeping ? '💤 Спит' : '🛋️ Отдыхает');
+  document.getElementById('p-time').textContent = st.mins + ' мин';
+  document.getElementById('p-commits').textContent = st.commits;
+  document.getElementById('p-tasks').textContent = st.tasks;
+  document.getElementById('p-action').textContent = '💬 ' + rand(rat.quotes);
+  document.getElementById('popup-overlay').classList.add('active');
+}
+
+function closePopup() { document.getElementById('popup-overlay').classList.remove('active'); }
+function closePopupOverlay(e) { if (e.target.id === 'popup-overlay') closePopup(); }
+
+// Update states every 4 seconds
+setInterval(() => {
+  RATS.forEach(rat => {
+    const st = state[rat.id];
+    st.mins++;
+    if (rat.boss) { st.working = true; if (Math.random()<0.25) st.act = rand(WORK); return; }
+    if (st.mins > 12 + Math.random()*20) {
+      st.mins = 0;
+      const r = Math.random();
+      if (r < 0.6) {
+        st.working = true; st.sleeping = false;
+        st.act = rand(WORK);
+        if (st.act.bubble === '🚀') { st.commits++; totalCommits++; }
+      } else if (r < 0.88) {
+        st.working = false;
+        st.act = rand(REST.filter(a => a.bubble !== '💤'));
+        st.sleeping = false;
+      } else {
+        st.working = false; st.sleeping = true;
+        st.act = REST.find(a => a.bubble === '💤');
+      }
+    }
+  });
+  render();
+}, 4000);
+
+render();
+</script>
+</body>
+</html>
