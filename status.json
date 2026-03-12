@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T23:31:00Z",
+  "updated": "2026-03-12T23:33:00Z",
   "agents": [
     {
-      "id": "agent000",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Дремлет, глаз прикрыл",
-      "commits": 247,
-      "workMinutes": 1840,
-      "totalMinutes": 1840
+      "task": "Ест пиццу",
+      "commits": 342,
+      "workMinutes": 8640,
+      "totalMinutes": 8640
     },
     {
-      "id": "agent001",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Чистит усики",
-      "commits": 183,
-      "workMinutes": 1420,
-      "totalMinutes": 1420
+      "task": "Спит",
+      "commits": 156,
+      "workMinutes": 4320,
+      "totalMinutes": 4320
     },
     {
-      "id": "agent002",
+      "id": "zhirob02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Жует печенье",
-      "commits": 156,
-      "workMinutes": 980,
-      "totalMinutes": 980
+      "task": "Проверяет логи",
+      "commits": 89,
+      "workMinutes": 2880,
+      "totalMinutes": 2880
     },
     {
-      "id": "agent003",
+      "id": "shusty03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Носит сыр в кладку",
-      "commits": 312,
-      "workMinutes": 2240,
-      "totalMinutes": 2240
+      "task": "Мышиный спорт",
+      "commits": 198,
+      "workMinutes": 5760,
+      "totalMinutes": 5760
     },
     {
-      "id": "agent004",
+      "id": "sklzky04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "crashed",
-      "task": "Упал в банку варенья",
-      "commits": 89,
-      "workMinutes": 0,
-      "totalMinutes": 450
+      "task": "Ловушка сработала",
+      "commits": 47,
+      "workMinutes": 1440,
+      "totalMinutes": 1440
     },
     {
-      "id": "agent005",
+      "id": "tykova05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Проверяет лабиринт",
-      "commits": 234,
-      "workMinutes": 1560,
-      "totalMinutes": 1560
+      "task": "Тестирует новый сыр",
+      "commits": 112,
+      "workMinutes": 3600,
+      "totalMinutes": 3600
     },
     {
-      "id": "agent006",
+      "id": "hrustk06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Грызёт крекеры",
-      "commits": 156,
-      "workMinutes": 1280,
-      "totalMinutes": 1280
+      "task": "Анализирует данные",
+      "commits": 78,
+      "workMinutes": 2160,
+      "totalMinutes": 2160
     },
     {
-      "id": "agent007",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Шмотает пиццу",
-      "commits": 198,
-      "workMinutes": 1540,
-      "totalMinutes": 1540
+      "task": "Код iOS пишет",
+      "commits": 134,
+      "workMinutes": 3840,
+      "totalMinutes": 3840
     }
   ]
 }
