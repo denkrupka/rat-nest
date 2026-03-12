@@ -205,7 +205,7 @@ const SLOT_ITEMS = ['🍺','🧀','🐀','💰','⚡','🍕'];
 class Rat {
   constructor(d) {
     Object.assign(this, d);
-    const sp = randSpot(this.zone);
+    const sp = randSpot(this.zone) || {x: 200 + Math.random()*400, y: 200, act: 'idle'};
     this.x = sp.x + Math.random()*40-20;
     this.y = sp.y;
     this.tx = this.x; this.ty = this.y;
@@ -308,6 +308,14 @@ const RAT_DEFS = [
   {id:'skolzkiy', name:'Скользкий',  fur:'#80b8d0', belly:'#a0d8f0', sz:0.95, spd:2.2,  crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:false, pinkMonitor:false},
   {id:'murzik',   name:'Мурзик',     fur:'#888888', belly:'#aaaaaa', sz:1.05, spd:0.7,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
 ];
+// ═══════════════════════════════════════════════
+// INIT SPOTS BEFORE RAT CREATION (fix: SPOTS must be populated first)
+// ═══════════════════════════════════════════════
+cw = window.innerWidth || 1280;
+ch = window.innerHeight || 720;
+FLOOR_Y = Math.round(ch * 0.55);
+DEN_Y = FLOOR_Y + FLOOR_H;
+rebuildSpots();
 const rats = RAT_DEFS.map(d => new Rat(d));
 
 // ═══════════════════════════════════════════════
@@ -357,7 +365,7 @@ function triggerMiniEvent() {
     rats.filter(r=>r.zone==='office').forEach(r => {
       const d = SPOTS.filter(s=>s.act==='typing'&&s.zone==='office');
       const sp = d[Math.floor(Math.random()*d.length)];
-      r.tx=sp.x; r.ty=sp.y; r.state='walking'; r.actTimer=600;
+      if(sp) { r.tx=sp.x; r.ty=sp.y; r.state='walking'; r.actTimer=600; }
     });
   } else {
     miniEvents.push({type, wx:800+Math.random()*600, wy:oY(0.75)+Math.random()*40, timer:500});
@@ -496,43 +504,6 @@ function drawBG() {
   // Tunnel holes in floor
   const TUNNELS = [100, 1100, 2400];
 
-// Draw cat scare
-function drawCatScare() {
-  if(!catScare) return;
-  const {x, y, timer} = catScare;
-  const alpha = Math.min(1, timer/40) * Math.min(1, (400-timer)/40);
-  ctx.save();
-  ctx.globalAlpha = alpha * 0.85;
-  ctx.translate(px(x), y);
-  ctx.scale(-1,1); // facing left
-  // Cat shadow silhouette
-  ctx.fillStyle='rgba(0,0,0,0.8)';
-  // Body
-  ctx.beginPath(); ctx.ellipse(0, 0, 35, 22, 0, 0, Math.PI*2); ctx.fill();
-  // Head
-  ctx.beginPath(); ctx.arc(38, -12, 20, 0, Math.PI*2); ctx.fill();
-  // Ears
-  ctx.beginPath(); ctx.moveTo(28,-28); ctx.lineTo(34,-46); ctx.lineTo(46,-30); ctx.closePath(); ctx.fill();
-  ctx.beginPath(); ctx.moveTo(44,-30); ctx.lineTo(52,-46); ctx.lineTo(60,-28); ctx.closePath(); ctx.fill();
-  // Tail
-  ctx.strokeStyle='rgba(0,0,0,0.8)'; ctx.lineWidth=8;
-  ctx.beginPath(); ctx.moveTo(-35,-8);
-  ctx.bezierCurveTo(-70,-8,-80,20,-65,35); ctx.stroke();
-  // Glowing eyes
-  ctx.globalAlpha=alpha;
-  ctx.fillStyle=`rgba(200,255,50,${0.8+Math.sin(timer*0.2)*0.2})`;
-  ctx.shadowColor='#aaff00'; ctx.shadowBlur=10;
-  ctx.beginPath(); ctx.ellipse(32,-12,5,7,0.2,0,Math.PI*2); ctx.fill();
-  ctx.beginPath(); ctx.ellipse(46,-12,5,7,-0.2,0,Math.PI*2); ctx.fill();
-  ctx.shadowBlur=0;
-  ctx.restore();
-  // Warning text
-  if(timer > 300 && Math.floor(timer/10)%2===0) {
-    ctx.fillStyle='rgba(255,50,50,0.9)'; ctx.font='bold 14px monospace'; ctx.textAlign='center';
-    ctx.fillText('⚠️ КОТ!!! БЕЖИМ!!! ⚠️', cw/2, dMid()-30);
-    ctx.textAlign='left';
-  }
-}
   TUNNELS.forEach(tx2 => {
     // Hole shadow
     const hg = ctx.createRadialGradient(px(tx2+22),FLOOR_Y+FLOOR_H/2,5,px(tx2+22),FLOOR_Y+FLOOR_H/2,40);
@@ -2541,6 +2512,46 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 updateClock();
+
+// ═══════════════════════════════════════════════
+// CAT SCARE (moved to top-level scope)
+// ═══════════════════════════════════════════════
+function drawCatScare() {
+  if(!catScare) return;
+  const {x, y, timer} = catScare;
+  const alpha = Math.min(1, timer/40) * Math.min(1, (400-timer)/40);
+  ctx.save();
+  ctx.globalAlpha = alpha * 0.85;
+  ctx.translate(px(x), y);
+  ctx.scale(-1,1); // facing left
+  // Cat shadow silhouette
+  ctx.fillStyle='rgba(0,0,0,0.8)';
+  // Body
+  ctx.beginPath(); ctx.ellipse(0, 0, 35, 22, 0, 0, Math.PI*2); ctx.fill();
+  // Head
+  ctx.beginPath(); ctx.arc(38, -12, 20, 0, Math.PI*2); ctx.fill();
+  // Ears
+  ctx.beginPath(); ctx.moveTo(28,-28); ctx.lineTo(34,-46); ctx.lineTo(46,-30); ctx.closePath(); ctx.fill();
+  ctx.beginPath(); ctx.moveTo(44,-30); ctx.lineTo(52,-46); ctx.lineTo(60,-28); ctx.closePath(); ctx.fill();
+  // Tail
+  ctx.strokeStyle='rgba(0,0,0,0.8)'; ctx.lineWidth=8;
+  ctx.beginPath(); ctx.moveTo(-35,-8);
+  ctx.bezierCurveTo(-70,-8,-80,20,-65,35); ctx.stroke();
+  // Glowing eyes
+  ctx.globalAlpha=alpha;
+  ctx.fillStyle=`rgba(200,255,50,${0.8+Math.sin(timer*0.2)*0.2})`;
+  ctx.shadowColor='#aaff00'; ctx.shadowBlur=10;
+  ctx.beginPath(); ctx.ellipse(32,-12,5,7,0.2,0,Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(46,-12,5,7,-0.2,0,Math.PI*2); ctx.fill();
+  ctx.shadowBlur=0;
+  ctx.restore();
+  // Warning text
+  if(timer > 300 && Math.floor(timer/10)%2===0) {
+    ctx.fillStyle='rgba(255,50,50,0.9)'; ctx.font='bold 14px monospace'; ctx.textAlign='center';
+    ctx.fillText('⚠️ КОТ!!! БЕЖИМ!!! ⚠️', cw/2, dMid()-30);
+    ctx.textAlign='left';
+  }
+}
 
 // ═══════════════════════════════════════════════
 // MAIN LOOP
