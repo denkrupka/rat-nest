@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T21:18:00Z",
+  "updated": "2026-03-12T21:20:00Z",
   "agents": [
     {
-      "id": "agent001",
+      "id": "shnyir01",
       "name": "Шнырь",
-      "role": "Главный координатор",
-      "model": "claude-opus-4-1",
+      "role": "Главный кодер",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует команду мышей, обновляет status.json",
-      "commits": 347,
+      "task": "Ест пиццу и смотрит логи",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 8640
+      "totalMinutes": 0
     },
     {
-      "id": "agent002",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Ест пиццу с колбасой и думает о миграциях БД",
-      "commits": 284,
+      "task": "Пишет API для счётов",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 7200
+      "totalMinutes": 0
     },
     {
-      "id": "agent003",
+      "id": "zhibas03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Оптимизирует CI/CD пайплайны и мониторит сервера",
-      "commits": 156,
+      "task": "Деплоит обновление на сервер",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 4320
+      "totalMinutes": 0
     },
     {
-      "id": "agent004",
+      "id": "shustk04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Полирует UI компоненты и оптимизирует Lighthouse",
-      "commits": 412,
+      "task": "Рефакторит React компоненты",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 9600
+      "totalMinutes": 0
     },
     {
-      "id": "agent005",
+      "id": "skozly05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
-      "status": "crashed",
-      "task": "Спит — слишком много работал с vulnerabilities",
-      "commits": 89,
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Проверяет уязвимости в API",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 2880
+      "totalMinutes": 0
     },
     {
-      "id": "agent006",
+      "id": "tykova06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Тестирует всё подряд и находит баги где их нет",
-      "commits": 203,
+      "task": "Пишет Playwright тесты",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 5400
+      "totalMinutes": 0
     },
     {
-      "id": "agent007",
+      "id": "hrustk07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует логи и строит дашборды для BI",
-      "commits": 167,
+      "task": "Анализирует метрики в Sentry",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 4320
+      "totalMinutes": 0
     },
     {
-      "id": "agent008",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Гуляет в парке — мобильный реке перестал падать",
-      "commits": 178,
+      "task": "Тестирует Expo приложение",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 3960
+      "totalMinutes": 0
     }
   ]
 }
