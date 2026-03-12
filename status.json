@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T10:53:00Z",
+  "updated": "2026-03-12T10:57:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Пишет основную логику портала MaxMaster",
-      "commits": 847,
-      "workMinutes": 2340,
-      "totalMinutes": 2340
+      "task": "Спит между задачами в подвале",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron002",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Оптимизирует Edge Functions и Supabase",
-      "commits": 523,
-      "workMinutes": 1680,
-      "totalMinutes": 1680
+      "task": "Оптимизирует API запросы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "jirobas3",
+      "id": "zhroba02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настраивает Docker, Vercel и CI/CD",
-      "commits": 312,
-      "workMinutes": 945,
-      "totalMinutes": 945
+      "task": "Пинает сервера в нужных местах",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustri4",
+      "id": "shustri3",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus-4",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Строит React компоненты и UI портала",
-      "commits": 634,
-      "workMinutes": 1890,
-      "totalMinutes": 1890
+      "task": "Рисует кнопочки и пиксели",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozkly5",
+      "id": "skrozky4",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Проверяет безопасность API и аутентификацию",
-      "commits": 189,
-      "workMinutes": 567,
-      "totalMinutes": 567
+      "task": "Тестирует дырки в безопасности",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykovi6",
+      "id": "tykopka5",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-opus-4",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Проверяет функциональность Playwright тестами",
-      "commits": 401,
-      "workMinutes": 1260,
-      "totalMinutes": 1260
+      "task": "Ломает всё что получится",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik7",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Работает с данными оферт и коштори",
-      "commits": 267,
-      "workMinutes": 810,
-      "totalMinutes": 810
+      "task": "Сортирует датасеты и графики",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik8",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Разрабатывает мобильное приложение на React Native",
-      "commits": 156,
-      "workMinutes": 480,
-      "totalMinutes": 480
+      "task": "Ест пиццу и коди​т приложения",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
