@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T17:42:00Z",
+  "updated": "2026-03-12T17:44:00Z",
   "agents": [
     {
-      "id": "00000000",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Координирует команду мышей, ждёт задач",
+      "task": "Координирует команду мышей",
       "commits": 42,
-      "workMinutes": 240,
+      "workMinutes": 120,
+      "totalMinutes": 480
+    },
+    {
+      "id": "miron01",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "Пишет Edge Functions и API роуты",
+      "commits": 28,
+      "workMinutes": 85,
+      "totalMinutes": 360
+    },
+    {
+      "id": "jirobas02",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "Настраивает CI/CD и инфраструктуру",
+      "commits": 15,
+      "workMinutes": 60,
       "totalMinutes": 240
     },
     {
-      "id": "00000001",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Пишет Edge Functions на выходных",
-      "commits": 18,
-      "workMinutes": 90,
-      "totalMinutes": 90
-    },
-    {
-      "id": "00000002",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Смотрит логи, разбирается с Sentry",
-      "commits": 12,
-      "workMinutes": 60,
-      "totalMinutes": 60
-    },
-    {
-      "id": "00000003",
+      "id": "shustrik03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Ждёт макетов, кофе пьёт",
-      "commits": 34,
-      "workMinutes": 180,
+      "task": "Верстает React компоненты и UI",
+      "commits": 35,
+      "workMinutes": 110,
+      "totalMinutes": 400
+    },
+    {
+      "id": "skolzkiy04",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-haiku-4-5",
+      "status": "idle",
+      "task": "Проводит security audit и pentest",
+      "commits": 12,
+      "workMinutes": 45,
       "totalMinutes": 180
     },
     {
-      "id": "00000004",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Проверяет уязвимости в коде",
-      "commits": 8,
-      "workMinutes": 45,
-      "totalMinutes": 45
-    },
-    {
-      "id": "00000005",
+      "id": "tykovka05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Тестирует рассчитанное, ловит баги",
-      "commits": 5,
-      "workMinutes": 30,
-      "totalMinutes": 30
+      "task": "Пишет Playwright тесты и проверяет функциональность",
+      "commits": 22,
+      "workMinutes": 75,
+      "totalMinutes": 300
     },
     {
-      "id": "00000006",
+      "id": "chrustik06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Анализирует метрики в бигкере",
-      "commits": 15,
-      "workMinutes": 75,
-      "totalMinutes": 75
+      "task": "Парсит данные и заполняет БД",
+      "commits": 18,
+      "workMinutes": 65,
+      "totalMinutes": 260
     },
     {
-      "id": "00000007",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Рабочий мобильный — ест пиццу",
-      "commits": 3,
-      "workMinutes": 15,
-      "totalMinutes": 15
+      "task": "Разрабатывает мобильное приложение на Expo",
+      "commits": 20,
+      "workMinutes": 70,
+      "totalMinutes": 280
     }
   ]
 }
