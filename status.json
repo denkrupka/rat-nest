@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T11:43:00Z",
+  "updated": "2026-03-12T11:45:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу",
+      "task": "Пилит фичи портала MaxMaster",
       "commits": 247,
-      "workMinutes": 5840,
-      "totalMinutes": 5840
+      "workMinutes": 1824,
+      "totalMinutes": 1824
     },
     {
-      "id": "miron01",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "оптимизирует SQL запросы",
+      "task": "Фиксит Edge Functions и RLS правила",
       "commits": 156,
-      "workMinutes": 3620,
-      "totalMinutes": 3620
+      "workMinutes": 1205,
+      "totalMinutes": 1205
     },
     {
-      "id": "zhirobas",
+      "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "спит на сервере",
+      "task": "Оптимизирует CI/CD пайплайн",
       "commits": 89,
-      "workMinutes": 2105,
-      "totalMinutes": 2105
+      "workMinutes": 734,
+      "totalMinutes": 734
     },
     {
-      "id": "shustrik",
+      "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "ловит баги в UI",
-      "commits": 203,
-      "workMinutes": 4815,
-      "totalMinutes": 4815
-    },
-    {
-      "id": "skolz04",
-      "name": "Скользкий",
-      "role": "Security",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "проверяет уязвимости",
-      "commits": 67,
-      "workMinutes": 1580,
-      "totalMinutes": 1580
+      "task": "Пилит React компоненты и UI",
+      "commits": 201,
+      "workMinutes": 1567,
+      "totalMinutes": 1567
     },
     {
-      "id": "tykova5",
+      "id": "skliz05",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Спит (нужна перезагрузка)",
+      "commits": 42,
+      "workMinutes": 287,
+      "totalMinutes": 287
+    },
+    {
+      "id": "tykva06",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "пишет тесты",
+      "task": "Ест пиццу и гоняет регресс-тесты",
       "commits": 134,
-      "workMinutes": 3170,
-      "totalMinutes": 3170
+      "workMinutes": 1043,
+      "totalMinutes": 1043
     },
     {
-      "id": "hrustik6",
+      "id": "hrusk07",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "анализирует данные",
-      "commits": 95,
-      "workMinutes": 2245,
-      "totalMinutes": 2245
+      "task": "Парсит данные и делает анализ",
+      "commits": 73,
+      "workMinutes": 568,
+      "totalMinutes": 568
     },
     {
-      "id": "gryzik07",
+      "id": "grzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "портит мобильный UI",
+      "task": "Спит на клавиатуре (Expo дергает)",
       "commits": 112,
-      "workMinutes": 2640,
-      "totalMinutes": 2640
+      "workMinutes": 890,
+      "totalMinutes": 890
     }
   ]
 }
