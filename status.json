@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Готов к новым задачам",
+      "task": "Готов к новым задачам, координирует команду",
       "commits": 142,
       "workMinutes": 2847,
       "totalMinutes": 2847
@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Пишет API эндпоинты для портала",
+      "task": "Пишет API эндпоинты для портала MaxMaster",
       "commits": 89,
       "workMinutes": 1560,
       "totalMinutes": 1560
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Настраивает CI/CD пайплайны",
+      "task": "Настраивает CI/CD пайплайны и Docker контейнеры",
       "commits": 56,
       "workMinutes": 980,
       "totalMinutes": 980
@@ -40,7 +40,7 @@
       "role": "Frontend",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Верстает React компоненты",
+      "task": "Верстает React компоненты и UI для мобилки",
       "commits": 78,
       "workMinutes": 1350,
       "totalMinutes": 1350
@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Спит после аудита безопасности",
+      "task": "Спит после аудита безопасности и настройки RLS",
       "commits": 23,
       "workMinutes": 420,
       "totalMinutes": 420
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет Playwright тесты",
+      "task": "Пишет Playwright тесты и проверяет функциональность",
       "commits": 167,
       "workMinutes": 2100,
       "totalMinutes": 2100
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Обрабатывает CSV и строит графики",
+      "task": "Обрабатывает CSV, строит графики и аналитику",
       "commits": 45,
       "workMinutes": 750,
       "totalMinutes": 750
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ест пиццу и собирает мобильное приложение",
+      "task": "Ест пиццу и собирает мобильное приложение на Expo",
       "commits": 34,
       "workMinutes": 580,
       "totalMinutes": 580
