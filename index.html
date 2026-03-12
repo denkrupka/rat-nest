@@ -2395,212 +2395,612 @@ function drawRatBody(ox, oy, bw, bh, fur, belly, fat, crown, heart) {
 }
 
 function drawCrashedRat(rat) {
-  const {x, y, fur, sz} = rat;
-  const bw = Math.round(22*sz*3), bh = Math.round(15*sz*3);
+  // Legacy wrapper - handled by drawCyberMouse now
+  drawRat(rat);
+}
+
+// ════════════════════════════════════════════════════
+// CYBER MOUSE v2 — Bipedal Humanoid Rat Drawing Engine
+// ════════════════════════════════════════════════════
+
+const CYBER_SCHEMES = {
+  'shnyr':    { body:'#1a2faa', armor:'#2244cc', eyeColor:'#ffee44', glowColor:'#5577ff', accent:'#ffcc00', tailColor:'#0033bb' },
+  'kodogryz': { body:'#aa2200', armor:'#cc3300', eyeColor:'#ff9900', glowColor:'#ff5500', accent:'#ff8844', tailColor:'#881100' },
+  'miron':    { body:'#115500', armor:'#1a8822', eyeColor:'#88ff44', glowColor:'#44ff88', accent:'#00ffaa', tailColor:'#114400' },
+  'zhirobas': { body:'#3a3a4a', armor:'#555566', eyeColor:'#cccccc', glowColor:'#888899', accent:'#aaaaaa', tailColor:'#222233' },
+  'shustrik': { body:'#997700', armor:'#ccaa00', eyeColor:'#ffffff', glowColor:'#ffff44', accent:'#ffee44', tailColor:'#aa9900' },
+  'skolzkiy': { body:'#551188', armor:'#7722bb', eyeColor:'#ff44ff', glowColor:'#aa44ff', accent:'#dd66ff', tailColor:'#440077' },
+  'tykovka':  { body:'#994400', armor:'#cc6600', eyeColor:'#44ddff', glowColor:'#ff8800', accent:'#ffaa55', tailColor:'#773300' },
+  'xrustik':  { body:'#6B3010', armor:'#8B4513', eyeColor:'#ffcc66', glowColor:'#cc8833', accent:'#dd9944', tailColor:'#5a2808' },
+};
+
+function getCyberScheme(rat) {
+  return CYBER_SCHEMES[rat.id] || { body:'#334466', armor:'#445577', eyeColor:'#88aaff', glowColor:'#4466cc', accent:'#6688cc', tailColor:'#223355' };
+}
+
+function drawCyberMouse(ox, oy, rat, tickVal) {
+  const sz = rat.sz || 1;
+  const s = sz;
+  const state = rat.state || 'activity';
+  const act = rat.act || 'idle';
+  const fat = rat.fat || false;
+  const sc = getCyberScheme(rat);
+  const isCrashed = rat.crashed || false;
+  const walkFrame = rat.walkFrame || 0;
+  const fw = fat ? 1.4 : 1.0;
+
+  // Key measurements at sz=1: total ~70px tall
+  const legH   = 16 * s;
+  const legW   = 5.5 * s * fw;
+  const torsoW = 22 * s * fw;
+  const torsoH = 24 * s;
+  const headR  = 13 * s * (fat ? 1.15 : 1.0);
+  const armL   = 12 * s;
+  const armW   = 4.5 * s;
+
+  // Vertical anchors (feet near oy+5)
+  const feetY  = oy + 5 * s;
+  const hipsY  = feetY - legH;
+  const torsoB = hipsY;
+  const torsoT = torsoB - torsoH;
+  const headCY = torsoT - headR * 0.4;
+
+  // Walk bob & swing
+  let bodyBob = 0, bodySwing = 0;
+  if (state === 'walking') {
+    const ph = (walkFrame % 4) / 4 * Math.PI * 2;
+    bodyBob   = Math.abs(Math.sin(ph)) * 2.5 * s;
+    bodySwing = Math.sin(ph) * 2 * s;
+  }
+
+  // === CRASHED: lay sideways ===
+  if (isCrashed) {
+    ctx.save();
+    ctx.translate(ox, oy);
+    ctx.rotate(Math.PI / 2);
+    // Red flickering halo
+    const flickAlpha = 0.3 + Math.sin(tickVal * 0.2) * 0.25;
+    ctx.shadowColor = '#ff0000';
+    ctx.shadowBlur = 20 + Math.sin(tickVal * 0.15) * 10;
+    ctx.strokeStyle = `rgba(255,50,50,${flickAlpha})`;
+    ctx.lineWidth = 8 * s;
+    ctx.beginPath();
+    ctx.arc(0, 0, headR * 2.2, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+    // Body lying flat
+    ctx.fillStyle = '#222233';
+    ctx.beginPath();
+    ctx.roundRect(-torsoH/2, -torsoW/2, torsoH, torsoW, 6);
+    ctx.fill();
+    ctx.fillStyle = sc.armor;
+    ctx.beginPath();
+    ctx.roundRect(-torsoH*0.4, -torsoW*0.35, torsoH*0.8, torsoW*0.7, 4);
+    ctx.fill();
+    // Head
+    ctx.shadowColor = '#ff0000'; ctx.shadowBlur = 8;
+    ctx.fillStyle = sc.body;
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.62, 0, headR, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    // Dark face
+    ctx.fillStyle = '#12121e';
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.62, 0, headR * 0.84, 0, Math.PI * 2);
+    ctx.fill();
+    // X-X eyes
+    ctx.strokeStyle = '#ff2222'; ctx.lineWidth = 2.5 * s;
+    const ew = 4 * s;
+    [[-0.35, 0], [0.35, 0]].forEach(([ex_off, ey_off]) => {
+      const ex = torsoH * 0.62 + ex_off * headR;
+      ctx.beginPath();
+      ctx.moveTo(ex - ew, -ew); ctx.lineTo(ex + ew, ew);
+      ctx.moveTo(ex + ew, -ew); ctx.lineTo(ex - ew, ew);
+      ctx.stroke();
+    });
+    // Ear
+    ctx.fillStyle = sc.body;
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.62, -headR * 1.05, headR * 0.4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+    // Skull above
+    ctx.font = `${Math.round(16 * s)}px serif`;
+    ctx.textAlign = 'center';
+    ctx.fillText('💀', ox, oy - headR * 1.8 + Math.sin(tickVal * 0.05) * 3);
+    ctx.textAlign = 'left';
+    return;
+  }
+
+  // === SLEEP pose: lying down ===
+  if (state === 'activity' && act === 'sleep') {
+    ctx.save();
+    ctx.translate(ox, oy - legH * 0.3);
+    ctx.rotate(-0.28);
+    // Body horizontal
+    ctx.fillStyle = sc.body;
+    ctx.beginPath();
+    ctx.roundRect(-torsoH * 0.55, -torsoW * 0.45, torsoH * 1.1, torsoW * 0.9, 6);
+    ctx.fill();
+    ctx.fillStyle = sc.armor;
+    ctx.beginPath();
+    ctx.roundRect(-torsoH * 0.42, -torsoW * 0.32, torsoH * 0.84, torsoW * 0.64, 4);
+    ctx.fill();
+    // Head
+    ctx.fillStyle = sc.body;
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.58, 0, headR, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = '#12121e';
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.58, 0, headR * 0.84, 0, Math.PI * 2);
+    ctx.fill();
+    // Ears (pointing up when lying)
+    ctx.fillStyle = sc.body;
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.58, -headR * 1.05, headR * 0.38, 0, Math.PI * 2);
+    ctx.fill();
+    // Closed eyes (curved lines = squinting)
+    ctx.strokeStyle = sc.eyeColor; ctx.lineWidth = 2 * s;
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.58 - headR * 0.38, -headR * 0.1, 3 * s, Math.PI, 0);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(torsoH * 0.58 + headR * 0.38, -headR * 0.1, 3 * s, Math.PI, 0);
+    ctx.stroke();
+    ctx.restore();
+    // ZZZ floating
+    ctx.fillStyle = `rgba(200,220,255,${0.5 + Math.sin(tickVal * 0.04) * 0.3})`;
+    ctx.font = `${Math.round(8 * s)}px monospace`;
+    const zi = ['z', 'zz', 'zzz'][Math.floor(tickVal / 38) % 3];
+    const zfloat = oy - torsoH - legH * 0.8 - (tickVal % 38) * 0.25;
+    ctx.textAlign = 'center';
+    ctx.fillText(zi, ox + 14 * s, zfloat);
+    ctx.textAlign = 'left';
+    return;
+  }
+
+  // === NORMAL BIPEDAL DRAWING ===
+
+  // --- TAIL ---
+  const tailX = ox - torsoW * 0.42 + bodySwing;
+  const tailY = torsoB - torsoH * 0.35 + bodyBob;
   ctx.save();
-  ctx.translate(px(x), y + 10);
-  ctx.rotate(Math.PI / 2); // лежит на боку
-
-  // Тело (серое)
-  ctx.fillStyle = '#555566';
+  ctx.strokeStyle = sc.tailColor;
+  ctx.lineWidth = 3 * s;
+  ctx.lineCap = 'round';
   ctx.beginPath();
-  ctx.ellipse(0, 0, bw/2, bh/2, 0, 0, Math.PI*2);
-  ctx.fill();
-
-  // X-глаза
-  ctx.strokeStyle = '#ff4444';
-  ctx.lineWidth = 2;
-  const ew = 6;
-  ctx.beginPath(); ctx.moveTo(bw*0.3-ew, -bh*0.4-ew); ctx.lineTo(bw*0.3+ew, -bh*0.4+ew); ctx.stroke();
-  ctx.beginPath(); ctx.moveTo(bw*0.3+ew, -bh*0.4-ew); ctx.lineTo(bw*0.3-ew, -bh*0.4+ew); ctx.stroke();
-
+  ctx.moveTo(tailX, tailY);
+  ctx.bezierCurveTo(
+    tailX - 20 * s, tailY + 18 * s,
+    tailX - 38 * s, tailY + 10 * s,
+    tailX - 30 * s, tailY - 14 * s
+  );
+  ctx.stroke();
+  // Glowing tail tip
+  ctx.shadowColor = sc.glowColor; ctx.shadowBlur = 8;
+  ctx.strokeStyle = sc.accent; ctx.lineWidth = 2 * s;
+  ctx.beginPath();
+  ctx.moveTo(tailX - 30 * s, tailY - 14 * s);
+  ctx.lineTo(tailX - 34 * s, tailY - 20 * s);
+  ctx.stroke();
+  ctx.shadowBlur = 0;
   ctx.restore();
 
-  // 💀 над крысой
-  ctx.font = '20px serif';
+  // --- LEGS ---
+  let leftLegOff = 0, rightLegOff = 0, leftFootX = 0, rightFootX = 0;
+  if (state === 'walking') {
+    const ph = (walkFrame % 4) / 4 * Math.PI * 2;
+    leftLegOff  = Math.sin(ph) * 7 * s;
+    rightLegOff = -Math.sin(ph) * 7 * s;
+    leftFootX   = Math.sin(ph) * 4 * s;
+    rightFootX  = -Math.sin(ph) * 4 * s;
+  } else if (state === 'activity' && act === 'gym') {
+    const gymPh = Math.sin(tickVal * 0.1);
+    leftLegOff  = gymPh * 5 * s;
+    rightLegOff = -gymPh * 5 * s;
+  } else if (state === 'activity' && act === 'gaming') {
+    const gpPh = Math.sin(tickVal * 0.15);
+    leftLegOff  = gpPh * 4 * s;
+    rightLegOff = gpPh * 4 * s;
+  }
+
+  // Shustrik: speed blur on legs
+  if (rat.id === 'shustrik' && state === 'walking') {
+    ctx.save();
+    ctx.globalAlpha = 0.4;
+    for (let blur = 1; blur <= 2; blur++) {
+      ctx.fillStyle = sc.accent;
+      ctx.beginPath();
+      ctx.roundRect(ox - legW * 2.2 - blur * 3 * s + bodySwing, hipsY + bodyBob, legW, legH, 3 * s);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.roundRect(ox + legW * 0.7 + blur * 3 * s + bodySwing, hipsY + bodyBob, legW, legH, 3 * s);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  ctx.fillStyle = sc.armor;
+  const legBaseY = hipsY + bodyBob;
+  // Left leg
+  ctx.beginPath();
+  ctx.roundRect(ox - legW * 2.1 + bodySwing, legBaseY, legW, legH + leftLegOff, 3 * s);
+  ctx.fill();
+  // Left boot
+  ctx.beginPath();
+  ctx.ellipse(ox - legW * 1.6 + leftFootX + bodySwing, feetY + leftLegOff + bodyBob, legW, legW * 0.48, 0, 0, Math.PI * 2);
+  ctx.fill();
+  // Right leg
+  ctx.beginPath();
+  ctx.roundRect(ox + legW * 1.1 + bodySwing, legBaseY, legW, legH + rightLegOff, 3 * s);
+  ctx.fill();
+  // Right boot
+  ctx.beginPath();
+  ctx.ellipse(ox + legW * 1.6 + rightFootX + bodySwing, feetY + rightLegOff + bodyBob, legW, legW * 0.48, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  // --- TORSO ---
+  ctx.fillStyle = sc.body;
+  ctx.beginPath();
+  ctx.roundRect(ox - torsoW / 2 + bodySwing, torsoT + bodyBob, torsoW, torsoH, 5 * s);
+  ctx.fill();
+
+  // Armor chest plate
+  ctx.fillStyle = sc.armor;
+  ctx.beginPath();
+  ctx.roundRect(ox - torsoW * 0.38 + bodySwing, torsoT + torsoH * 0.08 + bodyBob, torsoW * 0.76, torsoH * 0.58, 3 * s);
+  ctx.fill();
+
+  // ID badge on vest
+  const badges = { shnyr:'👑', kodogryz:'⚙️', miron:'⚡', zhirobas:'⭐', shustrik:'💨', skolzkiy:'🎭', tykovka:'🔭', xrustik:'🎧' };
+  const badge = badges[rat.id] || '•';
+  ctx.font = `${Math.round(10 * s)}px serif`;
   ctx.textAlign = 'center';
-  const skullBob = Math.sin(Date.now() * 0.003) * 3;
-  ctx.fillText('💀', px(x), y - 30 + skullBob);
+  ctx.fillText(badge, ox + bodySwing, torsoT + torsoH * 0.56 + bodyBob);
+  ctx.textAlign = 'left';
+
+  // Жиробас: fat belly bulge
+  if (fat) {
+    ctx.fillStyle = sc.armor + 'bb';
+    ctx.beginPath();
+    ctx.ellipse(ox + bodySwing, torsoT + torsoH * 0.7 + bodyBob, torsoW * 0.48, torsoH * 0.28, 0, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // --- ARMS ---
+  let leftArmAngle = -0.15, rightArmAngle = 0.15;
+  if (state === 'walking') {
+    const ph = (walkFrame % 4) / 4 * Math.PI * 2;
+    leftArmAngle  = -0.15 - Math.sin(ph) * 0.55;
+    rightArmAngle =  0.15 + Math.sin(ph) * 0.55;
+  } else if (state === 'activity') {
+    if (act === 'typing') {
+      leftArmAngle  =  0.85 + Math.sin(tickVal * 0.55) * 0.22;
+      rightArmAngle = -0.85 - Math.sin(tickVal * 0.55 + Math.PI) * 0.22;
+    } else if (act === 'gym') {
+      const gp = Math.sin(tickVal * 0.1);
+      leftArmAngle  = -1.4 + gp * 0.7;
+      rightArmAngle =  1.4 - gp * 0.7;
+    } else if (act === 'gaming') {
+      leftArmAngle  =  0.55 + Math.sin(tickVal * 0.14) * 0.22;
+      rightArmAngle = -0.55 + Math.sin(tickVal * 0.14 + 1) * 0.22;
+    } else if (act === 'eat_pizza') {
+      leftArmAngle  = -0.75 + Math.sin(tickVal * 0.18) * 0.2;
+      rightArmAngle = -0.5;
+    } else if (act === 'beer') {
+      leftArmAngle  = -0.3 + Math.sin(tickVal * 0.18) * 0.4;
+      rightArmAngle = -1.1 + Math.sin(tickVal * 0.08) * 0.2;
+    }
+  }
+
+  const armBaseY = torsoT + torsoH * 0.18 + bodyBob;
+  // Left arm
+  ctx.save();
+  ctx.translate(ox - torsoW * 0.47 + bodySwing, armBaseY);
+  ctx.rotate(leftArmAngle);
+  ctx.fillStyle = sc.body;
+  ctx.beginPath(); ctx.roundRect(-armW / 2, 0, armW, armL, 2 * s); ctx.fill();
+  ctx.shadowColor = sc.accent; ctx.shadowBlur = 5;
+  ctx.fillStyle = sc.accent;
+  ctx.beginPath(); ctx.arc(0, armL, armW * 0.78, 0, Math.PI * 2); ctx.fill();
+  ctx.shadowBlur = 0;
+  ctx.restore();
+
+  // Right arm
+  ctx.save();
+  ctx.translate(ox + torsoW * 0.47 + bodySwing, armBaseY);
+  ctx.rotate(rightArmAngle);
+  ctx.fillStyle = sc.body;
+  ctx.beginPath(); ctx.roundRect(-armW / 2, 0, armW, armL, 2 * s); ctx.fill();
+  ctx.shadowColor = sc.accent; ctx.shadowBlur = 5;
+  ctx.fillStyle = sc.accent;
+  ctx.beginPath(); ctx.arc(0, armL, armW * 0.78, 0, Math.PI * 2); ctx.fill();
+  ctx.shadowBlur = 0;
+  ctx.restore();
+
+  // Beer mug held by right arm
+  if (state === 'activity' && act === 'beer') {
+    const bob = Math.sin(tickVal * 0.18) * 3 * s;
+    ctx.save();
+    ctx.translate(ox + torsoW * 0.52 + bodySwing, armBaseY + armL * 0.6 + bob + bodyBob);
+    ctx.rotate(Math.sin(tickVal * 0.08) * 0.3 - 0.5);
+    ctx.fillStyle = '#c8a000'; ctx.fillRect(-3 * s, -18 * s, 7 * s, 18 * s);
+    ctx.fillStyle = '#e8d060'; ctx.fillRect(-3 * s, -24 * s, 7 * s, 7 * s);
+    ctx.restore();
+    if (Math.floor(tickVal / 15) % 2 === 0) {
+      ctx.fillStyle = 'rgba(255,200,50,0.8)';
+      ctx.font = `${Math.round(10 * s)}px serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText('🎵', ox + torsoW * 0.75 + bodySwing, torsoT + bodyBob);
+      ctx.textAlign = 'left';
+    }
+  }
+
+  // --- HEAD ---
+  ctx.save();
+  ctx.translate(bodySwing, bodyBob);
+
+  // RGB cyber glow
+  ctx.shadowColor = sc.glowColor;
+  ctx.shadowBlur = 10 + Math.sin(tickVal * 0.07) * 5;
+  ctx.fillStyle = sc.body;
+  ctx.beginPath(); ctx.arc(ox, headCY, headR, 0, Math.PI * 2); ctx.fill();
+  ctx.shadowBlur = 0;
+
+  // Dark face
+  ctx.fillStyle = '#12121e';
+  ctx.beginPath(); ctx.arc(ox, headCY, headR * 0.83, 0, Math.PI * 2); ctx.fill();
+
+  // Pointy cyber ears
+  ctx.fillStyle = sc.body;
+  // Left ear
+  ctx.beginPath();
+  ctx.moveTo(ox - headR * 0.42, headCY - headR * 0.62);
+  ctx.lineTo(ox - headR * 1.08, headCY - headR * 1.75);
+  ctx.lineTo(ox - headR * 0.05, headCY - headR * 0.88);
+  ctx.closePath(); ctx.fill();
+  // Right ear
+  ctx.beginPath();
+  ctx.moveTo(ox + headR * 0.42, headCY - headR * 0.62);
+  ctx.lineTo(ox + headR * 1.08, headCY - headR * 1.75);
+  ctx.lineTo(ox + headR * 0.05, headCY - headR * 0.88);
+  ctx.closePath(); ctx.fill();
+  // Inner ear glow
+  ctx.fillStyle = sc.accent + 'aa';
+  ctx.beginPath();
+  ctx.moveTo(ox - headR * 0.43, headCY - headR * 0.7);
+  ctx.lineTo(ox - headR * 0.92, headCY - headR * 1.55);
+  ctx.lineTo(ox - headR * 0.12, headCY - headR * 0.93);
+  ctx.closePath(); ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(ox + headR * 0.43, headCY - headR * 0.7);
+  ctx.lineTo(ox + headR * 0.92, headCY - headR * 1.55);
+  ctx.lineTo(ox + headR * 0.12, headCY - headR * 0.93);
+  ctx.closePath(); ctx.fill();
+
+  // --- EYES ---
+  const eyeY = headCY - headR * 0.1;
+  const eyeSpX = headR * 0.46;
+
+  // Glowing eyes
+  ctx.shadowColor = sc.eyeColor;
+  ctx.shadowBlur = 7 + Math.sin(tickVal * 0.11) * 3;
+  ctx.fillStyle = sc.eyeColor;
+  ctx.beginPath(); ctx.arc(ox - eyeSpX, eyeY, 4 * s, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.arc(ox + eyeSpX, eyeY, 4 * s, 0, Math.PI * 2); ctx.fill();
+  // Pupils
+  ctx.shadowBlur = 0;
+  ctx.fillStyle = '#000';
+  ctx.beginPath(); ctx.arc(ox - eyeSpX + s * 0.9, eyeY + s * 0.6, 2 * s, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.arc(ox + eyeSpX + s * 0.9, eyeY + s * 0.6, 2 * s, 0, Math.PI * 2); ctx.fill();
+
+  // Snout
+  ctx.fillStyle = sc.body;
+  ctx.beginPath();
+  ctx.ellipse(ox + headR * 0.05, headCY + headR * 0.44, headR * 0.36, headR * 0.27, 0, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#ff8899';
+  ctx.beginPath(); ctx.arc(ox + headR * 0.05, headCY + headR * 0.59, headR * 0.12, 0, Math.PI * 2); ctx.fill();
+
+  // === AGENT-SPECIFIC TRAITS ===
+
+  // Шнырь: golden crown
+  if (rat.id === 'shnyr' || rat.crown) {
+    ctx.fillStyle = '#ffcc00';
+    const cBase = headCY - headR * 0.86;
+    ctx.beginPath();
+    ctx.moveTo(ox - headR * 0.62, cBase);
+    ctx.lineTo(ox - headR * 0.5, cBase - headR * 0.78);
+    ctx.lineTo(ox - headR * 0.18, cBase - headR * 0.46);
+    ctx.lineTo(ox, cBase - headR * 0.92);
+    ctx.lineTo(ox + headR * 0.18, cBase - headR * 0.46);
+    ctx.lineTo(ox + headR * 0.5, cBase - headR * 0.78);
+    ctx.lineTo(ox + headR * 0.62, cBase);
+    ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = '#ff9900'; ctx.lineWidth = 0.8; ctx.stroke();
+    ctx.fillStyle = '#ff2244';
+    ctx.beginPath(); ctx.arc(ox, cBase - headR * 0.62, headR * 0.12, 0, Math.PI * 2); ctx.fill();
+  }
+
+  // Скользкий: cyber visor mask
+  if (rat.id === 'skolzkiy') {
+    ctx.fillStyle = 'rgba(130, 0, 190, 0.72)';
+    ctx.beginPath();
+    ctx.ellipse(ox, headCY + headR * 0.2, headR * 0.88, headR * 0.46, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = sc.accent; ctx.lineWidth = 1.5 * s;
+    ctx.beginPath();
+    ctx.moveTo(ox - headR * 0.85, headCY + headR * 0.1);
+    ctx.lineTo(ox + headR * 0.85, headCY + headR * 0.1);
+    ctx.stroke();
+    ctx.fillStyle = `rgba(210, 60, 255, ${0.18 + Math.sin(tickVal * 0.09) * 0.1})`;
+    ctx.beginPath();
+    ctx.ellipse(ox, headCY + headR * 0.1, headR * 0.72, headR * 0.36, 0, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Тыковка: nerd glasses
+  if (rat.id === 'tykovka') {
+    ctx.strokeStyle = '#44ddff'; ctx.lineWidth = 2 * s;
+    ctx.shadowColor = '#44ddff'; ctx.shadowBlur = 6;
+    ctx.beginPath(); ctx.arc(ox - eyeSpX, eyeY, 5.5 * s, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.arc(ox + eyeSpX, eyeY, 5.5 * s, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(ox - eyeSpX + 5.5 * s, eyeY);
+    ctx.lineTo(ox + eyeSpX - 5.5 * s, eyeY);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+  }
+
+  // Хрустик: headphones
+  if (rat.id === 'xrustik' || rat.headphones) {
+    ctx.strokeStyle = '#7a3a10'; ctx.lineWidth = 3.5 * s;
+    ctx.beginPath();
+    ctx.arc(ox, headCY, headR * 1.2, -Math.PI * 0.85, -Math.PI * 0.15);
+    ctx.stroke();
+    ctx.fillStyle = '#8B4513';
+    ctx.beginPath(); ctx.arc(ox - headR * 1.14, headCY, headR * 0.32, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(ox + headR * 1.14, headCY, headR * 0.32, 0, Math.PI * 2); ctx.fill();
+    ctx.shadowColor = sc.accent; ctx.shadowBlur = 6;
+    ctx.fillStyle = sc.accent;
+    ctx.beginPath(); ctx.arc(ox - headR * 1.14, headCY, headR * 0.16, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(ox + headR * 1.14, headCY, headR * 0.16, 0, Math.PI * 2); ctx.fill();
+    ctx.shadowBlur = 0;
+    // Music notes
+    const noteIdx = Math.floor(tickVal * 0.05) % 4;
+    const notes = ['♪','♫','♬','♩'];
+    const notePhase = (tickVal * 0.03) % 1;
+    ctx.fillStyle = `rgba(255,100,200,${0.8 - notePhase * 0.7})`;
+    ctx.font = `${Math.round(9 * s)}px serif`;
+    ctx.fillText(notes[noteIdx], ox + headR * 1.35, headCY - headR * 0.8 - notePhase * headR * 1.5);
+    if (notePhase > 0.5) {
+      ctx.fillStyle = `rgba(200,80,255,${0.8 - (notePhase - 0.5) * 1.6})`;
+      ctx.fillText(notes[(noteIdx + 1) % 4], ox + headR * 1.0, headCY - headR * 1.4 - (notePhase - 0.5) * headR * 1.5);
+    }
+  }
+
+  ctx.restore(); // end head group (bodySwing/bodyBob translate)
+
+  // --- NAME TAG ---
+  ctx.fillStyle = 'rgba(180,210,255,0.55)';
+  ctx.font = `${Math.round(8 * s)}px monospace`;
+  ctx.textAlign = 'center';
+  ctx.fillText(rat.name, ox + bodySwing, headCY - headR * 2.0 + bodyBob);
+  ctx.textAlign = 'left';
+
+  // --- ACTIVITY ICONS ---
+  if (state === 'activity' && act !== 'idle') {
+    const icons = {
+      typing:'⌨️', coffee:'☕', think:'💭', debug:'😤', commit:'🎉', gaming:'🎮',
+      tv:'📺', eat_pizza:'🍕', beer:'🍺', shower:'💧', gym:'💪', sex:'💕', sleep:'😴',
+      microwave:'🍕', toilet:'🚽', slot:'🎰'
+    };
+    if (icons[act]) {
+      ctx.font = `${Math.round(11 * s)}px serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText(icons[act], ox + bodySwing, headCY - headR * 3.0 + bodyBob);
+      ctx.textAlign = 'left';
+    }
+    ctx.font = `${Math.round(8 * s)}px monospace`;
+    ctx.textAlign = 'center';
+    if (act === 'commit' && Math.floor(tickVal / 28) % 2 === 0) {
+      ctx.fillStyle = '#ffcc44';
+      ctx.fillText('PUSH!', ox + bodySwing, headCY - headR * 4.0 + bodyBob);
+    }
+    if (act === 'debug' && Math.floor(tickVal / 18) % 2 === 0) {
+      ctx.fillStyle = '#ff4444';
+      ctx.fillText('WTF?!', ox + bodySwing, headCY - headR * 4.0 + bodyBob);
+    }
+    if (act === 'think') {
+      ctx.fillStyle = 'rgba(180,200,255,0.8)';
+      ctx.fillText('???', ox + bodySwing, headCY - headR * 4.0 + bodyBob);
+    }
+    if (act === 'typing') {
+      if (Math.floor(tickVal / 6) % 2 === 0) {
+        ctx.fillStyle = '#00aa44';
+        ctx.fillText('// code...', ox + bodySwing, headCY - headR * 3.6 + bodyBob);
+      }
+      if (tickVal % 10 === Math.floor(rat.x) % 10) {
+        rat.particles.push({
+          x: rat.x + (Math.random() - 0.5) * 30,
+          y: rat.y + headCY - headR * 2.5,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: -0.8 - Math.random() * 0.5,
+          color: 'rgba(0,200,80,0.7)', life: 40, size: 7,
+          isText: true, char: String.fromCharCode(65 + Math.floor(Math.random() * 26))
+        });
+      }
+    }
+    if (act === 'slot' && typeof slotSpinning !== 'undefined' && slotSpinning) {
+      ctx.fillStyle = '#ffcc00';
+      ctx.fillText('ВЕЗЁТ!', ox + bodySwing, headCY - headR * 4.0 + bodyBob);
+    }
+    ctx.textAlign = 'left';
+  }
 }
 
 function drawRat(rat) {
-  if (rat.crashed) { drawCrashedRat(rat); return; }
-  const {x, y, fur, belly, sz, facing, walkFrame, state, act, fat, crown, heart, blur, headphones, pinkMonitor} = rat;
+  const {x, y, sz, facing, blur} = rat;
+
+  // Crashed: handled inside drawCyberMouse
   ctx.save();
   ctx.translate(px(x), y);
-  if(facing<0) ctx.scale(-1,1);
-
-  const bw=Math.round(22*sz), bh=Math.round(15*sz);
+  if (facing < 0) ctx.scale(-1, 1);
 
   // Blur trail (Шустрик)
-  if(blur && rat.trail.length>0 && state==='walking'){
-    rat.trail.forEach((t,i)=>{
+  if (blur && rat.trail.length > 0 && rat.state === 'walking') {
+    rat.trail.forEach((t, i) => {
       ctx.save();
-      ctx.globalAlpha=(1-i/rat.trail.length)*0.28;
-      ctx.translate(px(t.x)-px(x), 0);
-      drawRatBody(0,0,bw,bh,fur,belly,false,false,false);
+      ctx.globalAlpha = (1 - i / rat.trail.length) * 0.28;
+      ctx.translate(px(t.x) - px(x), 0);
+      drawCyberMouse(0, 0, rat, tick);
       ctx.restore();
     });
   }
 
-  // Special: phone rat in bed
-  if(state==='activity' && act==='sleep' && rat.phoneInBed) {
+  // Special: phone rat in bed (Пузик)
+  if (rat.state === 'activity' && rat.act === 'sleep' && rat.phoneInBed) {
     ctx.save();
-    ctx.rotate(-0.38); ctx.translate(0, 4*sz);
-    drawRatBody(0,0,bw,bh,fur,belly,fat,crown,heart);
-    // Phone glow
-    ctx.shadowColor='rgba(150,200,255,0.8)'; ctx.shadowBlur=10;
-    fr_local(-bw*0.7+px(x)-px(x), -bh*1.3, bw*0.7, bh*0.9, '#001122');
-    ctx.shadowBlur=0;
-    ctx.fillStyle='#0044aa'; ctx.font=Math.round(7*sz)+'px monospace';
-    ctx.fillText('📱', bw*0.05, -bh*0.6);
-    // Scroll animation
-    const scrollY = (tick*0.5)%20;
-    ctx.fillStyle='rgba(100,150,255,0.4)';
-    ctx.fillRect(-bw*0.6, -bh*1.2+scrollY, bw*0.5, 4);
-    ctx.fillRect(-bw*0.6, -bh*1.2+scrollY+8, bw*0.4, 3);
-    ctx.restore();
-    ctx.save();
-    ctx.rotate(-0.38); ctx.translate(0,4*sz);
-    ctx.restore();
-    ctx.restore(); return;
-  }
-
-  function fr_local(lx,ly,lw,lh,c) {
-    ctx.fillStyle=c; ctx.fillRect(lx,ly,lw,lh);
-  }
-
-  // Sleep pose
-  if(state==='activity' && act==='sleep'){
-    ctx.save(); ctx.rotate(-0.38); ctx.translate(0,4*sz);
-    drawRatBody(0,0,bw,bh,fur,belly,fat,crown,heart);
-    ctx.restore();
-    ctx.fillStyle=`rgba(200,220,255,${0.5+Math.sin(tick*0.04)*0.3})`;
-    ctx.font=Math.round(8*sz)+'px monospace';
-    const zi=['z','zz','zzz'][Math.floor(tick/38)%3];
-    const zfloat=-bh*1.5-(tick%38)*0.2;
-    ctx.fillText(zi,bw*0.15,zfloat);
-    ctx.restore(); return;
-  }
-
-  if(state==='activity' && act==='sex'){
-    ctx.save(); ctx.scale(1,0.45);
-    drawRatBody(0,0,bw,bh,fur,belly,false,false,false);
-    ctx.restore(); ctx.restore(); return;
-  }
-
-  if(state==='activity' && act==='beer'){
-    // Dance bob
-    const bob = Math.sin(tick*0.18)*3;
-    ctx.save(); ctx.translate(0, bob);
-    ctx.save();
-    ctx.translate(bw*0.45,-bh*0.4);
-    ctx.rotate(Math.sin(tick*0.08)*0.3-0.5);
-    ctx.fillStyle='#c8a000'; ctx.fillRect(-3,-18,7,18);
-    ctx.fillStyle='#e8d000'; ctx.fillRect(-3,-24,7,7);
-    ctx.restore();
-    // Raised arm dance move
-    ctx.save();
-    ctx.translate(-bw*0.1, -bh*0.4);
-    ctx.rotate(Math.sin(tick*0.18)*0.8 - 1.2);
-    ctx.strokeStyle=fur; ctx.lineWidth=Math.round(3*sz);
-    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(0,-bh); ctx.stroke();
+    ctx.rotate(-0.38); ctx.translate(0, 4 * sz);
+    drawCyberMouse(0, 0, rat, tick);
+    // Phone glow overlay
+    const bw2 = Math.round(20 * sz), bh2 = Math.round(14 * sz);
+    ctx.shadowColor = 'rgba(150,200,255,0.8)'; ctx.shadowBlur = 10;
+    ctx.fillStyle = '#001122';
+    ctx.fillRect(-bw2 * 0.7, -bh2 * 2.2, bw2 * 0.9, bh2 * 1.2);
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = '#0044aa';
+    ctx.font = Math.round(7 * sz) + 'px monospace';
+    ctx.fillText('📱', -bw2 * 0.4, -bh2 * 1.4);
+    const scrollY = (tick * 0.5) % 20;
+    ctx.fillStyle = 'rgba(100,150,255,0.4)';
+    ctx.fillRect(-bw2 * 0.6, -bh2 * 2.0 + scrollY, bw2 * 0.5, 4);
+    ctx.fillRect(-bw2 * 0.6, -bh2 * 2.0 + scrollY + 8, bw2 * 0.4, 3);
     ctx.restore();
     ctx.restore();
-    // Music note above
-    if(Math.floor(tick/15)%2===0) {
-      ctx.fillStyle='rgba(255,200,50,0.8)';
-      ctx.font=Math.round(10*sz)+'px serif';
-      ctx.fillText('🎵',bw*0.2,-bh*2.5);
-    }
+    rat.particles.forEach(p => {
+      ctx.fillStyle = p.color;
+      if (p.isHeart) { ctx.font = p.size + 'px serif'; ctx.fillText('💕', px(p.x), p.y); }
+      else if (p.isText) { ctx.font = 'bold ' + p.size + 'px monospace'; ctx.fillText(p.char, px(p.x), p.y); }
+      else { ctx.shadowColor = p.color; ctx.shadowBlur = 3; ctx.fillRect(px(p.x), p.y, p.size, p.size); ctx.shadowBlur = 0; }
+    });
+    return;
   }
 
-  // Default draw
-  drawRatBody(0,0,bw,bh,fur,belly,fat,crown,heart);
-
-  // Headphones (for Шнырь or headphones rats)
-  if(headphones) {
-    const hx2=bw*0.46, hr2=bh*0.46;
-    ctx.strokeStyle='#222222'; ctx.lineWidth=Math.round(2.5*sz);
-    ctx.beginPath();
-    ctx.arc(hx2, -bh*0.06, hr2*1.1, -Math.PI*0.9, -Math.PI*0.1);
-    ctx.stroke();
-    ctx.fillStyle='#ff44aa';
-    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.3, 0, Math.PI*2); ctx.fill();
-    ctx.beginPath(); ctx.arc(hx2+hr2*1.05, -bh*0.06, hr2*0.3, 0, Math.PI*2); ctx.fill();
-    ctx.fillStyle='#222222';
-    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.2, 0, Math.PI*2); ctx.fill();
-    ctx.beginPath(); ctx.arc(hx2+hr2*1.05, -bh*0.06, hr2*0.2, 0, Math.PI*2); ctx.fill();
-    // LED glow
-    ctx.shadowColor='#ff44aa'; ctx.shadowBlur=6+Math.sin(tick*0.15)*3;
-    ctx.fillStyle=`rgba(255,68,170,${0.6+Math.sin(tick*0.2)*0.3})`;
-    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.14, 0, Math.PI*2); ctx.fill();
-    ctx.shadowBlur=0;
-    // Music notes floating up
-    const noteIdx = Math.floor(tick*0.05)%4;
-    const notes = ['♪','♫','♬','♩'];
-    const notePhase = (tick * 0.03) % 1;
-    ctx.fillStyle=`rgba(255,100,200,${0.8-notePhase*0.7})`;
-    ctx.font=Math.round(9*sz)+'px serif';
-    ctx.fillText(notes[noteIdx], hx2+hr2*1.2, -bh*1.2 - notePhase*bh*1.5);
-    if(notePhase > 0.5) {
-      ctx.fillStyle=`rgba(200,80,255,${0.8-(notePhase-0.5)*1.6})`;
-      ctx.fillText(notes[(noteIdx+1)%4], hx2+hr2*0.8, -bh*1.8 - (notePhase-0.5)*bh*1.5);
-    }
-  }
-
-  // Legs
-  ctx.fillStyle=fur;
-  if(state==='walking'){
-    const lv=[0,1,0,-1][walkFrame]*3*sz;
-    ctx.fillRect(-bw*0.3,bh*0.42,Math.round(5*sz),Math.round(7*sz)+lv);
-    ctx.fillRect(bw*0.06,bh*0.42,Math.round(5*sz),Math.round(7*sz)-lv);
-  } else {
-    ctx.fillRect(-bw*0.3,bh*0.42,Math.round(5*sz),Math.round(7*sz));
-    ctx.fillRect(bw*0.06,bh*0.42,Math.round(5*sz),Math.round(7*sz));
-  }
-
-  // Activity icons
-  if(state==='activity' && act!=='idle'){
-    const icons={typing:'⌨️',coffee:'☕',think:'💭',debug:'😤',commit:'🎉',gaming:'🎮',
-      tv:'📺',eat_pizza:'🍕',beer:'🍺',shower:'💧',gym:'💪',sex:'💕',sleep:'😴',
-      microwave:'🍕',toilet:'🚽',slot:'🎰'};
-    if(icons[act]){ctx.font=Math.round(11*sz)+'px serif'; ctx.fillText(icons[act],0,-bh*1.9);}
-    ctx.font=Math.round(8*sz)+'px monospace'; ctx.textAlign='center';
-    if(act==='commit' && Math.floor(tick/28)%2===0){ctx.fillStyle='#ffcc44';ctx.fillText('PUSH!',0,-bh*2.8);}
-    if(act==='debug' && Math.floor(tick/18)%2===0){ctx.fillStyle='#ff4444';ctx.fillText('WTF?!',0,-bh*2.8);}
-    if(act==='think'){ctx.fillStyle='rgba(180,200,255,0.8)';ctx.fillText('???',0,-bh*2.8);}
-    if(act==='typing') {
-      if(Math.floor(tick/6)%2===0){ctx.fillStyle='#00aa44';ctx.fillText('// code...',0,-bh*2.6);}
-      // Floating key letters
-      if(tick%10===Math.floor(rat.x)%10) {
-        rat.particles.push({
-          x:rat.x+(Math.random()-0.5)*30, y:rat.y-bh*2,
-          vx:(Math.random()-0.5)*0.8, vy:-0.8-Math.random()*0.5,
-          color:'rgba(0,200,80,0.7)', life:40, size:7,
-          isText:true, char:String.fromCharCode(65+Math.floor(Math.random()*26))
-        });
-      }
-    }
-    if(act==='slot' && slotSpinning){ctx.fillStyle='#ffcc00';ctx.fillText('ВЕЗЁТ!',0,-bh*2.8);}
-    ctx.textAlign='left';
-  }
-
-  // Name tag
-  ctx.fillStyle='rgba(200,225,255,0.55)';
-  ctx.font=Math.round(8*sz)+'px monospace';
-  ctx.textAlign='center'; ctx.fillText(rat.name,0,-bh*1.0-3); ctx.textAlign='left';
-
+  drawCyberMouse(0, 0, rat, tick);
   ctx.restore();
 
   // Particles outside transform
-  rat.particles.forEach(p=>{
-    ctx.fillStyle=p.color;
-    if(p.isHeart){ctx.font=p.size+'px serif';ctx.fillText('💕',px(p.x),p.y);}
-    else if(p.isText){ctx.font='bold '+p.size+'px monospace';ctx.fillText(p.char,px(p.x),p.y);}
-    else{ctx.shadowColor=p.color;ctx.shadowBlur=3;ctx.fillRect(px(p.x),p.y,p.size,p.size);ctx.shadowBlur=0;}
+  rat.particles.forEach(p => {
+    ctx.fillStyle = p.color;
+    if (p.isHeart) { ctx.font = p.size + 'px serif'; ctx.fillText('💕', px(p.x), p.y); }
+    else if (p.isText) { ctx.font = 'bold ' + p.size + 'px monospace'; ctx.fillText(p.char, px(p.x), p.y); }
+    else { ctx.shadowColor = p.color; ctx.shadowBlur = 3; ctx.fillRect(px(p.x), p.y, p.size, p.size); ctx.shadowBlur = 0; }
   });
 }
+
 
 // ═══════════════════════════════════════════════
 // CHAT BUBBLES DRAW
