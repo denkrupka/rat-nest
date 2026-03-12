@@ -13,10 +13,7 @@ html, body {
   font-family: 'Courier New', monospace;
 }
 canvas {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; height: 100vh;
   display: block;
   cursor: crosshair;
 }
@@ -239,67 +236,6 @@ function getDenSpots() {
     { x: w * 0.85, y: dY + dH * 0.45 }, // toilet
     { x: w * 0.93, y: dY + dH * 0.55 }  // medkit
   ];
-}
-
-// ─── Furniture Interaction System ───────────────────────────────────────────
-function getFurnitureSpots() {
-  const w = W(), dY = denY(), dH = denH();
-  return [
-    { type: 'bed',       x: w * 0.125,  y: dY + dH * 0.455 }, // center of bed
-    { type: 'sofa',      x: w * 0.32,   y: dY + dH * 0.52  }, // center of sofa
-    { type: 'microwave', x: w * 0.555,  y: dY + dH * 0.34  }, // beside microwave
-    { type: 'arcade',    x: w * 0.695,  y: dY + dH * 0.42  }, // beside arcade
-  ];
-}
-
-// furniture occupancy: type -> mouseIndex or null
-const furnitureOccupancy = { bed: null, sofa: null, microwave: null, arcade: null };
-// per-mouse furniture assignment when idle
-const idleFurnitureAssignment = {}; // mouseIndex -> furnitureType or null
-
-function updateIdleFurnitureAssignments() {
-  const spots = getFurnitureSpots();
-
-  // Release furniture from mice that are no longer idle
-  for (let i = 0; i < 8; i++) {
-    const agent = agents[i];
-    const assigned = idleFurnitureAssignment[i];
-    if (assigned && (!agent || agent.status !== 'idle')) {
-      furnitureOccupancy[assigned] = null;
-      idleFurnitureAssignment[i] = null;
-    }
-  }
-
-  // Assign furniture to idle mice without an assignment
-  for (let i = 0; i < 8; i++) {
-    const agent = agents[i];
-    if (!agent || agent.status !== 'idle') continue;
-    if (idleFurnitureAssignment[i]) continue; // already assigned
-
-    // Find nearest free furniture spot
-    const stationX = getStations()[i].x;
-    const stationY = getStations()[i].y;
-    // Use den spot as fallback position for distance calc
-    const dY = denY(), dH = denH();
-    const myX = stationX; // use station x as reference
-    const myY = dY + dH * 0.5;
-
-    let bestDist = Infinity, bestSpot = null;
-    for (const spot of spots) {
-      if (furnitureOccupancy[spot.type] !== null) continue; // occupied
-      const dist = Math.hypot(spot.x - myX, spot.y - myY);
-      if (dist < bestDist) {
-        bestDist = dist;
-        bestSpot = spot;
-      }
-    }
-
-    if (bestSpot) {
-      idleFurnitureAssignment[i] = bestSpot.type;
-      furnitureOccupancy[bestSpot.type] = i;
-    }
-    // If no furniture available, assignment remains null (wander in den)
-  }
 }
 
 // ─── Draw Environment ────────────────────────────────────────────────────────
@@ -687,7 +623,7 @@ function drawMedkit(x, y) {
 }
 
 // ─── Draw Mouse ──────────────────────────────────────────────────────────────
-function drawMouse(mx, my, cfg, status, anim, t, idleActivity) {
+function drawMouse(mx, my, cfg, status, anim, t) {
   ctx.save();
   ctx.translate(mx, my);
 
@@ -697,14 +633,6 @@ function drawMouse(mx, my, cfg, status, anim, t, idleActivity) {
   if (crashed) {
     ctx.rotate(Math.PI / 2);
     ctx.globalAlpha = 0.5;
-  }
-
-  // Furniture-specific posture transforms
-  if (idleActivity === 'bed') {
-    ctx.rotate(Math.PI / 2); // lying on side
-  } else if (idleActivity === 'sofa') {
-    ctx.scale(1, 0.75); // squished sitting
-    ctx.translate(0, 8);
   }
 
   // Scale
@@ -770,16 +698,6 @@ function drawMouse(mx, my, cfg, status, anim, t, idleActivity) {
     const typeCycle = Math.floor(t / 500) % 2;
     armLAngle = typeCycle === 0 ? -0.4 : -0.7;
     armRAngle = typeCycle === 0 ? -0.7 : -0.4;
-  } else if (idleActivity === 'arcade') {
-    // Arms raised for gaming
-    const gamePulse = Math.sin(t * 0.006) * 0.2;
-    armLAngle = -1.8 + gamePulse;
-    armRAngle = -1.8 - gamePulse;
-  } else if (idleActivity === 'microwave') {
-    // One arm raised (eating)
-    const eatPhase = Math.floor(t / 400) % 4;
-    armLAngle = eatPhase < 2 ? -0.8 : -0.3;
-    armRAngle = -0.1;
   }
 
   // Left arm
@@ -946,39 +864,12 @@ function drawMouse(mx, my, cfg, status, anim, t, idleActivity) {
     ctx.stroke();
   }
 
-  // ── IDLE: animations by furniture ──
+  // ── IDLE: ZZZ ──
   if (status === 'idle') {
-    if (idleActivity === 'bed') {
-      // ZZZ for sleeping on bed
-      const zPhase = Math.floor(t / 1500) % 3;
-      ctx.fillStyle = 'rgba(150,180,255,0.9)';
-      ctx.font = `bold ${10 + zPhase * 3}px monospace`;
-      ctx.fillText('z'.repeat(zPhase + 1), 12 + zPhase * 4, headY - 20 - zPhase * 6);
-    } else if (idleActivity === 'sofa') {
-      // Comfortable sitting — small content bubble
-      const bounceY = Math.sin(t * 0.001) * 2;
-      ctx.fillStyle = 'rgba(255,200,100,0.85)';
-      ctx.font = 'bold 11px monospace';
-      ctx.fillText('😌', 10, headY - 18 + bounceY);
-    } else if (idleActivity === 'microwave') {
-      // Eating animation — arm raise alternate + nom
-      const eatPhase = Math.floor(t / 400) % 4;
-      ctx.fillStyle = 'rgba(100,255,150,0.85)';
-      ctx.font = 'bold 11px monospace';
-      ctx.fillText(eatPhase < 2 ? '🍕' : '😋', 10, headY - 18);
-    } else if (idleActivity === 'arcade') {
-      // Gaming — arms up + score
-      const score = (Math.floor(t / 2000) * 10 + 30);
-      ctx.fillStyle = 'rgba(200,100,255,0.9)';
-      ctx.font = 'bold 10px monospace';
-      ctx.fillText(`+${score}`, 14, headY - 24);
-    } else {
-      // No furniture — generic wandering ZZZ
-      const zPhase = Math.floor(t / 1500) % 3;
-      ctx.fillStyle = 'rgba(150,180,255,0.8)';
-      ctx.font = `bold ${10 + zPhase * 3}px monospace`;
-      ctx.fillText('z'.repeat(zPhase + 1), 12 + zPhase * 4, headY - 20 - zPhase * 6);
-    }
+    const zPhase = Math.floor(t / 1500) % 3;
+    ctx.fillStyle = 'rgba(150,180,255,0.8)';
+    ctx.font = `bold ${10 + zPhase * 3}px monospace`;
+    ctx.fillText('z'.repeat(zPhase + 1), 12 + zPhase * 4, headY - 20 - zPhase * 6);
   }
 
   // ── CRASHED: Red cross blink ──
@@ -1158,10 +1049,6 @@ function render(t) {
 
   const stations   = getStations();
   const denSpots   = getDenSpots();
-  const furniSpots = getFurnitureSpots();
-
-  // Update idle→furniture assignments
-  updateIdleFurnitureAssignments();
 
   // Draw mice
   for (let i = 0; i < 8; i++) {
@@ -1170,36 +1057,16 @@ function render(t) {
     const cfg = MOUSE_CONFIGS[i];
     const anim = mouseAnim[i] || {};
 
-    let mx, my, idleActivity = null;
+    let mx, my;
     if (agent.status === 'working') {
-      // Working: ALWAYS at their desk in the office
       mx = stations[i].x;
       my = stations[i].y - 5;
     } else if (agent.status === 'idle') {
-      const assignment = idleFurnitureAssignment[i];
-      if (assignment) {
-        // Go to assigned furniture spot
-        const spot = furniSpots.find(s => s.type === assignment);
-        if (spot) {
-          // Gentle micro-oscillation near furniture
-          const wo = Math.sin(t * 0.0015 + i * 2.1) * 3;
-          mx = spot.x + wo;
-          my = spot.y;
-          idleActivity = assignment;
-        } else {
-          // Fallback: wander in den
-          const wx = Math.sin(t * 0.0008 + i * 1.3) * (W() * 0.028);
-          const wy = Math.cos(t * 0.0012 + i * 0.9) * (H() * 0.022);
-          mx = denSpots[i % denSpots.length].x + wx;
-          my = denSpots[i % denSpots.length].y + wy;
-        }
-      } else {
-        // No furniture available, wander in den
-        const wx = Math.sin(t * 0.0008 + i * 1.3) * (W() * 0.028);
-        const wy = Math.cos(t * 0.0012 + i * 0.9) * (H() * 0.022);
-        mx = denSpots[i % denSpots.length].x + wx;
-        my = denSpots[i % denSpots.length].y + wy;
-      }
+      // Wander in den spot with gentle oscillation
+      const wx = Math.sin(t * 0.0008 + i * 1.3) * (W() * 0.028);
+      const wy = Math.cos(t * 0.0012 + i * 0.9) * (H() * 0.022);
+      mx = denSpots[i].x + wx;
+      my = denSpots[i].y + wy;
     } else {
       // crashed: at station
       mx = stations[i].x;
@@ -1211,7 +1078,7 @@ function render(t) {
     mouseAnim[i].screenX = mx;
     mouseAnim[i].screenY = my;
 
-    drawMouse(mx, my, cfg, agent.status, anim, t, idleActivity);
+    drawMouse(mx, my, cfg, agent.status, anim, t);
 
     // Mouse label
     ctx.fillStyle = 'rgba(100,130,180,0.6)';
