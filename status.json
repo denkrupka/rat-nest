@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T15:15:00Z",
+  "updated": "2026-03-12T15:17:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,10 +7,10 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и координирует мышей",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу и организует работу",
+      "commits": 247,
+      "workMinutes": 3840,
+      "totalMinutes": 3840
     },
     {
       "id": "miron001",
@@ -18,76 +18,76 @@
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит на серверах",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает PostgreSQL и миграции",
+      "commits": 156,
+      "workMinutes": 2640,
+      "totalMinutes": 2640
     },
     {
-      "id": "zhirobo",
+      "id": "zhiroba1",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Отстраивает инфру в облаках",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит после деплоя на продакшене",
+      "commits": 89,
+      "workMinutes": 1980,
+      "totalMinutes": 1980
     },
     {
-      "id": "shustri",
+      "id": "shustri1",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Рисует красивые кнопки и делает ужимки",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Рисует красивые кнопки и формы",
+      "commits": 312,
+      "workMinutes": 4200,
+      "totalMinutes": 4200
     },
     {
-      "id": "skolzky",
+      "id": "skozlki1",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "Ловит хакеров и падает в свежегенерируемые дыры",
-      "commits": 0,
+      "task": "Ловит уязвимости в коде",
+      "commits": 42,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 840
     },
     {
-      "id": "tykovna",
+      "id": "tykovna1",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Ломает всё что могла и потом кусает",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверяет Playwright тесты",
+      "commits": 203,
+      "workMinutes": 3120,
+      "totalMinutes": 3120
     },
     {
-      "id": "khrusty",
+      "id": "hrustik1",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Грызёт данные и ищет паттерны",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует метрики и структурирует данные",
+      "commits": 67,
+      "workMinutes": 1680,
+      "totalMinutes": 1680
     },
     {
-      "id": "gryzik0",
+      "id": "gryzik01",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Ломает мобильнявы и ест сыр",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пилит React Native приложение",
+      "commits": 134,
+      "workMinutes": 2400,
+      "totalMinutes": 2400
     }
   ]
 }
