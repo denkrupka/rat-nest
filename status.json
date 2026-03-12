@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет тест-케이с",
+      "task": "Пишет тест-кейсы",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
