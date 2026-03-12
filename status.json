@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T22:03:00Z",
+  "updated": "2026-03-12T22:05:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "agent001",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу и перезаряжается",
-      "commits": 147,
-      "workMinutes": 1320,
-      "totalMinutes": 1320
-    },
-    {
-      "id": "miron02",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "спит после продакшена",
-      "commits": 89,
-      "workMinutes": 890,
-      "totalMinutes": 890
-    },
-    {
-      "id": "zhiro03",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "чекит логи CI/CD",
-      "commits": 56,
-      "workMinutes": 620,
-      "totalMinutes": 620
-    },
-    {
-      "id": "shustr04",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "рефакторит CSS-ы",
-      "commits": 134,
-      "workMinutes": 1105,
-      "totalMinutes": 1105
-    },
-    {
-      "id": "sklzk05",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "баг в валидации JWT",
+      "task": "Отдыхает, кормит крысят",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykova06",
+      "id": "agent002",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Ест пиццу из ночного бара",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "agent003",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Спит в ящике с чипсами",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "agent004",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Играет в пинг-понг",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "agent005",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Завис на баге в OpenSSL",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "agent006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "пишет Playwright тесты",
-      "commits": 78,
-      "workMinutes": 780,
-      "totalMinutes": 780
+      "task": "Тестирует сыр из холодильника",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik07",
+      "id": "agent007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "анализирует метрики пользователей",
-      "commits": 34,
-      "workMinutes": 450,
-      "totalMinutes": 450
-    },
-    {
-      "id": "gryzik08",
-      "name": "Грызик",
-      "role": "Mobile",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "оптимизирует React Native",
-      "commits": 45,
-      "workMinutes": 520,
-      "totalMinutes": 520
+      "task": "Грызёт аналитику в углу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "agent008",
+      "name": "Грызик",
+      "role": "Mobile",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Медитирует в стартапе",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
