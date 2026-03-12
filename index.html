@@ -417,6 +417,11 @@ rebuildSpots();
 const rats = RAT_DEFS.map(d => new Rat(d));
 
 // ═══════════════════════════════════════════════
+// TUNNEL POSITIONS (global — used in drawBG and cat scare logic)
+// ═══════════════════════════════════════════════
+const TUNNELS = [100, 1100, 2400];
+
+// ═══════════════════════════════════════════════
 // MINI EVENTS
 // ═══════════════════════════════════════════════
 let miniEvents = [];
@@ -600,8 +605,6 @@ function drawBG() {
   }
 
   // Tunnel holes in floor
-  const TUNNELS = [100, 1100, 2400];
-
   TUNNELS.forEach(tx2 => {
     // Hole shadow
     const hg = ctx.createRadialGradient(px(tx2+22),FLOOR_Y+FLOOR_H/2,5,px(tx2+22),FLOOR_Y+FLOOR_H/2,40);
