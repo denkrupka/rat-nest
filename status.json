@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T09:44:00Z",
+  "updated": "2026-03-12T09:47:00Z",
   "agents": [
     {
-      "id": "shnyr01",
+      "id": "session01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Готовит обновление портала MaxMaster",
-      "commits": 42,
-      "workMinutes": 0,
-      "totalMinutes": 127
-    },
-    {
-      "id": "miron02",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Рефакторит Edge Functions для Supabase",
-      "commits": 18,
-      "workMinutes": 0,
-      "totalMinutes": 85
-    },
-    {
-      "id": "zhiro03",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Настраивает GitHub Actions CI/CD pipeline",
-      "commits": 9,
-      "workMinutes": 0,
-      "totalMinutes": 52
-    },
-    {
-      "id": "shust04",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Пилит React компоненты для дашборда",
-      "commits": 31,
-      "workMinutes": 0,
-      "totalMinutes": 94
-    },
-    {
-      "id": "skolk05",
-      "name": "Скользкий",
-      "role": "Security",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Проводит аудит JWT и RLS политик",
-      "commits": 12,
+      "task": "Ест пиццу в перерыве между коммитами",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 67
+      "totalMinutes": 0
     },
     {
-      "id": "tykvo06",
+      "id": "session02",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Оптимизирует SQL запросы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "session03",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Смотрит логи Docker контейнеров",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "session04",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Спит над Tailwind макетом",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "session05",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Проверяет уязвимости в зависимостях",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "session06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет E2E тесты на Playwright",
-      "commits": 24,
+      "task": "Пишет тесты на Playwright",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 73
+      "totalMinutes": 0
     },
     {
-      "id": "hrusk07",
+      "id": "session07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует юзер метрики и строит запросы",
-      "commits": 8,
+      "task": "Парсит CSV в PostgreSQL",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 41
+      "totalMinutes": 0
     },
     {
-      "id": "gryzk08",
+      "id": "session08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Портирует фичи на мобильный Expo",
-      "commits": 15,
+      "task": "Судит Expo build для iOS",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 58
+      "totalMinutes": 0
     }
   ]
 }
