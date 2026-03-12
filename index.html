@@ -317,7 +317,7 @@ let miniEvents = [];
 let nextEventIn = 4800 + Math.random()*3600;
 
 function triggerMiniEvent() {
-  const types = ['deliveroo','proddown','coffee_spill','pizza_delivery'];
+  const types = ['deliveroo','proddown','coffee_spill','pizza_delivery','lunch_break','power_outage'];
   const type = types[Math.floor(Math.random()*types.length)];
   if (type === 'deliveroo' || type === 'pizza_delivery') {
     miniEvents.push({type, wx:-60, wy:dY(0.75), timer:600});
@@ -331,6 +331,17 @@ function triggerMiniEvent() {
       r.tx = 1600 + Math.random()*300; r.ty = oY(0.6)+Math.random()*60;
       r.state = 'walking'; r.act = 'debug';
     });
+  } else if(type === 'lunch_break') {
+    miniEvents.push({type, timer:480});
+    // All office rats head to den kitchen
+    rats.filter(r=>r.zone==='office').slice(0,4).forEach(r => {
+      r.zone='den';
+      r.tx = 1100 + Math.random()*200; r.ty = dY(0.55)+Math.random()*40;
+      r.state='walking';
+      setTimeout(()=>{ r.zone='office'; r.tx=600+Math.random()*800; r.ty=oY(0.75); r.state='walking'; }, 8000);
+    });
+  } else if(type === 'power_outage') {
+    miniEvents.push({type, timer:200});
   } else {
     miniEvents.push({type, wx:800+Math.random()*600, wy:oY(0.75)+Math.random()*40, timer:500});
   }
@@ -646,8 +657,14 @@ function drawDen() {
   // ── BAR ──
   drawBar(2480, dy);
 
+  // ── DEN FIRE EXTINGUISHER ──
+  drawFireExtinguisher(1770, dy);
+
   // ── DISCO LIGHTS in bar ──
   drawDiscoLights(2480, dy);
+
+  // ── HANGOUT AREA RUG ──
+  drawRug(2780, dY(0.65));
 
   // ── BOUNCING BALL ──
   const ballX = 3200 + Math.sin(tick*0.05)*80;
@@ -962,6 +979,34 @@ function drawBar(x, y) {
   ctx.fillRect(px(x-10), y, 180, h+30);
 }
 
+function drawRug(x, y) {
+  const w=180, h=80;
+  ctx.save();
+  // Rug base
+  ctx.fillStyle='rgba(120,40,10,0.7)';
+  ctx.beginPath(); ctx.ellipse(px(x+w/2), y+h/2, w/2, h/2, 0, 0, Math.PI*2); ctx.fill();
+  // Pattern
+  ctx.strokeStyle='rgba(200,100,30,0.5)'; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.ellipse(px(x+w/2), y+h/2, w*0.4, h*0.4, 0, 0, Math.PI*2); ctx.stroke();
+  ctx.strokeStyle='rgba(220,160,50,0.4)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.ellipse(px(x+w/2), y+h/2, w*0.25, h*0.25, 0, 0, Math.PI*2); ctx.stroke();
+  // Fringe
+  for(let f=-8;f<=8;f+=2) {
+    ctx.strokeStyle='rgba(180,80,10,0.5)'; ctx.lineWidth=0.5;
+    ctx.beginPath(); ctx.moveTo(px(x+w/2+f*10), y); ctx.lineTo(px(x+w/2+f*10), y-6); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(px(x+w/2+f*10), y+h); ctx.lineTo(px(x+w/2+f*10), y+h+6); ctx.stroke();
+  }
+  // Bean bags on rug
+  for(let b=0;b<3;b++) {
+    const bx=x+30+b*60, by2=y+20;
+    ctx.fillStyle=['#882200','#004488','#224400'][b];
+    ctx.beginPath(); ctx.ellipse(px(bx), by2+20, 22, 18, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle=['#cc4400','#0066cc','#336600'][b];
+    ctx.beginPath(); ctx.ellipse(px(bx), by2+15, 16, 12, 0, 0, Math.PI*2); ctx.fill();
+  }
+  ctx.restore();
+}
+
 function drawDiscoLights(x, y) {
   // Rotating disco lights from ceiling
   const DISCO_COLORS = ['#ff2244','#22ffaa','#4488ff','#ffcc00','#ff44ff','#44ffff'];
@@ -1175,6 +1220,21 @@ function drawOffice() {
   em('🌿', 500, oFloor()-4, 16); em('🌱', 1390, oFloor()-6, 14);
   em('🌿', 2430, oFloor()-4, 16); em('🌱', 3100, oFloor()-6, 14);
 
+  // Fish tank
+  drawFishTank(2360, oY(0.50));
+
+  // Wall calendar
+  drawCalendar(3200, oY(0.20));
+
+  // Fire extinguisher
+  drawFireExtinguisher(3340, oY(0.70));
+
+  // Post-it notes cluster
+  drawPostIts(1460, oY(0.40));
+
+  // Motivational poster
+  drawMotivationalPoster(3420, oY(0.20));
+
   // Water cooler
   fr(2340, oY(0.55), 26, 54, '#aabbcc'); sr(2340, oY(0.55), 26, 54, '#889aaa', 2);
   fr(2344, oY(0.55)+4, 18, 24, 'rgba(100,180,255,0.3)');
@@ -1310,6 +1370,145 @@ function drawCoffeeMachine(x, y) {
     ctx.fillRect(px(x+28+s*7),sy2,3,8);
   }
   em('☕',x+28,y+94,12);
+}
+
+function drawFishTank(x, y) {
+  const w=62, h=46;
+  // Tank glass
+  fr(x, y, w, h, 'rgba(0,30,60,0.8)'); sr(x, y, w, h, '#336688', 2);
+  // Water gradient
+  const wg = ctx.createLinearGradient(0, y, 0, y+h);
+  wg.addColorStop(0, 'rgba(0,80,140,0.4)'); wg.addColorStop(1, 'rgba(0,40,80,0.6)');
+  ctx.fillStyle=wg; ctx.fillRect(px(x+2),y+2,w-4,h-4);
+  // Bubbles
+  for(let b=0;b<5;b++) {
+    const by2 = y+h-4 - ((tick*0.6+b*9)%(h-8));
+    const ba = 0.3+Math.sin(tick*0.08+b)*0.2;
+    ctx.fillStyle=`rgba(150,220,255,${ba})`;
+    ctx.beginPath(); ctx.arc(px(x+8+b*10), by2, 1.5, 0, Math.PI*2); ctx.fill();
+  }
+  // Fish 1
+  const f1x = x+8 + Math.sin(tick*0.04)*22;
+  const f1y = y+h*0.4 + Math.sin(tick*0.07)*8;
+  const f1dir = Math.cos(tick*0.04) > 0 ? 1 : -1;
+  ctx.save(); ctx.translate(px(f1x), f1y); if(f1dir<0) ctx.scale(-1,1);
+  ctx.fillStyle='#ff8822';
+  ctx.beginPath(); ctx.ellipse(0,0,7,4,0,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#ffaa44';
+  ctx.beginPath(); ctx.moveTo(-7,0); ctx.lineTo(-12,-4); ctx.lineTo(-12,4); ctx.closePath(); ctx.fill();
+  ctx.restore();
+  // Fish 2 (smaller, blue)
+  const f2x = x+12 + Math.sin(tick*0.06+1.5)*20;
+  const f2y = y+h*0.65 + Math.sin(tick*0.1)*6;
+  const f2dir = Math.cos(tick*0.06+1.5) > 0 ? 1 : -1;
+  ctx.save(); ctx.translate(px(f2x), f2y); if(f2dir<0) ctx.scale(-1,1);
+  ctx.fillStyle='#4488ff';
+  ctx.beginPath(); ctx.ellipse(0,0,5,3,0,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+  // Seaweed
+  ctx.strokeStyle='rgba(0,180,60,0.6)'; ctx.lineWidth=2;
+  for(let s=0;s<3;s++) {
+    const sa = Math.sin(tick*0.03+s*0.8);
+    ctx.beginPath(); ctx.moveTo(px(x+10+s*18),y+h-4);
+    ctx.bezierCurveTo(px(x+10+s*18+sa*5),y+h-14, px(x+10+s*18-sa*5),y+h-24, px(x+10+s*18+sa*3),y+h-32);
+    ctx.stroke();
+  }
+  // Sand
+  ctx.fillStyle='#8a6a3a'; ctx.fillRect(px(x+2),y+h-5,w-4,4);
+  // Label
+  tx('🐟 ПЕТЯ', x+2, y+h+10, '#225588', 8);
+}
+
+function drawCalendar(x, y) {
+  const w=56, h=64;
+  fr(x, y, w, h, '#f5f5f0'); sr(x, y, w, h, '#cccccc', 2);
+  // Header
+  fr(x, y, w, 18, '#cc2222'); tx('МАРТ', x+14, y+13, '#fff', 9);
+  // Rings
+  fr(x+16, y-4, 5, 8, '#888'); fr(x+32, y-4, 5, 8, '#888');
+  // Days grid
+  ctx.font='6px monospace';
+  const days=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+  days.forEach((d,i) => {
+    ctx.fillStyle='#666';
+    ctx.fillText(d, px(x+3+i*8), y+28);
+  });
+  const today = new Date().getDate();
+  for(let d=1;d<=31;d++) {
+    const row=Math.floor((d-1)/7), col=(d-1)%7;
+    const dx=x+3+col*8, dy2=y+36+row*9;
+    const isToday=d===today;
+    if(isToday) { fr(dx-1,dy2-7,8,8,'#cc2222'); ctx.fillStyle='#fff'; }
+    else ctx.fillStyle = col>=5 ? '#cc4444' : '#333';
+    ctx.fillText(d.toString(), px(dx), dy2);
+  }
+  // Mark deadline
+  em('💀', x+38, y+54, 8);
+}
+
+function drawFireExtinguisher(x, y) {
+  const h=50;
+  fr(x+6, y, 18, h, '#cc2222'); sr(x+6, y, 18, h, '#881111', 2);
+  fr(x+8, y-12, 14, 14, '#888');
+  fr(x+13, y-18, 4, 8, '#555');
+  fr(x+10, y+h, 10, 6, '#441111');
+  fr(x+3, y+h*0.3, 24, 6, '#ff4444');
+  // Hose
+  ctx.strokeStyle='#444'; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(px(x+6),y+h*0.2);
+  ctx.bezierCurveTo(px(x-10),y+h*0.5, px(x-8),y+h*0.7, px(x-4),y+h*0.75);
+  ctx.stroke();
+  em('🔥', x-6, y+h, 10);
+}
+
+function drawPostIts(x, y) {
+  const notes = [
+    {txt:['FIX IT!','URGENT'], c:'#ffee44', dx:0, dy:0},
+    {txt:['call Denis','re: server'], c:'#ff88aa', dx:52, dy:-8},
+    {txt:['coffee?','yes pls'], c:'#88ffaa', dx:24, dy:40},
+    {txt:['TODO:','everything'], c:'#88aaff', dx:-10, dy:30},
+  ];
+  notes.forEach((n, i) => {
+    const nx=x+n.dx, ny=y+n.dy;
+    const tilt = (i%2===0?1:-1)*0.08;
+    ctx.save();
+    ctx.translate(px(nx+22), ny+22);
+    ctx.rotate(tilt);
+    ctx.fillStyle=n.c+'dd';
+    ctx.fillRect(-22,-22,44,40);
+    ctx.strokeStyle=n.c; ctx.lineWidth=0.5;
+    ctx.strokeRect(-22,-22,44,40);
+    ctx.fillStyle='rgba(0,0,0,0.7)'; ctx.font='7px monospace';
+    n.txt.forEach((t,j) => ctx.fillText(t,-20,-10+j*12));
+    // Shadow
+    ctx.fillStyle='rgba(0,0,0,0.15)';
+    ctx.fillRect(-20,18,44,4);
+    ctx.restore();
+  });
+  // Pin at top
+  notes.forEach((n, i) => {
+    ctx.fillStyle='#cc3333';
+    ctx.beginPath(); ctx.arc(px(x+n.dx+22), y+n.dy, 3, 0, Math.PI*2); ctx.fill();
+  });
+}
+
+function drawMotivationalPoster(x, y) {
+  const w=70, h=90;
+  fr(x, y, w, h, '#0a0a14'); sr(x, y, w, h, '#222', 1);
+  // Frame
+  fr(x-4, y-4, w+8, h+8, '#111');
+  fr(x+2, y+2, w-4, h-4, '#050510');
+  // Text
+  ctx.fillStyle='rgba(255,200,0,0.9)'; ctx.font='bold 7px monospace'; ctx.textAlign='center';
+  ctx.fillText('WORK', px(x+w/2), y+18);
+  ctx.fillText('HARDER', px(x+w/2), y+26);
+  ctx.fillStyle='rgba(200,200,200,0.4)'; ctx.font='6px serif';
+  ctx.fillText('— Boss', px(x+w/2), y+36);
+  // Small icon
+  ctx.font='22px serif'; ctx.fillText('💼', px(x+w/2-12), y+h-20);
+  ctx.fillStyle='rgba(255,100,0,0.6)'; ctx.font='6px monospace';
+  ctx.fillText('or die trying', px(x+w/2), y+h-6);
+  ctx.textAlign='left';
 }
 
 function drawWhiteboard(x, y) {
@@ -1645,6 +1844,26 @@ function drawMiniEvents() {
       ctx.fillStyle='rgba(90,40,5,0.8)'; ctx.beginPath();
       ctx.ellipse(px(ev.wx),ev.wy,34,20,0,0,Math.PI*2); ctx.fill();
       em('☕',ev.wx-10,ev.wy+8,15);
+    }
+    if(ev.type==='lunch_break'){
+      const a=0.4+Math.sin(tick*0.1)*0.1;
+      ctx.fillStyle=`rgba(255,180,0,${a*0.15})`;
+      ctx.fillRect(px(1000),DEN_Y,600,ch-DEN_Y);
+      ctx.fillStyle=`rgba(255,200,50,${a})`;
+      ctx.font='bold 18px monospace'; ctx.textAlign='center';
+      ctx.fillText('🍽️ ОБЕД! ВСЕ В НОРУ! 🍽️',cw/2,FLOOR_Y/2);
+      ctx.textAlign='left';
+    }
+    if(ev.type==='power_outage'){
+      const f=ev.timer/200;
+      ctx.fillStyle=`rgba(0,0,0,${(1-f)*0.85})`;
+      ctx.fillRect(0,0,cw,ch);
+      if(f<0.3) {
+        ctx.fillStyle=`rgba(255,220,50,${f*3})`;
+        ctx.font='bold 24px monospace'; ctx.textAlign='center';
+        ctx.fillText('⚡ АВАРИЯ! СВЕТА НЕТ! ⚡',cw/2,ch/2);
+        ctx.textAlign='left';
+      }
     }
   });
 }
