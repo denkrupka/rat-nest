@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T16:19:00Z",
+  "updated": "2026-03-12T16:21:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-haiku",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует команду мышей и управляет портал",
-      "commits": 124,
-      "workMinutes": 0,
-      "totalMinutes": 8640
+      "task": "Ест пиццу и наблюдает",
+      "commits": 342,
+      "workMinutes": 1240,
+      "totalMinutes": 1240
     },
     {
-      "id": "miron02",
+      "id": "miron00",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Разрабатывает Edge Functions и API endpoints",
-      "commits": 87,
-      "workMinutes": 0,
-      "totalMinutes": 5280
+      "task": "Спит под столом",
+      "commits": 156,
+      "workMinutes": 890,
+      "totalMinutes": 890
     },
     {
-      "id": "zhiro03",
+      "id": "zhiro00",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Администрирует инфраструктуру и CI/CD пайпла",
-      "commits": 56,
-      "workMinutes": 0,
-      "totalMinutes": 3360
-    },
-    {
-      "id": "shust04",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Разработка React компонентов и UI интерфейса",
-      "commits": 142,
-      "workMinutes": 0,
-      "totalMinutes": 7200
+      "task": "Чистит сыр из ловушки",
+      "commits": 89,
+      "workMinutes": 720,
+      "totalMinutes": 720
     },
     {
-      "id": "skoze05",
+      "id": "shust00",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Танцует на клавиатуре",
+      "commits": 267,
+      "workMinutes": 1100,
+      "totalMinutes": 1100
+    },
+    {
+      "id": "skol00",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Аудит безопасности API и аутентификации",
-      "commits": 34,
+      "model": "claude-sonnet",
+      "status": "crashed",
+      "task": "Поймал кота и скрывается",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 2400
+      "totalMinutes": 0
     },
     {
-      "id": "tykik06",
+      "id": "tykev00",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Автоматизация тестирования и Playwright e2e",
-      "commits": 98,
-      "workMinutes": 0,
-      "totalMinutes": 4800
+      "task": "Тестирует сыр на вкус",
+      "commits": 124,
+      "workMinutes": 650,
+      "totalMinutes": 650
     },
     {
-      "id": "hrust07",
+      "id": "hrust00",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Оптимизация SQL запросов и аналитика базы",
-      "commits": 62,
-      "workMinutes": 0,
-      "totalMinutes": 3600
+      "task": "Анализирует зёрна",
+      "commits": 98,
+      "workMinutes": 540,
+      "totalMinutes": 540
     },
     {
-      "id": "gryzi08",
+      "id": "gryzik0",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Мобильное приложение React Native и Expo",
-      "commits": 45,
-      "workMinutes": 0,
-      "totalMinutes": 2880
+      "task": "Грызет кабель ethernet",
+      "commits": 76,
+      "workMinutes": 480,
+      "totalMinutes": 480
     }
   ]
 }
