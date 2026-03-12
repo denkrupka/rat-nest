@@ -245,7 +245,44 @@ async function fetchStatus() {
     const r = await fetch('status.json?t=' + Date.now());
     const d = await r.json();
     const arr = Array.isArray(d.agents) ? d.agents : Object.values(d.agents || {});
-    arr.forEach(a => { if (a.id) statusMap[a.id] = a; });
+    arr.forEach(a => {
+      if (a.id) {
+        const prev = statusMap[a.id];
+        statusMap[a.id] = a;
+        // Найди крысу с этим agentId
+        const rat = rats && rats.find(r => r.agentId === a.id);
+        if (rat) {
+          // Если статус изменился
+          if (!prev || prev.status !== a.status) {
+            if (a.status === 'working') {
+              // Отправить к ближайшему desk
+              const deskSpots = SPOTS.filter(s => s.id.startsWith('desk'));
+              const spot = deskSpots[Math.floor(Math.random() * deskSpots.length)];
+              rat.tx = spot.x; rat.ty = spot.y;
+              rat.currentSpot = spot;
+              rat.state = 'walking';
+              rat.zone = 'office';
+              rat.forcedWorking = true;
+            } else if (a.status === 'idle') {
+              rat.forcedWorking = false;
+              rat.crashed = false;
+              // Пусть сам выберет спот
+              rat.pickTarget();
+            } else if (a.status === 'crashed') {
+              rat.crashed = true;
+              rat.state = 'crashed';
+              rat.crashedAt = Date.now();
+              rat.forcedWorking = false;
+            }
+          }
+          // Обновить данные
+          rat.task = a.task;
+          rat.commits = a.commits;
+          rat.workMinutes = a.workMinutes;
+          rat.totalMinutes = a.totalMinutes;
+        }
+      }
+    });
   } catch(e) {}
 }
 fetchStatus();
@@ -361,6 +398,16 @@ const SLOT_ITEMS = ['🍺','🧀','🐀','💰','⚡','🍕'];
 class Rat {
   constructor(d) {
     Object.assign(this, d);
+    // Initialize status-driven fields
+    const statusData = this.agentId ? (statusMap[this.agentId] || {}) : {};
+    this.task = statusData.task || 'Ждёт задач';
+    this.commits = statusData.commits || 0;
+    this.workMinutes = statusData.workMinutes || 0;
+    this.totalMinutes = statusData.totalMinutes || 0;
+    this.crashed = statusData.status === 'crashed';
+    this.forcedWorking = statusData.status === 'working';
+    if (this.forcedWorking) this.zone = 'office';
+
     const sp = randSpot(this.zone) || {x: 200 + Math.random()*400, y: 200, act: 'idle'};
     this.x = sp.x + Math.random()*40-20;
     this.y = sp.y;
@@ -374,9 +421,35 @@ class Rat {
     this.trail = [];
     this.particles = [];
     this.blink = 0;
+
+    if (this.crashed) {
+      this.state = 'crashed';
+    } else if (this.forcedWorking) {
+      const deskSpots = SPOTS.filter(s => s.id.startsWith('desk'));
+      const chosen = deskSpots[Math.floor(Math.random() * deskSpots.length)];
+      if (chosen) {
+        this.x = chosen.x; this.y = chosen.y;
+        this.tx = chosen.x; this.ty = chosen.y;
+        this.currentSpot = chosen;
+        this.state = 'activity';
+        this.act = 'typing';
+      }
+    }
   }
 
   pickTarget() {
+    // Если крыса принудительно работает — остаётся за desk
+    if (this.forcedWorking) {
+      const deskSpots = SPOTS.filter(s => s.id.startsWith('desk'));
+      const sp = deskSpots[Math.floor(Math.random() * deskSpots.length)];
+      if (sp) {
+        this.tx = sp.x; this.ty = sp.y;
+        this.currentSpot = sp;
+        this.act = 'typing';
+        this.actTimer = 300 + Math.random() * 400;
+      }
+      return;
+    }
     const sp = randSpot(this.zone);
     this.tx = sp.x + Math.random()*20-10;
     this.ty = sp.y;
@@ -387,6 +460,15 @@ class Rat {
 
   update(dt) {
     this.blink = Math.max(0, this.blink - dt*60);
+    // Crashed крысы не двигаются
+    if (this.state === 'crashed') {
+      this.particles = this.particles.filter(p => p.life > 0);
+      this.particles.forEach(p => {
+        p.x += p.vx * dt*60; p.y += p.vy * dt*60;
+        p.vy += 0.06 * dt*60; p.life -= dt*60;
+      });
+      return;
+    }
     if (this.state === 'walking') {
       const dx = this.tx - this.x, dy = this.ty - this.y;
       const dist = Math.sqrt(dx*dx + dy*dy);
@@ -451,18 +533,18 @@ class Rat {
 // RAT DEFINITIONS
 // ═══════════════════════════════════════════════
 const RAT_DEFS = [
-  {id:'shnyr',    name:'Шнырь',      fur:'#c8960c', belly:'#e0b040', sz:1.15, spd:1.1,  crown:true,  heart:false, fat:false, blur:false, zone:'office', headphones:true, pinkMonitor:true},
-  {id:'zhirobas', name:'Жиробас',    fur:'#9e7560', belly:'#c09070', sz:1.75, spd:0.45, crown:false, heart:false, fat:true,  blur:false, zone:'office', headphones:false, pinkMonitor:false},
-  {id:'shustrik', name:'Шустрик',    fur:'#ddd8c8', belly:'#f0ece0', sz:0.9,  spd:2.8,  crown:false, heart:false, fat:false, blur:true,  zone:'office', headphones:false, pinkMonitor:false},
-  {id:'pysklia',  name:'Пыськля',    fur:'#e08080', belly:'#f0a0a0', sz:1.0,  spd:0.9,  crown:false, heart:true,  fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
-  {id:'gryzik',   name:'Грызик',     fur:'#88aa60', belly:'#a8cc80', sz:1.0,  spd:1.0,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
-  {id:'tykovka',  name:'Тыковка',    fur:'#e0904a', belly:'#f0b070', sz:1.1,  spd:0.85, crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:false, pinkMonitor:false},
-  {id:'chvyak',   name:'Чвяк',       fur:'#b09060', belly:'#d0b088', sz:1.2,  spd:0.8,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
-  {id:'miron',    name:'Мирон',      fur:'#7080b0', belly:'#90a0d0', sz:1.0,  spd:0.95, crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:false, pinkMonitor:false},
-  {id:'puzik',    name:'Пузик',      fur:'#c0a880', belly:'#d8c0a0', sz:0.85, spd:0.55, crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false, phoneInBed:true},
-  {id:'xrustik',  name:'Хрустик',    fur:'#a0c070', belly:'#c0e090', sz:1.0,  spd:1.0,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
-  {id:'skolzkiy', name:'Скользкий',  fur:'#80b8d0', belly:'#a0d8f0', sz:0.95, spd:2.2,  crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:false, pinkMonitor:false},
-  {id:'murzik',   name:'Мурзик',     fur:'#888888', belly:'#aaaaaa', sz:1.05, spd:0.7,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
+  {id:'shnyr',    agentId:'00000001', name:'Шнырь',      fur:'#c8960c', belly:'#e0b040', sz:1.15, spd:1.1,  crown:true,  heart:false, fat:false, blur:false, zone:'office', headphones:true, pinkMonitor:true},
+  {id:'zhirobas', agentId:'00000004', name:'Жиробас',    fur:'#9e7560', belly:'#c09070', sz:1.75, spd:0.45, crown:false, heart:false, fat:true,  blur:false, zone:'office', headphones:false, pinkMonitor:false},
+  {id:'shustrik', agentId:'00000005', name:'Шустрик',    fur:'#ddd8c8', belly:'#f0ece0', sz:0.9,  spd:2.8,  crown:false, heart:false, fat:false, blur:true,  zone:'office', headphones:false, pinkMonitor:false},
+  {id:'pysklia',  agentId:null,       name:'Пыськля',    fur:'#e08080', belly:'#f0a0a0', sz:1.0,  spd:0.9,  crown:false, heart:true,  fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
+  {id:'gryzik',   agentId:'00000002', name:'Кодогрыз',   fur:'#88aa60', belly:'#a8cc80', sz:1.0,  spd:1.0,  crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:true,  pinkMonitor:false},
+  {id:'tykovka',  agentId:'00000007', name:'Тыковка',    fur:'#e0904a', belly:'#f0b070', sz:1.1,  spd:0.85, crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:false, pinkMonitor:false},
+  {id:'chvyak',   agentId:null,       name:'Чвяк',       fur:'#b09060', belly:'#d0b088', sz:1.2,  spd:0.8,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
+  {id:'miron',    agentId:'00000003', name:'Мирон',      fur:'#7080b0', belly:'#90a0d0', sz:1.0,  spd:0.95, crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:false, pinkMonitor:false},
+  {id:'puzik',    agentId:null,       name:'Пузик',      fur:'#c0a880', belly:'#d8c0a0', sz:0.85, spd:0.55, crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false, phoneInBed:true},
+  {id:'xrustik',  agentId:'00000008', name:'Хрустик',    fur:'#a0c070', belly:'#c0e090', sz:1.0,  spd:1.0,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
+  {id:'skolzkiy', agentId:'00000006', name:'Скользкий',  fur:'#80b8d0', belly:'#a0d8f0', sz:0.95, spd:2.2,  crown:false, heart:false, fat:false, blur:false, zone:'office', headphones:false, pinkMonitor:false},
+  {id:'murzik',   agentId:null,       name:'Мурзик',     fur:'#888888', belly:'#aaaaaa', sz:1.05, spd:0.7,  crown:false, heart:false, fat:false, blur:false, zone:'den',    headphones:false, pinkMonitor:false},
 ];
 // ═══════════════════════════════════════════════
 // INIT SPOTS BEFORE RAT CREATION (fix: SPOTS must be populated first)
