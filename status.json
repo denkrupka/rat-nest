@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T11:35:00Z",
+  "updated": "2026-03-12T11:37:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "mouse0000",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Пишет багажный скрипт для парсинга котиков",
-      "commits": 42,
-      "workMinutes": 247,
-      "totalMinutes": 247
+      "task": "Читает логи, ищет баги в коде",
+      "commits": 147,
+      "workMinutes": 0,
+      "totalMinutes": 2840
     },
     {
-      "id": "miron001",
+      "id": "mouse0001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настраивает Redis для кэша юзеров",
-      "commits": 18,
-      "workMinutes": 165,
-      "totalMinutes": 165
+      "task": "Оптимизирует API, закрывает утечки памяти",
+      "commits": 89,
+      "workMinutes": 0,
+      "totalMinutes": 1920
     },
     {
-      "id": "zhiroba2",
+      "id": "mouse0002",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Оптимизирует Dockerfile для меньшего размера образа",
-      "commits": 7,
-      "workMinutes": 89,
-      "totalMinutes": 89
+      "task": "Обновляет инфру, переливает логи в S3",
+      "commits": 56,
+      "workMinutes": 0,
+      "totalMinutes": 1440
     },
     {
-      "id": "shustri3",
+      "id": "mouse0003",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Рефакторит компоненты с Tailwind v4",
-      "commits": 31,
-      "workMinutes": 203,
-      "totalMinutes": 203
+      "task": "Крашит компоненты, восстанавливает UI",
+      "commits": 123,
+      "workMinutes": 0,
+      "totalMinutes": 2560
     },
     {
-      "id": "skozlki4",
+      "id": "mouse0004",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Проверяет XSS уязвимости в формах",
-      "commits": 12,
-      "workMinutes": 134,
-      "totalMinutes": 134
+      "task": "Спит после ночного сканирования ошибок",
+      "commits": 34,
+      "workMinutes": 0,
+      "totalMinutes": 920
     },
     {
-      "id": "tykovka5",
+      "id": "mouse0005",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет Playwright тесты для платёжного потока",
-      "commits": 25,
-      "workMinutes": 156,
-      "totalMinutes": 156
+      "task": "Ест пиццу, готовит тесты для фронтов",
+      "commits": 78,
+      "workMinutes": 0,
+      "totalMinutes": 1680
     },
     {
-      "id": "hrustik6",
+      "id": "mouse0006",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Обрабатывает CSV с 50K строк в Excel",
-      "commits": 9,
-      "workMinutes": 112,
-      "totalMinutes": 112
+      "task": "Парсит данные, делает дашборды",
+      "commits": 42,
+      "workMinutes": 0,
+      "totalMinutes": 1120
     },
     {
-      "id": "gryzik07",
+      "id": "mouse0007",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Собирает Expo APK для тестирования",
-      "commits": 14,
-      "workMinutes": 87,
-      "totalMinutes": 87
+      "task": "Ломает мобильное приложение, чинит UI",
+      "commits": 67,
+      "workMinutes": 0,
+      "totalMinutes": 1560
     }
   ]
 }
