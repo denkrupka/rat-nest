@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T15:36:00Z",
+  "updated": "2026-03-12T15:38:25.602554+00:00",
   "agents": [
     {
-      "id": "session0",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и ждёт приказов",
-      "commits": 42,
-      "workMinutes": 240,
-      "totalMinutes": 240
+      "task": "Координирует команду, анализирует требования к фичам",
+      "commits": 156,
+      "workMinutes": 480,
+      "totalMinutes": 2400
     },
     {
-      "id": "session1",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Обновляет API эндпоинты",
-      "commits": 18,
-      "workMinutes": 120,
-      "totalMinutes": 120
+      "task": "Разработка Edge Functions, SQL оптимизация",
+      "commits": 89,
+      "workMinutes": 240,
+      "totalMinutes": 1800
     },
     {
-      "id": "session2",
+      "id": "ziroba03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Проверяет логи инфраструктуры",
-      "commits": 12,
-      "workMinutes": 90,
-      "totalMinutes": 90
-    },
-    {
-      "id": "session3",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Верстает новые компоненты",
-      "commits": 28,
+      "task": "Настройка GitHub Actions, мониторинг Sentry",
+      "commits": 34,
       "workMinutes": 180,
-      "totalMinutes": 180
+      "totalMinutes": 1200
     },
     {
-      "id": "session4",
+      "id": "shust04",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "React компоненты, Tailwind стили, Playwright тесты",
+      "commits": 127,
+      "workMinutes": 360,
+      "totalMinutes": 2100
+    },
+    {
+      "id": "skol05",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
-      "status": "idle",
-      "task": "Аудит безопасности API",
-      "commits": 8,
-      "workMinutes": 60,
-      "totalMinutes": 60
+      "status": "crashed",
+      "task": "Audit API endpoints, проверка RLS в БД",
+      "commits": 12,
+      "workMinutes": 0,
+      "totalMinutes": 600
     },
     {
-      "id": "session5",
+      "id": "tykov06",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет тесты на Playwright",
-      "commits": 35,
-      "workMinutes": 210,
-      "totalMinutes": 210
+      "task": "Написание E2E тестов, проверка регрессии",
+      "commits": 64,
+      "workMinutes": 120,
+      "totalMinutes": 900
     },
     {
-      "id": "session6",
+      "id": "hrust07",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует метрики",
-      "commits": 15,
-      "workMinutes": 100,
-      "totalMinutes": 100
+      "task": "Анализ логов, отчёты по метрикам",
+      "commits": 23,
+      "workMinutes": 90,
+      "totalMinutes": 600
     },
     {
-      "id": "session7",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Разработка мобильного приложения",
-      "commits": 22,
+      "task": "Expo/React Native, iOS/Android юнит-тесты",
+      "commits": 41,
       "workMinutes": 150,
-      "totalMinutes": 150
+      "totalMinutes": 1500
     }
   ]
 }
