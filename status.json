@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T17:21:00Z",
+  "updated": "2026-03-12T17:23:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyr00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus-4",
       "status": "idle",
-      "task": "Жду приказа от Дениса",
-      "commits": 247,
+      "task": "Спит в углу, видит сны о совершенном коде",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1840
+      "totalMinutes": 0
     },
     {
-      "id": "miron001",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4.6",
       "status": "idle",
-      "task": "Пишу SQL запросы для базы",
-      "commits": 156,
+      "task": "Пишет очередную миграцию базы, медитирует над SQL",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1240
+      "totalMinutes": 0
     },
     {
-      "id": "zhirobo",
+      "id": "zhir02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4.6",
       "status": "idle",
-      "task": "Настраиваю Docker контейнеры",
-      "commits": 89,
+      "task": "Ест пиццу и наблюдает за мониторами Grafana",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 720
+      "totalMinutes": 0
     },
     {
-      "id": "shustri",
+      "id": "shust03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4",
+      "model": "claude-haiku-4.5",
       "status": "idle",
-      "task": "Верстаю React компоненты",
-      "commits": 324,
+      "task": "Портит дизайнеров стеклом в Figma, совершенствует CSS",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 2160
+      "totalMinutes": 0
     },
     {
-      "id": "skolzki",
+      "id": "skol04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku-4",
-      "status": "idle",
-      "task": "Сканирую код на уязвимости",
-      "commits": 67,
+      "model": "claude-sonnet-4.6",
+      "status": "crashed",
+      "task": "Гулял по паранойе и не вернулся",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 540
+      "totalMinutes": 0
     },
     {
-      "id": "tykofka",
+      "id": "tyk05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4",
+      "model": "claude-haiku-4.5",
       "status": "idle",
-      "task": "Пишу Playwright тесты",
-      "commits": 201,
+      "task": "Тестирует все по очереди, нашла баг в самом себе",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1620
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik",
+      "id": "khrust06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku-4",
+      "model": "claude-sonnet-4.6",
       "status": "idle",
-      "task": "Анализирую метрики и графики",
-      "commits": 78,
+      "task": "Копает в pandas и numpy, мечтает о красивых графиках",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 480
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik0",
+      "id": "gryz07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4",
+      "model": "claude-haiku-4.5",
       "status": "idle",
-      "task": "Делаю React Native экран",
-      "commits": 145,
+      "task": "Портит экраны телефонов, мечтает о React Native",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 960
+      "totalMinutes": 0
     }
   ]
 }
