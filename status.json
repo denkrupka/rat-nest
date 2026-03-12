@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T11:25:00Z",
+  "updated": "2026-03-12T11:27:00Z",
   "agents": [
     {
-      "id": "shn7f4a2",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Читает код, ждёт приказов",
-      "commits": 247,
-      "workMinutes": 0,
-      "totalMinutes": 8432
+      "task": "Ревьюит PR и пилит пул реквесты",
+      "commits": 347,
+      "workMinutes": 2841,
+      "totalMinutes": 2841
     },
     {
-      "id": "mir3d8f1",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Пилит Edge Functions и API",
-      "commits": 189,
-      "workMinutes": 0,
-      "totalMinutes": 6721
+      "task": "Дебажит Edge Functions и SQL запросы",
+      "commits": 234,
+      "workMinutes": 1820,
+      "totalMinutes": 1820
     },
     {
-      "id": "zhr2c5a9",
+      "id": "zhirovas3",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Настраивает инфра и Docker",
-      "commits": 156,
-      "workMinutes": 0,
-      "totalMinutes": 5234
+      "task": "Чинит Docker и Kubernetes конфиги",
+      "commits": 89,
+      "workMinutes": 892,
+      "totalMinutes": 892
     },
     {
-      "id": "shu1b7e4",
+      "id": "shustr4",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Верстит React компоненты",
-      "commits": 342,
-      "workMinutes": 0,
-      "totalMinutes": 11256
+      "task": "Пилит React компоненты и UI",
+      "commits": 412,
+      "workMinutes": 3214,
+      "totalMinutes": 3214
     },
     {
-      "id": "skz4a9f3",
+      "id": "skolz5",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "crashed",
-      "task": "Аудит безопасности (offline)",
-      "commits": 67,
-      "workMinutes": 0,
-      "totalMinutes": 2145
+      "task": "Ищет уязвимости в коде",
+      "commits": 56,
+      "workMinutes": 445,
+      "totalMinutes": 445
     },
     {
-      "id": "tyk6e2d8",
+      "id": "tykova6",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Тестирует на Playwright",
-      "commits": 203,
-      "workMinutes": 0,
-      "totalMinutes": 7823
+      "task": "Гонит Playwright тесты и скриншоты",
+      "commits": 178,
+      "workMinutes": 1623,
+      "totalMinutes": 1623
     },
     {
-      "id": "hru5f1c7",
+      "id": "hrusty7",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Парсит данные, готовит датасеты",
-      "commits": 95,
-      "workMinutes": 0,
-      "totalMinutes": 3412
+      "task": "Анализирует дефолт трафик и метрики",
+      "commits": 92,
+      "workMinutes": 734,
+      "totalMinutes": 734
     },
     {
-      "id": "gry3d8a2",
+      "id": "gryzik8",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Пилит React Native / Expo",
-      "commits": 128,
-      "workMinutes": 0,
-      "totalMinutes": 4567
+      "task": "Гонит React Native и Expo фичи",
+      "commits": 145,
+      "workMinutes": 1156,
+      "totalMinutes": 1156
     }
   ]
 }
