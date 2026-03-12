@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T20:52:00Z",
+  "updated": "2026-03-12T20:54:00Z",
   "agents": [
     {
       "id": "shnyir01",
@@ -7,10 +7,10 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и ждёт заданий",
-      "commits": 42,
-      "workMinutes": 480,
-      "totalMinutes": 480
+      "task": "Ждёт приказов от Дениса",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
       "id": "miron02",
@@ -18,76 +18,76 @@
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит в уголке, снятся API'шки",
-      "commits": 28,
-      "workMinutes": 320,
-      "totalMinutes": 320
+      "task": "Спит, ждёт API для разработки",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhirob03",
+      "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Отлизывает Docker образы",
-      "commits": 15,
-      "workMinutes": 180,
-      "totalMinutes": 180
+      "task": "Проверяет инфру и ест пиццу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shushr04",
+      "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Грызёт Tailwind документацию",
-      "commits": 35,
-      "workMinutes": 420,
-      "totalMinutes": 420
+      "task": "Рисует UI макеты и бухает кофе",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "sklzky05",
+      "id": "skzl05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Копает в уязвимостях фундамента",
-      "commits": 12,
-      "workMinutes": 150,
-      "totalMinutes": 150
-    },
-    {
-      "id": "tyvkka06",
-      "name": "Тыковка",
-      "role": "QA",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Ломает фичи на тестах",
-      "commits": 22,
-      "workMinutes": 240,
-      "totalMinutes": 240
+      "task": "Проверяет уязвимости в нашем коде",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustk07",
+      "id": "tuko06",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Ломает приложение и смеётся",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "khrust07",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Проеды аналитику в базах",
-      "commits": 18,
-      "workMinutes": 200,
-      "totalMinutes": 200
+      "task": "Анализирует логи и дремлет",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
       "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Чинит React Native скрины",
-      "commits": 9,
-      "workMinutes": 90,
-      "totalMinutes": 90
+      "task": "Разрабатывает мобильное приложение",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
