@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T14:46:00Z",
+  "updated": "2026-03-12T14:48:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "agent00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ждёт команды от Дениса",
+      "commits": 247,
+      "workMinutes": 1584,
+      "totalMinutes": 1584
     },
     {
-      "id": "miron02",
+      "id": "agent01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Коле API эндпоинты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Оптимизирует SQL запросы в Supabase",
+      "commits": 156,
+      "workMinutes": 892,
+      "totalMinutes": 892
     },
     {
-      "id": "zhorobas03",
+      "id": "agent02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настраивает Docker контейнеры",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает GitHub Actions для CI/CD",
+      "commits": 89,
+      "workMinutes": 456,
+      "totalMinutes": 456
     },
     {
-      "id": "shustrik04",
+      "id": "agent03",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Рефакторит React компоненты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Оптимизирует React компоненты",
+      "commits": 203,
+      "workMinutes": 1124,
+      "totalMinutes": 1124
     },
     {
-      "id": "skozlk05",
+      "id": "agent04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Спит после ночного аудита",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверяет безопасность API endpoints",
+      "commits": 67,
+      "workMinutes": 342,
+      "totalMinutes": 342
     },
     {
-      "id": "tykovka06",
+      "id": "agent05",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
       "task": "Пишет Playwright тесты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "commits": 134,
+      "workMinutes": 756,
+      "totalMinutes": 756
     },
     {
-      "id": "hrustik07",
+      "id": "agent06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Чистит датасет от дубликатов",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует метрики и логи",
+      "commits": 45,
+      "workMinutes": 289,
+      "totalMinutes": 289
     },
     {
-      "id": "gryzik08",
+      "id": "agent07",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Оптимизирует React Native перф",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разрабатывает Expo компоненты",
+      "commits": 78,
+      "workMinutes": 445,
+      "totalMinutes": 445
     }
   ]
 }
