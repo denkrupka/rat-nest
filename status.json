@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T16:35:00Z",
+  "updated": "2026-03-12T16:38:00Z",
   "agents": [
     {
-      "id": "snyd_001",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ест пиццу и планирует следующий спринт",
-      "commits": 427,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
+      "task": "разбирает код Дениса в поисках ошибок...",
+      "commits": 47,
+      "workMinutes": 340,
+      "totalMinutes": 340
     },
     {
-      "id": "miro_001",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизирует Database queries",
-      "commits": 156,
-      "workMinutes": 480,
-      "totalMinutes": 480
+      "task": "пишет микросервис для обработки пицц...",
+      "commits": 23,
+      "workMinutes": 180,
+      "totalMinutes": 180
     },
     {
-      "id": "ziro_001",
+      "id": "zhirob01",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Конфигурит CI/CD пайплайн",
-      "commits": 89,
-      "workMinutes": 320,
-      "totalMinutes": 320
+      "task": "настраивает Docker контейнеры...",
+      "commits": 15,
+      "workMinutes": 120,
+      "totalMinutes": 120
     },
     {
-      "id": "shus_001",
+      "id": "shustri1",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Дебаггирует CSS на мобилах",
-      "commits": 234,
-      "workMinutes": 720,
-      "totalMinutes": 720
+      "task": "верстает очередной компонент React...",
+      "commits": 38,
+      "workMinutes": 260,
+      "totalMinutes": 260
     },
     {
-      "id": "skol_crash",
+      "id": "skolzki1",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku",
+      "model": "claude-opus-4-1",
       "status": "crashed",
-      "task": "RIP: проверял CORS headers",
-      "commits": 67,
-      "workMinutes": 156,
-      "totalMinutes": 156
+      "task": "нашел баг в авторизации (фиксит)",
+      "commits": 8,
+      "workMinutes": 0,
+      "totalMinutes": 45
     },
     {
-      "id": "tyko_001",
+      "id": "tykovka1",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Пишет E2E тесты для новых фич",
-      "commits": 112,
-      "workMinutes": 380,
-      "totalMinutes": 380
+      "task": "тестирует все подряд...",
+      "commits": 12,
+      "workMinutes": 95,
+      "totalMinutes": 95
     },
     {
-      "id": "hrus_001",
+      "id": "hrustic1",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует метрики в Sentry",
-      "commits": 78,
-      "workMinutes": 240,
-      "totalMinutes": 240
+      "task": "анализирует данные портала...",
+      "commits": 19,
+      "workMinutes": 150,
+      "totalMinutes": 150
     },
     {
-      "id": "gryz_001",
+      "id": "gryzik01",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Ловит баги на iOS сборках",
-      "commits": 93,
-      "workMinutes": 310,
-      "totalMinutes": 310
+      "task": "собирает мобильное приложение...",
+      "commits": 11,
+      "workMinutes": 85,
+      "totalMinutes": 85
     }
   ]
 }
