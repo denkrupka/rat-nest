@@ -24,7 +24,7 @@
       "totalMinutes": 360
     },
     {
-      "id": "zhiroб03",
+      "id": "zhiroбas03",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
@@ -57,7 +57,7 @@
       "totalMinutes": 60
     },
     {
-      "id": "tykobka6",
+      "id": "tykobka06",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
