@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T17:32:00Z",
+  "updated": "2026-03-12T17:34:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "agent0001",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу пепперони",
-      "commits": 42,
-      "workMinutes": 180,
-      "totalMinutes": 420
+      "task": "Ест пиццу и готов к боевым задачам",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron02",
+      "id": "agent0002",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "завтракает сыром и хлебом",
-      "commits": 28,
-      "workMinutes": 120,
-      "totalMinutes": 360
+      "task": "Спит в подвале на кучке документов Supabase",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhiro03",
+      "id": "agent0003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "чистит свой уголок в гнезде",
-      "commits": 15,
-      "workMinutes": 90,
-      "totalMinutes": 300
-    },
-    {
-      "id": "shust04",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "прыгает по крыше (веселится)",
-      "commits": 35,
-      "workMinutes": 150,
-      "totalMinutes": 390
+      "task": "Чинит Docker volume на кухне",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skol05",
+      "id": "agent0004",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Рисует Tailwind компоненты в Figma",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "agent0005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
-      "status": "crashed",
-      "task": "не отвечает на связь (ловит котов?)",
-      "commits": 8,
-      "workMinutes": 60,
-      "totalMinutes": 240
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Ищет уязвимости в своих стихах",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tyko06",
+      "id": "agent0006",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "спит на куче документов",
-      "commits": 22,
-      "workMinutes": 100,
-      "totalMinutes": 320
+      "task": "Бегает с чек-листом по порталу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "khrus07",
+      "id": "agent0007",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "разбирает базу данных (в поисках орешков)",
-      "commits": 18,
-      "workMinutes": 85,
-      "totalMinutes": 280
+      "task": "Ест морковку и считает в уме",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzi08",
+      "id": "agent0008",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "тестирует мобилу на планшете",
-      "commits": 12,
-      "workMinutes": 70,
-      "totalMinutes": 250
+      "task": "Ломает мобилку на тестирование",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
