@@ -646,6 +646,22 @@ function drawDen() {
   // ── BAR ──
   drawBar(2480, dy);
 
+  // ── DISCO LIGHTS in bar ──
+  drawDiscoLights(2480, dy);
+
+  // ── BOUNCING BALL ──
+  const ballX = 3200 + Math.sin(tick*0.05)*80;
+  const ballBaseY = dFloor() - 12;
+  const ballBounce = Math.abs(Math.sin(tick*0.12))*50;
+  const ballY = ballBaseY - ballBounce;
+  ctx.fillStyle='#ff4400'; ctx.shadowColor='rgba(255,80,0,0.5)'; ctx.shadowBlur=6;
+  ctx.beginPath(); ctx.arc(px(ballX), ballY, 9, 0, Math.PI*2); ctx.fill();
+  ctx.shadowBlur=0;
+  // Shadow on floor
+  const shadowScale = 1 - ballBounce/60;
+  ctx.fillStyle=`rgba(0,0,0,${0.3*shadowScale})`;
+  ctx.beginPath(); ctx.ellipse(px(ballX), ballBaseY+4, 9*shadowScale, 3*shadowScale, 0, 0, Math.PI*2); ctx.fill();
+
   // ── GRAFFITI WALL ──
   drawGraffitiWall(2820, dy);
 
@@ -946,6 +962,48 @@ function drawBar(x, y) {
   ctx.fillRect(px(x-10), y, 180, h+30);
 }
 
+function drawDiscoLights(x, y) {
+  // Rotating disco lights from ceiling
+  const DISCO_COLORS = ['#ff2244','#22ffaa','#4488ff','#ffcc00','#ff44ff','#44ffff'];
+  for(let d=0;d<4;d++) {
+    const angle = tick * 0.04 + d * (Math.PI/2);
+    const beatPulse = 0.5+Math.sin(tick*0.12)*0.3;
+    const col = DISCO_COLORS[(Math.floor(tick/20)+d)%DISCO_COLORS.length];
+    const lightX = x + 20 + d*38;
+    const lightY = y + 8;
+    // Spotlight beam
+    ctx.save();
+    ctx.globalAlpha=0.12*beatPulse;
+    const beamLen = (ch-y)*0.7;
+    const beamAngle = angle;
+    const endX = lightX + Math.sin(beamAngle)*beamLen;
+    const endY = lightY + Math.abs(Math.cos(beamAngle))*beamLen*0.8;
+    const grad = ctx.createConicalGradient ? null : null;
+    ctx.fillStyle=col;
+    ctx.beginPath();
+    ctx.moveTo(px(lightX), lightY);
+    ctx.lineTo(px(endX-12), endY);
+    ctx.lineTo(px(endX+12), endY);
+    ctx.closePath(); ctx.fill();
+    ctx.restore();
+    // Disco ball dot on ceiling
+    ctx.fillStyle=col; ctx.shadowColor=col; ctx.shadowBlur=8*beatPulse;
+    ctx.beginPath(); ctx.arc(px(lightX), lightY, 4, 0, Math.PI*2); ctx.fill();
+    ctx.shadowBlur=0;
+  }
+  // Disco ball
+  const dbx = x+80, dby = y+12;
+  fr(dbx-1, y, 2, 16, '#555');
+  for(let r=0;r<5;r++) for(let c=0;c<5;c++) {
+    const angle = tick*0.06+r*0.8+c*0.6;
+    const col2 = DISCO_COLORS[(r*2+c+Math.floor(tick/10))%DISCO_COLORS.length];
+    ctx.fillStyle=col2;
+    ctx.fillRect(px(dbx-10+c*5), dby-10+r*5, 4, 4);
+  }
+  ctx.strokeStyle='rgba(200,200,200,0.3)'; ctx.lineWidth=0.5;
+  ctx.beginPath(); ctx.arc(px(dbx), dby, 12, 0, Math.PI*2); ctx.stroke();
+}
+
 function drawGraffitiWall(x, y) {
   const h = ch - y - 10;
   // Wall
@@ -972,11 +1030,122 @@ function drawGraffitiWall(x, y) {
 }
 
 // ═══════════════════════════════════════════════
+// OFFICE WINDOWS (outside view)
+// ═══════════════════════════════════════════════
+function drawOfficeWindows() {
+  const night = isNight();
+  const dusk = isDusk();
+  const WINDOW_XS = [340, 740, 1120, 1500, 1900, 2280, 2660, 3020];
+  WINDOW_XS.forEach((wx2, i) => {
+    const wy = 10, ww = 88, wh = Math.round(FLOOR_Y * 0.38);
+    // Window frame
+    fr(wx2, wy, ww, wh, '#0d0d1e'); sr(wx2, wy, ww, wh, '#1e2e4a', 2);
+    // Sky
+    let skyTop, skyBot;
+    if(night) {
+      skyTop='#020410'; skyBot='#050818';
+    } else if(dusk) {
+      skyTop='#1a0a28'; skyBot='#2a1840';
+    } else {
+      skyTop='#0a1828'; skyBot='#102040';
+    }
+    const skyG = ctx.createLinearGradient(0, wy+2, 0, wy+wh-2);
+    skyG.addColorStop(0, skyTop); skyG.addColorStop(1, skyBot);
+    ctx.fillStyle=skyG; ctx.fillRect(px(wx2+2),wy+2,ww-4,wh-4);
+    // Buildings silhouette
+    ctx.fillStyle = night ? '#030308' : '#060614';
+    const bldH = [wh*0.35, wh*0.5, wh*0.28, wh*0.44, wh*0.32];
+    let bx=4;
+    for(let b=0;b<5;b++){
+      const bh2=bldH[(i+b)%5];
+      ctx.fillRect(px(wx2+bx), wy+wh-bh2, 14, bh2);
+      // Building windows
+      if(night) {
+        for(let wr=0;wr<Math.floor(bh2/8)-1;wr++) {
+          for(let wc=0;wc<2;wc++) {
+            const on = (tick + i*7 + b*13 + wr*3 + wc*5) % 120 > 20;
+            ctx.fillStyle=on?'rgba(255,220,80,0.8)':'rgba(0,0,0,0)';
+            ctx.fillRect(px(wx2+bx+2+wc*6), wy+wh-bh2+wr*8+3, 4, 4);
+          }
+        }
+      }
+      bx += 16 + (b%2)*2;
+    }
+    // Moon / sun
+    if(night) {
+      ctx.fillStyle='rgba(220,230,255,0.5)';
+      ctx.beginPath(); ctx.arc(px(wx2+ww*0.75), wy+wh*0.2, 7, 0, Math.PI*2); ctx.fill();
+    } else {
+      ctx.fillStyle='rgba(255,200,50,0.3)';
+      ctx.beginPath(); ctx.arc(px(wx2+ww*0.75), wy+wh*0.2, 9, 0, Math.PI*2); ctx.fill();
+    }
+    // Stars in night windows
+    if(night) {
+      for(let s=0;s<5;s++) {
+        const sa=0.4+Math.sin(tick*0.05+i*3+s)*0.3;
+        ctx.fillStyle=`rgba(255,255,255,${sa*0.6})`;
+        const stx=wx2+8+s*14+(Math.sin(i+s)*6), sty=wy+6+s*5;
+        ctx.beginPath(); ctx.arc(px(stx), sty, 0.8, 0, Math.PI*2); ctx.fill();
+      }
+    }
+    // Rain if raining (periodic)
+    if(Math.floor(tick/1200)%3===0) {
+      ctx.strokeStyle='rgba(100,180,255,0.4)'; ctx.lineWidth=0.5;
+      for(let r=0;r<4;r++){
+        const ry=(tick*2+r*18)%(wh-4)+wy+2;
+        const rxp=wx2+10+r*20;
+        ctx.beginPath(); ctx.moveTo(px(rxp),ry); ctx.lineTo(px(rxp-2),ry+7); ctx.stroke();
+      }
+    }
+    // Frame separator
+    ctx.strokeStyle='#1a2a40'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(px(wx2+ww/2),wy+2); ctx.lineTo(px(wx2+ww/2),wy+wh-2); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(px(wx2+2),wy+wh*0.5); ctx.lineTo(px(wx2+ww-2),wy+wh*0.5); ctx.stroke();
+  });
+}
+
+// ═══════════════════════════════════════════════
+// CEILING FANS
+// ═══════════════════════════════════════════════
+function drawCeilingFans() {
+  const FAN_XS = [240, 640, 1040, 1440, 1840, 2240, 2640, 3040];
+  FAN_XS.forEach((fx, i) => {
+    const fy = 22;
+    const fanAngle = tick * 0.08 + i * 1.2;
+    const blur = 0.3;
+    // Housing
+    ctx.fillStyle='#1a1a2e'; ctx.beginPath();
+    ctx.arc(px(fx), fy, 8, 0, Math.PI*2); ctx.fill();
+    ctx.strokeStyle='#2a2a40'; ctx.lineWidth=1;
+    // Blades
+    for(let b=0;b<3;b++) {
+      const angle = fanAngle + b*(Math.PI*2/3);
+      ctx.save();
+      ctx.translate(px(fx), fy);
+      ctx.rotate(angle);
+      ctx.fillStyle='rgba(30,30,48,0.85)';
+      ctx.beginPath();
+      ctx.moveTo(0,0); ctx.lineTo(-6,2); ctx.lineTo(-22,1); ctx.lineTo(-22,-1); ctx.lineTo(-6,-2);
+      ctx.closePath(); ctx.fill();
+      ctx.restore();
+    }
+    // Center dot
+    ctx.fillStyle='#888'; ctx.beginPath();
+    ctx.arc(px(fx), fy, 3, 0, Math.PI*2); ctx.fill();
+    // Wire
+    ctx.strokeStyle='#1a1a30'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(px(fx),0); ctx.lineTo(px(fx),fy-8); ctx.stroke();
+  });
+}
+
+// ═══════════════════════════════════════════════
 // OFFICE FURNITURE
 // ═══════════════════════════════════════════════
 function drawOffice() {
   tx('⌨️ ОФИС', WORLD_W-3580, 14, isNight()?'#0d1a2e':'#1a2a3a', 13);
 
+  drawOfficeWindows();
+  drawCeilingFans();
   drawSprintBoard(90, oY(0.08));
   drawMeetingTable(55, oY(0.55));
   drawWhiteboard(2700, oY(0.14));
@@ -1344,12 +1513,28 @@ function drawRat(rat) {
     ctx.beginPath();
     ctx.arc(hx2, -bh*0.06, hr2*1.1, -Math.PI*0.9, -Math.PI*0.1);
     ctx.stroke();
+    ctx.fillStyle='#ff44aa';
+    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.3, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(hx2+hr2*1.05, -bh*0.06, hr2*0.3, 0, Math.PI*2); ctx.fill();
     ctx.fillStyle='#222222';
-    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.28, 0, Math.PI*2); ctx.fill();
-    ctx.beginPath(); ctx.arc(hx2+hr2*1.05, -bh*0.06, hr2*0.28, 0, Math.PI*2); ctx.fill();
-    // LED lights
-    ctx.fillStyle=`rgba(255,50,50,${0.7+Math.sin(tick*0.2)*0.3})`;
-    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.12, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.2, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(hx2+hr2*1.05, -bh*0.06, hr2*0.2, 0, Math.PI*2); ctx.fill();
+    // LED glow
+    ctx.shadowColor='#ff44aa'; ctx.shadowBlur=6+Math.sin(tick*0.15)*3;
+    ctx.fillStyle=`rgba(255,68,170,${0.6+Math.sin(tick*0.2)*0.3})`;
+    ctx.beginPath(); ctx.arc(hx2-hr2*1.05, -bh*0.06, hr2*0.14, 0, Math.PI*2); ctx.fill();
+    ctx.shadowBlur=0;
+    // Music notes floating up
+    const noteIdx = Math.floor(tick*0.05)%4;
+    const notes = ['♪','♫','♬','♩'];
+    const notePhase = (tick * 0.03) % 1;
+    ctx.fillStyle=`rgba(255,100,200,${0.8-notePhase*0.7})`;
+    ctx.font=Math.round(9*sz)+'px serif';
+    ctx.fillText(notes[noteIdx], hx2+hr2*1.2, -bh*1.2 - notePhase*bh*1.5);
+    if(notePhase > 0.5) {
+      ctx.fillStyle=`rgba(200,80,255,${0.8-(notePhase-0.5)*1.6})`;
+      ctx.fillText(notes[(noteIdx+1)%4], hx2+hr2*0.8, -bh*1.8 - (notePhase-0.5)*bh*1.5);
+    }
   }
 
   // Legs
@@ -1514,6 +1699,24 @@ function showPopup(rat, sx, sy) {
 // CLICK INTERACTIONS
 // ═══════════════════════════════════════════════
 function handleClick(wx, wy, sx, sy) {
+  // Sprint board easter egg (PANIC MODE)
+  if(wx >= 90 && wx <= 610 && wy >= oY(0.08) && wy <= FLOOR_Y) {
+    const msgs = ['🔥 SPRINT FAILED! ВСЁ ГОРИТ', '💀 DEADLINE СЕГОДНЯ В 9:00', '🚨 BOSS ONLINE!', '⚡ ВСЕМ РАБОТАТЬ!'];
+    showToast(msgs[Math.floor(Math.random()*msgs.length)], 100);
+    // Make all office rats run to desks
+    rats.filter(r=>r.zone==='office').forEach(r => {
+      const deskSpots = SPOTS.filter(s=>s.act==='typing' && s.zone==='office');
+      const sp = deskSpots[Math.floor(Math.random()*deskSpots.length)];
+      r.tx = sp.x; r.ty = sp.y; r.state='walking';
+    });
+    return;
+  }
+  // Whiteboard easter egg
+  if(wx >= 2700 && wx <= 2860 && wy >= oY(0.14) && wy <= FLOOR_Y) {
+    const msgs = ['💡 ЭВРИКА!', '🤯 ЭТО ЖЕ ГЕНИАЛЬНО!', '✅ АРХИТЕКТУРА ГОТОВА', '❌ ВСЁ НАДО ПЕРЕДЕЛАТЬ'];
+    showToast(msgs[Math.floor(Math.random()*msgs.length)], 80);
+    return;
+  }
   // Microwave
   if(wx >= 1200 && wx <= 1278 && wy >= DEN_Y && wy <= ch) {
     microwaveTimer = 180;
