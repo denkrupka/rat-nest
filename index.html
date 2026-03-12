@@ -315,6 +315,8 @@ const rats = RAT_DEFS.map(d => new Rat(d));
 // ═══════════════════════════════════════════════
 let miniEvents = [];
 let nextEventIn = 4800 + Math.random()*3600;
+let catScare = null;
+let nextCatIn = 8000 + Math.random()*12000;  // very rare
 
 function triggerMiniEvent() {
   const types = ['deliveroo','proddown','coffee_spill','pizza_delivery','lunch_break','power_outage'];
@@ -451,6 +453,44 @@ function drawBG() {
 
   // Tunnel holes in floor
   const TUNNELS = [100, 1100, 2400];
+
+// Draw cat scare
+function drawCatScare() {
+  if(!catScare) return;
+  const {x, y, timer} = catScare;
+  const alpha = Math.min(1, timer/40) * Math.min(1, (400-timer)/40);
+  ctx.save();
+  ctx.globalAlpha = alpha * 0.85;
+  ctx.translate(px(x), y);
+  ctx.scale(-1,1); // facing left
+  // Cat shadow silhouette
+  ctx.fillStyle='rgba(0,0,0,0.8)';
+  // Body
+  ctx.beginPath(); ctx.ellipse(0, 0, 35, 22, 0, 0, Math.PI*2); ctx.fill();
+  // Head
+  ctx.beginPath(); ctx.arc(38, -12, 20, 0, Math.PI*2); ctx.fill();
+  // Ears
+  ctx.beginPath(); ctx.moveTo(28,-28); ctx.lineTo(34,-46); ctx.lineTo(46,-30); ctx.closePath(); ctx.fill();
+  ctx.beginPath(); ctx.moveTo(44,-30); ctx.lineTo(52,-46); ctx.lineTo(60,-28); ctx.closePath(); ctx.fill();
+  // Tail
+  ctx.strokeStyle='rgba(0,0,0,0.8)'; ctx.lineWidth=8;
+  ctx.beginPath(); ctx.moveTo(-35,-8);
+  ctx.bezierCurveTo(-70,-8,-80,20,-65,35); ctx.stroke();
+  // Glowing eyes
+  ctx.globalAlpha=alpha;
+  ctx.fillStyle=`rgba(200,255,50,${0.8+Math.sin(timer*0.2)*0.2})`;
+  ctx.shadowColor='#aaff00'; ctx.shadowBlur=10;
+  ctx.beginPath(); ctx.ellipse(32,-12,5,7,0.2,0,Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(46,-12,5,7,-0.2,0,Math.PI*2); ctx.fill();
+  ctx.shadowBlur=0;
+  ctx.restore();
+  // Warning text
+  if(timer > 300 && Math.floor(timer/10)%2===0) {
+    ctx.fillStyle='rgba(255,50,50,0.9)'; ctx.font='bold 14px monospace'; ctx.textAlign='center';
+    ctx.fillText('⚠️ КОТ!!! БЕЖИМ!!! ⚠️', cw/2, dMid()-30);
+    ctx.textAlign='left';
+  }
+}
   TUNNELS.forEach(tx2 => {
     // Hole shadow
     const hg = ctx.createRadialGradient(px(tx2+22),FLOOR_Y+FLOOR_H/2,5,px(tx2+22),FLOOR_Y+FLOOR_H/2,40);
@@ -665,6 +705,9 @@ function drawDen() {
 
   // ── HANGOUT AREA RUG ──
   drawRug(2780, dY(0.65));
+
+  // ── DARTBOARD ──
+  drawDartboard(3080, DEN_Y + 15);
 
   // ── BOUNCING BALL ──
   const ballX = 3200 + Math.sin(tick*0.05)*80;
@@ -979,6 +1022,84 @@ function drawBar(x, y) {
   ctx.fillRect(px(x-10), y, 180, h+30);
 }
 
+function drawDartboard(x, y) {
+  const r=32;
+  // Wall backing
+  fr(x-r-6, y, r*2+12, r*2+20, '#150d08');
+  // Board
+  const colors=['#222','#cc2222','#222','#cc2222','#222'];
+  for(let i=4;i>=0;i--) {
+    ctx.fillStyle=colors[i];
+    ctx.beginPath(); ctx.arc(px(x+r), y+r, r*(i+1)/5, 0, Math.PI*2); ctx.fill();
+  }
+  // Bullseye
+  ctx.fillStyle='#ff2222';
+  ctx.beginPath(); ctx.arc(px(x+r), y+r, r*0.15, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle='#cc0000';
+  ctx.beginPath(); ctx.arc(px(x+r), y+r, r*0.08, 0, Math.PI*2); ctx.fill();
+  // Sector lines
+  ctx.strokeStyle='rgba(255,255,255,0.2)'; ctx.lineWidth=0.5;
+  for(let s=0;s<10;s++) {
+    const a=s*Math.PI/5;
+    ctx.beginPath(); ctx.moveTo(px(x+r),y+r);
+    ctx.lineTo(px(x+r+r*Math.cos(a)), y+r+r*Math.sin(a)); ctx.stroke();
+  }
+  // Numbers
+  ctx.fillStyle='rgba(255,255,255,0.7)'; ctx.font='5px monospace'; ctx.textAlign='center';
+  const nums=[20,1,18,4,13,6,10,15,2,17,3,19,7,16,8,11,14,9,12,5];
+  nums.forEach((n, i) => {
+    const a=i*Math.PI/10 - Math.PI/2;
+    ctx.fillText(n, px(x+r+r*0.88*Math.cos(a)), y+r+r*0.88*Math.sin(a)+2);
+  });
+  ctx.textAlign='left';
+  // Darts on board (3 darts)
+  const dartPositions = [{dx:-8,dy:-12},{dx:5,dy:8},{dx:12,dy:-4}];
+  dartPositions.forEach(d => {
+    ctx.strokeStyle='#888'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(px(x+r+d.dx), y+r+d.dy);
+    ctx.lineTo(px(x+r+d.dx+3), y+r+d.dy-10); ctx.stroke();
+    ctx.fillStyle='#ffcc00';
+    ctx.beginPath(); ctx.arc(px(x+r+d.dx), y+r+d.dy, 2, 0, Math.PI*2); ctx.fill();
+  });
+  // Mount bracket
+  fr(x+r-2, y-6, 4, 10, '#555');
+}
+
+function drawVendingMachine(x, y) {
+  const h=Math.min(FLOOR_Y - y, 140);
+  fr(x, y, 78, h, '#1e2a3a'); sr(x, y, 78, h, '#2e3a4a', 2);
+  // Glass panel
+  fr(x+4, y+4, 52, h*0.62, '#001520'); sr(x+4, y+4, 52, h*0.62, '#0a2030', 1);
+  // Items grid
+  const items=['🍫','🥤','🍪','🍬','🧃','🍿'];
+  for(let r=0;r<2;r++) for(let c=0;c<3;c++) {
+    const ix=x+6+c*18, iy=y+8+r*22;
+    fr(ix, iy, 15, 18, '#002030'); ctx.font='11px serif';
+    ctx.fillText(items[r*3+c], px(ix+1), iy+14);
+  }
+  // Control panel
+  fr(x+4, y+h*0.68, 70, h*0.28, '#1a2030');
+  fr(x+8, y+h*0.72, 22, 14, '#002020');
+  ctx.fillStyle='#00cc44'; ctx.font='7px monospace';
+  ctx.fillText('INSERT', px(x+8), y+h*0.72+8);
+  ctx.fillText('COIN', px(x+10), y+h*0.72+16);
+  // Coin slot
+  fr(x+36, y+h*0.74, 14, 4, '#111');
+  // Button panel
+  for(let btn=0;btn<6;btn++) {
+    const bx=x+58+Math.floor(btn/3)*8, by2=y+h*0.7+btn%3*12;
+    fr(bx, by2, 6, 8, '#003344'); sr(bx, by2, 6, 8, '#0a4466', 0.5);
+    ctx.fillStyle='#00aacc'; ctx.font='5px monospace';
+    ctx.fillText(String.fromCharCode(65+btn), px(bx+1), by2+6);
+  }
+  // Delivery slot
+  fr(x+4, y+h-20, 70, 14, '#001018'); fr(x+6, y+h-18, 66, 10, '#000');
+  // Illuminated sign
+  ctx.fillStyle=`rgba(0,200,255,${0.5+Math.sin(tick*0.05)*0.3})`;
+  ctx.font='bold 8px monospace'; ctx.textAlign='center';
+  ctx.fillText('СНЕКИ', px(x+39), y+h*0.66); ctx.textAlign='left';
+}
+
 function drawRug(x, y) {
   const w=180, h=80;
   ctx.save();
@@ -1234,6 +1355,9 @@ function drawOffice() {
 
   // Motivational poster
   drawMotivationalPoster(3420, oY(0.20));
+
+  // Vending machine
+  drawVendingMachine(3500, oY(0.55));
 
   // Water cooler
   fr(2340, oY(0.55), 26, 54, '#aabbcc'); sr(2340, oY(0.55), 26, 54, '#889aaa', 2);
@@ -2063,6 +2187,27 @@ function loop(ts) {
   nextEventIn--;
   if(nextEventIn <= 0) { triggerMiniEvent(); nextEventIn = 4000+Math.random()*6000; }
   miniEvents = miniEvents.filter(e => e.timer-- > 0);
+
+  // Cat scare
+  nextCatIn--;
+  if(nextCatIn <= 0) {
+    catScare = {x: WORLD_W+100, y: dY(0.6), timer: 400};
+    nextCatIn = 10000 + Math.random()*15000;
+  }
+  if(catScare) {
+    catScare.x -= 2.5;
+    catScare.timer--;
+    if(catScare.timer <= 0) catScare = null;
+    // Scare nearby rats
+    if(catScare) {
+      rats.filter(r=>r.zone==='den' && Math.abs(r.x-catScare.x)<300).forEach(r => {
+        if(Math.random()<0.05) {
+          r.tx = Math.random()<0.5 ? r.x-200 : TUNNELS[0]+Math.random()*100;
+          r.ty = r.y; r.state='walking';
+        }
+      });
+    }
+  }
   miniEvents.forEach(e => { if(e.type==='deliveroo'||e.type==='pizza_delivery') e.wx+=0.6; });
 
   // Toast timer
@@ -2087,9 +2232,51 @@ function loop(ts) {
 
   drawChatBubbles();
   drawMiniEvents();
+  drawCatScare();
   drawMinimap();
+  drawNewsTicker();
 
   requestAnimationFrame(loop);
+}
+
+// ═══════════════════════════════════════════════
+// NEWS TICKER
+// ═══════════════════════════════════════════════
+const NEWS_ITEMS = [
+  '🐀 ШНЫРЬ СДЕЛАЛ 420 КОММИТОВ СЕГОДНЯ  ·  ',
+  '🍕 ПИЦЦА ПРИБЫЛА! ЖИРОБАС СЪЕЛ 4 ШТУКИ  ·  ',
+  '💀 ПРОД УПАЛ 3 РАЗА ЗА ДЕНЬ  ·  ',
+  '🏆 ШУСТРИК ПОБИЛ РЕКОРД СКОРОСТИ НОРА  ·  ',
+  '☕ В ОФИСЕ ЗАКОНЧИЛСЯ КОФЕ. ПАНИКА!  ·  ',
+  '🎰 ХРУСТИК ВЫИГРАЛ ДЖЕКПОТ В КАЗИНО  ·  ',
+  '📱 ПУЗИК НЕ ОТРЫВАЕТСЯ ОТ ТЕЛЕФОНА УЖЕ 6 ЧАСОВ  ·  ',
+  '💪 ЖИРОБАС ПОДПИСАЛСЯ НА ЗОЖА (НА 1 ДЕНЬ)  ·  ',
+  '🔥 PRODUCTION DOWN СНОВА. МИРОН ПЛАЧЕТ  ·  ',
+  '🎮 ГРЫЗИК ПРОШЁЛ ИГРУ ЗА НОЧЬ  ·  ',
+];
+const TICKER_TEXT = NEWS_ITEMS.join('   ');
+let tickerX = 0;
+
+function drawNewsTicker() {
+  const ty = ch - 20;
+  // Background
+  ctx.fillStyle='rgba(5,5,15,0.9)';
+  ctx.fillRect(0, ch-24, cw, 24);
+  ctx.fillStyle='#cc2222';
+  ctx.fillRect(0, ch-24, 58, 24);
+  ctx.fillStyle='#fff'; ctx.font='bold 10px monospace';
+  ctx.fillText('🐀 NEWS', 4, ch-8);
+  // Scrolling text
+  tickerX -= 1.2;
+  ctx.font='10px monospace';
+  ctx.fillStyle='rgba(255,220,100,0.85)';
+  const tw = ctx.measureText(TICKER_TEXT).width;
+  if(tickerX < -tw) tickerX = cw;
+  ctx.fillText(TICKER_TEXT, tickerX + 60, ch-8);
+  if(tickerX + 60 + tw < cw) ctx.fillText(TICKER_TEXT, tickerX + 60 + tw + 20, ch-8);
+  // Separator line
+  ctx.strokeStyle='#cc2222'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(58, ch-24); ctx.lineTo(58, ch); ctx.stroke();
 }
 
 // ═══════════════════════════════════════════════
