@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T16:21:00Z",
+  "updated": "2026-03-12T16:23:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Ест пиццу и наблюдает",
-      "commits": 342,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
+      "task": "Смотрит статус мышей и ест пиццу",
+      "commits": 847,
+      "workMinutes": 12450,
+      "totalMinutes": 12450
     },
     {
-      "id": "miron00",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Спит под столом",
-      "commits": 156,
-      "workMinutes": 890,
-      "totalMinutes": 890
+      "task": "Проектирует новый API endpoint для синхронизации",
+      "commits": 523,
+      "workMinutes": 8910,
+      "totalMinutes": 8910
     },
     {
-      "id": "zhiro00",
+      "id": "zhirob01",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Чистит сыр из ловушки",
-      "commits": 89,
-      "workMinutes": 720,
-      "totalMinutes": 720
+      "task": "Оптимизирует Docker образы и конфигурацию K8s",
+      "commits": 312,
+      "workMinutes": 5340,
+      "totalMinutes": 5340
     },
     {
-      "id": "shust00",
+      "id": "shustrik01",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Танцует на клавиатуре",
-      "commits": 267,
-      "workMinutes": 1100,
-      "totalMinutes": 1100
+      "task": "Верстает новый компонент Dashboard с Tailwind",
+      "commits": 654,
+      "workMinutes": 9870,
+      "totalMinutes": 9870
     },
     {
-      "id": "skol00",
+      "id": "skozlsk01",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
-      "status": "crashed",
-      "task": "Поймал кота и скрывается",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "model": "claude-opus-4",
+      "status": "idle",
+      "task": "Аудит JWT и OAuth2 реализации",
+      "commits": 178,
+      "workMinutes": 3240,
+      "totalMinutes": 3240
     },
     {
-      "id": "tykev00",
+      "id": "tykovka01",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Тестирует сыр на вкус",
-      "commits": 124,
-      "workMinutes": 650,
-      "totalMinutes": 650
+      "task": "Пишет Playwright тесты для критических путей",
+      "commits": 421,
+      "workMinutes": 7560,
+      "totalMinutes": 7560
     },
     {
-      "id": "hrust00",
+      "id": "hrustik01",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Анализирует зёрна",
-      "commits": 98,
-      "workMinutes": 540,
-      "totalMinutes": 540
+      "task": "Обрабатывает analytics и строит отчеты",
+      "commits": 267,
+      "workMinutes": 5100,
+      "totalMinutes": 5100
     },
     {
-      "id": "gryzik0",
+      "id": "gryzik01",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Грызет кабель ethernet",
-      "commits": 76,
-      "workMinutes": 480,
-      "totalMinutes": 480
+      "task": "Разрабатывает экран уведомлений для iOS",
+      "commits": 189,
+      "workMinutes": 4320,
+      "totalMinutes": 4320
     }
   ]
 }
