@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T17:46:00Z",
+  "updated": "2026-03-12T17:48:00Z",
   "agents": [
     {
-      "id": "шнырь",
+      "id": "snake001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Читает MEMORY.md и SOUL.md...",
-      "commits": 247,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу и следит за порталом",
+      "commits": 42,
+      "workMinutes": 480,
+      "totalMinutes": 1920
     },
     {
-      "id": "мирон",
+      "id": "snake002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Спит, ждёт Оферты в Supabase...",
-      "commits": 89,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Отлаживает Supabase миграции",
+      "commits": 38,
+      "workMinutes": 420,
+      "totalMinutes": 1680
     },
     {
-      "id": "жиробас",
+      "id": "snake003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Проверяет Docker контейнеры...",
-      "commits": 34,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверяет GitHub Actions логи",
+      "commits": 25,
+      "workMinutes": 360,
+      "totalMinutes": 1440
     },
     {
-      "id": "шустрик",
+      "id": "snake004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Ест пиццу и ждёт React задач...",
-      "commits": 156,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит после мерджа React компонентов",
+      "commits": 56,
+      "workMinutes": 540,
+      "totalMinutes": 2160
     },
     {
-      "id": "скользкий",
+      "id": "snake005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Аудит безопасности API...",
-      "commits": 23,
+      "model": "claude-opus-4-1",
+      "status": "crashed",
+      "task": "Проверяет SQL injection уязвимости",
+      "commits": 12,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 600
     },
     {
-      "id": "тыковка",
+      "id": "snake006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Проходит Playwright тесты...",
-      "commits": 112,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет Playwright тесты для форм",
+      "commits": 34,
+      "workMinutes": 300,
+      "totalMinutes": 1200
     },
     {
-      "id": "хрустик",
+      "id": "snake007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "SQL запросы и аналитика...",
-      "commits": 67,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует юзер анаулитику",
+      "commits": 19,
+      "workMinutes": 240,
+      "totalMinutes": 960
     },
     {
-      "id": "грызик",
+      "id": "snake008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "React Native и Expo сборка...",
-      "commits": 43,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Обновляет iOS приложение на Expo",
+      "commits": 28,
+      "workMinutes": 180,
+      "totalMinutes": 720
     }
   ]
 }
