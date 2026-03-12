@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T18:13:00Z",
+  "updated": "2026-03-12T18:15:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу",
+      "commits": 147,
+      "workMinutes": 324,
+      "totalMinutes": 1820
     },
     {
-      "id": "miron001",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит",
+      "commits": 89,
+      "workMinutes": 187,
+      "totalMinutes": 945
     },
     {
-      "id": "zhirobas",
+      "id": "zhirobas03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "пьёт кофе",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверяет логи",
+      "commits": 56,
+      "workMinutes": 134,
+      "totalMinutes": 672
     },
     {
-      "id": "shustrik",
+      "id": "shustrik04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "глядит мемы",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Смотрит фильм",
+      "commits": 112,
+      "workMinutes": 278,
+      "totalMinutes": 1390
     },
     {
-      "id": "skozlky",
+      "id": "skolzkiy05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku-4-5",
-      "status": "crashed",
-      "task": "недостижим",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Патрулирует",
+      "commits": 34,
+      "workMinutes": 76,
+      "totalMinutes": 380
     },
     {
-      "id": "tykobka",
+      "id": "tykovka06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "тестирует интеграции",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирует",
+      "commits": 67,
+      "workMinutes": 156,
+      "totalMinutes": 780
     },
     {
-      "id": "hrustic0",
+      "id": "hrustik07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "анализирует датасеты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Обрабатывает данные",
+      "commits": 43,
+      "workMinutes": 98,
+      "totalMinutes": 490
     },
     {
-      "id": "grizik00",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "пишет iOS код",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Грызит код",
+      "commits": 78,
+      "workMinutes": 189,
+      "totalMinutes": 945
     }
   ]
 }
