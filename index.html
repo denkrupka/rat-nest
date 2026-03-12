@@ -26,7 +26,8 @@
 <title>🐀 Крысиная нора — Штаб крысиной банды</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #050508; overflow: hidden; font-family: monospace; }
+html { overflow: hidden; width: 100%; height: 100%; max-width: 100vw; max-height: 100vh; }
+body { background: #050508; overflow: hidden; font-family: monospace; width: 100%; height: 100%; max-width: 100vw; max-height: 100vh; }
 canvas { display: block; cursor: crosshair; }
 #popup {
   position: fixed; display: none;
@@ -206,6 +207,7 @@ let themeDark = (localStorage.getItem('ratTheme') !== 'light');
 // ═══════════════════════════════════════════════
 // CONSTANTS & LAYOUT
 // ═══════════════════════════════════════════════
+const WORLD_SCALE = 1.5; // масштаб мебели под размер новых крыс
 const WORLD_W = 3600;
 const FLOOR_H = 32;
 let cw, ch, FLOOR_Y, DEN_Y;
@@ -1167,26 +1169,26 @@ function bed(x, y, special, phoneRat) {
   const h = Math.min(ch - y - 60, 100);
   const bx = x, by = y + 20;
   // Bed frame
-  fr(bx, by, 118, h*0.75, '#3d1e10'); sr(bx, by, 118, h*0.75, '#5a2e18', 2);
+  fr(bx, by, 177, h*0.75, '#3d1e10'); sr(bx, by, 177, h*0.75, '#5a2e18', 2);
   // Pillow
-  fr(bx+8, by+8, 42, 26, '#e8d8c8'); sr(bx+8, by+8, 42, 26, '#c8b8a8', 1);
+  fr(bx+8, by+8, 63, 32, '#e8d8c8'); sr(bx+8, by+8, 63, 32, '#c8b8a8', 1);
   // Blanket
   const bc = special ? '#cc4466' : '#334488';
   const bs = special ? '#ff6688' : '#4466bb';
   const bob = special ? Math.sin(tick*0.16)*4 : Math.sin(tick*0.06)*1.5;
-  fr(bx+8, by+36+bob, 102, h*0.38-bob*0.3, bc);
-  sr(bx+8, by+36+bob, 102, h*0.38-bob*0.3, bs, 1);
+  fr(bx+8, by+36+bob, 161, h*0.38-bob*0.3, bc);
+  sr(bx+8, by+36+bob, 161, h*0.38-bob*0.3, bs, 1);
   // Headboard
-  fr(bx, by-13, 118, 16, '#5a2e18'); sr(bx, by-13, 118, 16, '#7a4e38', 1);
-  if(special) em('💕', bx+52, by+28, 10);
+  fr(bx, by-13, 177, 16, '#5a2e18'); sr(bx, by-13, 177, 16, '#7a4e38', 1);
+  if(special) em('💕', bx+80, by+28, 12);
   // Nightstand
-  fr(bx+122, by+h*0.4, 26, h*0.35, '#2d1408');
-  em('💡', bx+126, by+h*0.4+14, 9);
+  fr(bx+181, by+h*0.4, 32, h*0.35, '#2d1408');
+  em('💡', bx+187, by+h*0.4+14, 10);
 }
 
 function drawTV(x, y) {
   const fh = Math.round((FLOOR_Y - DEN_Y) * 0.5);
-  const w = 88, h = 66;
+  const w = Math.round(88 * WORLD_SCALE), h = Math.round(66 * WORLD_SCALE);
   // TV stand
   fr(x+6, y+h+2, 76, 10, '#222'); fr(x+28, y+h+12, 32, 14, '#1a1a1a');
   // TV frame
@@ -1237,19 +1239,19 @@ function drawPS(x, y) {
 }
 
 function drawFridge(x, y) {
-  const h = Math.min(ch - y - 40, 120);
-  fr(x, y+20, 68, h, '#2a3c4e'); sr(x, y+20, 68, h, '#3d5570', 2);
+  const h = Math.min(ch - y - 40, 168);
+  fr(x, y+20, 95, h, '#2a3c4e'); sr(x, y+20, 95, h, '#3d5570', 2);
   ctx.strokeStyle='#1e2c3e'; ctx.lineWidth=1;
-  ctx.beginPath(); ctx.moveTo(px(x+2),y+20+h*0.4); ctx.lineTo(px(x+66),y+20+h*0.4); ctx.stroke();
-  fr(x+58,y+28,6,22,'#4d6070'); fr(x+58,y+h*0.5+24,6,22,'#4d6070');
+  ctx.beginPath(); ctx.moveTo(px(x+2),y+20+h*0.4); ctx.lineTo(px(x+93),y+20+h*0.4); ctx.stroke();
+  fr(x+83,y+28,6,22,'#4d6070'); fr(x+83,y+h*0.5+24,6,22,'#4d6070');
   em('🧀',x+8,y+38,11); em('🍺',x+32,y+38,11); em('🥤',x+8,y+60,11); em('🍕',x+34,y+58,10);
 }
 
 function drawMicrowave(x, y) {
-  const h = 52;
-  fr(x, y+20, 78, h, '#2a2a2e'); sr(x, y+20, 78, h, '#3a3a40', 2);
+  const h = 68;
+  fr(x, y+20, 102, h, '#2a2a2e'); sr(x, y+20, 102, h, '#3a3a40', 2);
   // Display
-  fr(x+4, y+24, 50, 28, '#001108'); sr(x+4, y+24, 50, 28, '#004420', 1);
+  fr(x+4, y+24, 66, 36, '#001108'); sr(x+4, y+24, 66, 36, '#004420', 1);
   if(microwaveTimer > 0) {
     // Spinning plate
     const angle = tick * 0.12;
@@ -1278,8 +1280,8 @@ function drawMicrowave(x, y) {
     tx('3000W', x+8, y+52, '#006622', 8);
   }
   // Door
-  fr(x+56, y+24, 18, 44, '#1e1e24'); sr(x+56, y+24, 18, 44, '#2e2e34', 1);
-  em('🔲',x+58,y+46,10);
+  fr(x+74, y+24, 24, 60, '#1e1e24'); sr(x+74, y+24, 24, 60, '#2e2e34', 1);
+  em('🔲',x+78,y+56,12);
 }
 
 function drawKitchenTable(x, y) {
@@ -2007,7 +2009,7 @@ function drawMeetingTable(x, y) {
 }
 
 function desk(x, y, pinkMon, special) {
-  const dw=148, dh=88;
+  const dw=222, dh=120;
   // Desk
   fr(x, y, dw, dh, '#141428'); sr(x, y, dw, dh, '#202040', 2);
   fr(x+5, y+dh, 10, 30, '#0e0e20'); fr(x+133, y+dh, 10, 30, '#0e0e20');
