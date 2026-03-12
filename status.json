@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T21:12:00Z",
+  "updated": "2026-03-12T21:14:00Z",
   "agents": [
     {
       "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Спит после работы. Мозг на перезагрузке",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "miron001",
-      "name": "Мирон",
-      "role": "Backend",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ест пиццу и расслабляется",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Отдыхает, чистит усы",
+      "commits": 47,
+      "workMinutes": 283,
+      "totalMinutes": 283
+    },
+    {
+      "id": "miron02",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet-4",
+      "status": "idle",
+      "task": "Проверяет API логи",
+      "commits": 34,
+      "workMinutes": 187,
+      "totalMinutes": 187
     },
     {
       "id": "zhirobas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Качает мышцы в тренажёрке",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Следит за инфраструктурой",
+      "commits": 28,
+      "workMinutes": 164,
+      "totalMinutes": 164
     },
     {
       "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Смотрит фильм на диване",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Дорабатывает UI компоненты",
+      "commits": 52,
+      "workMinutes": 312,
+      "totalMinutes": 312
     },
     {
-      "id": "skolzskiy",
+      "id": "skozlkiy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "crashed",
-      "task": "Потеряется в сети (как всегда)",
-      "commits": 0,
+      "task": "Проверял уязвимости",
+      "commits": 19,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 127
     },
     {
-      "id": "tykovka0",
+      "id": "tykovka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Проверяет свой запас орешков",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет тесты для новых фич",
+      "commits": 41,
+      "workMinutes": 245,
+      "totalMinutes": 245
     },
     {
-      "id": "hrustik01",
+      "id": "hrustic",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Анализирует запасы сыра в норке",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует метрики портала",
+      "commits": 23,
+      "workMinutes": 138,
+      "totalMinutes": 138
     },
     {
-      "id": "gryzik001",
+      "id": "gryzik",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Грызёт провода и провода",
-      "commits": 0,
+      "task": "Спит, видит сны про React Native",
+      "commits": 15,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 89
     }
   ]
 }
