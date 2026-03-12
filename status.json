@@ -1,34 +1,16 @@
 {
-  "updated": "2026-03-12T02:08:00Z",
-  "agents": {
-    "shnyr": {
-      "status": "working",
-      "task": "Координирует 3 агента: Finance, Kanban, SuperAdmin",
-      "model": "claude-sonnet-4-6",
-      "commits": 9,
-      "uptime": "2h 15m"
-    },
-    "pyshka": {
-      "status": "done",
-      "task": "Kanban компонент для Rekrutacja — готово ✅",
-      "model": "gpt-5.1-codex",
-      "commits": 2,
-      "uptime": "45m"
-    },
-    "ryzhy": {
-      "status": "running",
-      "task": "Finance Budget Dashboard + SuperAdmin панель",
-      "model": "gpt-5.1-codex",
-      "commits": 3,
-      "uptime": "1h 30m"
-    },
-    "hvostik": { "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null },
-    "klyik":   { "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null },
-    "sery":    { "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null },
-    "pisklia": { "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null },
-    "zhirobas":{ "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null },
-    "shustrik":{ "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null },
-    "lysyi":   { "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null },
-    "bandit":  { "status": "reserve", "task": null, "model": null, "commits": 0, "uptime": null }
-  }
+  "updated": "2026-03-12T07:30:00Z",
+  "agents": [
+    {"id": "shnyr", "name": "Шнырь", "role": "Координатор 👑", "status": "working", "activity": "typing", "task": "Раздаёт задачи суб-агентам, смотрит на всех с короной", "model": "claude-sonnet-4-6", "lastCommit": "feat: master plan v42", "commits": 42, "uptime": "8h 15m"},
+    {"id": "zhirobas", "name": "Жиробас", "role": "Backend 🐘", "status": "working", "activity": "coffee", "task": "Пишет SQL запросы, ест попутно", "model": "gpt-4o", "lastCommit": "fix: index on fat_table", "commits": 8, "uptime": "3h 20m"},
+    {"id": "shustrik", "name": "Шустрик", "role": "DevOps ⚡", "status": "working", "activity": "commit", "task": "Деплоит, деплоит, деплоит — не останавливается", "model": "claude-haiku-3-5", "lastCommit": "ci: deploy #47 FAST", "commits": 47, "uptime": "1h 05m"},
+    {"id": "pysklia", "name": "Пыськля", "role": "Frontend 💕", "status": "working", "activity": "typing", "task": "Делает красивые компоненты с любовью", "model": "gpt-4o-mini", "lastCommit": "feat: pink button with hearts", "commits": 15, "uptime": "4h 40m"},
+    {"id": "gryzik", "name": "Грызик", "role": "QA 🔍", "status": "idle", "activity": "sleep", "task": "Грызёт провода и баги одновременно", "model": "gemini-pro", "lastCommit": "test: bit through everything", "commits": 6, "uptime": "2h 10m"},
+    {"id": "tykovka", "name": "Тыковка", "role": "Finance 🟠", "status": "working", "activity": "think", "task": "Считает деньги, плачет", "model": "gpt-4o", "lastCommit": "fix: budget overflow error", "commits": 11, "uptime": "5h 00m"},
+    {"id": "chvyak", "name": "Чвяк", "role": "Data Science 🍕", "status": "working", "activity": "eat_pizza", "task": "Анализирует данные, жуёт попутно", "model": "claude-opus-4", "lastCommit": "feat: pizza consumption model", "commits": 3, "uptime": "1h 30m"},
+    {"id": "miron", "name": "Мирон", "role": "Architect 🤔", "status": "working", "activity": "debug", "task": "Думает над архитектурой уже 3 часа", "model": "claude-sonnet-4-6", "lastCommit": "docs: thinking about it", "commits": 2, "uptime": "6h 55m"},
+    {"id": "puzik", "name": "Пузик", "role": "Mobile 📱", "status": "idle", "activity": "sleep", "task": "Zzz... мобильное приложение подождёт", "model": "gemini-flash", "lastCommit": "nap: recharging battery", "commits": 4, "uptime": "0h 45m"},
+    {"id": "xrustik", "name": "Хрустик", "role": "Security 🔐", "status": "working", "activity": "beer", "task": "Пентест с чипсами и пивом", "model": "gpt-4o", "lastCommit": "sec: found 3 bugs, ate 2", "commits": 9, "uptime": "3h 15m"},
+    {"id": "skolzkiy", "name": "Скользкий", "role": "ML/AI 🌊", "status": "working", "activity": "typing", "task": "Скользит между моделями", "model": "mixtral-8x22b", "lastCommit": "feat: slippery gradient descent", "commits": 17, "uptime": "4h 20m"}
+  ]
 }
