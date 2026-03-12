@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T16:51:00Z",
+  "updated": "2026-03-12T16:53:00Z",
   "agents": [
     {
       "id": "50fb2591",
@@ -7,29 +7,29 @@
       "role": "Главный кодер",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Analyze rat-nest repository structure and report findings (commit count",
+      "task": "Analyze rat-nest repository structure",
       "commits": 0,
       "workMinutes": 1,
       "totalMinutes": 1
     },
     {
-      "id": "mironXX",
+      "id": "mironXXXX",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизирует базу данных и пишет миграции",
+      "task": "Refactoring API endpoints (ест пиццу)",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "girobas",
+      "id": "zhirobas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Настраивает pipelines и мониторинг",
+      "task": "Deployment pipeline optimization (спит)",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -40,18 +40,18 @@
       "role": "Frontend",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Рисует UI компоненты и анимации",
+      "task": "UI components library (медитирует)",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "skozlky",
+      "id": "skozzkiy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Проверяет безопасность и ищет уязвимости",
+      "model": "claude-sonnet-4-6",
+      "status": "crashed",
+      "task": "Vulnerability scan (перезагрузка)",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -62,29 +62,29 @@
       "role": "QA",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Тестирует функции и ловит баги",
+      "task": "Test suite automation (проверяет баги)",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "hrustik",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует данные и строит графики",
+      "task": "Data pipeline optimization (грызет файлы)",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "gryzik",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Разрабатывает мобильные приложения",
+      "task": "React Native optimization (закладывает орехи)",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
