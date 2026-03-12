@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T17:48:00Z",
+  "updated": "2026-03-12T17:50:00Z",
   "agents": [
     {
-      "id": "snake001",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и следит за порталом",
+      "task": "Ждёт поручений",
       "commits": 42,
-      "workMinutes": 480,
-      "totalMinutes": 1920
+      "workMinutes": 180,
+      "totalMinutes": 240
     },
     {
-      "id": "snake002",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Отлаживает Supabase миграции",
-      "commits": 38,
-      "workMinutes": 420,
-      "totalMinutes": 1680
+      "task": "Обедает, сыр грызет",
+      "commits": 28,
+      "workMinutes": 120,
+      "totalMinutes": 180
     },
     {
-      "id": "snake003",
+      "id": "zhirobd",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Проверяет GitHub Actions логи",
-      "commits": 25,
-      "workMinutes": 360,
-      "totalMinutes": 1440
+      "task": "Спит на сервере",
+      "commits": 15,
+      "workMinutes": 60,
+      "totalMinutes": 120
     },
     {
-      "id": "snake004",
+      "id": "shustri",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит после мерджа React компонентов",
-      "commits": 56,
-      "workMinutes": 540,
-      "totalMinutes": 2160
+      "task": "Ловит баги в консоли",
+      "commits": 35,
+      "workMinutes": 140,
+      "totalMinutes": 200
     },
     {
-      "id": "snake005",
+      "id": "skozlyy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "crashed",
-      "task": "Проверяет SQL injection уязвимости",
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Проверяет замки",
       "commits": 12,
-      "workMinutes": 0,
-      "totalMinutes": 600
+      "workMinutes": 80,
+      "totalMinutes": 100
     },
     {
-      "id": "snake006",
+      "id": "tykovna",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пишет Playwright тесты для форм",
-      "commits": 34,
-      "workMinutes": 300,
-      "totalMinutes": 1200
+      "task": "Тестирует фичи",
+      "commits": 8,
+      "workMinutes": 45,
+      "totalMinutes": 90
     },
     {
-      "id": "snake007",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует юзер анаулитику",
+      "task": "Считает статистику",
       "commits": 19,
-      "workMinutes": 240,
-      "totalMinutes": 960
+      "workMinutes": 95,
+      "totalMinutes": 150
     },
     {
-      "id": "snake008",
+      "id": "gryzik01",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Обновляет iOS приложение на Expo",
-      "commits": 28,
-      "workMinutes": 180,
-      "totalMinutes": 720
+      "task": "Прыгает между фреймворками",
+      "commits": 22,
+      "workMinutes": 110,
+      "totalMinutes": 160
     }
   ]
 }
