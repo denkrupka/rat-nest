@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T11:55:00Z",
+  "updated": "2026-03-12T11:57:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "пьёт кофе и ждёт указаний",
-      "commits": 143,
-      "workMinutes": 8420,
-      "totalMinutes": 8420
+      "task": "Кодит фичи portala.maxmaster",
+      "commits": 147,
+      "workMinutes": 2340,
+      "totalMinutes": 2340
     },
     {
-      "id": "miron02",
+      "id": "miron000",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "оптимизирует API endpoints",
-      "commits": 87,
-      "workMinutes": 5240,
-      "totalMinutes": 5240
+      "task": "Edge Functions на Supabase",
+      "commits": 89,
+      "workMinutes": 1680,
+      "totalMinutes": 1680
     },
     {
-      "id": "zhirobas3",
+      "id": "zhirovas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "следит за логами продакшена",
-      "commits": 65,
-      "workMinutes": 3960,
-      "totalMinutes": 3960
+      "task": "Разворачивает инфру на VPS",
+      "commits": 52,
+      "workMinutes": 840,
+      "totalMinutes": 840
     },
     {
-      "id": "shustrik4",
+      "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "полирует UI компоненты",
-      "commits": 112,
-      "workMinutes": 6720,
-      "totalMinutes": 6720
+      "task": "React компоненты с Tailwind",
+      "commits": 123,
+      "workMinutes": 2100,
+      "totalMinutes": 2100
     },
     {
-      "id": "skozlky5",
+      "id": "skozlky0",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "сканирует зависимости на уязвимости",
-      "commits": 52,
-      "workMinutes": 3120,
-      "totalMinutes": 3120
+      "task": "Аудит безопасности, пентесты",
+      "commits": 34,
+      "workMinutes": 600,
+      "totalMinutes": 600
     },
     {
-      "id": "tykovka6",
+      "id": "tykofka0",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "ест пиццу и тестирует E2E",
-      "commits": 98,
-      "workMinutes": 5880,
-      "totalMinutes": 5880
+      "task": "Тестирует на Playwright",
+      "commits": 78,
+      "workMinutes": 1440,
+      "totalMinutes": 1440
     },
     {
-      "id": "hrustik77",
+      "id": "hrustik00",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "анализирует датасет и готовит репорт",
-      "commits": 43,
-      "workMinutes": 2580,
-      "totalMinutes": 2580
+      "task": "Аналитика, Excel, SQL",
+      "commits": 45,
+      "workMinutes": 900,
+      "totalMinutes": 900
     },
     {
-      "id": "gryzik88",
+      "id": "gryzik000",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "спит перед мобильным фичей",
-      "commits": 34,
-      "workMinutes": 2040,
-      "totalMinutes": 2040
+      "task": "Разрабатывает мобильное приложение",
+      "commits": 56,
+      "workMinutes": 1200,
+      "totalMinutes": 1200
     }
   ]
 }
