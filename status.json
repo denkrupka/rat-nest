@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T23:35:00Z",
+  "updated": "2026-03-12T23:37:00Z",
   "agents": [
     {
-      "id": "00000001",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Koordiniranje zadataka miševa",
-      "commits": 342,
-      "workMinutes": 15840,
-      "totalMinutes": 15840
+      "task": "Координирует команду, организует задачи",
+      "commits": 47,
+      "workMinutes": 1250,
+      "totalMinutes": 1250
     },
     {
-      "id": "00000002",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "API миграция на new schema",
-      "commits": 218,
-      "workMinutes": 9120,
-      "totalMinutes": 9120
+      "task": "Пилит Supabase функции и API endpoints",
+      "commits": 38,
+      "workMinutes": 890,
+      "totalMinutes": 890
     },
     {
-      "id": "00000003",
+      "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Kubernetes deployment оптимизация",
-      "commits": 156,
-      "workMinutes": 7200,
-      "totalMinutes": 7200
+      "task": "Настраивает CI/CD пайплайны и инфра",
+      "commits": 22,
+      "workMinutes": 650,
+      "totalMinutes": 650
     },
     {
-      "id": "00000004",
+      "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "React компонент библиотека",
-      "commits": 421,
-      "workMinutes": 18960,
-      "totalMinutes": 18960
+      "task": "Крутит React компоненты и UI на Tailwind",
+      "commits": 56,
+      "workMinutes": 1120,
+      "totalMinutes": 1120
     },
     {
-      "id": "00000005",
+      "id": "skol05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "Pentesting инфраструктуры",
-      "commits": 89,
-      "workMinutes": 4200,
-      "totalMinutes": 4200
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Проверяет безопасность кода и API",
+      "commits": 19,
+      "workMinutes": 480,
+      "totalMinutes": 480
     },
     {
-      "id": "00000006",
+      "id": "tyk06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Playwright тесты",
-      "commits": 267,
-      "workMinutes": 12480,
-      "totalMinutes": 12480
+      "task": "Пишет тесты и проверяет фичи Playwright",
+      "commits": 31,
+      "workMinutes": 720,
+      "totalMinutes": 720
     },
     {
-      "id": "00000007",
+      "id": "hrust07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Анализ дашборда",
-      "commits": 134,
-      "workMinutes": 6120,
-      "totalMinutes": 6120
+      "task": "Обрабатывает данные и анализирует метрики",
+      "commits": 25,
+      "workMinutes": 600,
+      "totalMinutes": 600
     },
     {
-      "id": "00000008",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "React Native приложение",
-      "commits": 203,
-      "workMinutes": 9360,
-      "totalMinutes": 9360
+      "task": "Разрабатывает мобильное приложение на React Native",
+      "commits": 29,
+      "workMinutes": 550,
+      "totalMinutes": 550
     }
   ]
 }
