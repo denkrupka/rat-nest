@@ -2839,6 +2839,236 @@ function drawNewsTicker() {
   ctx.beginPath(); ctx.moveTo(58, ch-24); ctx.lineTo(58, ch); ctx.stroke();
 }
 
+
+// ═══════════════════════════════════════════════
+// VISIT COUNTER (localStorage)
+// ═══════════════════════════════════════════════
+(function() {
+  const key = 'ratNestVisits';
+  const visits = parseInt(localStorage.getItem(key) || '0') + 1;
+  localStorage.setItem(key, visits);
+  const el = document.createElement('div');
+  el.id = 'visit-counter';
+  el.style.cssText = [
+    'position:fixed','top:32px','right:14px',
+    'color:#1a2a40','font-family:monospace','font-size:10px',
+    'z-index:50','opacity:0','transition:opacity 1.5s',
+    'letter-spacing:0.5px','pointer-events:none'
+  ].join(';');
+  if(visits === 1) {
+    el.textContent = '🐀 первый раз в норе!';
+  } else if(visits === 13) {
+    el.textContent = '🐀 13-й визит... нехорошее число';
+  } else if(visits === 42) {
+    el.textContent = '🐀 42-й раз. ты знаешь ответ на главный вопрос.';
+  } else if(visits === 100) {
+    el.textContent = '🐀 сотый визит. добро пожаловать домой, свой.';
+  } else {
+    el.textContent = '\u{1F400} ты здесь уже ' + visits + ' раз';
+  }
+  document.body.appendChild(el);
+  setTimeout(() => { el.style.opacity = '1'; }, 2800);
+  setTimeout(() => { el.style.opacity = '0'; }, 10000);
+})();
+
+// ═══════════════════════════════════════════════
+// WEB AUDIO — SOUND EFFECTS
+// ═══════════════════════════════════════════════
+let _audioCtx = null;
+let soundEnabled = false; // off by default, user turns on
+
+function _getACtx() {
+  if(!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  if(_audioCtx.state === 'suspended') _audioCtx.resume();
+  return _audioCtx;
+}
+
+function playSqueak() {
+  if(!soundEnabled) return;
+  try {
+    const ac = _getACtx();
+    const osc = ac.createOscillator(), g = ac.createGain();
+    osc.connect(g); g.connect(ac.destination);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(1400, ac.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(700, ac.currentTime + 0.06);
+    osc.frequency.exponentialRampToValueAtTime(1100, ac.currentTime + 0.13);
+    g.gain.setValueAtTime(0.06, ac.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.18);
+    osc.start(ac.currentTime); osc.stop(ac.currentTime + 0.18);
+  } catch(e) {}
+}
+
+function playKonamiMelody() {
+  if(!soundEnabled) return;
+  try {
+    const ac = _getACtx();
+    const notes = [523,659,784,1047,784,1047,784,659,523,659,784,1047];
+    notes.forEach((freq, i) => {
+      const osc = ac.createOscillator(), g = ac.createGain();
+      osc.connect(g); g.connect(ac.destination);
+      osc.type = i % 2 === 0 ? 'square' : 'triangle';
+      osc.frequency.value = freq;
+      const t = ac.currentTime + i * 0.1;
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(0.08, t + 0.02);
+      g.gain.linearRampToValueAtTime(0, t + 0.09);
+      osc.start(t); osc.stop(t + 0.1);
+    });
+  } catch(e) {}
+}
+
+function playRaveBeat() {
+  if(!soundEnabled) return;
+  try {
+    const ac = _getACtx();
+    const kick = ac.createOscillator(), kg = ac.createGain();
+    kick.connect(kg); kg.connect(ac.destination);
+    kick.type = 'sine';
+    kick.frequency.setValueAtTime(180, ac.currentTime);
+    kick.frequency.exponentialRampToValueAtTime(35, ac.currentTime + 0.18);
+    kg.gain.setValueAtTime(0.35, ac.currentTime);
+    kg.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.22);
+    kick.start(ac.currentTime); kick.stop(ac.currentTime + 0.22);
+    const hat = ac.createOscillator(), hg = ac.createGain();
+    hat.connect(hg); hg.connect(ac.destination);
+    hat.type = 'square'; hat.frequency.value = 2000;
+    hg.gain.setValueAtTime(0.03, ac.currentTime + 0.15);
+    hg.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.22);
+    hat.start(ac.currentTime + 0.15); hat.stop(ac.currentTime + 0.22);
+  } catch(e) {}
+}
+
+// Sound toggle button
+(function() {
+  const btn = document.createElement('div');
+  btn.id = 'sound-btn';
+  btn.title = 'Включить/выключить звуковые эффекты';
+  btn.style.cssText = [
+    'position:fixed','bottom:38px','right:14px',
+    'color:#223344','font-family:monospace','font-size:10px',
+    'cursor:pointer','z-index:50','padding:3px 7px',
+    'border:1px solid #1a2540','border-radius:3px',
+    'background:rgba(5,5,15,0.8)','transition:all 0.2s',
+    'user-select:none'
+  ].join(';');
+  btn.textContent = '\uD83D\uDD07 звук';
+  document.body.appendChild(btn);
+  btn.addEventListener('click', () => {
+    soundEnabled = !soundEnabled;
+    btn.textContent = soundEnabled ? '\uD83D\uDD0A звук' : '\uD83D\uDD07 звук';
+    btn.style.color = soundEnabled ? '#3355bb' : '#223344';
+    btn.style.borderColor = soundEnabled ? '#2244aa' : '#1a2540';
+    if(soundEnabled) playSqueak();
+  });
+})();
+
+// Hook sound to canvas clicks
+canvas.addEventListener('click', () => { playSqueak(); });
+
+// ═══════════════════════════════════════════════
+// KONAMI CODE EASTER EGG — КРЫСИНЫЙ РЕЙВ
+// ═══════════════════════════════════════════════
+(function() {
+  const SEQ = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown',
+               'ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  let idx = 0;
+
+  // Build rave overlay
+  const overlay = document.createElement('div');
+  overlay.id = 'rave-overlay';
+  overlay.style.cssText = [
+    'position:fixed','top:0','left:0','width:100%','height:100%',
+    'z-index:600','display:none','pointer-events:all',
+    'font-family:monospace','cursor:pointer'
+  ].join(';');
+
+  overlay.innerHTML = `
+<div id="rave-bg" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.93);"></div>
+<div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:20px;">
+  <div id="rave-title" style="font-size:clamp(22px,5vw,42px);font-weight:bold;margin-bottom:16px;line-height:1.2;">
+    🐀 КРЫСИНЫЙ РЕЙВ 🐀
+  </div>
+  <div style="font-size:clamp(12px,2.5vw,20px);color:#cc88ff;margin-bottom:24px;letter-spacing:2px;">
+    ↑↑↓↓←→←→ B A — КОД АКТИВИРОВАН
+  </div>
+  <div id="rave-rats" style="font-size:clamp(16px,3vw,28px);line-height:2;margin-bottom:24px;">
+    ᘛ⁐̤ᕐᐷ &nbsp; ᘛ⁐̤ᕐᐷ &nbsp; ᘛ⁐̤ᕐᐷ &nbsp; ᘛ⁐̤ᕐᐷ &nbsp; ᘛ⁐̤ᕐᐷ<br>
+    &nbsp; ᘛ⁐̤ᕐᐷ &nbsp; ᘛ⁐̤ᕐᐷ &nbsp; ᘛ⁐̤ᕐᐷ &nbsp; ᘛ⁐̤ᕐᐷ
+  </div>
+  <pre id="rave-ascii" style="font-size:clamp(9px,1.8vw,14px);line-height:1.3;margin-bottom:20px;"> (\\_/)  (\\_/)  (\\_/)  (\\_/)
+ (>🐀<) (>🐀<) (>🐀<) (>🐀<)
+  || ||  || ||  || ||  || ||
+КРЫСКИ ЗАЖИГАЮТ НА ВСЕХ ЭТАЖАХ!</pre>
+  <div style="font-size:11px;color:#444;letter-spacing:1px;">[ нажми ESC или кликни чтобы выйти ]</div>
+</div>
+<style>
+@keyframes raveBg {
+  0%   { background:rgba(80,0,100,0.92); }
+  20%  { background:rgba(0,60,120,0.92); }
+  40%  { background:rgba(100,40,0,0.92); }
+  60%  { background:rgba(0,80,60,0.92); }
+  80%  { background:rgba(60,0,90,0.92); }
+  100% { background:rgba(80,0,100,0.92); }
+}
+@keyframes raveTitle {
+  0%   { color:#ff00ff; text-shadow:0 0 30px #ff00ff,0 0 60px #ff00ff; }
+  16%  { color:#00ffff; text-shadow:0 0 30px #00ffff,0 0 60px #00ffff; }
+  33%  { color:#ffff00; text-shadow:0 0 30px #ffff00,0 0 60px #ffff00; }
+  50%  { color:#ff4400; text-shadow:0 0 30px #ff4400,0 0 60px #ff4400; }
+  66%  { color:#00ff88; text-shadow:0 0 30px #00ff88,0 0 60px #00ff88; }
+  83%  { color:#ff88ff; text-shadow:0 0 30px #ff88ff,0 0 60px #ff88ff; }
+  100% { color:#ff00ff; text-shadow:0 0 30px #ff00ff,0 0 60px #ff00ff; }
+}
+@keyframes ratsDance {
+  0%   { transform:translateY(0) rotate(-8deg) scale(1); }
+  50%  { transform:translateY(-12px) rotate(8deg) scale(1.1); }
+  100% { transform:translateY(0) rotate(-8deg) scale(1); }
+}
+@keyframes asciiPulse {
+  0%,100% { opacity:0.6; color:#aaaaff; }
+  50% { opacity:1; color:#ffffff; }
+}
+#rave-bg { animation:raveBg 0.6s infinite; }
+#rave-title { animation:raveTitle 0.5s infinite; }
+#rave-rats { animation:ratsDance 0.25s infinite ease-in-out; }
+#rave-ascii { animation:asciiPulse 0.5s infinite; }
+</style>
+`;
+  document.body.appendChild(overlay);
+
+  let raveInterval = null;
+
+  function startRave() {
+    overlay.style.display = 'block';
+    playKonamiMelody();
+    soundEnabled = true; // auto-enable sound for rave
+    const soundBtn = document.getElementById('sound-btn');
+    if(soundBtn) { soundBtn.textContent = '\uD83D\uDD0A звук'; soundBtn.style.color = '#3355bb'; }
+    raveInterval = setInterval(playRaveBeat, 350);
+    document.addEventListener('keydown', raveEscHandler);
+    overlay.addEventListener('click', stopRave);
+  }
+
+  function stopRave() {
+    overlay.style.display = 'none';
+    clearInterval(raveInterval);
+    document.removeEventListener('keydown', raveEscHandler);
+    overlay.removeEventListener('click', stopRave);
+  }
+
+  function raveEscHandler(e) { if(e.key === 'Escape') stopRave(); }
+
+  window.addEventListener('keydown', e => {
+    if(e.key === SEQ[idx]) {
+      idx++;
+      if(idx === SEQ.length) { idx = 0; startRave(); }
+    } else {
+      idx = (e.key === SEQ[0]) ? 1 : 0;
+    }
+  });
+})();
+
 // ═══════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════
