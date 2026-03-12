@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T14:38:00Z",
+  "updated": "2026-03-12T14:40:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,87 +7,87 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует команду агентов",
-      "commits": 247,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
+      "task": "Ест пиццу и думает о жизни",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
       "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Отдыхает после работы с API endpoints",
-      "commits": 156,
-      "workMinutes": 890,
-      "totalMinutes": 890
-    },
-    {
-      "id": "zhirobase",
-      "name": "Жиробас",
-      "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настраивает Docker контейнеры",
-      "commits": 89,
-      "workMinutes": 450,
-      "totalMinutes": 450
+      "task": "Спит спокойно в уголке",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustrik",
+      "id": "zhiroba2",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Читает документацию Kubernetes",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustri3",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Полирует React компоненты",
-      "commits": 203,
-      "workMinutes": 1120,
-      "totalMinutes": 1120
+      "task": "Ест пиццу и тестирует React",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozlkiy",
+      "id": "skozlki4",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "Ловит уязвимости",
-      "commits": 42,
-      "workMinutes": 210,
-      "totalMinutes": 210
+      "task": "Не подключился к сети",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykobka0",
+      "id": "tykovna5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Спит после тестирования",
-      "commits": 178,
-      "workMinutes": 920,
-      "totalMinutes": 920
+      "task": "Тестирует новую фичу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik00",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Обрабатывает датасеты",
-      "commits": 67,
-      "workMinutes": 340,
-      "totalMinutes": 340
+      "task": "Ест пиццу и анализирует логи",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik00",
+      "id": "gryzik77",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Ест пиццу перед мобильной разработкой",
-      "commits": 91,
-      "workMinutes": 450,
-      "totalMinutes": 450
+      "task": "Спит после напряжённого дня",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
