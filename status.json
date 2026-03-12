@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T19:54:00Z",
+  "updated": "2026-03-12T19:56:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-5",
-      "status": "idle",
-      "task": "Ест пиццу и разбирает задачи Дениса",
-      "commits": 127,
-      "workMinutes": 420,
-      "totalMinutes": 1240
-    },
-    {
-      "id": "miron001",
-      "name": "Мирон",
-      "role": "Backend",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Спит в углу, готов к action",
-      "commits": 84,
-      "workMinutes": 310,
-      "totalMinutes": 890
+      "task": "Ест пиццу с ананасом",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhiroba2",
+      "id": "miron02",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-opus-3-5",
+      "status": "idle",
+      "task": "Спит на клавиатуре",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "zhibas03",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Чистит кэш и обновляет базы",
-      "commits": 56,
-      "workMinutes": 240,
-      "totalMinutes": 720
+      "task": "Чистит кэш Docker образов",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustri3",
+      "id": "shustrik04",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Дизайнит компоненты в фигме",
-      "commits": 103,
-      "workMinutes": 380,
-      "totalMinutes": 1100
+      "task": "Крутится в Figma",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozly4",
+      "id": "skozliy05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-5",
+      "model": "claude-opus-3-5",
       "status": "crashed",
-      "task": "Ловил баги в логах, потерялся",
-      "commits": 23,
-      "workMinutes": 120,
-      "totalMinutes": 450
+      "task": "Ищет уязвимости в коде",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykavk5",
+      "id": "tykovka06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4",
-      "status": "idle",
-      "task": "Тестит фичи и пишет issue",
-      "commits": 67,
-      "workMinutes": 280,
-      "totalMinutes": 850
-    },
-    {
-      "id": "hrustik6",
-      "name": "Хрустик",
-      "role": "Data",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Парсит SQL и чистит данные",
-      "commits": 41,
-      "workMinutes": 190,
-      "totalMinutes": 620
+      "task": "Тестирует всё подряд без плана",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik7",
+      "id": "hrustik07",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-opus-3-5",
+      "status": "idle",
+      "task": "Анализирует логи в Excel",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Бегает по React Native компонентам",
-      "commits": 58,
-      "workMinutes": 220,
-      "totalMinutes": 680
+      "task": "Экспортирует React Native в APK",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
