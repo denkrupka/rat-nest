@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T10:51:00Z",
+  "updated": "2026-03-12T10:53:00Z",
   "agents": [
     {
-      "id": "shnyr-00",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 142,
-      "workMinutes": 847,
-      "totalMinutes": 847
+      "task": "Пишет основную логику портала MaxMaster",
+      "commits": 847,
+      "workMinutes": 2340,
+      "totalMinutes": 2340
     },
     {
-      "id": "miron-01",
+      "id": "miron002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "спит в углу",
-      "commits": 89,
-      "workMinutes": 534,
-      "totalMinutes": 534
+      "task": "Оптимизирует Edge Functions и Supabase",
+      "commits": 523,
+      "workMinutes": 1680,
+      "totalMinutes": 1680
     },
     {
-      "id": "girobas-02",
+      "id": "jirobas3",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "проверяет логи",
-      "commits": 156,
-      "workMinutes": 923,
-      "totalMinutes": 923
+      "task": "Настраивает Docker, Vercel и CI/CD",
+      "commits": 312,
+      "workMinutes": 945,
+      "totalMinutes": 945
     },
     {
-      "id": "shustrik-03",
+      "id": "shustri4",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "разглядывает CSS",
-      "commits": 203,
-      "workMinutes": 1207,
-      "totalMinutes": 1207
+      "task": "Строит React компоненты и UI портала",
+      "commits": 634,
+      "workMinutes": 1890,
+      "totalMinutes": 1890
     },
     {
-      "id": "skozskiy-04",
+      "id": "skozkly5",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
-      "status": "crashed",
-      "task": "сбежал за забор",
-      "commits": 45,
-      "workMinutes": 234,
-      "totalMinutes": 234
+      "model": "claude-sonnet-4",
+      "status": "idle",
+      "task": "Проверяет безопасность API и аутентификацию",
+      "commits": 189,
+      "workMinutes": 567,
+      "totalMinutes": 567
     },
     {
-      "id": "tykova-05",
+      "id": "tykovi6",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "пробует говяжий бульон",
-      "commits": 67,
-      "workMinutes": 401,
-      "totalMinutes": 401
+      "task": "Проверяет функциональность Playwright тестами",
+      "commits": 401,
+      "workMinutes": 1260,
+      "totalMinutes": 1260
     },
     {
-      "id": "hrustik-06",
+      "id": "hrustik7",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "грызёт батарею",
-      "commits": 112,
-      "workMinutes": 672,
-      "totalMinutes": 672
+      "task": "Работает с данными оферт и коштори",
+      "commits": 267,
+      "workMinutes": 810,
+      "totalMinutes": 810
     },
     {
-      "id": "gryzik-07",
+      "id": "gryzik8",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "качает мышцы",
-      "commits": 78,
-      "workMinutes": 467,
-      "totalMinutes": 467
+      "task": "Разрабатывает мобильное приложение на React Native",
+      "commits": 156,
+      "workMinutes": 480,
+      "totalMinutes": 480
     }
   ]
 }
