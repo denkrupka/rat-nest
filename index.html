@@ -84,6 +84,56 @@ canvas { display: block; cursor: crosshair; }
   font-family:monospace; font-size:10px; pointer-events:none;
   letter-spacing:1px; transition: opacity 3s;
 }
+
+/* ── WAVE 4: Typewriter title ── */
+#typewriter-wrap {
+  position:fixed; top:14px; left:50%; transform:translateX(-50%);
+  z-index:50; pointer-events:none; opacity:0; transition:opacity 0.5s;
+  font-family:monospace; font-size:16px; color:#3366cc;
+  text-shadow:0 0 15px rgba(50,100,255,0.5); letter-spacing:2px;
+  white-space:nowrap;
+}
+#typewriter-cursor {
+  display:inline-block;
+  animation:twBlink 0.7s step-end infinite;
+  color:#5588ff;
+}
+@keyframes twBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ── WAVE 4: Dark theme toggle ── */
+#dark-toggle {
+  position:fixed; bottom:60px; right:14px;
+  color:#223344; font-family:monospace; font-size:13px;
+  cursor:pointer; z-index:50; padding:3px 7px;
+  border:1px solid #1a2540; border-radius:3px;
+  background:rgba(5,5,15,0.8); transition:all 0.2s; user-select:none;
+}
+#dark-toggle:hover { border-color:#2244aa; color:#3355bb; }
+
+/* ── WAVE 4: Light mode HTML overrides ── */
+body.light-mode #popup {
+  background:rgba(240,233,218,0.97)!important;
+  border-color:#8899bb!important; color:#334455!important;
+}
+body.light-mode #popup .pname { color:#cc8800!important; }
+body.light-mode #popup .prole { color:#7788bb!important; }
+body.light-mode #popup .plabel { color:#8899aa!important; }
+body.light-mode #popup .pval { color:#445566!important; }
+body.light-mode #clock { color:#667788!important; }
+body.light-mode #hint { color:#6677aa!important; }
+body.light-mode #kb-hint { color:#6677aa!important; }
+body.light-mode #dark-toggle {
+  background:rgba(240,230,210,0.9)!important;
+  color:#445566!important; border-color:#8899aa!important;
+}
+body.light-mode #sound-btn {
+  background:rgba(240,230,210,0.8)!important;
+  color:#445566!important; border-color:#8899aa!important;
+}
+body.light-mode #typewriter-wrap {
+  color:#bb6600!important;
+  text-shadow:0 0 15px rgba(200,100,0,0.4)!important;
+}
 </style>
 </head>
 <body>
@@ -111,6 +161,7 @@ canvas { display: block; cursor: crosshair; }
 <div id="kb-hint">⌨ A/D или ←/→ для скролла</div>
 <div id="clock"></div>
 <div id="toast" id="toast"></div>
+<div id="typewriter-wrap"><span id="typewriter-text"></span><span id="typewriter-cursor">|</span></div>
 <script>
 // ═══════════════════════════════════════════════
 // LOADING SCREEN
@@ -146,6 +197,13 @@ canvas { display: block; cursor: crosshair; }
     }, 400);
   });
 })();
+
+// ═══════════════════════════════════════════════
+// WAVE 4 — GLOBAL STATE
+// ═══════════════════════════════════════════════
+let pawTrails = [];
+let lastPawX = -999, lastPawY = -999;
+let themeDark = (localStorage.getItem('ratTheme') !== 'light');
 
 // ═══════════════════════════════════════════════
 // CONSTANTS & LAYOUT
@@ -774,6 +832,12 @@ function drawBG() {
 
   // Cobwebs
   [[30,25],[1100,28],[1270,26],[3150,25],[2800,28]].forEach(([x,y])=>cobweb(x,y));
+
+  // ── Wave 4: light mode warm overlay ──
+  if (!themeDark) {
+    ctx.fillStyle = 'rgba(255,235,180,0.10)';
+    ctx.fillRect(0, 0, cw, ch);
+  }
 }
 
 function cobweb(x,y) {
@@ -2596,7 +2660,24 @@ window.addEventListener('orientationchange', () => {
   setTimeout(resize, 200);
 });
 
-canvas.addEventListener('mousemove', e => { mouseClientX = e.clientX; });
+canvas.addEventListener('mousemove', e => {
+  mouseClientX = e.clientX;
+  // ── Paw trails
+  const _dx = e.clientX - lastPawX, _dy = e.clientY - lastPawY;
+  const _dist = Math.sqrt(_dx*_dx + _dy*_dy);
+  if (_dist > 32) {
+    lastPawX = e.clientX; lastPawY = e.clientY;
+    const _angle = Math.atan2(_dy, _dx);
+    const _sign = (pawTrails.length % 2 === 0) ? 1 : -1;
+    const _px = Math.cos(_angle + Math.PI/2) * 7 * _sign;
+    const _py = Math.sin(_angle + Math.PI/2) * 7 * _sign;
+    pawTrails.push({
+      x: e.clientX + _px, y: e.clientY + _py,
+      alpha: 0.65, rotation: _angle + Math.PI/2,
+    });
+    if (pawTrails.length > 35) pawTrails.shift();
+  }
+});
 
 // ═══════════════════════════════════════════════
 // KEYBOARD NAVIGATION (A/D, ←/→ arrows)
@@ -2682,6 +2763,31 @@ function drawCatScare() {
     ctx.fillText('⚠️ КОТ!!! БЕЖИМ!!! ⚠️', cw/2, dMid()-30);
     ctx.textAlign='left';
   }
+}
+
+// ═══════════════════════════════════════════════
+// WAVE 4 — PAW TRAILS
+// ═══════════════════════════════════════════════
+function drawPawTrails() {
+  pawTrails.forEach(p => {
+    if (p.alpha <= 0.01) return;
+    const s = 5.5;
+    ctx.save();
+    ctx.globalAlpha = p.alpha;
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotation);
+    const r = themeDark ? 180 : 120, g = themeDark ? 90 : 55, b = themeDark ? 55 : 20;
+    ctx.fillStyle = `rgb(${r},${g},${b})`;
+    // Main palm pad
+    ctx.beginPath(); ctx.ellipse(0, s*0.35, s*0.88, s*0.65, 0, 0, Math.PI*2); ctx.fill();
+    // 3 toe pads
+    [[-s*0.6, -s*0.25], [0, -s*0.68], [s*0.6, -s*0.25]].forEach(([tx, ty]) => {
+      ctx.beginPath(); ctx.ellipse(tx, ty, s*0.34, s*0.28, 0, 0, Math.PI*2); ctx.fill();
+    });
+    ctx.restore();
+    p.alpha -= 0.010; // ~1.7s to fade
+  });
+  pawTrails = pawTrails.filter(p => p.alpha > 0.01);
 }
 
 // ═══════════════════════════════════════════════
@@ -2788,6 +2894,7 @@ function loop(ts) {
   drawChatBubbles();
   drawMiniEvents();
   drawCatScare();
+  drawPawTrails();
   drawMinimap();
   drawNewsTicker();
 
@@ -3067,6 +3174,61 @@ canvas.addEventListener('click', () => { playSqueak(); });
     } else {
       idx = (e.key === SEQ[0]) ? 1 : 0;
     }
+  });
+})();
+
+// ═══════════════════════════════════════════════
+// WAVE 4 — DARK MODE TOGGLE
+// ═══════════════════════════════════════════════
+(function() {
+  const btn = document.createElement('div');
+  btn.id = 'dark-toggle';
+  btn.title = 'Тёмная / светлая тема';
+  btn.textContent = themeDark ? '🌙' : '☀️';
+  document.body.appendChild(btn);
+
+  function applyTheme() {
+    if (themeDark) {
+      document.body.classList.remove('light-mode');
+      btn.textContent = '🌙';
+    } else {
+      document.body.classList.add('light-mode');
+      btn.textContent = '☀️';
+    }
+    localStorage.setItem('ratTheme', themeDark ? 'dark' : 'light');
+  }
+  applyTheme();
+
+  btn.addEventListener('click', () => {
+    themeDark = !themeDark;
+    applyTheme();
+  });
+})();
+
+// ═══════════════════════════════════════════════
+// WAVE 4 — TYPEWRITER TITLE
+// ═══════════════════════════════════════════════
+(function() {
+  const TITLE = '🐀 КРЫСИНАЯ НОРА';
+  const textEl = document.getElementById('typewriter-text');
+  const wrap = document.getElementById('typewriter-wrap');
+  if (!textEl || !wrap) return;
+
+  window.addEventListener('load', () => {
+    // Wait for loading screen to finish fading (~1300ms)
+    setTimeout(() => {
+      wrap.style.opacity = '1';
+      let i = 0;
+      const iv = setInterval(() => {
+        textEl.textContent = TITLE.slice(0, i + 1);
+        i++;
+        if (i >= TITLE.length) {
+          clearInterval(iv);
+          // Blink cursor for 2.5s then fade out
+          setTimeout(() => { wrap.style.opacity = '0'; }, 2500);
+        }
+      }, 80);
+    }, 1300);
   });
 })();
 
