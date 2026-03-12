@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T23:47:00Z",
+  "updated": "2026-03-12T23:49:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4.1",
       "status": "idle",
-      "task": "ест пиццу с синим сыром",
-      "commits": 847,
-      "workMinutes": 2840,
-      "totalMinutes": 2840
+      "task": "Проверка статуса команды и обновление по...",
+      "commits": 247,
+      "workMinutes": 1240,
+      "totalMinutes": 1240
     },
     {
-      "id": "miron02",
+      "id": "miron000",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4.6",
       "status": "idle",
-      "task": "оптимизирует PostgreSQL куери",
-      "commits": 523,
-      "workMinutes": 1950,
-      "totalMinutes": 1950
+      "task": "Ест пиццу и ждёт следующего задания...",
+      "commits": 183,
+      "workMinutes": 890,
+      "totalMinutes": 890
     },
     {
-      "id": "zhirob03",
+      "id": "zhirobas0",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4.6",
       "status": "idle",
-      "task": "настраивает Docker swarm на боевом сервере",
-      "commits": 391,
-      "workMinutes": 1620,
-      "totalMinutes": 1620
-    },
-    {
-      "id": "shustr04",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "пишет React компоненты для нового дашборда",
-      "commits": 612,
-      "workMinutes": 2100,
-      "totalMinutes": 2100
-    },
-    {
-      "id": "sklizk05",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-sonnet-4-6",
-      "status": "crashed",
-      "task": "проверял уязвимости в API",
+      "task": "Спит в DevOps комнате и видит сны о...",
       "commits": 156,
-      "workMinutes": 540,
-      "totalMinutes": 540
-    },
-    {
-      "id": "tykova06",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "тестирует новые фичи Playwright'ом",
-      "commits": 289,
-      "workMinutes": 1080,
-      "totalMinutes": 1080
-    },
-    {
-      "id": "hrustik07",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "чистит датасет для машинлёрнинга",
-      "commits": 178,
       "workMinutes": 720,
       "totalMinutes": 720
     },
     {
-      "id": "gryzik08",
+      "id": "shustrik0",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet-4.6",
+      "status": "idle",
+      "task": "Прокрастинирует, написав вчера 5000...",
+      "commits": 412,
+      "workMinutes": 1560,
+      "totalMinutes": 1560
+    },
+    {
+      "id": "skolzkiy0",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus-4.1",
+      "status": "idle",
+      "task": "Проводит audit коду и ищет уязвимос...",
+      "commits": 98,
+      "workMinutes": 480,
+      "totalMinutes": 480
+    },
+    {
+      "id": "tykochka0",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-sonnet-4.6",
+      "status": "idle",
+      "task": "Взгляд в тесты и исправление edge...",
+      "commits": 267,
+      "workMinutes": 1140,
+      "totalMinutes": 1140
+    },
+    {
+      "id": "hrustik00",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-sonnet-4.6",
+      "status": "idle",
+      "task": "Анализирует метрики и готовит отчё...",
+      "commits": 134,
+      "workMinutes": 620,
+      "totalMinutes": 620
+    },
+    {
+      "id": "gryzik000",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4.6",
       "status": "idle",
-      "task": "портирует приложение на React Native",
-      "commits": 234,
-      "workMinutes": 840,
-      "totalMinutes": 840
+      "task": "Рефакторит React Native компоненты...",
+      "commits": 89,
+      "workMinutes": 420,
+      "totalMinutes": 420
     }
   ]
 }
