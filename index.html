@@ -319,7 +319,7 @@ let catScare = null;
 let nextCatIn = 8000 + Math.random()*12000;  // very rare
 
 function triggerMiniEvent() {
-  const types = ['deliveroo','proddown','coffee_spill','pizza_delivery','lunch_break','power_outage'];
+  const types = ['deliveroo','proddown','coffee_spill','pizza_delivery','lunch_break','power_outage','birthday','boss_arrives'];
   const type = types[Math.floor(Math.random()*types.length)];
   if (type === 'deliveroo' || type === 'pizza_delivery') {
     miniEvents.push({type, wx:-60, wy:dY(0.75), timer:600});
@@ -344,6 +344,21 @@ function triggerMiniEvent() {
     });
   } else if(type === 'power_outage') {
     miniEvents.push({type, timer:200});
+  } else if(type === 'birthday') {
+    miniEvents.push({type, timer:500});
+    // All rats head to den hangout
+    rats.forEach(r => {
+      r.tx = 2700+Math.random()*200; r.ty = dY(0.55)+Math.random()*50;
+      r.state='walking'; r.zone='den';
+    });
+  } else if(type === 'boss_arrives') {
+    miniEvents.push({type, bx: WORLD_W+80, timer:550});
+    // All office rats run to desks frantically
+    rats.filter(r=>r.zone==='office').forEach(r => {
+      const d = SPOTS.filter(s=>s.act==='typing'&&s.zone==='office');
+      const sp = d[Math.floor(Math.random()*d.length)];
+      r.tx=sp.x; r.ty=sp.y; r.state='walking'; r.actTimer=600;
+    });
   } else {
     miniEvents.push({type, wx:800+Math.random()*600, wy:oY(0.75)+Math.random()*40, timer:500});
   }
@@ -594,6 +609,18 @@ function drawCatScare() {
     );
     ctx.stroke();
   }
+
+  // Horizontal pipes on den ceiling
+  const PIPE_COLORS=['#2a1800','#1a1428','#2a1420'];
+  [[60,DEN_Y+6,1200,8,'#2a1800'],[900,DEN_Y+12,800,6,'#1a1428'],
+   [1500,DEN_Y+8,1000,7,'#2a1418'],[2200,DEN_Y+5,900,9,'#1a2018']].forEach(([px2,py2,pw,ph,c])=>{
+    fr(px2,py2,pw,ph,c); fr(px2,py2,pw,Math.round(ph*0.3),'rgba(255,255,255,0.04)');
+    // Pipe joints
+    for(let j=px2+120;j<px2+pw;j+=240){
+      fr(j,py2-2,10,ph+4,'rgba(100,60,20,0.5)');
+      sr(j,py2-2,10,ph+4,'rgba(150,90,30,0.4)',1);
+    }
+  });
 
   // Den: dangling light bulbs
   const BULBS = [280, 700, 1100, 1500, 1900, 2300, 2700, 3100];
@@ -1200,6 +1227,73 @@ function drawDartboard(x, y) {
   fr(x+r-2, y-6, 4, 10, '#555');
 }
 
+function drawBookshelf(x, y) {
+  const w=120, h=Math.min(FLOOR_Y-y-10, 180);
+  fr(x, y, w, h, '#2a1800'); sr(x, y, w, h, '#4a2e10', 2);
+  const BOOK_COLORS=['#cc2222','#2244cc','#22aa44','#cc8800','#884488','#228888','#cc4400','#4488cc'];
+  const BOOK_TITLES=['CODE','BUGS','GIT','JS','PY','DB','API','OPS'];
+  let bx=4;
+  for(let shelf=0;shelf<3;shelf++) {
+    const sy=y+6+shelf*(h/3);
+    fr(x+2, sy+h/3-4, w-4, 4, '#3a2010');
+    let bookX=x+4;
+    for(let b=0;b<8;b++) {
+      const bw2=10+Math.random()*4|0;
+      const bh2=h/3-12-Math.random()*8|0;
+      const col=BOOK_COLORS[(shelf*8+b)%8];
+      fr(bookX, sy+h/3-bh2-4, bw2, bh2, col);
+      sr(bookX, sy+h/3-bh2-4, bw2, bh2, '#000000', 0.5);
+      // Spine text
+      ctx.save();
+      ctx.translate(px(bookX+bw2/2), sy+h/3-bh2/2-4);
+      ctx.rotate(-Math.PI/2);
+      ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.font='4px monospace';
+      ctx.textAlign='center';
+      ctx.fillText(BOOK_TITLES[(shelf*8+b)%8], 0, 2);
+      ctx.textAlign='left';
+      ctx.restore();
+      bookX += bw2+1;
+      if(bookX > x+w-14) break;
+    }
+    // Occasional leaning book
+    if(shelf%2===0) {
+      ctx.save();
+      ctx.translate(px(x+w-16), sy+h/3-4);
+      ctx.rotate(0.3);
+      ctx.fillStyle=BOOK_COLORS[shelf*3%8];
+      ctx.fillRect(-6,-28,10,28);
+      ctx.restore();
+    }
+  }
+  // Decoration on top shelf
+  em('🏆', x+4, y+8, 12);
+  em('🌵', x+w-20, y+8, 12);
+}
+
+function drawRatOfDay(x, y) {
+  const w=140, h=60;
+  const ratOfDay = RAT_DEFS[Math.floor(tick/600)%RAT_DEFS.length];
+  fr(x, y, w, h, '#0c1a0c'); sr(x, y, w, h, '#1a4a1a', 2);
+  // Gold star background
+  ctx.fillStyle='rgba(255,200,0,0.1)'; ctx.fillRect(px(x+2),y+2,w-4,h-4);
+  // Header
+  fr(x, y, w, 16, '#1a3a0a');
+  tx('🌟 КРЫСА ДНЯ 🌟', x+10, y+12, '#44ff44', 8);
+  // Rat preview (small)
+  ctx.save();
+  ctx.translate(px(x+20), y+42);
+  drawRatBody(0,0,16,11,ratOfDay.fur,ratOfDay.belly,ratOfDay.fat,ratOfDay.crown,ratOfDay.heart);
+  ctx.restore();
+  // Name
+  ctx.fillStyle='#ffcc44'; ctx.font='bold 10px monospace';
+  ctx.fillText(ratOfDay.name, px(x+38), y+38);
+  ctx.fillStyle='#88cc88'; ctx.font='7px monospace';
+  ctx.fillText('зона: '+ratOfDay.zone, px(x+38), y+50);
+  // Stars
+  ctx.fillStyle='rgba(255,200,0,0.7)'; ctx.font='9px serif';
+  ctx.fillText('★★★★★', px(x+w-52), y+52);
+}
+
 function drawVendingMachine(x, y) {
   const h=Math.min(FLOOR_Y - y, 140);
   fr(x, y, 78, h, '#1e2a3a'); sr(x, y, 78, h, '#2e3a4a', 2);
@@ -1503,6 +1597,12 @@ function drawOffice() {
 
   // Vending machine
   drawVendingMachine(3500, oY(0.55));
+
+  // Bookshelf
+  drawBookshelf(3000, oY(0.45));
+
+  // Rat of the Day display
+  drawRatOfDay(3200, oY(0.15));
 
   // Water cooler
   fr(2340, oY(0.55), 26, 54, '#aabbcc'); sr(2340, oY(0.55), 26, 54, '#889aaa', 2);
@@ -2093,7 +2193,18 @@ function drawRat(rat) {
     if(act==='commit' && Math.floor(tick/28)%2===0){ctx.fillStyle='#ffcc44';ctx.fillText('PUSH!',0,-bh*2.8);}
     if(act==='debug' && Math.floor(tick/18)%2===0){ctx.fillStyle='#ff4444';ctx.fillText('WTF?!',0,-bh*2.8);}
     if(act==='think'){ctx.fillStyle='rgba(180,200,255,0.8)';ctx.fillText('???',0,-bh*2.8);}
-    if(act==='typing' && Math.floor(tick/6)%2===0){ctx.fillStyle='#00aa44';ctx.fillText('// code...',0,-bh*2.6);}
+    if(act==='typing') {
+      if(Math.floor(tick/6)%2===0){ctx.fillStyle='#00aa44';ctx.fillText('// code...',0,-bh*2.6);}
+      // Floating key letters
+      if(tick%10===Math.floor(rat.x)%10) {
+        rat.particles.push({
+          x:rat.x+(Math.random()-0.5)*30, y:rat.y-bh*2,
+          vx:(Math.random()-0.5)*0.8, vy:-0.8-Math.random()*0.5,
+          color:'rgba(0,200,80,0.7)', life:40, size:7,
+          isText:true, char:String.fromCharCode(65+Math.floor(Math.random()*26))
+        });
+      }
+    }
     if(act==='slot' && slotSpinning){ctx.fillStyle='#ffcc00';ctx.fillText('ВЕЗЁТ!',0,-bh*2.8);}
     ctx.textAlign='left';
   }
@@ -2109,6 +2220,7 @@ function drawRat(rat) {
   rat.particles.forEach(p=>{
     ctx.fillStyle=p.color;
     if(p.isHeart){ctx.font=p.size+'px serif';ctx.fillText('💕',px(p.x),p.y);}
+    else if(p.isText){ctx.font='bold '+p.size+'px monospace';ctx.fillText(p.char,px(p.x),p.y);}
     else{ctx.shadowColor=p.color;ctx.shadowBlur=3;ctx.fillRect(px(p.x),p.y,p.size,p.size);ctx.shadowBlur=0;}
   });
 }
@@ -2198,6 +2310,54 @@ function drawMiniEvents() {
         ctx.fillStyle=`rgba(255,220,50,${f*3})`;
         ctx.font='bold 24px monospace'; ctx.textAlign='center';
         ctx.fillText('⚡ АВАРИЯ! СВЕТА НЕТ! ⚡',cw/2,ch/2);
+        ctx.textAlign='left';
+      }
+      // Lightning flashes
+      if(Math.floor(ev.timer/8)%5===0) {
+        ctx.strokeStyle='rgba(255,240,100,0.9)'; ctx.lineWidth=2;
+        ctx.beginPath();
+        const lx=cw*0.3+Math.random()*cw*0.4, ly=0;
+        ctx.moveTo(lx,ly); ctx.lineTo(lx+20,ly+40); ctx.lineTo(lx+5,ly+40);
+        ctx.lineTo(lx+30,ly+80); ctx.stroke();
+      }
+    }
+    if(ev.type==='birthday'){
+      // Confetti shower
+      for(let c=0;c<8;c++) {
+        const cx=Math.random()*cw, cy=((tick*2+c*40)%ch);
+        const colors=['#ff4','#f4f','#4ff','#f84','#8f4'];
+        ctx.fillStyle=colors[c%5];
+        ctx.fillRect(cx,cy,5,8);
+      }
+      ctx.fillStyle=`rgba(255,200,0,${0.7+Math.sin(tick*0.12)*0.2})`;
+      ctx.font='bold 26px monospace'; ctx.textAlign='center';
+      ctx.fillText('🎂 ДЕНЬ РОЖДЕНИЯ ЖИРОБАСА! 🎂',cw/2,ch/2-20);
+      ctx.fillStyle='rgba(255,150,50,0.8)';
+      ctx.font='16px monospace';
+      ctx.fillText('🎉 ВСЕ В НОРУ! ТОРТ СТЫНЕТ! 🎉',cw/2,ch/2+20);
+      ctx.textAlign='left';
+    }
+    if(ev.type==='boss_arrives'){
+      // Draw giant boss rat coming from right
+      if(ev.bx !== undefined) {
+        ev.bx -= 1.8;
+        const bx=ev.bx, by2=oY(0.6);
+        ctx.save();
+        ctx.translate(px(bx),by2);
+        ctx.scale(-1,1);
+        // Giant suit rat
+        drawRatBody(0,0,50,34,'#222244','#3344aa',false,true,false);
+        // Briefcase
+        ctx.fillStyle='#8B4513'; ctx.fillRect(30,15,20,14);
+        ctx.strokeStyle='#6B3413'; ctx.lineWidth=1; ctx.strokeRect(30,15,20,14);
+        ctx.fillStyle='#aa6633'; ctx.fillRect(38,10,4,6);
+        ctx.restore();
+        // "BOSS" label
+        ctx.fillStyle=`rgba(255,50,50,${0.8+Math.sin(tick*0.15)*0.2})`;
+        ctx.font='bold 14px monospace'; ctx.textAlign='center';
+        ctx.fillText('👔 BOSS ИЗ ГОЛОВНОГО ОФИСА',cw/2,40);
+        ctx.font='10px monospace'; ctx.fillStyle='rgba(255,200,100,0.8)';
+        ctx.fillText('ВСЕМу РАБОТАТЬ! ПРОВЕРКА!',cw/2,56);
         ctx.textAlign='left';
       }
     }
