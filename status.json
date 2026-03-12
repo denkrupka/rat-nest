@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T23:55:00Z",
+  "updated": "2026-03-12T23:58:00Z",
   "agents": [
     {
-      "id": "rat_00",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4.1",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Координирует команду мышей",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Координирует команду, спит по расписанию",
+      "commits": 142,
+      "workMinutes": 8640,
+      "totalMinutes": 8640
     },
     {
-      "id": "rat_01",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus-4.1",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Оптимизирует базу данных",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет Edge Functions, отдыхает в офисе",
+      "commits": 87,
+      "workMinutes": 6480,
+      "totalMinutes": 6480
     },
     {
-      "id": "rat_02",
+      "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4.6",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Следит за инфраструктурой",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает инфраструктуру, ест пиццу",
+      "commits": 56,
+      "workMinutes": 4320,
+      "totalMinutes": 4320
     },
     {
-      "id": "rat_03",
+      "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4.6",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Делает интерфейс красивым",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Чинит React компоненты, пьёт кофе",
+      "commits": 124,
+      "workMinutes": 7920,
+      "totalMinutes": 7920
     },
     {
-      "id": "rat_04",
+      "id": "skliz05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4.1",
-      "status": "crashed",
-      "task": "Ищет дыры в безопасности",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Проверяет уязвимости, в отпуске",
+      "commits": 34,
+      "workMinutes": 2880,
+      "totalMinutes": 2880
     },
     {
-      "id": "rat_05",
+      "id": "tikov06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4.6",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Тестирует всё подряд",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет тесты, играет в видеоигры",
+      "commits": 98,
+      "workMinutes": 5760,
+      "totalMinutes": 5760
     },
     {
-      "id": "rat_06",
+      "id": "hrust07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4.6",
+      "model": "claude-sonnet-4-5",
       "status": "idle",
-      "task": "Анализирует метрики",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует датасеты, спит",
+      "commits": 67,
+      "workMinutes": 3960,
+      "totalMinutes": 3960
     },
     {
-      "id": "rat_07",
+      "id": "grzyk08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus-4.1",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Портирует на мобильные платформы",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Развивает мобильное приложение, медитирует",
+      "commits": 51,
+      "workMinutes": 2640,
+      "totalMinutes": 2640
     }
   ]
 }
