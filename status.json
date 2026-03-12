@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T19:06:00Z",
+  "updated": "2026-03-12T19:08:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Готов к новым задачам, координирует команду",
+      "task": "Спит под лампой, греет буфет",
       "commits": 142,
-      "workMinutes": 2847,
-      "totalMinutes": 2847
+      "workMinutes": 8640,
+      "totalMinutes": 8640
     },
     {
-      "id": "miron02",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пишет API эндпоинты для портала MaxMaster",
-      "commits": 89,
-      "workMinutes": 1560,
-      "totalMinutes": 1560
+      "task": "Ест пиццу из миски, жует клавиатуру",
+      "commits": 87,
+      "workMinutes": 5220,
+      "totalMinutes": 5220
     },
     {
-      "id": "zhiro03",
+      "id": "zhiroba",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настраивает CI/CD пайплайны и Docker контейнеры",
-      "commits": 56,
-      "workMinutes": 980,
-      "totalMinutes": 980
+      "task": "Чистит усы, опробует новые логи",
+      "commits": 54,
+      "workMinutes": 3240,
+      "totalMinutes": 3240
     },
     {
-      "id": "shust04",
+      "id": "shustri",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Верстает React компоненты и UI для мобилки",
-      "commits": 78,
-      "workMinutes": 1350,
-      "totalMinutes": 1350
+      "task": "Разбирает CSS, грызет элементы DOM",
+      "commits": 93,
+      "workMinutes": 5580,
+      "totalMinutes": 5580
     },
     {
-      "id": "skliz05",
+      "id": "skozski",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Спит после аудита безопасности и настройки RLS",
+      "task": "Проверяет уязвимости, скользит по базам",
       "commits": 23,
-      "workMinutes": 420,
-      "totalMinutes": 420
+      "workMinutes": 1380,
+      "totalMinutes": 1380
     },
     {
-      "id": "tykov06",
+      "id": "tykovka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет Playwright тесты и проверяет функциональность",
-      "commits": 167,
-      "workMinutes": 2100,
-      "totalMinutes": 2100
+      "task": "Жует тесты, ломает фичи для проверки",
+      "commits": 156,
+      "workMinutes": 9360,
+      "totalMinutes": 9360
     },
     {
-      "id": "hrust07",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Обрабатывает CSV, строит графики и аналитику",
-      "commits": 45,
-      "workMinutes": 750,
-      "totalMinutes": 750
+      "task": "Анализирует метрики, хрустит картошкой",
+      "commits": 34,
+      "workMinutes": 2040,
+      "totalMinutes": 2040
     },
     {
-      "id": "gryzik08",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Ест пиццу и собирает мобильное приложение на Expo",
-      "commits": 34,
-      "workMinutes": 580,
-      "totalMinutes": 580
+      "task": "Грызет React Native, набивает щеки",
+      "commits": 78,
+      "workMinutes": 4680,
+      "totalMinutes": 4680
     }
   ]
 }
