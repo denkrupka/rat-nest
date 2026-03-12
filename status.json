@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ест пиццу и ждёт приказов",
+      "task": "Ждёт приказов, ест пиццу",
       "commits": 247,
       "workMinutes": 1840,
       "totalMinutes": 1840
@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизирует API endpoints для больших запросов",
+      "task": "Оптимизирует API для больших запросов",
       "commits": 156,
       "workMinutes": 1320,
       "totalMinutes": 1320
@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Проверяет безопасность и чинит уязвимости",
+      "task": "Проверяет безопасность и фиксит баги",
       "commits": 124,
       "workMinutes": 960,
       "totalMinutes": 960
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Тестирует фичи и находит баги",
+      "task": "Тестирует фичи и ловит баги",
       "commits": 178,
       "workMinutes": 1440,
       "totalMinutes": 1440
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует большие объёмы данных",
+      "task": "Анализирует большие датасеты",
       "commits": 92,
       "workMinutes": 850,
       "totalMinutes": 850
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Разбирается с мобильным приложением",
+      "task": "Работает над мобильным приложением",
       "commits": 143,
       "workMinutes": 1100,
       "totalMinutes": 1100
