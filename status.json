@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-12T21:04:00Z",
+  "updated": "2026-03-12T21:06:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "готов к следующему заданию",
-      "commits": 147,
-      "workMinutes": 2341,
-      "totalMinutes": 2341
-    },
-    {
-      "id": "miron02",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "проверяет API endpoints",
-      "commits": 89,
-      "workMinutes": 1456,
-      "totalMinutes": 1456
-    },
-    {
-      "id": "zhiro03",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "мониторит infrastructure",
-      "commits": 54,
-      "workMinutes": 892,
-      "totalMinutes": 892
-    },
-    {
-      "id": "shust04",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "оптимизирует React компоненты",
-      "commits": 203,
-      "workMinutes": 3214,
-      "totalMinutes": 3214
-    },
-    {
-      "id": "skol05",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-6",
-      "status": "crashed",
-      "task": "восстанавливается",
+      "task": "Ждёт задач от Дениса...",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 512
+      "totalMinutes": 0
     },
     {
-      "id": "tykov06",
+      "id": "miron001",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Кодит микросервис...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "zhirobas",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Настраивает K8s кластер...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Рисует интерфейс...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skolzkiy",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Спит и видит коде...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tykobka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "ест пиццу и пишет тесты",
-      "commits": 126,
-      "workMinutes": 1987,
-      "totalMinutes": 1987
+      "task": "Ест пиццу и тестирует...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrust07",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "анализирует метрики",
-      "commits": 73,
-      "workMinutes": 1205,
-      "totalMinutes": 1205
+      "task": "Исправляет SQL запросы...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik08",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "спит в уголке",
-      "commits": 45,
-      "workMinutes": 678,
-      "totalMinutes": 678
+      "task": "Прыгает по экранам...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
