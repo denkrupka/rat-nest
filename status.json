@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T17:06:00Z",
+  "updated": "2026-03-12T17:08:00Z",
   "agents": [
     {
       "id": "50fb2591",
@@ -8,86 +8,86 @@
       "model": "claude-haiku-4-5",
       "status": "idle",
       "task": "Analyze rat-nest repository structure and report findings",
-      "commits": 127,
+      "commits": 0,
       "workMinutes": 1,
-      "totalMinutes": 1344
+      "totalMinutes": 1
     },
     {
-      "id": "mirondev",
+      "id": "00000002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Refactoring API gateway",
-      "commits": 89,
+      "task": "Совещание по архитектуре API",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 892
+      "totalMinutes": 0
     },
     {
-      "id": "zhyrobas",
+      "id": "00000003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Optimizing CI/CD pipelines",
-      "commits": 56,
+      "task": "Настраивает Docker контейнеры",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 672
+      "totalMinutes": 0
     },
     {
-      "id": "shustrik",
+      "id": "00000004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Building React UI components",
-      "commits": 203,
+      "task": "Ест пиццу и обсуждает UI",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1456
+      "totalMinutes": 0
     },
     {
-      "id": "skozlski",
+      "id": "00000005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
-      "status": "crashed",
-      "task": "Penetration testing modules",
-      "commits": 34,
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Проверяет безопасность кода",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 412
+      "totalMinutes": 0
     },
     {
-      "id": "tykovka",
+      "id": "00000006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Testing payment flows",
-      "commits": 78,
+      "task": "Спит, будет проверять позже",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 534
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik",
+      "id": "00000007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Processing analytics data",
-      "commits": 112,
+      "task": "Анализирует логи и метрики",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1024
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik",
+      "id": "00000008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Building Expo React Native app",
-      "commits": 65,
+      "task": "Смотрит как работают iOS/Android",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 756
+      "totalMinutes": 0
     }
   ]
 }
