@@ -227,6 +227,7 @@ class Rat {
     this.act = 'idle';
     this.spotX = this.x; this.spotY = this.y;
     this.actTimer = 0;
+    this.pickActivity(); // start immediately
     this.idleTimer = Math.random()*2000;
     this.walkFrame = 0;
     this.walkTick = 0;
@@ -769,7 +770,7 @@ function drawRat(rat) {
 }
 
 // ─── STATS ────────────────────────────────────────────────────────────────────
-let statTick=0;
+let statTick=1300; // trigger immediately
 function updateStats(dt){
   statTick+=dt;
   if(statTick<1200) return; statTick=0;
