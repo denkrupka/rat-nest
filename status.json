@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12T17:36:00Z",
+  "updated": "2026-03-12T17:38:00Z",
   "agents": [
     {
       "id": "50fb2591",
@@ -8,17 +8,17 @@
       "model": "claude-haiku-4-5",
       "status": "idle",
       "task": "Analyze rat-nest repository structure and report findings",
-      "commits": 0,
+      "commits": 221,
       "workMinutes": 1,
-      "totalMinutes": 1
+      "totalMinutes": 78
     },
     {
-      "id": "miran001",
+      "id": "mirondev",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Написание API для интеграции платежей",
+      "task": "Развивает backend API и микросервисы",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Настройка Docker контейнеров",
+      "task": "Поддерживает инфру и CI/CD пайплайн",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -38,9 +38,9 @@
       "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизация React компонентов",
+      "task": "Делает React компоненты и UI",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -51,29 +51,29 @@
       "role": "Security",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Аудит безопасности кода",
+      "task": "Аудирует безопасность и пентест",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykofka",
+      "id": "tykovna",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Тестирование новых фич",
+      "task": "Тестирует фичи и пишет тесты",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "hrustic",
+      "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-opus",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Анализ данных пользователей",
+      "task": "Обрабатывает данные и аналитика",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Разработка мобильной версии",
+      "task": "Разрабатывает мобильное приложение",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
