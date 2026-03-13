@@ -57,7 +57,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "tykovka",
+      "id": "tykovka0",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
@@ -68,7 +68,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "hrustik0",
+      "id": "hrustik00",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-haiku",
@@ -79,7 +79,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "gryzik00",
+      "id": "gryzik000",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
