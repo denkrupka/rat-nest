@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T00:12:00Z",
+  "updated": "2026-03-13T00:14:00Z",
   "agents": [
     {
-      "id": "shnyir-1",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Ест пиццу и следит за командой 🐀",
-      "commits": 42,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Координирует команду мышей",
+      "commits": 142,
+      "workMinutes": 480,
+      "totalMinutes": 720
     },
     {
-      "id": "miron-1",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Спит под столом и видит кошмары о SQL",
-      "commits": 18,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу в кабинете",
+      "commits": 89,
+      "workMinutes": 320,
+      "totalMinutes": 480
     },
     {
-      "id": "zhiro-1",
+      "id": "zhiro01",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Настраивает гнездо для максимального уюта",
-      "commits": 12,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит в серверной комнате",
+      "commits": 56,
+      "workMinutes": 240,
+      "totalMinutes": 360
     },
     {
-      "id": "shust-1",
+      "id": "shust01",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Рисует красивые компоненты в уме 🎨",
-      "commits": 27,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Кодит интерфейс мыльной онлайн",
+      "commits": 124,
+      "workMinutes": 400,
+      "totalMinutes": 600
     },
     {
-      "id": "skolk-1",
+      "id": "skol01",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Ищет уязвимости в тёмных углах 🔒",
-      "commits": 8,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверяет баги в тестах",
+      "commits": 34,
+      "workMinutes": 180,
+      "totalMinutes": 300
     },
     {
-      "id": "tyk-1",
+      "id": "tyk01",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Ломает всё что попадается под лапы 🐾",
-      "commits": 35,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Написана логика тестов",
+      "commits": 76,
+      "workMinutes": 320,
+      "totalMinutes": 480
     },
     {
-      "id": "hrust-1",
+      "id": "hrust01",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Анализирует потоки данных в гнезде",
-      "commits": 14,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует метрики производства",
+      "commits": 45,
+      "workMinutes": 200,
+      "totalMinutes": 350
     },
     {
-      "id": "gryz-1",
+      "id": "griz01",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Портирует приложения на мышачную ОС 📱",
-      "commits": 6,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирует мобильное приложение",
+      "commits": 67,
+      "workMinutes": 280,
+      "totalMinutes": 420
     }
   ]
 }
