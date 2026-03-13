@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T07:27:00Z",
+  "updated": "2026-03-13T07:29:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу и читает GitHub issues",
+      "commits": 247,
+      "workMinutes": 8543,
+      "totalMinutes": 8543
     },
     {
-      "id": "miron02",
+      "id": "miron000",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "спит",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит в углу офиса",
+      "commits": 189,
+      "workMinutes": 6234,
+      "totalMinutes": 6234
     },
     {
-      "id": "zhiro03",
+      "id": "zirobus0",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "конфигурирует сервер",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает Docker контейнеры во сне",
+      "commits": 156,
+      "workMinutes": 5120,
+      "totalMinutes": 5120
     },
     {
-      "id": "shust04",
+      "id": "shustri0",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "проектирует UI",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Чистит зубы piccolissimo щётками",
+      "commits": 312,
+      "workMinutes": 9876,
+      "totalMinutes": 9876
     },
     {
-      "id": "skold05",
+      "id": "skolzkiy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "offline",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Смотрит DEFCON записи на YouTube",
+      "commits": 134,
+      "workMinutes": 4456,
+      "totalMinutes": 4456
     },
     {
-      "id": "tykav06",
+      "id": "tykovka0",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "проверяет тесты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Качает железо в подвале",
+      "commits": 198,
+      "workMinutes": 6789,
+      "totalMinutes": 6789
     },
     {
-      "id": "khrus07",
+      "id": "hrustic00",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "парсит данные",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет мемы про Big O notation",
+      "commits": 87,
+      "workMinutes": 3012,
+      "totalMinutes": 3012
     },
     {
-      "id": "gryzk08",
+      "id": "grzycyk00",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "собирает приложение",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Медитирует над React Native багами",
+      "commits": 145,
+      "workMinutes": 5234,
+      "totalMinutes": 5234
     }
   ]
 }
