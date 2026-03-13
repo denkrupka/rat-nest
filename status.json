@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T00:39:00Z",
+  "updated": "2026-03-13T00:41:00Z",
   "agents": [
     {
-      "id": "shnyr01",
+      "id": "snake001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "Координирует команду мышей",
-      "commits": 42,
-      "workMinutes": 240,
-      "totalMinutes": 240
-    },
-    {
-      "id": "miron01",
-      "name": "Мирон",
-      "role": "Backend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Пишет Edge Functions и API",
-      "commits": 18,
-      "workMinutes": 0,
-      "totalMinutes": 120
+      "task": "Координирует команду, ревью PR",
+      "commits": 47,
+      "workMinutes": 285,
+      "totalMinutes": 1440
     },
     {
-      "id": "zhiro01",
+      "id": "snake002",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Трудится над API, ест пиццу",
+      "commits": 34,
+      "workMinutes": 210,
+      "totalMinutes": 1440
+    },
+    {
+      "id": "snake003",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Конфигурирует серверы и CI/CD",
-      "commits": 12,
-      "workMinutes": 0,
-      "totalMinutes": 90
+      "task": "Деплойит в облако, спит",
+      "commits": 28,
+      "workMinutes": 156,
+      "totalMinutes": 1440
     },
     {
-      "id": "shust01",
+      "id": "snake004",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Строит React компоненты и UI",
-      "commits": 35,
-      "workMinutes": 0,
-      "totalMinutes": 180
+      "task": "Красит UI, нецелится на кнопку",
+      "commits": 52,
+      "workMinutes": 312,
+      "totalMinutes": 1440
     },
     {
-      "id": "skol01",
+      "id": "snake005",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Аудит безопасности и пентесты",
-      "commits": 8,
-      "workMinutes": 0,
-      "totalMinutes": 60
+      "task": "Холодно лежит в углу",
+      "commits": 15,
+      "workMinutes": 89,
+      "totalMinutes": 1440
     },
     {
-      "id": "tyk01",
+      "id": "snake006",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Тестирует функциональность",
-      "commits": 15,
-      "workMinutes": 0,
-      "totalMinutes": 100
+      "task": "Ловит баги, мотает в углах",
+      "commits": 31,
+      "workMinutes": 186,
+      "totalMinutes": 1440
     },
     {
-      "id": "khrust01",
+      "id": "snake007",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Обрабатывает данные и аналитику",
-      "commits": 10,
-      "workMinutes": 0,
-      "totalMinutes": 75
+      "task": "Анализирует дейта, сладко спит",
+      "commits": 22,
+      "workMinutes": 132,
+      "totalMinutes": 1440
     },
     {
-      "id": "gryzi01",
+      "id": "snake008",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Разрабатывает iOS/Android",
-      "commits": 22,
-      "workMinutes": 0,
-      "totalMinutes": 140
+      "task": "Мобильный фронтенд, полусон",
+      "commits": 19,
+      "workMinutes": 114,
+      "totalMinutes": 1440
     }
   ]
 }
