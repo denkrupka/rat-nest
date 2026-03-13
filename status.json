@@ -2,7 +2,7 @@
   "updated": "2026-03-13T05:55:00Z",
   "agents": [
     {
-      "id": "1b2fe20b",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus-4",
@@ -13,7 +13,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "backend01",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-opus-4",
@@ -24,7 +24,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "devops01",
+      "id": "zhiro01",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-opus-4",
@@ -35,7 +35,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "frontend1",
+      "id": "shust01",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-opus-4",
@@ -46,7 +46,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "security1",
+      "id": "skol01",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus-4",
@@ -57,7 +57,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "qa00001",
+      "id": "tyk01",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-opus-4",
@@ -68,7 +68,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "data0001",
+      "id": "hrust01",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-opus-4",
@@ -79,7 +79,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "mobile01",
+      "id": "gryz01",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-opus-4",
