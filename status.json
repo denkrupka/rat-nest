@@ -1,13 +1,13 @@
 {
-  "updated": "2026-03-13T01:12:00Z",
+  "updated": "2026-03-13T01:14:00Z",
   "agents": [
     {
       "id": "00000001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ждёт задачи",
+      "task": "Дежурство на главной станции",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизирует базу данных",
+      "task": "Ест пиццу в столовой",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Настраивает инфраструктуру",
+      "task": "Спит на сервере",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -38,9 +38,9 @@
       "id": "00000004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Верстает компоненты",
+      "task": "Смотрит исходный код конкурентов",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -49,9 +49,9 @@
       "id": "00000005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Аудитит безопасность",
+      "model": "claude-opus-4-1",
+      "status": "crashed",
+      "task": "Анализировал секретные ключи",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -60,9 +60,9 @@
       "id": "00000006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Тестирует фичи",
+      "task": "Тестирует новый функционал",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Парсит данные",
+      "task": "Обновляет статистику в БД",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Разрабатывает мобилку",
+      "task": "Портирует мобильное приложение",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
