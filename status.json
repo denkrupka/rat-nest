@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T08:02:00Z",
+  "updated": "2026-03-13T08:04:00Z",
   "agents": [
     {
-      "id": "00000001",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и следит за ребятами",
-      "commits": 42,
-      "workMinutes": 120,
-      "totalMinutes": 720
+      "task": "Ест пиццу и планирует задачи на день",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000002",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит (заслужил отдых)",
-      "commits": 28,
-      "workMinutes": 90,
-      "totalMinutes": 480
+      "task": "Спит после ночной смены",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000003",
+      "id": "jirobas2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Проверяет серверы и мониторит пинги",
-      "commits": 15,
-      "workMinutes": 60,
-      "totalMinutes": 360
-    },
-    {
-      "id": "00000004",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Смотрит код и ищет style issues",
-      "commits": 35,
-      "workMinutes": 110,
-      "totalMinutes": 600
+      "task": "Пьёт кофе и смотрит мониторинг",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000005",
+      "id": "shustri3",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Чинит UI компоненты",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skozski",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
-      "status": "crashed",
-      "task": "Упал при проверке уязвимостей",
-      "commits": 8,
-      "workMinutes": 30,
-      "totalMinutes": 240
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Анализирует логи безопасности",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000006",
+      "id": "tykovka5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Тестирует новые фичи и проверяет UI",
-      "commits": 12,
-      "workMinutes": 45,
-      "totalMinutes": 300
+      "task": "Проверяет баги в тестовом окружении",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000007",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует метрики и пишет отчёты",
-      "commits": 22,
-      "workMinutes": 75,
-      "totalMinutes": 420
+      "task": "Грызёт данные аналитики",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000008",
+      "id": "gryzik77",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет мобильное приложение на React Native",
-      "commits": 18,
-      "workMinutes": 65,
-      "totalMinutes": 380
+      "task": "Ловит баги на мобильном устройстве",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
