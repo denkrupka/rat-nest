@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Ест пиццу и ждёт оферт на обработку",
+      "task": "Ест пиццу и ждёт оферт",
       "commits": 89,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Мониторит инфру, вздремнул",
+      "task": "Мониторит инфру",
       "commits": 56,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -40,7 +40,7 @@
       "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Смотрит на UI/UX, ищет баги",
+      "task": "Ищет баги в UI",
       "commits": 123,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет тесты, проверяет скриншоты",
+      "task": "Пишет тесты",
       "commits": 201,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует CSV, спит на БД",
+      "task": "Анализирует данные",
       "commits": 67,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Смотрит React Native, ест сыр",
+      "task": "React Native разработка",
       "commits": 92,
       "workMinutes": 0,
       "totalMinutes": 0
