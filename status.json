@@ -1,52 +1,52 @@
 {
-  "updated": "2026-03-13T17:53:00Z",
+  "updated": "2026-03-13T17:53:49.133947Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "шнырь00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу и наблюдает за командой",
+      "task": "работает на задаче",
       "commits": 42,
       "workMinutes": 1080,
       "totalMinutes": 1080
     },
     {
-      "id": "miron001",
+      "id": "мирон01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит в гнезде",
+      "task": "работает на задаче",
       "commits": 28,
       "workMinutes": 720,
       "totalMinutes": 720
     },
     {
-      "id": "zhirob00",
+      "id": "жироба02",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "проверяет логи сервера",
+      "task": "работает на задаче",
       "commits": 15,
       "workMinutes": 480,
       "totalMinutes": 480
     },
     {
-      "id": "shustri0",
+      "id": "шустри03",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "рисует картинки в CSS",
+      "task": "работает на задаче",
       "commits": 34,
       "workMinutes": 960,
       "totalMinutes": 960
     },
     {
-      "id": "skolzki0",
+      "id": "скольз04",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
@@ -57,34 +57,34 @@
       "totalMinutes": 0
     },
     {
-      "id": "tykovka0",
+      "id": "тыковк05",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "жует баги в тестах",
+      "task": "работает на задаче",
       "commits": 8,
       "workMinutes": 240,
       "totalMinutes": 240
     },
     {
-      "id": "hrustic0",
+      "id": "хрусти06",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "обрабатывает датасеты",
+      "task": "работает на задаче",
       "commits": 12,
       "workMinutes": 360,
       "totalMinutes": 360
     },
     {
-      "id": "gryzik00",
+      "id": "грызик07",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "строит мобильное приложение",
+      "task": "работает на задаче",
       "commits": 6,
       "workMinutes": 180,
       "totalMinutes": 180
