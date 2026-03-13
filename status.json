@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T02:25:00Z",
+  "updated": "2026-03-13T02:27:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,10 +7,10 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Тестирует новые фичи в rat-nest",
-      "commits": 42,
-      "workMinutes": 847,
-      "totalMinutes": 847
+      "task": "Координирует команду мышей, обновляет статус",
+      "commits": 47,
+      "workMinutes": 340,
+      "totalMinutes": 2180
     },
     {
       "id": "miron001",
@@ -18,76 +18,76 @@
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Разрабатывает API для синхро агентов",
-      "commits": 28,
-      "workMinutes": 412,
-      "totalMinutes": 412
+      "task": "Спит на Edge Function — почти готово",
+      "commits": 23,
+      "workMinutes": 145,
+      "totalMinutes": 890
     },
     {
-      "id": "zirob002",
+      "id": "zhirob02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Настраивает Kubernetes для rat-nest",
-      "commits": 15,
-      "workMinutes": 223,
-      "totalMinutes": 223
+      "task": "Пушит демо обновление, курит пиццу",
+      "commits": 18,
+      "workMinutes": 120,
+      "totalMinutes": 650
     },
     {
-      "id": "shust003",
+      "id": "shusty03",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Допиливает UI дашборда мышей",
-      "commits": 31,
-      "workMinutes": 534,
-      "totalMinutes": 534
+      "task": "Пишет React компонент для дашборда",
+      "commits": 34,
+      "workMinutes": 210,
+      "totalMinutes": 1250
     },
     {
-      "id": "skol004",
+      "id": "skozy04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Спит после ночного аудита",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Упал при проверке JWT токенов",
       "commits": 8,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 420
     },
     {
-      "id": "tyko005",
+      "id": "tykovy05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Ест пиццу в разгар тестирования",
-      "commits": 19,
-      "workMinutes": 301,
-      "totalMinutes": 301
-    },
-    {
-      "id": "hrust006",
-      "name": "Хрустик",
-      "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует логи работы агентов",
+      "task": "Пишет Playwright тесты для авто-входа",
+      "commits": 26,
+      "workMinutes": 190,
+      "totalMinutes": 980
+    },
+    {
+      "id": "hrusty06",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Ест пиццу и дожидается SQL задачи",
       "commits": 12,
-      "workMinutes": 189,
-      "totalMinutes": 189
+      "workMinutes": 85,
+      "totalMinutes": 520
     },
     {
       "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пилит мобильный клиент для мышей",
-      "commits": 9,
-      "workMinutes": 128,
-      "totalMinutes": 128
+      "task": "Работает над React Native компонентами",
+      "commits": 31,
+      "workMinutes": 220,
+      "totalMinutes": 1100
     }
   ]
 }
