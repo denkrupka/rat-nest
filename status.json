@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T12:27:00Z",
+  "updated": "2026-03-13T12:29:00Z",
   "agents": [
     {
       "id": "shnyir01",
@@ -7,87 +7,87 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и наблюдает за командой",
+      "task": "Ждет команду от Дениса",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "miron02",
+      "id": "miron002",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит и видит хорошие REST API",
+      "task": "Спит в берлоге",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "zhirob03",
+      "id": "zhiroba3",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Инженерит инфру в облаках",
+      "task": "Инженер по инфре, ест пиццу",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "shustri04",
+      "id": "shustri4",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пишет гладкий UI компонент",
+      "task": "Frontend мастер чинит UI",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "skozski05",
+      "id": "skozski5",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-sonnet",
       "status": "crashed",
-      "task": "Проверяет уязвимости в коде",
+      "task": "Отсутствует",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykova06",
+      "id": "tykovna6",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет тесты и ломает фичи",
+      "task": "QA тестирует приложение",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "hrustik07",
+      "id": "hrustik7",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Парсит и трансформирует датасеты",
+      "task": "Data анализирует события",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
       "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Чешет iOS приложение на React Native",
+      "task": "Mobile разработчик休息中",
       "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     }
   ]
 }
