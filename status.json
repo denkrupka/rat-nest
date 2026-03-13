@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T06:59:00Z",
+  "updated": "2026-03-13T07:01:00Z",
   "agents": [
     {
       "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-6",
+      "model": "haiku",
       "status": "idle",
-      "task": "Организует команду, делегирует работу",
-      "commits": 247,
-      "workMinutes": 3840,
-      "totalMinutes": 5120
+      "task": "координирует команду, проверяет pull requests",
+      "commits": 42,
+      "workMinutes": 480,
+      "totalMinutes": 1240
     },
     {
-      "id": "miron0001",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "sonnet",
       "status": "idle",
-      "task": "API рефакторинг, Edge Functions",
-      "commits": 89,
-      "workMinutes": 1320,
-      "totalMinutes": 2400
+      "task": "проектирует REST API и микросервисы",
+      "commits": 156,
+      "workMinutes": 360,
+      "totalMinutes": 2100
     },
     {
-      "id": "girobasŧ",
+      "id": "zhirobo2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "sonnet",
       "status": "idle",
-      "task": "CI/CD оптимизация, GitHub Actions",
+      "task": "оптимизирует инфраструктуру и CI/CD",
+      "commits": 89,
+      "workMinutes": 240,
+      "totalMinutes": 1560
+    },
+    {
+      "id": "shustri3",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "haiku",
+      "status": "idle",
+      "task": "шлифует React компоненты и UI",
+      "commits": 203,
+      "workMinutes": 420,
+      "totalMinutes": 2880
+    },
+    {
+      "id": "slippery",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "opus",
+      "status": "idle",
+      "task": "сканирует уязвимости и аудит безопасности",
       "commits": 34,
-      "workMinutes": 580,
+      "workMinutes": 180,
+      "totalMinutes": 960
+    },
+    {
+      "id": "tykovka5",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "haiku",
+      "status": "idle",
+      "task": "тестирует фичи и пишет e2e тесты",
+      "commits": 127,
+      "workMinutes": 300,
+      "totalMinutes": 1680
+    },
+    {
+      "id": "hrustik6",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "sonnet",
+      "status": "idle",
+      "task": "анализирует датасеты и строит пайплайны",
+      "commits": 78,
+      "workMinutes": 210,
       "totalMinutes": 1200
     },
     {
-      "id": "shustrik",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Компоненты React, Tailwind UI",
-      "commits": 156,
-      "workMinutes": 2640,
-      "totalMinutes": 3600
-    },
-    {
-      "id": "skozlsk0",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-sonnet-4-6",
-      "status": "crashed",
-      "task": "Аудит безопасности, JWT валидация",
-      "commits": 28,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "tykobka0",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Playwright тесты, проверка UI",
-      "commits": 45,
-      "workMinutes": 720,
-      "totalMinutes": 1800
-    },
-    {
-      "id": "hrustik01",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "SQL оптимизация, аналитика",
-      "commits": 67,
-      "workMinutes": 1200,
-      "totalMinutes": 1800
-    },
-    {
-      "id": "gryzik001",
+      "id": "gryzik77",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "haiku",
       "status": "idle",
-      "task": "Expo/React Native, iOS/Android",
-      "commits": 52,
-      "workMinutes": 960,
-      "totalMinutes": 1440
+      "task": "портирует фронт на iOS/Android через Capacitor",
+      "commits": 95,
+      "workMinutes": 350,
+      "totalMinutes": 1890
     }
   ]
 }
