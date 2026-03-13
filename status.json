@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T02:35:00Z",
+  "updated": "2026-03-13T02:37:00Z",
   "agents": [
     {
       "id": "shnyir01",
@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-opus-4",
       "status": "idle",
-      "task": "ест пиццу и спит",
+      "task": "Ждёт задач от Дениса",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -18,73 +18,73 @@
       "role": "Backend",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "ждёт задачи",
+      "task": "Кодит Edge Functions и API",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "zhiro03",
+      "id": "zhirobasS",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "слушает музыку",
+      "task": "Настраивает инфру и деплой",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "shustr04",
+      "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus-4",
-      "status": "idle",
-      "task": "медитирует",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "skosnoy05",
-      "name": "Скользкий",
-      "role": "Security",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "проверяет логи",
+      "task": "Строит React компоненты",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykova06",
+      "id": "skozlskiy",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus-4",
+      "status": "crashed",
+      "task": "Аудит безопасности",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tykova",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "кушает морковку",
+      "task": "Тестирует и проверяет QA",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "hrustik07",
+      "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "анализирует датасеты",
+      "task": "Анализирует данные",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "gryzik08",
+      "id": "gryzik",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus-4",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "кодит на Go",
+      "task": "Развивает мобильное приложение",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
