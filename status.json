@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T13:18:00Z",
+  "updated": "2026-03-13T13:20:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir_1",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus-4",
       "status": "idle",
-      "task": "читает GitHub issues",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверка качества кода портала",
+      "commits": 42,
+      "workMinutes": 120,
+      "totalMinutes": 480
     },
     {
-      "id": "miron02",
+      "id": "miron_2",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "спит в углу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Оптимизация SQL запросов базы данных",
+      "commits": 28,
+      "workMinutes": 90,
+      "totalMinutes": 360
     },
     {
-      "id": "jirobas3",
+      "id": "zhiro_3",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настройка Kubernetes кластера и мониторинга",
+      "commits": 15,
+      "workMinutes": 60,
+      "totalMinutes": 240
     },
     {
-      "id": "shustrik",
+      "id": "shust_4",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "смотрит YouTube",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разработка React компонентов интерфейса",
+      "commits": 56,
+      "workMinutes": 150,
+      "totalMinutes": 420
     },
     {
-      "id": "skozky05",
+      "id": "skoz_5",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus-4",
       "status": "crashed",
-      "task": "потерялся в сети",
-      "commits": 0,
+      "task": "Аудит безопасности API endpoints",
+      "commits": 8,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 120
     },
     {
-      "id": "tukova06",
+      "id": "tyk_6",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "проверяет баги",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирование критических сценариев пользователя",
+      "commits": 32,
+      "workMinutes": 100,
+      "totalMinutes": 360
     },
     {
-      "id": "hrustik7",
+      "id": "hrust_7",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "копает данные",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализ метрик и построение дашборда",
+      "commits": 19,
+      "workMinutes": 75,
+      "totalMinutes": 300
     },
     {
-      "id": "gryzik08",
+      "id": "gryz_8",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "тестит iOS",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разработка React Native приложения",
+      "commits": 44,
+      "workMinutes": 130,
+      "totalMinutes": 400
     }
   ]
 }
