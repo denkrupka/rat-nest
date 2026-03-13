@@ -1,93 +1,13 @@
 {
-  "updated": "2026-03-13T05:32:00Z",
+  "updated": "2026-03-13T05:34:00Z",
   "agents": [
-    {
-      "id": "00000001",
-      "name": "Шнырь",
-      "role": "Главный кодер",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Жду команд от Дениса",
-      "commits": 127,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
-    },
-    {
-      "id": "00000002",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Пиво и тишина",
-      "commits": 89,
-      "workMinutes": 856,
-      "totalMinutes": 856
-    },
-    {
-      "id": "00000003",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Мониторю серверы",
-      "commits": 56,
-      "workMinutes": 672,
-      "totalMinutes": 672
-    },
-    {
-      "id": "00000004",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Рисую красивые компоненты",
-      "commits": 143,
-      "workMinutes": 1420,
-      "totalMinutes": 1420
-    },
-    {
-      "id": "00000005",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Ищу дыры в коде",
-      "commits": 34,
-      "workMinutes": 412,
-      "totalMinutes": 412
-    },
-    {
-      "id": "00000006",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Тестирую всё подряд",
-      "commits": 98,
-      "workMinutes": 1050,
-      "totalMinutes": 1050
-    },
-    {
-      "id": "00000007",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Жую数据",
-      "commits": 62,
-      "workMinutes": 720,
-      "totalMinutes": 720
-    },
-    {
-      "id": "00000008",
-      "name": "Грызик",
-      "role": "Mobile",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Спит после работы",
-      "commits": 51,
-      "workMinutes": 640,
-      "totalMinutes": 640
-    }
+    {"id": "shnyir01", "name": "Шнырь", "role": "Главный кодер", "model": "claude-opus", "status": "idle", "task": "Спит на клавиатуре", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "miron02", "name": "Мирон", "role": "Backend", "model": "claude-sonnet", "status": "idle", "task": "Ест пиццу", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "zirovas", "name": "Жиробас", "role": "DevOps", "model": "claude-haiku", "status": "idle", "task": "Чистит ушебру", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "shustrik", "name": "Шустрик", "role": "Frontend", "model": "claude-sonnet", "status": "idle", "task": "Ловит мух в углу", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "skozski", "name": "Скользкий", "role": "Security", "model": "claude-haiku", "status": "crashed", "task": "Потерялся в тролле", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "tykovka", "name": "Тыковка", "role": "QA", "model": "claude-sonnet", "status": "idle", "task": "Тестирует хаз", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "hrustik01", "name": "Хрустик", "role": "Data", "model": "claude-haiku", "status": "idle", "task": "Грызёт Postgres", "commits": 0, "workMinutes": 0, "totalMinutes": 0},
+    {"id": "gryzik01", "name": "Грызик", "role": "Mobile", "model": "claude-haiku", "status": "idle", "task": "Мощит на iOS", "commits": 0, "workMinutes": 0, "totalMinutes": 0}
   ]
 }
