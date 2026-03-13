@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T11:04:00Z",
+  "updated": "2026-03-13T11:06:00Z",
   "agents": [
     {
-      "id": "mouse_001",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "читает SOUL.md и готовится к новым заданиям",
-      "commits": 127,
-      "workMinutes": 4840,
-      "totalMinutes": 4840
+      "task": "Ждёт новых задач",
+      "commits": 42,
+      "workMinutes": 180,
+      "totalMinutes": 420
     },
     {
-      "id": "mouse_002",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "оптимизирует Edge Functions в Supabase",
-      "commits": 84,
-      "workMinutes": 3120,
-      "totalMinutes": 3120
+      "task": "Завтракает, потом читает доки",
+      "commits": 28,
+      "workMinutes": 120,
+      "totalMinutes": 240
     },
     {
-      "id": "mouse_003",
+      "id": "zhirobas03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "настраивает GitHub Actions workflow",
-      "commits": 42,
-      "workMinutes": 1680,
-      "totalMinutes": 1680
+      "task": "Смотрит метрики инфраструктуры",
+      "commits": 15,
+      "workMinutes": 90,
+      "totalMinutes": 180
     },
     {
-      "id": "mouse_004",
+      "id": "shustrik04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "дизайнит новые компоненты в React",
-      "commits": 156,
-      "workMinutes": 5280,
-      "totalMinutes": 5280
+      "task": "Раскрашивает компоненты",
+      "commits": 35,
+      "workMinutes": 150,
+      "totalMinutes": 320
     },
     {
-      "id": "mouse_005",
+      "id": "skozlky05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "crashed",
-      "task": "проверял JWT токены",
-      "commits": 23,
-      "workMinutes": 960,
-      "totalMinutes": 960
+      "task": "Пока не ужинал, перезагрузка ждёт",
+      "commits": 8,
+      "workMinutes": 45,
+      "totalMinutes": 90
     },
     {
-      "id": "mouse_006",
+      "id": "tykoka06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "пишет Playwright тесты",
-      "commits": 98,
-      "workMinutes": 3600,
-      "totalMinutes": 3600
+      "task": "Пробует функции, пишет баги",
+      "commits": 22,
+      "workMinutes": 110,
+      "totalMinutes": 200
     },
     {
-      "id": "mouse_007",
+      "id": "hrustik07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "обрабатывает CSV данные в Supabase",
-      "commits": 67,
-      "workMinutes": 2400,
-      "totalMinutes": 2400
+      "task": "Реформатирует CSV в JSON",
+      "commits": 18,
+      "workMinutes": 85,
+      "totalMinutes": 160
     },
     {
-      "id": "mouse_008",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "разрабатывает Expo приложение",
-      "commits": 145,
-      "workMinutes": 4920,
-      "totalMinutes": 4920
+      "task": "Кодит мобильное приложение",
+      "commits": 25,
+      "workMinutes": 95,
+      "totalMinutes": 210
     }
   ]
 }
