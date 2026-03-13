@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T08:39:00Z",
+  "updated": "2026-03-13T08:41:00Z",
   "agents": [
     {
-      "id": "a1b2c3d4",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Спит, восстанавливается после ночной работы",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 480
-    },
-    {
-      "id": "e5f6g7h8",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "Ест пиццу и обсуждает архитектуру в чате",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 360
-    },
-    {
-      "id": "i9j0k1l2",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Дремлет рядом с кулером сервера",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 240
-    },
-    {
-      "id": "m3n4o5p6",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Рисует UI в фигме, ест семечки",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 320
-    },
-    {
-      "id": "q7r8s9t0",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "crashed",
-      "task": "Сидит в углу и ворчит про баги",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "u1v2w3x4",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Тестирует все подряд и ломает систему",
-      "commits": 0,
-      "workMinutes": 0,
+      "task": "Координирует команду, отдыхает",
+      "commits": 42,
+      "workMinutes": 180,
       "totalMinutes": 180
     },
     {
-      "id": "y5z6a7b8",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "id": "miron01",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Организует данные в огромный Excel",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 150
+      "task": "Готовит кофе и API endpoints",
+      "commits": 38,
+      "workMinutes": 165,
+      "totalMinutes": 165
     },
     {
-      "id": "c9d0e1f2",
+      "id": "zhirob02",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Следит за инфраструктурой и пайпайнами",
+      "commits": 28,
+      "workMinutes": 142,
+      "totalMinutes": 142
+    },
+    {
+      "id": "shusht03",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Пилит React компоненты в реальном времени",
+      "commits": 52,
+      "workMinutes": 205,
+      "totalMinutes": 205
+    },
+    {
+      "id": "sklzk04",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-sonnet",
+      "status": "crashed",
+      "task": "Ловит уязвимости и делает аудиты",
+      "commits": 15,
+      "workMinutes": 89,
+      "totalMinutes": 89
+    },
+    {
+      "id": "tykova05",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Гонит тесты и ловит баги",
+      "commits": 44,
+      "workMinutes": 195,
+      "totalMinutes": 195
+    },
+    {
+      "id": "hrustk06",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Анализирует DataBases и писчет SQL",
+      "commits": 21,
+      "workMinutes": 127,
+      "totalMinutes": 127
+    },
+    {
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Портирует приложение на айфон, стоит на ушах",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 90
+      "task": "Чинит мобильный и iOS/Android",
+      "commits": 35,
+      "workMinutes": 156,
+      "totalMinutes": 156
     }
   ]
 }
