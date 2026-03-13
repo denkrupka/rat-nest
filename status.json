@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T07:33:00Z",
+  "updated": "2026-03-13T07:38:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "rat-nest0",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и медитирует",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит в углу, вижу только хвост",
+      "commits": 42,
+      "workMinutes": 3120,
+      "totalMinutes": 4200
     },
     {
-      "id": "miron001",
+      "id": "rat-nest1",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Оптимизирует БД запросы",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу в кейтеринге",
+      "commits": 38,
+      "workMinutes": 2880,
+      "totalMinutes": 3960
     },
     {
-      "id": "zhirobc",
+      "id": "rat-nest2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Спит в углу серверной",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
-    },
-    {
-      "id": "shustrik",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пилит React компоненты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает AWS диск по новой",
+      "commits": 15,
+      "workMinutes": 1440,
+      "totalMinutes": 2100
     },
     {
-      "id": "skozlski",
+      "id": "rat-nest3",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Вёрстка Tailwind компонентов",
+      "commits": 31,
+      "workMinutes": 2160,
+      "totalMinutes": 3360
+    },
+    {
+      "id": "rat-nest4",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-opus",
       "status": "crashed",
-      "task": "Упал с сервера",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Аудит логирования в production",
+      "commits": 12,
+      "workMinutes": 840,
+      "totalMinutes": 1260
     },
     {
-      "id": "tykovka0",
+      "id": "rat-nest5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Проверяет багрепорты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Прописывает тесты Playwright",
+      "commits": 28,
+      "workMinutes": 1920,
+      "totalMinutes": 2880
     },
     {
-      "id": "hrustik00",
+      "id": "rat-nest6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует метрики",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Парсит CSV по аналитике",
+      "commits": 19,
+      "workMinutes": 1200,
+      "totalMinutes": 1800
     },
     {
-      "id": "gryzik000",
+      "id": "rat-nest7",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Налаживает iOS сборку",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Поправляет React Native компоненты",
+      "commits": 22,
+      "workMinutes": 1560,
+      "totalMinutes": 2340
     }
   ]
 }
