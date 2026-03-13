@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T17:38:00Z",
+  "updated": "2026-03-13T17:40:00Z",
   "agents": [
     {
-      "id": "agent001",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует команду мышей, ест сыр",
-      "commits": 247,
-      "workMinutes": 1440,
-      "totalMinutes": 1440
+      "task": "Координирует команду мышей",
+      "commits": 42,
+      "workMinutes": 1260,
+      "totalMinutes": 1260
     },
     {
-      "id": "agent002",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Refactor API endpoints и миграции",
-      "commits": 89,
-      "workMinutes": 480,
-      "totalMinutes": 480
+      "task": "Оптимизирует Edge Functions",
+      "commits": 28,
+      "workMinutes": 840,
+      "totalMinutes": 840
     },
     {
-      "id": "agent003",
+      "id": "zirobasf",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Docker/k8s инфра, мониторинг Sentry",
-      "commits": 56,
+      "task": "Настраивает CI/CD",
+      "commits": 15,
+      "workMinutes": 450,
+      "totalMinutes": 450
+    },
+    {
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Лепит React компоненты",
+      "commits": 35,
+      "workMinutes": 1050,
+      "totalMinutes": 1050
+    },
+    {
+      "id": "skozskiy",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Проверяет уязвимости",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tukvoyka",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Пишет тесты и проверяет",
+      "commits": 22,
+      "workMinutes": 660,
+      "totalMinutes": 660
+    },
+    {
+      "id": "hrusti001",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Анализирует данные",
+      "commits": 12,
       "workMinutes": 360,
       "totalMinutes": 360
     },
     {
-      "id": "agent004",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "React компоненты, Tailwind UI вёрстка",
-      "commits": 134,
-      "workMinutes": 600,
-      "totalMinutes": 600
-    },
-    {
-      "id": "agent005",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "crashed",
-      "task": "Patch SQL injection vulnerability",
-      "commits": 12,
-      "workMinutes": 0,
-      "totalMinutes": 120
-    },
-    {
-      "id": "agent006",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "Playwright тесты, проверка скриншотов",
-      "commits": 78,
-      "workMinutes": 420,
-      "totalMinutes": 420
-    },
-    {
-      "id": "agent007",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "ETL pipelines, анализ логов из S3",
-      "commits": 45,
-      "workMinutes": 240,
-      "totalMinutes": 240
-    },
-    {
-      "id": "agent008",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "React Native iOS/Android, Capacitor",
-      "commits": 67,
-      "workMinutes": 300,
-      "totalMinutes": 300
+      "task": "Разрабатывает мобильное приложение",
+      "commits": 18,
+      "workMinutes": 540,
+      "totalMinutes": 540
     }
   ]
 }
