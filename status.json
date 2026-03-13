@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T06:01:00Z",
+  "updated": "2026-03-13T06:03:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,87 +7,87 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует мышей, читает задачи",
-      "commits": 42,
-      "workMinutes": 180,
-      "totalMinutes": 480
+      "task": "координирует команду мышей",
+      "commits": 847,
+      "workMinutes": 2841,
+      "totalMinutes": 14205
     },
     {
-      "id": "miron001",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Отдыхает после Edge Functions",
-      "commits": 28,
-      "workMinutes": 120,
-      "totalMinutes": 360
+      "task": "пишет REST API и микросервисы",
+      "commits": 423,
+      "workMinutes": 1687,
+      "totalMinutes": 8437
     },
     {
-      "id": "zhirobas",
+      "id": "zhiro02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Настраивает CI/CD pipeline",
-      "commits": 15,
-      "workMinutes": 95,
-      "totalMinutes": 240
-    },
-    {
-      "id": "shustrik",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пиксель-перфект компоненты",
-      "commits": 51,
-      "workMinutes": 210,
-      "totalMinutes": 540
+      "task": "настраивает Kubernetes и мониторинг",
+      "commits": 156,
+      "workMinutes": 892,
+      "totalMinutes": 4460
     },
     {
-      "id": "skuzliy",
+      "id": "shust03",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "верстает React компоненты и UI",
+      "commits": 634,
+      "workMinutes": 2104,
+      "totalMinutes": 10520
+    },
+    {
+      "id": "slizk04",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "Security audit (offline)",
-      "commits": 8,
-      "workMinutes": 0,
-      "totalMinutes": 120
+      "task": "спит и видит хакеров",
+      "commits": 89,
+      "workMinutes": 445,
+      "totalMinutes": 2225
     },
     {
-      "id": "tybochka",
+      "id": "tykka05",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Жует пиццу и пишет тесты",
-      "commits": 19,
-      "workMinutes": 78,
-      "totalMinutes": 180
+      "task": "тестирует все фичи и ловит баги",
+      "commits": 312,
+      "workMinutes": 1560,
+      "totalMinutes": 7800
     },
     {
-      "id": "hrustik0",
+      "id": "hrust06",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Data pipeline, BigQuery queries",
-      "commits": 22,
-      "workMinutes": 140,
-      "totalMinutes": 300
+      "task": "анализирует данные и строит дашборды",
+      "commits": 201,
+      "workMinutes": 1005,
+      "totalMinutes": 5025
     },
     {
-      "id": "gryzik00",
+      "id": "gryzk07",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Спит в уголке, снятся сны",
-      "commits": 11,
-      "workMinutes": 45,
-      "totalMinutes": 150
+      "task": "разрабатывает iOS и Android приложения",
+      "commits": 278,
+      "workMinutes": 1390,
+      "totalMinutes": 6950
     }
   ]
 }
