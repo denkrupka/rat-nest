@@ -2,7 +2,7 @@
   "updated": "2026-03-13T03:59:00Z",
   "agents": [
     {
-      "id": "shnyir",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
@@ -13,7 +13,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "miron",
+      "id": "miron000",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-opus",
@@ -24,7 +24,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "zhirobas",
+      "id": "zhiroba0",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
@@ -35,7 +35,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "shustrik",
+      "id": "shustri0",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
@@ -46,18 +46,18 @@
       "totalMinutes": 0
     },
     {
-      "id": "skol",
+      "id": "skol000",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "Спит и видит код без баг",
+      "task": "Спит и видит код без багов",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tyk",
+      "id": "tyk00000",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-sonnet",
@@ -68,7 +68,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "hrustik",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
@@ -79,7 +79,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "gryzik",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-sonnet",
