@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T00:10:00Z",
+  "updated": "2026-03-13T00:12:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir-1",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "ест пиццу и релаксит",
-      "commits": 247,
-      "workMinutes": 1205,
-      "totalMinutes": 1205
+      "task": "Ест пиццу и следит за командой 🐀",
+      "commits": 42,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron000",
+      "id": "miron-1",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "дебажит Edge Functions",
-      "commits": 89,
-      "workMinutes": 521,
-      "totalMinutes": 521
+      "task": "Спит под столом и видит кошмары о SQL",
+      "commits": 18,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhibas00",
+      "id": "zhiro-1",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "настраивает GitHub Actions",
-      "commits": 34,
-      "workMinutes": 213,
-      "totalMinutes": 213
+      "task": "Настраивает гнездо для максимального уюта",
+      "commits": 12,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustri0",
+      "id": "shust-1",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "верстает новые компоненты",
-      "commits": 156,
-      "workMinutes": 892,
-      "totalMinutes": 892
+      "task": "Рисует красивые компоненты в уме 🎨",
+      "commits": 27,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozlky0",
+      "id": "skolk-1",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "искал уязвимости",
-      "commits": 12,
-      "workMinutes": 67,
-      "totalMinutes": 67
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Ищет уязвимости в тёмных углах 🔒",
+      "commits": 8,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykobka0",
+      "id": "tyk-1",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "пишет Playwright тесты",
-      "commits": 78,
-      "workMinutes": 445,
-      "totalMinutes": 445
+      "task": "Ломает всё что попадается под лапы 🐾",
+      "commits": 35,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik00",
+      "id": "hrust-1",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "парсит датасеты",
-      "commits": 45,
-      "workMinutes": 267,
-      "totalMinutes": 267
+      "task": "Анализирует потоки данных в гнезде",
+      "commits": 14,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "grizik000",
+      "id": "gryz-1",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "тестирует React Native",
-      "commits": 67,
-      "workMinutes": 401,
-      "totalMinutes": 401
+      "task": "Портирует приложения на мышачную ОС 📱",
+      "commits": 6,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
