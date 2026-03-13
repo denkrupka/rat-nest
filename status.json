@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Парсит данные для Денис-дашборда",
+      "task": "Парсит данные для дашборда",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
