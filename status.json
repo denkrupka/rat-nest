@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T08:08:00Z",
+  "updated": "2026-03-13T08:10:00Z",
   "agents": [
     {
       "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Отдыхает в главном офисе",
-      "commits": 847,
-      "workMinutes": 12540,
-      "totalMinutes": 12540
+      "task": "Координирует команду, пьёт кофе",
+      "commits": 42,
+      "workMinutes": 240,
+      "totalMinutes": 480
     },
     {
       "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Занят наладкой API базы данных",
-      "commits": 523,
-      "workMinutes": 8190,
-      "totalMinutes": 8190
+      "task": "Готовит API, ест суши",
+      "commits": 28,
+      "workMinutes": 180,
+      "totalMinutes": 360
     },
     {
       "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Проверяет состояние серверов",
-      "commits": 412,
-      "workMinutes": 6480,
-      "totalMinutes": 6480
+      "task": "Настраивает инфру, спит",
+      "commits": 15,
+      "workMinutes": 120,
+      "totalMinutes": 240
     },
     {
       "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Дизайнит новые компоненты UI",
-      "commits": 689,
-      "workMinutes": 10890,
-      "totalMinutes": 10890
+      "task": "Верстает UI, ест пиццу",
+      "commits": 36,
+      "workMinutes": 210,
+      "totalMinutes": 420
     },
     {
-      "id": "skozy05",
+      "id": "skliz05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-opus-4",
       "status": "crashed",
-      "task": "Восстанавливается после аудита",
-      "commits": 234,
-      "workMinutes": 3660,
-      "totalMinutes": 3660
+      "task": "Поймал баг, ушёл в спячку",
+      "commits": 12,
+      "workMinutes": 90,
+      "totalMinutes": 180
     },
     {
-      "id": "tykov06",
+      "id": "tykova06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Тестирует новый релиз",
-      "commits": 156,
-      "workMinutes": 2340,
-      "totalMinutes": 2340
+      "task": "Тестирует всё подряд",
+      "commits": 8,
+      "workMinutes": 120,
+      "totalMinutes": 240
     },
     {
       "id": "hrustik07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Анализирует данные портала",
-      "commits": 378,
-      "workMinutes": 5670,
-      "totalMinutes": 5670
+      "task": "Парсит данные, грызёт семки",
+      "commits": 20,
+      "workMinutes": 150,
+      "totalMinutes": 300
     },
     {
       "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Разрабатывает мобильное приложение",
-      "commits": 445,
-      "workMinutes": 6900,
-      "totalMinutes": 6900
+      "task": "Пишет React Native, дрыхнет",
+      "commits": 16,
+      "workMinutes": 100,
+      "totalMinutes": 200
     }
   ]
 }
