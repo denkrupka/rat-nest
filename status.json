@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T05:22:00Z",
+  "updated": "2026-03-13T05:24:00Z",
   "agents": [
     {
-      "id": "00000001",
+      "id": "a1b2c3d4",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Отдыхает между задачами, грызет сыр...",
-      "commits": 487,
-      "workMinutes": 14230,
-      "totalMinutes": 14230
+      "task": "ест пиццу",
+      "commits": 42,
+      "workMinutes": 480,
+      "totalMinutes": 480
     },
     {
-      "id": "00000002",
+      "id": "b2c3d4e5",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Дегустирует кофе с сахаром, ждет задач...",
-      "commits": 312,
-      "workMinutes": 9840,
-      "totalMinutes": 9840
+      "task": "спит после 12 часов деплоя",
+      "commits": 28,
+      "workMinutes": 720,
+      "totalMinutes": 720
     },
     {
-      "id": "00000003",
+      "id": "c3d4e5f6",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Организует серверную инфраструктуру...",
-      "commits": 189,
-      "workMinutes": 5670,
-      "totalMinutes": 5670
+      "task": "обновляет инфраструктуру и мониторит серверы",
+      "commits": 15,
+      "workMinutes": 240,
+      "totalMinutes": 240
     },
     {
-      "id": "00000004",
+      "id": "d4e5f6g7",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Прикидывает новые CSS трюки, ест пиццу...",
-      "commits": 423,
-      "workMinutes": 12690,
-      "totalMinutes": 12690
+      "task": "пьёт кофе и смотрит Figma макеты",
+      "commits": 35,
+      "workMinutes": 360,
+      "totalMinutes": 360
     },
     {
-      "id": "00000005",
+      "id": "e5f6g7h8",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4",
       "status": "crashed",
-      "task": "Session timeout - needs restart",
-      "commits": 94,
-      "workMinutes": 2820,
-      "totalMinutes": 2820
+      "task": "кражднула токены и сбежала",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000006",
+      "id": "f6g7h8i9",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Тестирует UI на мобильных устройствах...",
-      "commits": 156,
-      "workMinutes": 4680,
-      "totalMinutes": 4680
+      "task": "гуляет по парку и проверяет чек-листы",
+      "commits": 8,
+      "workMinutes": 120,
+      "totalMinutes": 120
     },
     {
-      "id": "00000007",
+      "id": "g7h8i9j0",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Анализирует метрики и готовит отчеты...",
-      "commits": 203,
-      "workMinutes": 6090,
-      "totalMinutes": 6090
+      "task": "анализирует датасеты и рисует графики",
+      "commits": 12,
+      "workMinutes": 180,
+      "totalMinutes": 180
     },
     {
-      "id": "00000008",
+      "id": "h8i9j0k1",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Оптимизирует React Native компоненты...",
-      "commits": 178,
-      "workMinutes": 5340,
-      "totalMinutes": 5340
+      "task": "закусывает сырок и пилит React Native",
+      "commits": 19,
+      "workMinutes": 240,
+      "totalMinutes": 240
     }
   ]
 }
