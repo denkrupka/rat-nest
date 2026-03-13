@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T11:59:00Z",
+  "updated": "2026-03-13T12:01:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Ест сыр из холодильника",
-      "commits": 847,
-      "workMinutes": 12420,
-      "totalMinutes": 12420
-    },
-    {
-      "id": "miron001",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Спит на батарее",
-      "commits": 312,
-      "workMinutes": 5280,
-      "totalMinutes": 5280
-    },
-    {
-      "id": "zhirobasss",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Настраивает серверные шкафы",
-      "commits": 256,
-      "workMinutes": 4320,
-      "totalMinutes": 4320
-    },
-    {
-      "id": "shustrik0",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Крутит CSS анимации",
-      "commits": 524,
-      "workMinutes": 8640,
-      "totalMinutes": 8640
-    },
-    {
-      "id": "skozlskiy",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "crashed",
-      "task": "Тестирует брандмауэр",
-      "commits": 189,
-      "workMinutes": 3180,
-      "totalMinutes": 3180
-    },
-    {
-      "id": "tykovna0",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Проверяет тесты на багах",
-      "commits": 401,
-      "workMinutes": 6720,
-      "totalMinutes": 6720
-    },
-    {
-      "id": "hrustik00",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Анализирует маткую папку",
-      "commits": 178,
-      "workMinutes": 2880,
+      "task": "Ждёт новых команд от Дениса",
+      "commits": 342,
+      "workMinutes": 0,
       "totalMinutes": 2880
     },
     {
-      "id": "gryzik000",
+      "id": "miron",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-opus-4",
+      "status": "idle",
+      "task": "Проверяет Edge Functions в Supabase",
+      "commits": 127,
+      "workMinutes": 0,
+      "totalMinutes": 1440
+    },
+    {
+      "id": "zhirobas",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-haiku-4",
+      "status": "idle",
+      "task": "Дремлет рядом с Docker контейнерами",
+      "commits": 89,
+      "workMinutes": 0,
+      "totalMinutes": 720
+    },
+    {
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet-4",
+      "status": "idle",
+      "task": "Ест пиццу и смотрит Tailwind примеры",
+      "commits": 201,
+      "workMinutes": 0,
+      "totalMinutes": 1440
+    },
+    {
+      "id": "skol_key",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus-4",
+      "status": "idle",
+      "task": "Патрулирует систему на предмет уязвимостей",
+      "commits": 45,
+      "workMinutes": 0,
+      "totalMinutes": 600
+    },
+    {
+      "id": "tykoka",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-haiku-4",
+      "status": "idle",
+      "task": "Пишет Playwright тесты для новых фич",
+      "commits": 156,
+      "workMinutes": 0,
+      "totalMinutes": 1080
+    },
+    {
+      "id": "hrustic",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-sonnet-4",
+      "status": "idle",
+      "task": "Анализирует метрики и логи",
+      "commits": 78,
+      "workMinutes": 0,
+      "totalMinutes": 480
+    },
+    {
+      "id": "gryzic",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4",
       "status": "idle",
-      "task": "Портирует iOS на фасоль",
-      "commits": 267,
-      "workMinutes": 4500,
-      "totalMinutes": 4500
+      "task": "Строит мобильное приложение на Expo",
+      "commits": 92,
+      "workMinutes": 0,
+      "totalMinutes": 840
     }
   ]
 }
