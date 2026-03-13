@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T11:57:00Z",
+  "updated": "2026-03-13T11:59:00Z",
   "agents": [
     {
       "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Спит в углу. Готов к боям. 💤",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест сыр из холодильника",
+      "commits": 847,
+      "workMinutes": 12420,
+      "totalMinutes": 12420
     },
     {
       "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Ест пиццу. Спокойно молчит. 🍕",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит на батарее",
+      "commits": 312,
+      "workMinutes": 5280,
+      "totalMinutes": 5280
     },
     {
-      "id": "zhiro002",
+      "id": "zhirobasss",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Смотрит на logs. Всё ок. 📊",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает серверные шкафы",
+      "commits": 256,
+      "workMinutes": 4320,
+      "totalMinutes": 4320
     },
     {
-      "id": "shust003",
+      "id": "shustrik0",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Рисует в CSS. Красиво молчит. 🎨",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Крутит CSS анимации",
+      "commits": 524,
+      "workMinutes": 8640,
+      "totalMinutes": 8640
     },
     {
-      "id": "skooz004",
+      "id": "skozlskiy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "crashed",
-      "task": "⚠️ Бежал и упал. Перезагрузка...",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирует брандмауэр",
+      "commits": 189,
+      "workMinutes": 3180,
+      "totalMinutes": 3180
     },
     {
-      "id": "tyvok005",
+      "id": "tykovna0",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Тестирует на ошибки. Всё работает. ✅",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверяет тесты на багах",
+      "commits": 401,
+      "workMinutes": 6720,
+      "totalMinutes": 6720
     },
     {
-      "id": "chrst006",
+      "id": "hrustik00",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Анализирует данные в углу. 📈",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует маткую папку",
+      "commits": 178,
+      "workMinutes": 2880,
+      "totalMinutes": 2880
     },
     {
-      "id": "gryzk007",
+      "id": "gryzik000",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Грызёт мобильный код. Потихоньку. 📱",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Портирует iOS на фасоль",
+      "commits": 267,
+      "workMinutes": 4500,
+      "totalMinutes": 4500
     }
   ]
 }
