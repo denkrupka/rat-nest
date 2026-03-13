@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T02:57:00Z",
+  "updated": "2026-03-13T02:59:00Z",
   "agents": [
     {
-      "id": "mouse_001",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Спит в углу, жует семечки",
-      "commits": 42,
-      "workMinutes": 240,
-      "totalMinutes": 480
-    },
-    {
-      "id": "mouse_002",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4",
-      "status": "idle",
-      "task": "Ест сыр из холодильника",
-      "commits": 28,
-      "workMinutes": 180,
-      "totalMinutes": 360
-    },
-    {
-      "id": "mouse_003",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-sonnet-4",
-      "status": "idle",
-      "task": "Пьёт кофе, стучит по кладке",
-      "commits": 15,
-      "workMinutes": 120,
-      "totalMinutes": 240
-    },
-    {
-      "id": "mouse_004",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-haiku-4",
-      "status": "idle",
-      "task": "Рисует красивые кнопки на стене",
-      "commits": 35,
-      "workMinutes": 210,
-      "totalMinutes": 420
-    },
-    {
-      "id": "mouse_005",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4",
-      "status": "crashed",
-      "task": "Упал в мышеловку, сбежал",
+      "task": "Ест пиццу и смотрит код",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "mouse_006",
+      "id": "miron001",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet-4-6",
+      "status": "idle",
+      "task": "Спит на сервере",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "zhiroba2",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet-4-6",
+      "status": "idle",
+      "task": "Гаснет логи",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustri3",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet-4-6",
+      "status": "idle",
+      "task": "Красит кнопки",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skolzki4",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Ловит баги",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tykovna5",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Проверяет качество пиццы",
-      "commits": 20,
-      "workMinutes": 150,
-      "totalMinutes": 300
+      "task": "Ломает функции",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "mouse_007",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Считает зёрна пшеницы в углу",
-      "commits": 12,
-      "workMinutes": 90,
-      "totalMinutes": 180
+      "task": "Считает циферки",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "mouse_008",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Грызёт кабели в подвале",
-      "commits": 8,
-      "workMinutes": 60,
-      "totalMinutes": 120
+      "task": "Раскусывает экран",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
