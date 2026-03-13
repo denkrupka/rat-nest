@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T02:22:00Z",
+  "updated": "2026-03-13T02:25:00Z",
   "agents": [
     {
       "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирует новые фичи в rat-nest",
+      "commits": 42,
+      "workMinutes": 847,
+      "totalMinutes": 847
     },
     {
       "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разрабатывает API для синхро агентов",
+      "commits": 28,
+      "workMinutes": 412,
+      "totalMinutes": 412
     },
     {
-      "id": "zhirob00",
+      "id": "zirob002",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "пьёт кофе",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает Kubernetes для rat-nest",
+      "commits": 15,
+      "workMinutes": 223,
+      "totalMinutes": 223
     },
     {
-      "id": "shustri0",
+      "id": "shust003",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "читает Twitter",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Допиливает UI дашборда мышей",
+      "commits": 31,
+      "workMinutes": 534,
+      "totalMinutes": 534
     },
     {
-      "id": "skozlyi0",
+      "id": "skol004",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "сетевое исключение",
-      "commits": 0,
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Спит после ночного аудита",
+      "commits": 8,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykovat0",
+      "id": "tyko005",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "проверяет тесты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу в разгар тестирования",
+      "commits": 19,
+      "workMinutes": 301,
+      "totalMinutes": 301
     },
     {
-      "id": "hrustik0",
+      "id": "hrust006",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "анализирует метрики",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Анализирует логи работы агентов",
+      "commits": 12,
+      "workMinutes": 189,
+      "totalMinutes": 189
     },
     {
-      "id": "gryzik00",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "оптимизирует APK",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пилит мобильный клиент для мышей",
+      "commits": 9,
+      "workMinutes": 128,
+      "totalMinutes": 128
     }
   ]
 }
