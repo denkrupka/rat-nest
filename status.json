@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T02:10:00Z",
+  "updated": "2026-03-13T02:12:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,87 +7,87 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и смотрит код",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Монитор статуса команды",
+      "commits": 187,
+      "workMinutes": 420,
+      "totalMinutes": 1240
     },
     {
-      "id": "miron01",
+      "id": "miron00",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит на сервере",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Оптимизация API endpoints",
+      "commits": 64,
+      "workMinutes": 180,
+      "totalMinutes": 520
     },
     {
-      "id": "zhirobas2",
+      "id": "zhiro00",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Откручивает гайки на AWS",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настройка CI/CD pipeline",
+      "commits": 42,
+      "workMinutes": 120,
+      "totalMinutes": 340
     },
     {
-      "id": "shustrik3",
+      "id": "shustr00",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Красит кнопки в React",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Компонент Dashboard",
+      "commits": 93,
+      "workMinutes": 260,
+      "totalMinutes": 720
     },
     {
-      "id": "skozlkiy4",
+      "id": "skozly00",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
-      "status": "crashed",
-      "task": "Ловит экплойты (пока без интернета)",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "status": "idle",
+      "task": "Аудит безопасности",
+      "commits": 28,
+      "workMinutes": 90,
+      "totalMinutes": 280
     },
     {
-      "id": "tykovka5",
+      "id": "tykova00",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Ломает всё подряд (регулярно)",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирование покрытия",
+      "commits": 156,
+      "workMinutes": 380,
+      "totalMinutes": 980
     },
     {
-      "id": "hrustic6",
+      "id": "hrustik00",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Щёлкает по датасетам",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "ETL pipeline",
+      "commits": 31,
+      "workMinutes": 110,
+      "totalMinutes": 340
     },
     {
-      "id": "gryzik07",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Чинит iOS при луне",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "iOS/Android синхронизация",
+      "commits": 47,
+      "workMinutes": 150,
+      "totalMinutes": 450
     }
   ]
 }
