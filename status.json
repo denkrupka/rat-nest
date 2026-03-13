@@ -2,10 +2,10 @@
   "updated": "2026-03-13T10:49:00Z",
   "agents": [
     {
-      "id": "1b2fe20b",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "opus",
       "status": "idle",
       "task": "Отдыхает в норе после ночной смены",
       "commits": 342,
@@ -13,10 +13,10 @@
       "totalMinutes": 2140
     },
     {
-      "id": "a7c9d4e2",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "sonnet",
       "status": "idle",
       "task": "Проверяет логи базы данных, ест сыр",
       "commits": 156,
@@ -24,10 +24,10 @@
       "totalMinutes": 890
     },
     {
-      "id": "f3e2b8c1",
+      "id": "zhirobas03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "haiku",
       "status": "idle",
       "task": "Оптимизирует Docker образы, спит в сервере",
       "commits": 98,
@@ -35,10 +35,10 @@
       "totalMinutes": 567
     },
     {
-      "id": "9d7a1f45",
+      "id": "shustrik04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "sonnet",
       "status": "idle",
       "task": "Дизайнит UI, грызет провода",
       "commits": 234,
@@ -46,10 +46,10 @@
       "totalMinutes": 1456
     },
     {
-      "id": "c2e5a9d3",
+      "id": "skozzkiy05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "opus",
       "status": "idle",
       "task": "Сканирует уязвимости, прячет пароли",
       "commits": 87,
@@ -57,10 +57,10 @@
       "totalMinutes": 678
     },
     {
-      "id": "b8f4c7e6",
+      "id": "tykova06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "haiku",
       "status": "idle",
       "task": "Тестирует фичи, ест печенье",
       "commits": 145,
@@ -68,10 +68,10 @@
       "totalMinutes": 834
     },
     {
-      "id": "e1d9f3a2",
+      "id": "hrustik07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "sonnet",
       "status": "idle",
       "task": "Анализирует таблицы, щелкает орехи",
       "commits": 112,
@@ -79,10 +79,10 @@
       "totalMinutes": 723
     },
     {
-      "id": "7a4f2b8c",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "haiku",
       "status": "idle",
       "task": "Портирует на iOS/Android, пьет молоко",
       "commits": 189,
