@@ -2,7 +2,7 @@
   "updated": "2026-03-13T17:03:00Z",
   "agents": [
     {
-      "id": "12345678",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
@@ -13,7 +13,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "87654321",
+      "id": "miron0a",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
@@ -24,7 +24,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "11223344",
+      "id": "zhirobasb",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
@@ -35,7 +35,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "55667788",
+      "id": "shustrik2",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
@@ -46,18 +46,18 @@
       "totalMinutes": 0
     },
     {
-      "id": "99001122",
+      "id": "skozlsky3",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ловит ошибки",
+      "task": "Ловит уязвимости",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "33445566",
+      "id": "tykoka0c",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-sonnet",
@@ -68,7 +68,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "77889900",
+      "id": "hrustik4d",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
@@ -79,7 +79,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "44556677",
+      "id": "gryzik5e",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
