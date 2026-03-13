@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T11:35:00Z",
+  "updated": "2026-03-13T11:37:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Отдыхает с пиццей 🍕",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ждёт задачу от Дениса",
+      "commits": 247,
+      "workMinutes": 1823,
+      "totalMinutes": 2041
     },
     {
-      "id": "miron02",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Спит в углу 😴",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу и придумывает архитектуру",
+      "commits": 156,
+      "workMinutes": 1204,
+      "totalMinutes": 1563
     },
     {
-      "id": "zhiro03",
+      "id": "girob002",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Чистит кэш 🗑️",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит после деплоя",
+      "commits": 89,
+      "workMinutes": 723,
+      "totalMinutes": 1102
     },
     {
-      "id": "shust04",
+      "id": "shust003",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Рисует кнопки 🎨",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Полирует UI компоненты",
+      "commits": 198,
+      "workMinutes": 1456,
+      "totalMinutes": 1834
     },
     {
-      "id": "skozl05",
+      "id": "sklyz004",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Патчит уязвимости 🔐",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ловит уязвимости в углах",
+      "commits": 67,
+      "workMinutes": 512,
+      "totalMinutes": 823
     },
     {
-      "id": "tikov06",
+      "id": "tykob005",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Ломает интерфейс 🧪",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет тесты и ловит баги",
+      "commits": 134,
+      "workMinutes": 892,
+      "totalMinutes": 1127
     },
     {
-      "id": "hrusk07",
+      "id": "hrust006",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Сортирует датасет 📊",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Парсит данные и ищет паттерны",
+      "commits": 112,
+      "workMinutes": 745,
+      "totalMinutes": 956
     },
     {
-      "id": "gryz08",
+      "id": "grzyk007",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4",
       "status": "idle",
-      "task": "Оптимизирует мобилку 📱",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Грызёт React Native",
+      "commits": 178,
+      "workMinutes": 1134,
+      "totalMinutes": 1512
     }
   ]
 }
