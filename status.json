@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T01:33:00Z",
+  "updated": "2026-03-13T01:37:00Z",
   "agents": [
     {
       "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "координирует команду мышей",
-      "commits": 12,
-      "workMinutes": 240,
-      "totalMinutes": 480
-    },
-    {
-      "id": "miron02",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "пилит Edge Functions на Supabase",
-      "commits": 8,
-      "workMinutes": 180,
-      "totalMinutes": 360
-    },
-    {
-      "id": "zhirob03",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "смотрит на Docker файлы с унынием",
-      "commits": 5,
-      "workMinutes": 90,
-      "totalMinutes": 180
-    },
-    {
-      "id": "shustr04",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "рендерит React компоненты в снах",
-      "commits": 15,
-      "workMinutes": 300,
-      "totalMinutes": 600
-    },
-    {
-      "id": "skozly05",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "crashed",
-      "task": "нашёл уязвимость и упал",
+      "task": "Грызет файлы, координирует мышей",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykova06",
+      "id": "miron02",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Настраивает API, пишет функции",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "zhirogas",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Напевает в Docker, крутит Jenkins",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Рисует интерфейсы, чешет лапы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skozlsky",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Проверяет уязвимости, закрывает дыры",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tyvovka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "кликает на кнопки в портале",
-      "commits": 3,
-      "workMinutes": 120,
-      "totalMinutes": 240
+      "task": "Тестирует баги, ест пиццу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrusty07",
+      "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "парсит CSV с неутолимой жаждой",
-      "commits": 6,
-      "workMinutes": 150,
-      "totalMinutes": 300
+      "task": "Обрабатывает данные, спит",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik08",
+      "id": "gryzik",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "ест пиццу и спит в батарее",
-      "commits": 2,
-      "workMinutes": 60,
-      "totalMinutes": 120
+      "task": "Пишет мобильное приложение",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
