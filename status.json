@@ -35,7 +35,7 @@
       "totalMinutes": 892
     },
     {
-      "id": "shustr4",
+      "id": "shustr04",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
@@ -68,7 +68,7 @@
       "totalMinutes": 1156
     },
     {
-      "id": "hrustik7",
+      "id": "hrustik07",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-haiku",
@@ -79,7 +79,7 @@
       "totalMinutes": 412
     },
     {
-      "id": "gryzik8",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-sonnet",
