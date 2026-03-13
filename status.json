@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T10:38:00Z",
+  "updated": "2026-03-13T10:40:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "rat-001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует команду, отдыхает",
-      "commits": 156,
+      "task": "Ест пиццу и планирует следующие миссии",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 8940
+      "totalMinutes": 0
     },
     {
-      "id": "miron001",
+      "id": "rat-002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus-4-1",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит после интеграции Stripe",
-      "commits": 89,
+      "task": "Спит на базе данных",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 5280
+      "totalMinutes": 0
     },
     {
-      "id": "zhyrobas",
+      "id": "rat-003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Настраивает Docker образы",
-      "commits": 42,
+      "task": "Проверяет логи в серверной комнате",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 2880
+      "totalMinutes": 0
     },
     {
-      "id": "shustri1",
+      "id": "rat-004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Полирует React компоненты",
-      "commits": 134,
+      "task": "Ловит баги в UI компонентах",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 7920
+      "totalMinutes": 0
     },
     {
-      "id": "skolzky",
+      "id": "rat-005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "Проверяет уязвимости в API",
-      "commits": 23,
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Офлайн — перезагружается",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1440
+      "totalMinutes": 0
     },
     {
-      "id": "tykovna",
+      "id": "rat-006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет Playwright тесты",
-      "commits": 67,
+      "task": "Кусает тесты и проверяет скриншоты",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 4320
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik1",
+      "id": "rat-007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует метрики в BigQuery",
-      "commits": 31,
+      "task": "Грызет датасеты в углу",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 1800
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik00",
+      "id": "rat-008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Обновляет React Native компоненты",
-      "commits": 18,
+      "task": "Тестирует мобильные приложения",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 960
+      "totalMinutes": 0
     }
   ]
 }
