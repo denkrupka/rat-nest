@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T17:13:00Z",
+  "updated": "2026-03-13T17:15:00Z",
   "agents": [
     {
-      "id": "shnyr01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Чистит логи системы",
-      "commits": 847,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
+      "task": "Обновляет статус команды",
+      "commits": 42,
+      "workMinutes": 156,
+      "totalMinutes": 156
     },
     {
-      "id": "miron02",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Оптимизирует базу данных",
-      "commits": 563,
-      "workMinutes": 821,
-      "totalMinutes": 821
+      "task": "Ест пиццу в логовище",
+      "commits": 28,
+      "workMinutes": 94,
+      "totalMinutes": 94
     },
     {
-      "id": "zhirob03",
+      "id": "zhirobas02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Проверяет инфраструктуру",
-      "commits": 412,
-      "workMinutes": 634,
-      "totalMinutes": 634
-    },
-    {
-      "id": "shust04",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Рисует интерфейсы",
-      "commits": 691,
-      "workMinutes": 956,
-      "totalMinutes": 956
+      "task": "Настраивает Docker контейнеры",
+      "commits": 15,
+      "workMinutes": 73,
+      "totalMinutes": 73
     },
     {
-      "id": "skol05",
+      "id": "shustrik03",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Полирует UI компоненты",
+      "commits": 34,
+      "workMinutes": 128,
+      "totalMinutes": 128
+    },
+    {
+      "id": "skuzky04",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "Ищет дыры в коде",
-      "commits": 298,
-      "workMinutes": 0,
-      "totalMinutes": 412
+      "task": "Спит после аудита",
+      "commits": 8,
+      "workMinutes": 31,
+      "totalMinutes": 31
     },
     {
-      "id": "tykov06",
+      "id": "tykovka05",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Жует тесты",
-      "commits": 524,
-      "workMinutes": 743,
-      "totalMinutes": 743
+      "task": "Ловит баги в тестовой сети",
+      "commits": 21,
+      "workMinutes": 87,
+      "totalMinutes": 87
     },
     {
-      "id": "hrust07",
+      "id": "hrustik06",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Считает метрики",
-      "commits": 376,
-      "workMinutes": 589,
-      "totalMinutes": 589
+      "task": "Анализирует логи и метрики",
+      "commits": 12,
+      "workMinutes": 44,
+      "totalMinutes": 44
     },
     {
-      "id": "gryz08",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Порядок наводит в приложении",
-      "commits": 458,
-      "workMinutes": 667,
-      "totalMinutes": 667
+      "task": "Тестирует iOS/Android сборки",
+      "commits": 19,
+      "workMinutes": 61,
+      "totalMinutes": 61
     }
   ]
 }
