@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T06:16:00Z",
+  "updated": "2026-03-13T06:18:00Z",
   "agents": [
     {
-      "id": "snake001a",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Проверка портала MaxMaster",
-      "commits": 42,
-      "workMinutes": 128,
-      "totalMinutes": 128
+      "task": "отрабатывает сессию",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake002b",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизация Supabase Edge Functions",
-      "commits": 31,
-      "workMinutes": 94,
-      "totalMinutes": 94
+      "task": "оптимизирует backend",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake003c",
+      "id": "zhiro03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Мониторинг сервера и Redis кэша",
-      "commits": 18,
-      "workMinutes": 67,
-      "totalMinutes": 67
+      "task": "настраивает инфраструктуру",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake004d",
+      "id": "shust04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Разработка UI компонентов",
-      "commits": 54,
-      "workMinutes": 156,
-      "totalMinutes": 156
+      "task": "кодит интерфейс",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake005e",
+      "id": "skozl05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Аудит API безопасности",
-      "commits": 12,
-      "workMinutes": 45,
-      "totalMinutes": 45
+      "task": "ищет уязвимости",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake006f",
+      "id": "tykova06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Тестирование Playwright сценариев",
-      "commits": 23,
-      "workMinutes": 89,
-      "totalMinutes": 89
+      "task": "тестирует фичи",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake007g",
+      "id": "hrusty07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Анализ метрик пользователей",
-      "commits": 16,
-      "workMinutes": 72,
-      "totalMinutes": 72
+      "task": "анализирует данные",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake008h",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Разработка мобильного приложения",
-      "commits": 28,
-      "workMinutes": 110,
-      "totalMinutes": 110
+      "task": "разрабатывает мобильное приложение",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
