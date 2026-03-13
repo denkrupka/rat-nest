@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Проверяет резервный чат (встал с кровати)",
+      "task": "Координирует команду мышей",
       "commits": 142,
       "workMinutes": 487,
       "totalMinutes": 1920
@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Оптимизирует SQL запросы (пьёт кофе)",
+      "task": "Оптимизирует SQL запросы",
       "commits": 89,
       "workMinutes": 312,
       "totalMinutes": 1440
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Мониторит инфру (ест пиццу)",
+      "task": "Мониторит инфраструктуру",
       "commits": 67,
       "workMinutes": 245,
       "totalMinutes": 960
@@ -40,7 +40,7 @@
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Делает UI компоненты (щербатый)",
+      "task": "Разрабатывает UI компоненты",
       "commits": 156,
       "workMinutes": 521,
       "totalMinutes": 2160
@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "Аудит безопасности (спит вверх тормашками)",
+      "task": "Аудит безопасности",
       "commits": 34,
       "workMinutes": 112,
       "totalMinutes": 480
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Тестирует фичи (проверяет сыр)",
+      "task": "Тестирует фичи",
       "commits": 98,
       "workMinutes": 378,
       "totalMinutes": 1680
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует датасеты (грызёт зерно)",
+      "task": "Анализирует датасеты",
       "commits": 45,
       "workMinutes": 167,
       "totalMinutes": 720
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Разрабатывает мобильный app (спит)",
+      "task": "Разрабатывает мобильный app",
       "commits": 72,
       "workMinutes": 289,
       "totalMinutes": 1200
