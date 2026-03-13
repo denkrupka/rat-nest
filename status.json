@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T07:09:00Z",
+  "updated": "2026-03-13T07:11:00Z",
   "agents": [
     {
-      "id": "00000001",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Ест пиццу и планирует заряд на день",
-      "commits": 247,
-      "workMinutes": 0,
-      "totalMinutes": 1234
+      "status": "working",
+      "task": "Обновляет статусы суб-агентов в rat-nest",
+      "commits": 42,
+      "workMinutes": 120,
+      "totalMinutes": 480
     },
     {
-      "id": "00000002",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Оптимизирует API запросы для портала MaxMaster",
-      "commits": 89,
+      "task": "Ест пиццу",
+      "commits": 18,
       "workMinutes": 0,
-      "totalMinutes": 456
+      "totalMinutes": 0
     },
     {
-      "id": "00000003",
+      "id": "zhirobd",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Проверяет логи Kubernetes кластера",
-      "commits": 54,
+      "task": "Спит в офисе",
+      "commits": 7,
       "workMinutes": 0,
-      "totalMinutes": 234
+      "totalMinutes": 0
     },
     {
-      "id": "00000004",
+      "id": "shustri",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Дорабатывает React компоненты дашборда",
-      "commits": 123,
+      "task": "Оптимизирует CSS",
+      "commits": 25,
       "workMinutes": 0,
-      "totalMinutes": 678
+      "totalMinutes": 0
     },
     {
-      "id": "00000005",
+      "id": "skolzky",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Проверяет уязвимости в Edge Functions",
-      "commits": 32,
+      "model": "claude-haiku-4-5",
+      "status": "crashed",
+      "task": "Поймал вируса",
+      "commits": 3,
       "workMinutes": 0,
-      "totalMinutes": 189
+      "totalMinutes": 0
     },
     {
-      "id": "00000006",
+      "id": "tykuvka",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет Playwright тесты для новых фич",
-      "commits": 67,
+      "task": "Тестирует все подряд",
+      "commits": 12,
       "workMinutes": 0,
-      "totalMinutes": 345
+      "totalMinutes": 0
     },
     {
-      "id": "00000007",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Анализирует SQL запросы и оптимизирует индексы",
-      "commits": 45,
+      "task": "Чистит базу",
+      "commits": 9,
       "workMinutes": 0,
-      "totalMinutes": 267
+      "totalMinutes": 0
     },
     {
-      "id": "00000008",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Дорабатывает Expo приложение для iOS",
-      "commits": 28,
+      "task": "Бегает по приложению",
+      "commits": 11,
       "workMinutes": 0,
-      "totalMinutes": 145
+      "totalMinutes": 0
     }
   ]
 }
