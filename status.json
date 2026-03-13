@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T13:30:00Z",
+  "updated": "2026-03-13T13:32:00Z",
   "agents": [
     {
-      "id": "shnyir",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Проверяет статус команды",
-      "commits": 42,
-      "workMinutes": 180,
-      "totalMinutes": 720
+      "task": "Координирует команду мышей",
+      "commits": 287,
+      "workMinutes": 2156,
+      "totalMinutes": 2156
     },
     {
-      "id": "miron",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Оптимизирует API эндпоинты",
-      "commits": 28,
-      "workMinutes": 120,
-      "totalMinutes": 480
+      "task": "Пишет API endpoints и оптимизирует БД",
+      "commits": 154,
+      "workMinutes": 1203,
+      "totalMinutes": 1203
     },
     {
-      "id": "zhirobas",
+      "id": "jirobas2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Деплойит обновление",
-      "commits": 15,
-      "workMinutes": 90,
-      "totalMinutes": 360
-    },
-    {
-      "id": "shustrik",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пилит новый UI компонент",
-      "commits": 35,
-      "workMinutes": 150,
-      "totalMinutes": 600
+      "task": "Настраивает Docker, CI/CD, инфраструктура",
+      "commits": 89,
+      "workMinutes": 756,
+      "totalMinutes": 756
     },
     {
-      "id": "skozlskiy",
+      "id": "shustr3",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "React компоненты, Tailwind, интерфейсы",
+      "commits": 203,
+      "workMinutes": 1834,
+      "totalMinutes": 1834
+    },
+    {
+      "id": "skol04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-sonnet",
       "status": "crashed",
-      "task": "Проверял уязвимости",
-      "commits": 8,
-      "workMinutes": 0,
-      "totalMinutes": 240
+      "task": "Аудиты безопасности (офлайн)",
+      "commits": 45,
+      "workMinutes": 487,
+      "totalMinutes": 487
     },
     {
-      "id": "tykobka",
+      "id": "tykova5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Запускает тесты",
-      "commits": 22,
-      "workMinutes": 110,
-      "totalMinutes": 440
+      "task": "Playwright тесты, проверка функциональности",
+      "commits": 127,
+      "workMinutes": 967,
+      "totalMinutes": 967
     },
     {
-      "id": "hrustik",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Анализирует логи",
-      "commits": 12,
-      "workMinutes": 75,
-      "totalMinutes": 300
+      "task": "Анализ данных, экспорт, ETL",
+      "commits": 68,
+      "workMinutes": 521,
+      "totalMinutes": 521
     },
     {
-      "id": "gryzik",
+      "id": "gryzik7",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Строит мобильное приложение",
-      "commits": 18,
-      "workMinutes": 95,
-      "totalMinutes": 380
+      "task": "React Native, Capacitor, мобильные приложения",
+      "commits": 91,
+      "workMinutes": 634,
+      "totalMinutes": 634
     }
   ]
 }
