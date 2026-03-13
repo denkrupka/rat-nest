@@ -13,7 +13,7 @@
       "totalMinutes": 5120
     },
     {
-      "id": "miron01",
+      "id": "miron0001",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet-4-6",
@@ -46,7 +46,7 @@
       "totalMinutes": 3600
     },
     {
-      "id": "skozlsky",
+      "id": "skozlsk0",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-sonnet-4-6",
@@ -57,7 +57,7 @@
       "totalMinutes": 0
     },
     {
-      "id": "tykobka",
+      "id": "tykobka0",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-sonnet-4-6",
@@ -68,7 +68,7 @@
       "totalMinutes": 1800
     },
     {
-      "id": "hrustik0",
+      "id": "hrustik01",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet-4-6",
@@ -79,7 +79,7 @@
       "totalMinutes": 1800
     },
     {
-      "id": "gryzik00",
+      "id": "gryzik001",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-sonnet-4-6",
