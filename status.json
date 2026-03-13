@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T04:59:00Z",
+  "updated": "2026-03-13T05:01:00Z",
   "agents": [
     {
       "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-6",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу в терминале",
-      "commits": 42,
-      "workMinutes": 240,
-      "totalMinutes": 240
-    },
-    {
-      "id": "miron01",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-opus-4-6",
-      "status": "idle",
-      "task": "Спит на клавиатуре",
-      "commits": 38,
-      "workMinutes": 180,
-      "totalMinutes": 180
-    },
-    {
-      "id": "zhiro02",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Настраивает nginx.conf во сне",
-      "commits": 25,
-      "workMinutes": 150,
-      "totalMinutes": 150
-    },
-    {
-      "id": "shust03",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Красит Tailwind в фиолетовый",
-      "commits": 51,
-      "workMinutes": 200,
-      "totalMinutes": 200
-    },
-    {
-      "id": "skol04",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-6",
-      "status": "crashed",
-      "task": "Взломал firewall своего компьютера",
+      "task": "ест пиццу и планирует задачи",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tyko05",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-sonnet-4-6",
+      "id": "miron01",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Ломает фичи в production нарочно",
-      "commits": 29,
-      "workMinutes": 120,
-      "totalMinutes": 120
+      "task": "пишет SQL запросы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "khrus06",
+      "id": "zhiro02",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "настраивает инфру",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shust03",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "делает красивые компоненты",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skols04",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "проверяет безопасность",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tikov05",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "тестирует всё подряд",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "hrust06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku-4-5",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Анализирует количество орехов в запасах",
-      "commits": 17,
-      "workMinutes": 90,
-      "totalMinutes": 90
+      "task": "обрабатывает данные",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
       "id": "gryz07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Портирует React на Game Boy",
-      "commits": 12,
-      "workMinutes": 60,
-      "totalMinutes": 60
+      "task": "разработает мобилу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
