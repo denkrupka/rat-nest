@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T12:29:00Z",
+  "updated": "2026-03-13T12:31:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "agent001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Ждет команду от Дениса",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 1440
+      "task": "Координирует команду, пьет кофе",
+      "commits": 847,
+      "workMinutes": 12450,
+      "totalMinutes": 15200
     },
     {
-      "id": "miron002",
+      "id": "agent002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4-6",
       "status": "idle",
-      "task": "Спит в берлоге",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 1440
+      "task": "Пишет Edge Functions на Supabase",
+      "commits": 523,
+      "workMinutes": 8240,
+      "totalMinutes": 9800
     },
     {
-      "id": "zhiroba3",
+      "id": "agent003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Инженер по инфре, ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 1440
+      "task": "Настраивает GitHub Actions пайплайны",
+      "commits": 287,
+      "workMinutes": 5130,
+      "totalMinutes": 6200
     },
     {
-      "id": "shustri4",
+      "id": "agent004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Frontend мастер чинит UI",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 1440
+      "task": "Верстает React компоненты с Tailwind",
+      "commits": 612,
+      "workMinutes": 9780,
+      "totalMinutes": 11500
     },
     {
-      "id": "skozski5",
+      "id": "agent005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
-      "status": "crashed",
-      "task": "Отсутствует",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "model": "claude-opus-4-6",
+      "status": "idle",
+      "task": "Сканирует код на уязвимости",
+      "commits": 156,
+      "workMinutes": 3420,
+      "totalMinutes": 4100
     },
     {
-      "id": "tykovna6",
+      "id": "agent006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "QA тестирует приложение",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 1440
+      "task": "Пишет Playwright тесты",
+      "commits": 423,
+      "workMinutes": 6890,
+      "totalMinutes": 8200
     },
     {
-      "id": "hrustik7",
+      "id": "agent007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Data анализирует события",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 1440
+      "task": "Обрабатывает CSV и JSON",
+      "commits": 234,
+      "workMinutes": 4560,
+      "totalMinutes": 5400
     },
     {
-      "id": "gryzik08",
+      "id": "agent008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Mobile разработчик休息中",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 1440
+      "task": "Строит Expo React Native приложение",
+      "commits": 345,
+      "workMinutes": 5670,
+      "totalMinutes": 6800
     }
   ]
 }
