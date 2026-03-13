@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и координирует команду",
+      "task": "Ест пиццу и координирует команду мышей",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -40,7 +40,7 @@
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Полирует кнопки в интерфейсе",
+      "task": "Полирует кнопки в интерфейсе и CSS",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "Ловил фишера в подвале",
+      "task": "Ловил фишера в подвале ретро-компа",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Нюхает код на запах багов",
+      "task": "Нюхает код на запах багов и проблем",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Тестирует приложение на мобильник",
+      "task": "Тестирует приложение на мобильных платформах",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
