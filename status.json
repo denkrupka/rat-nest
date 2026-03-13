@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T12:55:00Z",
+  "updated": "2026-03-13T12:57:00Z",
   "agents": [
     {
-      "id": "shnyir",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Спит после ночной сессии",
-      "commits": 342,
-      "workMinutes": 0,
-      "totalMinutes": 142560
+      "task": "Ест пиццу и смотрит на код",
+      "commits": 47,
+      "workMinutes": 284,
+      "totalMinutes": 284
     },
     {
-      "id": "miron",
+      "id": "miron02",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Ест пиццу и смотрит видос про Redis",
-      "commits": 218,
-      "workMinutes": 0,
-      "totalMinutes": 89340
+      "task": "Проектирует новый API endpoint",
+      "commits": 23,
+      "workMinutes": 156,
+      "totalMinutes": 156
     },
     {
-      "id": "zhirobas",
+      "id": "zhirobu03",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Читает документацию по Kubernetes",
-      "commits": 156,
-      "workMinutes": 0,
-      "totalMinutes": 73480
+      "task": "Настраивает Docker контейнеры",
+      "commits": 18,
+      "workMinutes": 98,
+      "totalMinutes": 98
     },
     {
-      "id": "shustrik",
+      "id": "shustri04",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Делает контролер для новой React компоненты",
-      "commits": 289,
-      "workMinutes": 0,
-      "totalMinutes": 124920
+      "task": "Верстает React компоненты",
+      "commits": 31,
+      "workMinutes": 201,
+      "totalMinutes": 201
     },
     {
-      "id": "skolzkiy",
+      "id": "skozlyi05",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4",
       "status": "idle",
-      "task": "Проверяет логи на предмет утечек",
-      "commits": 94,
-      "workMinutes": 0,
-      "totalMinutes": 52140
+      "task": "Спит после аудита безопасности",
+      "commits": 12,
+      "workMinutes": 67,
+      "totalMinutes": 67
     },
     {
-      "id": "tykovka",
+      "id": "tykovka06",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет тесты для новых API endpoints",
-      "commits": 167,
-      "workMinutes": 0,
-      "totalMinutes": 81720
+      "task": "Тестирует фичи и ловит баги",
+      "commits": 9,
+      "workMinutes": 54,
+      "totalMinutes": 54
     },
     {
-      "id": "hrustik",
+      "id": "hrustik07",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует метрики performance",
-      "commits": 203,
-      "workMinutes": 0,
-      "totalMinutes": 98280
+      "task": "Анализирует логи и метрики",
+      "commits": 14,
+      "workMinutes": 89,
+      "totalMinutes": 89
     },
     {
-      "id": "gryzik",
+      "id": "gryzik08",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Оптимизирует React Native компоненты",
-      "commits": 127,
-      "workMinutes": 0,
-      "totalMinutes": 64620
+      "task": "Чинит React Native баги",
+      "commits": 6,
+      "workMinutes": 42,
+      "totalMinutes": 42
     }
   ]
 }
