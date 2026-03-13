@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T11:24:00Z",
+  "updated": "2026-03-13T11:26:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Сортирует документацию по портальч",
-      "commits": 47,
-      "workMinutes": 312,
-      "totalMinutes": 312
-    },
-    {
-      "id": "miron001",
-      "name": "Мирон",
-      "role": "Backend",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Пишет API для интеграции с Supabase",
-      "commits": 34,
-      "workMinutes": 287,
-      "totalMinutes": 287
+      "task": "Ест пиццу и думает о жизни",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhyrobas",
-      "name": "Жиробас",
-      "role": "DevOps",
+      "id": "miron",
+      "name": "Мирон",
+      "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настраивает Docker Compose для production",
-      "commits": 28,
-      "workMinutes": 156,
-      "totalMinutes": 156
+      "task": "Спит в углу и видит сны о SQL",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustri0",
+      "id": "zhirobas",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Наблюдает за логами из кровати",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Рефакторит компоненты React на Tailwind",
-      "commits": 52,
-      "workMinutes": 425,
-      "totalMinutes": 425
+      "task": "Рисует кнопки в фантазиях",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "sklzkyy0",
+      "id": "skol",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
-      "status": "idle",
-      "task": "Тестирует JWT и CORS policies",
-      "commits": 19,
-      "workMinutes": 203,
-      "totalMinutes": 203
+      "status": "crashed",
+      "task": "В отпуске, не отвечает на пинги",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tukova00",
+      "id": "tykovka",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет Playwright тесты для авторизации",
-      "commits": 41,
-      "workMinutes": 378,
-      "totalMinutes": 378
+      "task": "Ломает всё что попадётся под когти",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik0",
+      "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Парсит CSV и синхронизирует с DB",
-      "commits": 23,
-      "workMinutes": 267,
-      "totalMinutes": 267
+      "task": "Грызёт Excel таблицы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik00",
+      "id": "gryzik",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Разрабатывает React Native экраны",
-      "commits": 31,
-      "workMinutes": 298,
-      "totalMinutes": 298
+      "task": "Юзает React Native на мобиле",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
