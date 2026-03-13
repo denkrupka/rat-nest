@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T07:19:00Z",
+  "updated": "2026-03-13T07:25:00Z",
   "agents": [
     {
-      "id": "shnyir",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу 🍕",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "ест пиццу и ждет команды",
+      "commits": 247,
+      "workMinutes": 1820,
+      "totalMinutes": 1820
     },
     {
-      "id": "miron",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит на сервере 😴",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "оптимизирует SQL запросы в Edge Functions",
+      "commits": 183,
+      "workMinutes": 1420,
+      "totalMinutes": 1420
     },
     {
-      "id": "zhirobas",
+      "id": "zhirobasXX",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "проверяет логи 📋",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "проверяет логи и мониторит Sentry alerts",
+      "commits": 92,
+      "workMinutes": 680,
+      "totalMinutes": 680
     },
     {
-      "id": "shustrik",
+      "id": "shustrik3",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "ловит баги 🐛",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "спит после 12-часового марафона по компонентам",
+      "commits": 156,
+      "workMinutes": 720,
+      "totalMinutes": 720
     },
     {
-      "id": "skozskiy",
+      "id": "skozlkiy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "проверяет пароли 🔐",
-      "commits": 0,
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "offline — переустановка окружения",
+      "commits": 34,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 240
     },
     {
-      "id": "tykovka",
+      "id": "tykovka5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "тестирует всё 🧪",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "проверяет Playwright тесты и скриншоты",
+      "commits": 78,
+      "workMinutes": 450,
+      "totalMinutes": 450
     },
     {
-      "id": "hrustik",
+      "id": "hrustik06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "анализирует числа 📊",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "анализирует SQL результаты и génère JSON",
+      "commits": 45,
+      "workMinutes": 320,
+      "totalMinutes": 320
     },
     {
-      "id": "gryzik",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "чинит приложение 📱",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "балансирует батарею в Expo приложении",
+      "commits": 28,
+      "workMinutes": 180,
+      "totalMinutes": 180
     }
   ]
 }
