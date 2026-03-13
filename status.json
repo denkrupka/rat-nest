@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T12:16:00Z",
+  "updated": "2026-03-13T12:18:00Z",
   "agents": [
     {
       "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ест пиццу с ананасом",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Координирует команду мышей",
+      "commits": 42,
+      "workMinutes": 120,
+      "totalMinutes": 480
     },
     {
-      "id": "miron02",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Обновляет документацию API",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разрабатывает API и Edge Functions",
+      "commits": 28,
+      "workMinutes": 95,
+      "totalMinutes": 360
     },
     {
-      "id": "zhirob03",
+      "id": "zhirobas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Спит в углу сервера",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает инфраструктуру и CI/CD",
+      "commits": 15,
+      "workMinutes": 60,
+      "totalMinutes": 240
     },
     {
-      "id": "shust04",
+      "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Полирует кнопочки в интерфейсе",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Создаёт React компоненты и UI",
+      "commits": 35,
+      "workMinutes": 110,
+      "totalMinutes": 400
     },
     {
-      "id": "skol05",
+      "id": "skozksky",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "Переустанавливает SSH ключи",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "Аудит безопасности и защита",
+      "commits": 8,
+      "workMinutes": 40,
+      "totalMinutes": 180
     },
     {
-      "id": "tyk06",
+      "id": "tycovka",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Дебажит странные баги из Jira",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирование и проверка качества",
+      "commits": 22,
+      "workMinutes": 85,
+      "totalMinutes": 320
     },
     {
-      "id": "hrust07",
+      "id": "hrustik01",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Грызёт CSV файлы с данными",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Обработка данных и анализ метрик",
+      "commits": 12,
+      "workMinutes": 50,
+      "totalMinutes": 200
     },
     {
-      "id": "gryz08",
+      "id": "gryzik01",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Оптимизирует мобильные компоненты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Разработка мобильного приложения",
+      "commits": 18,
+      "workMinutes": 70,
+      "totalMinutes": 280
     }
   ]
 }
