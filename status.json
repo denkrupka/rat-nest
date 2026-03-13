@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T03:30:00Z",
+  "updated": "2026-03-13T03:32:00Z",
   "agents": [
     {
       "id": "session01",
@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "ест пиццу в углу",
+      "task": "Координирует работу команды мышей",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит на сервере",
+      "task": "Ест пиццу",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "пилит докер образ",
+      "task": "Спит на серверах",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -40,7 +40,7 @@
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "смотрит фигму",
+      "task": "Переделывает CSS в пятый раз",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-opus",
       "status": "crashed",
-      "task": "исчез в даркнете",
+      "task": "n/a",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "кликает по кнопкам",
+      "task": "Нашла 47 багов и требует переписать всё",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "жует сырую морковку",
+      "task": "Анализирует данные о собственной лени",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "пилит Swift и Kotlin",
+      "task": "Грызет батарею телефона",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
