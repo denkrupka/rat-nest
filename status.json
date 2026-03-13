@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T17:36:00Z",
+  "updated": "2026-03-13T17:38:00Z",
   "agents": [
     {
-      "id": "shn00001",
+      "id": "agent001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-5",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ест пиццу пепперони",
+      "task": "Координирует команду мышей, ест сыр",
       "commits": 247,
-      "workMinutes": 1248,
-      "totalMinutes": 1248
+      "workMinutes": 1440,
+      "totalMinutes": 1440
     },
     {
-      "id": "mir00002",
+      "id": "agent002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Спит в углу сервера",
-      "commits": 134,
-      "workMinutes": 856,
-      "totalMinutes": 856
+      "task": "Refactor API endpoints и миграции",
+      "commits": 89,
+      "workMinutes": 480,
+      "totalMinutes": 480
     },
     {
-      "id": "zhir0003",
+      "id": "agent003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Чистит логи Docker контейнеров",
-      "commits": 89,
-      "workMinutes": 612,
-      "totalMinutes": 612
+      "task": "Docker/k8s инфра, мониторинг Sentry",
+      "commits": 56,
+      "workMinutes": 360,
+      "totalMinutes": 360
     },
     {
-      "id": "shus0004",
+      "id": "agent004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Медитирует над CSS флексбоксом",
-      "commits": 156,
-      "workMinutes": 742,
-      "totalMinutes": 742
+      "task": "React компоненты, Tailwind UI вёрстка",
+      "commits": 134,
+      "workMinutes": 600,
+      "totalMinutes": 600
     },
     {
-      "id": "skol0005",
+      "id": "agent005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-5",
+      "model": "claude-opus-4-1",
       "status": "crashed",
-      "task": "Нашёл баг в себе и вышел",
-      "commits": 23,
-      "workMinutes": 145,
-      "totalMinutes": 145
+      "task": "Patch SQL injection vulnerability",
+      "commits": 12,
+      "workMinutes": 0,
+      "totalMinutes": 120
     },
     {
-      "id": "tyk00006",
+      "id": "agent006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ломает фичи ради науки",
-      "commits": 67,
-      "workMinutes": 523,
-      "totalMinutes": 523
+      "task": "Playwright тесты, проверка скриншотов",
+      "commits": 78,
+      "workMinutes": 420,
+      "totalMinutes": 420
     },
     {
-      "id": "hrus0007",
+      "id": "agent007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует семечки в базе",
-      "commits": 112,
-      "workMinutes": 634,
-      "totalMinutes": 634
+      "task": "ETL pipelines, анализ логов из S3",
+      "commits": 45,
+      "workMinutes": 240,
+      "totalMinutes": 240
     },
     {
-      "id": "griz0008",
+      "id": "agent008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Грызёт батареи в телефоне",
-      "commits": 78,
-      "workMinutes": 421,
-      "totalMinutes": 421
+      "task": "React Native iOS/Android, Capacitor",
+      "commits": 67,
+      "workMinutes": 300,
+      "totalMinutes": 300
     }
   ]
 }
