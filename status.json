@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T09:27:00Z",
+  "updated": "2026-03-13T09:29:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и координирует команду",
-      "commits": 127,
-      "workMinutes": 3450,
-      "totalMinutes": 3450
+      "task": "ест пиццу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron02",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит после ночного пилота Edge Functions",
-      "commits": 89,
-      "workMinutes": 2340,
-      "totalMinutes": 2340
+      "task": "спит",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "ziroban3",
+      "id": "zhiroba2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Проверяет логи в кофейне",
-      "commits": 64,
-      "workMinutes": 1560,
-      "totalMinutes": 1560
-    },
-    {
-      "id": "shustri4",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Переигрывает шахматные партии",
-      "commits": 156,
-      "workMinutes": 4200,
-      "totalMinutes": 4200
+      "task": "чистит кейсы в сервере",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozskk5",
+      "id": "shustri3",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "прогуливается по терминалу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skolzky4",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "В тренажёрке, качает мышцы кода",
-      "commits": 42,
-      "workMinutes": 980,
-      "totalMinutes": 980
+      "task": "проверяет замки",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykovka6",
+      "id": "tykovka5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет кейсы для Playwright",
-      "commits": 73,
-      "workMinutes": 1820,
-      "totalMinutes": 1820
+      "task": "кусает электрический провод",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik7",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Чистит данные и пьёт чай",
-      "commits": 51,
-      "workMinutes": 1290,
-      "totalMinutes": 1290
+      "task": "анализирует семечки",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik88",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Тестирует Expo на древнем iPhone",
-      "commits": 38,
-      "workMinutes": 890,
-      "totalMinutes": 890
+      "task": "чешет щеку",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
