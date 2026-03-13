@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T11:22:00Z",
+  "updated": "2026-03-13T11:24:00Z",
   "agents": [
     {
       "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
-      "status": "idle",
-      "task": "Координирует команду мышей",
-      "commits": 42,
-      "workMinutes": 240,
-      "totalMinutes": 1440
-    },
-    {
-      "id": "miron01",
-      "name": "Мирон",
-      "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Оптимизирует API endpoints",
-      "commits": 28,
-      "workMinutes": 180,
-      "totalMinutes": 1440
+      "task": "Сортирует документацию по портальч",
+      "commits": 47,
+      "workMinutes": 312,
+      "totalMinutes": 312
     },
     {
-      "id": "zhiro02",
+      "id": "miron001",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-opus",
+      "status": "idle",
+      "task": "Пишет API для интеграции с Supabase",
+      "commits": 34,
+      "workMinutes": 287,
+      "totalMinutes": 287
+    },
+    {
+      "id": "zhyrobas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Настраивает деплой пайпелайн",
-      "commits": 15,
-      "workMinutes": 120,
-      "totalMinutes": 1440
+      "task": "Настраивает Docker Compose для production",
+      "commits": 28,
+      "workMinutes": 156,
+      "totalMinutes": 156
     },
     {
-      "id": "shust03",
+      "id": "shustri0",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Правит UI компоненты",
-      "commits": 35,
-      "workMinutes": 200,
-      "totalMinutes": 1440
+      "task": "Рефакторит компоненты React на Tailwind",
+      "commits": 52,
+      "workMinutes": 425,
+      "totalMinutes": 425
     },
     {
-      "id": "skol04",
+      "id": "sklzkyy0",
       "name": "Скользкий",
       "role": "Security",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Аудит безопасности RLS",
-      "commits": 8,
-      "workMinutes": 90,
-      "totalMinutes": 1440
+      "task": "Тестирует JWT и CORS policies",
+      "commits": 19,
+      "workMinutes": 203,
+      "totalMinutes": 203
     },
     {
-      "id": "tykov05",
+      "id": "tukova00",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет Playwright тесты",
-      "commits": 22,
-      "workMinutes": 150,
-      "totalMinutes": 1440
+      "task": "Пишет Playwright тесты для авторизации",
+      "commits": 41,
+      "workMinutes": 378,
+      "totalMinutes": 378
     },
     {
-      "id": "hrust06",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Обрабатывает CSV датасеты",
-      "commits": 12,
-      "workMinutes": 110,
-      "totalMinutes": 1440
+      "task": "Парсит CSV и синхронизирует с DB",
+      "commits": 23,
+      "workMinutes": 267,
+      "totalMinutes": 267
     },
     {
-      "id": "gryzik07",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Ест пиццу и спит",
-      "commits": 3,
-      "workMinutes": 45,
-      "totalMinutes": 1440
+      "task": "Разрабатывает React Native экраны",
+      "commits": 31,
+      "workMinutes": 298,
+      "totalMinutes": 298
     }
   ]
 }
