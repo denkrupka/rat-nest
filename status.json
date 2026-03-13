@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T00:41:00Z",
+  "updated": "2026-03-13T00:43:00Z",
   "agents": [
     {
-      "id": "snake001",
+      "id": "rnd-0001",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Координирует команду, ревью PR",
-      "commits": 47,
-      "workMinutes": 285,
-      "totalMinutes": 1440
+      "task": "Ест пиццу и смотрит на код",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake002",
+      "id": "rnd-0002",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Трудится над API, ест пиццу",
-      "commits": 34,
-      "workMinutes": 210,
-      "totalMinutes": 1440
+      "task": "Спит на сервере",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake003",
+      "id": "rnd-0003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Деплойит в облако, спит",
-      "commits": 28,
-      "workMinutes": 156,
-      "totalMinutes": 1440
+      "task": "Чистит докерфайлы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake004",
+      "id": "rnd-0004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Красит UI, нецелится на кнопку",
-      "commits": 52,
-      "workMinutes": 312,
-      "totalMinutes": 1440
+      "task": "Ловит бажи в CSS",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake005",
+      "id": "rnd-0005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Холодно лежит в углу",
-      "commits": 15,
-      "workMinutes": 89,
-      "totalMinutes": 1440
+      "task": "Ищет уязвимости",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake006",
+      "id": "rnd-0006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Ловит баги, мотает в углах",
-      "commits": 31,
-      "workMinutes": 186,
-      "totalMinutes": 1440
+      "task": "Тестирует в безделье",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake007",
+      "id": "rnd-0007",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Анализирует дейта, сладко спит",
-      "commits": 22,
-      "workMinutes": 132,
-      "totalMinutes": 1440
+      "task": "Анализирует метрики",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "snake008",
+      "id": "rnd-0008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Мобильный фронтенд, полусон",
-      "commits": 19,
-      "workMinutes": 114,
-      "totalMinutes": 1440
+      "task": "Портирует в мобильные",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
