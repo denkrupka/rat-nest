@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T17:53:49.133947Z",
+  "updated": "2026-03-13T17:55:00Z",
   "agents": [
     {
-      "id": "шнырь00",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "работает на задаче",
-      "commits": 42,
-      "workMinutes": 1080,
-      "totalMinutes": 1080
-    },
-    {
-      "id": "мирон01",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "работает на задаче",
-      "commits": 28,
-      "workMinutes": 720,
-      "totalMinutes": 720
-    },
-    {
-      "id": "жироба02",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "работает на задаче",
-      "commits": 15,
-      "workMinutes": 480,
-      "totalMinutes": 480
-    },
-    {
-      "id": "шустри03",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "работает на задаче",
-      "commits": 34,
-      "workMinutes": 960,
-      "totalMinutes": 960
-    },
-    {
-      "id": "скольз04",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "не запущен",
+      "task": "Ест пиццу и смотрит логи",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "тыковк05",
+      "id": "miron001",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Спит на клавиатуре",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "zhirobus",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-haiku",
+      "status": "idle",
+      "task": "Смотрит метрики Prometheus",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustrik",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Гуляет по парку",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skolzkiy",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Offline",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tykobka",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "работает на задаче",
-      "commits": 8,
-      "workMinutes": 240,
-      "totalMinutes": 240
+      "task": "Пишет чек-лист тестов",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "хрусти06",
+      "id": "hrustik0",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "работает на задаче",
-      "commits": 12,
-      "workMinutes": 360,
-      "totalMinutes": 360
+      "task": "Анализирует логи",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "грызик07",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "работает на задаче",
-      "commits": 6,
-      "workMinutes": 180,
-      "totalMinutes": 180
+      "task": "Грызит печенье",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
