@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T06:42:00Z",
+  "updated": "2026-03-13T06:45:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,87 +7,87 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Отдыхает после марафона",
-      "commits": 247,
-      "workMinutes": 1850,
-      "totalMinutes": 1850
-    },
-    {
-      "id": "miron0001",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Оптимизирует Supabase RLS политики",
-      "commits": 156,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
-    },
-    {
-      "id": "zhirobasdev",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Настраивает GitHub Actions workflow",
-      "commits": 89,
-      "workMinutes": 720,
-      "totalMinutes": 720
-    },
-    {
-      "id": "shustrik00",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-haiku",
-      "status": "idle",
-      "task": "Ест пиццу и смотрит UI",
-      "commits": 203,
-      "workMinutes": 1560,
-      "totalMinutes": 1560
-    },
-    {
-      "id": "skols0001",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "Проверяет JWT уязвимости",
+      "task": "Ест пиццу и смотрит GitHub",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykovka00",
+      "id": "miron01",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Спит в углу сервера",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "zhirouba2",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Смотрит мониторы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "shustri3",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Фиксит CSS на выходных",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "skozski4",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Сломан — надо чинить",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
+    },
+    {
+      "id": "tykovna5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Спит после ночного тестирования",
-      "commits": 134,
-      "workMinutes": 950,
-      "totalMinutes": 950
+      "task": "Тестирует UI в Figma",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik00",
+      "id": "hrustik6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Парсит CSV в SQL миграции",
-      "commits": 78,
-      "workMinutes": 580,
-      "totalMinutes": 580
+      "task": "Занят SQL запросами",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik000",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пилит React Native компоненты",
-      "commits": 112,
-      "workMinutes": 820,
-      "totalMinutes": 820
+      "task": "Гребёт React Native код",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
