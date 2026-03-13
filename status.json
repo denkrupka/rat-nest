@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T12:59:00Z",
+  "updated": "2026-03-13T13:01:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "agent00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-6",
       "status": "idle",
-      "task": "Координирует работу команды и планирует архитектуру портала MaxMaster",
-      "commits": 347,
-      "workMinutes": 2841,
-      "totalMinutes": 2841
+      "task": "Координирует команду, ест пиццу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron02",
+      "id": "agent01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Разрабатывает Edge Functions и оптимизирует Supabase запросы",
-      "commits": 189,
-      "workMinutes": 1564,
-      "totalMinutes": 1564
+      "task": "Оптимизирует БД запросы",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhibas03",
+      "id": "agent02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Настраивает CI/CD pipelines и управляет инфраструктурой",
-      "commits": 94,
-      "workMinutes": 723,
-      "totalMinutes": 723
+      "task": "Спит в ванне с тепловой водой",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shust04",
+      "id": "agent03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Ест пиццу и ждёт следующего таска по React компонентам",
-      "commits": 256,
-      "workMinutes": 1987,
-      "totalMinutes": 1987
+      "task": "Медитирует над Tailwind",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozhk05",
+      "id": "agent04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-haiku",
+      "model": "claude-opus-4-6",
       "status": "idle",
-      "task": "Проверяет уязвимости и аудирует API безопасность",
-      "commits": 67,
-      "workMinutes": 512,
-      "totalMinutes": 512
+      "task": "Анализирует уязвимости в сне",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykova06",
+      "id": "agent05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Спит после длительной сессии Playwright тестов",
-      "commits": 123,
-      "workMinutes": 891,
-      "totalMinutes": 891
+      "task": "Тестирует всё подряд",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrusty07",
+      "id": "agent06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует данные и оптимизирует SQL запросы",
-      "commits": 145,
-      "workMinutes": 1124,
-      "totalMinutes": 1124
+      "task": "Чистит данные и грызёт батон",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik08",
+      "id": "agent07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Интегрирует React Native компоненты в Expo приложение",
-      "commits": 78,
-      "workMinutes": 634,
-      "totalMinutes": 634
+      "task": "Портирует приложение на Android",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
