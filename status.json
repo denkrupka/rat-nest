@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-opus-4",
       "status": "crashed",
-      "task": "кражднула токены и сбежала",
+      "task": "украла токены и сбежала",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
