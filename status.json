@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T06:40:00Z",
+  "updated": "2026-03-13T06:42:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,87 +7,87 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу и думает о жизни",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Отдыхает после марафона",
+      "commits": 247,
+      "workMinutes": 1850,
+      "totalMinutes": 1850
     },
     {
-      "id": "miron001",
+      "id": "miron0001",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Спит в углу базы данных",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Оптимизирует Supabase RLS политики",
+      "commits": 156,
+      "workMinutes": 1240,
+      "totalMinutes": 1240
     },
     {
-      "id": "ziroba2",
+      "id": "zhirobasdev",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Разбирает Kubernetes в кармане",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает GitHub Actions workflow",
+      "commits": 89,
+      "workMinutes": 720,
+      "totalMinutes": 720
     },
     {
-      "id": "shustri3",
+      "id": "shustrik00",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Чистит CSS в своей норе",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Ест пиццу и смотрит UI",
+      "commits": 203,
+      "workMinutes": 1560,
+      "totalMinutes": 1560
     },
     {
-      "id": "skozliy4",
+      "id": "skols0001",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Прячет секреты под половицей",
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Проверяет JWT уязвимости",
       "commits": 0,
       "workMinutes": 0,
       "totalMinutes": 0
     },
     {
-      "id": "tykovna5",
+      "id": "tykovka00",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Ломает интерфейсы для науки",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Спит после ночного тестирования",
+      "commits": 134,
+      "workMinutes": 950,
+      "totalMinutes": 950
     },
     {
-      "id": "hrustic6",
+      "id": "hrustik00",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Анализирует зёрна в кладовке",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Парсит CSV в SQL миграции",
+      "commits": 78,
+      "workMinutes": 580,
+      "totalMinutes": 580
     },
     {
-      "id": "gryzik07",
+      "id": "gryzik000",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Грызёт React Native в мобиле",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пилит React Native компоненты",
+      "commits": 112,
+      "workMinutes": 820,
+      "totalMinutes": 820
     }
   ]
 }
