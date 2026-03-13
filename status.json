@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T10:32:00Z",
+  "updated": "2026-03-13T10:34:00Z",
   "agents": [
     {
-      "id": "agent00",
+      "id": "idle-001",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "читает документацию React и лучших практик",
-      "commits": 247,
-      "workMinutes": 1840,
-      "totalMinutes": 1840
+      "task": "Ест пиццу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "agent01",
+      "id": "idle-002",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "спит после ночной смены на Edge Functions",
-      "commits": 189,
-      "workMinutes": 1520,
-      "totalMinutes": 1520
+      "task": "Спит",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "agent02",
+      "id": "idle-003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "настраивает Docker для локальной разработки",
-      "commits": 134,
-      "workMinutes": 980,
-      "totalMinutes": 980
+      "task": "Чистит сыр",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "agent03",
+      "id": "idle-004",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "ест пиццу и смотрит Tailwind UI компоненты",
-      "commits": 312,
-      "workMinutes": 2140,
-      "totalMinutes": 2140
+      "task": "Закуски грызёт",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "agent04",
+      "id": "idle-005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-opus",
       "status": "crashed",
-      "task": "проверяет API безопасность",
-      "commits": 87,
+      "task": "Восстанавливается",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 620
+      "totalMinutes": 0
     },
     {
-      "id": "agent05",
+      "id": "idle-006",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "пишет Playwright тесты для Суппабазы",
-      "commits": 156,
-      "workMinutes": 1240,
-      "totalMinutes": 1240
+      "task": "Проверяет видео",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "agent06",
+      "id": "idle-007",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "анализирует датасеты и оптимизирует SQL",
-      "commits": 98,
-      "workMinutes": 860,
-      "totalMinutes": 860
+      "task": "Анализирует тренды",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "agent07",
+      "id": "idle-008",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-opus",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "разрабатывает мобильное приложение на Expo",
-      "commits": 203,
-      "workMinutes": 1680,
-      "totalMinutes": 1680
+      "task": "Читает новости",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
