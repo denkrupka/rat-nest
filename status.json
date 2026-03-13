@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-13T01:16:00Z",
+  "updated": "2026-03-13T01:18:00Z",
   "agents": [
     {
       "id": "shnyir00",
@@ -7,87 +7,87 @@
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Ест пиццу пепперони в кабине",
-      "commits": 187,
-      "workMinutes": 2340,
-      "totalMinutes": 2340
+      "task": "Ест пиццу из контейнера, уже холодная...",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron001",
+      "id": "miron000",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Сортирует API документацию по возрастанию",
-      "commits": 142,
-      "workMinutes": 1890,
-      "totalMinutes": 1890
+      "task": "Спит в углу, мирно посапывает",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "zhirobas",
+      "id": "zhirob00",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Настраивает кластер Kubernetes 8.0",
-      "commits": 98,
-      "workMinutes": 1560,
-      "totalMinutes": 1560
+      "task": "Чинит контейнер, последний день перед праздн",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "shustrik",
+      "id": "shushr00",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пиксель-пёрфектит макет в Figma",
-      "commits": 264,
-      "workMinutes": 3120,
-      "totalMinutes": 3120
+      "task": "Прыгает по клавиатуре, ищет баги",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "skozlsky",
+      "id": "skolz00",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Спит на клавиатуре (проверка безопасности завтра)",
-      "commits": 67,
-      "workMinutes": 890,
-      "totalMinutes": 890
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Нашёл критическую уязвимость в своём коде",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "tykovka0",
+      "id": "tykova00",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Кушает семечки, смотрит на экран",
-      "commits": 156,
-      "workMinutes": 2100,
-      "totalMinutes": 2100
+      "task": "Тестирует чтение страницы, очень внимателен",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik00",
+      "id": "hrustak",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Жует морковку, думает о SQL",
-      "commits": 89,
-      "workMinutes": 1230,
-      "totalMinutes": 1230
+      "task": "Обходит БД в поисках свежих молодых данных",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik000",
+      "id": "gryzik00",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Тестирует React Native на своём телефоне",
-      "commits": 203,
-      "workMinutes": 2890,
-      "totalMinutes": 2890
+      "task": "Грызёт провода, тестирует USB выносливость",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
