@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T10:34:00Z",
+  "updated": "2026-03-13T10:36:00Z",
   "agents": [
     {
-      "id": "idle-001",
+      "id": "shnyir-0",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Ест пиццу",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Координирует команду, отдыхает между задачами",
+      "commits": 42,
+      "workMinutes": 180,
+      "totalMinutes": 480
     },
     {
-      "id": "idle-002",
+      "id": "miron-1",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Спит",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Пишет Edge Functions, отдыхает в перерывах",
+      "commits": 28,
+      "workMinutes": 120,
+      "totalMinutes": 360
     },
     {
-      "id": "idle-003",
+      "id": "zhiro-2",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Чистит сыр",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Настраивает инфру, ест пиццу",
+      "commits": 15,
+      "workMinutes": 90,
+      "totalMinutes": 240
     },
     {
-      "id": "idle-004",
+      "id": "shust-3",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Закуски грызёт",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Полирует UI компоненты, релаксирует",
+      "commits": 35,
+      "workMinutes": 150,
+      "totalMinutes": 420
     },
     {
-      "id": "idle-005",
+      "id": "skol-4",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
+      "model": "claude-opus-4-1",
       "status": "crashed",
-      "task": "Восстанавливается",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Проверял уязвимости, но... упал",
+      "commits": 8,
+      "workMinutes": 45,
+      "totalMinutes": 120
     },
     {
-      "id": "idle-006",
+      "id": "tyko-5",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Проверяет видео",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Тестирует всё, спит после стресса",
+      "commits": 22,
+      "workMinutes": 110,
+      "totalMinutes": 300
     },
     {
-      "id": "idle-007",
+      "id": "khrust-6",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Анализирует тренды",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Парсит данные, смотрит графики",
+      "commits": 18,
+      "workMinutes": 100,
+      "totalMinutes": 280
     },
     {
-      "id": "idle-008",
+      "id": "grizik-7",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Читает новости",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "Делает Expo приложения, отдыхает",
+      "commits": 25,
+      "workMinutes": 130,
+      "totalMinutes": 360
     }
   ]
 }
