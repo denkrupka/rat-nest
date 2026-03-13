@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T04:20:00Z",
+  "updated": "2026-03-13T04:22:00Z",
   "agents": [
     {
-      "id": "00000001",
+      "id": "agent001",
       "name": "Шнырь",
       "role": "Главный кодер",
       "model": "claude-opus",
       "status": "idle",
-      "task": "Координирует команду, проверяет ЦКП",
-      "commits": 847,
-      "workMinutes": 2840,
-      "totalMinutes": 2840
+      "task": "Ест пиццу с колбасой",
+      "commits": 247,
+      "workMinutes": 8320,
+      "totalMinutes": 8320
     },
     {
-      "id": "00000002",
+      "id": "agent002",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Разрабатывает Edge Functions и API",
-      "commits": 342,
-      "workMinutes": 1560,
-      "totalMinutes": 1560
+      "task": "Спит в углу",
+      "commits": 156,
+      "workMinutes": 5920,
+      "totalMinutes": 5920
     },
     {
-      "id": "00000003",
+      "id": "agent003",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet",
-      "status": "idle",
-      "task": "Настраивает деплойменты и CI/CD",
-      "commits": 215,
-      "workMinutes": 980,
-      "totalMinutes": 980
-    },
-    {
-      "id": "00000004",
-      "name": "Шустрик",
-      "role": "Frontend",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Верстает UI компоненты и формы",
-      "commits": 521,
-      "workMinutes": 1820,
-      "totalMinutes": 1820
+      "task": "Проверяет логи CI/CD",
+      "commits": 89,
+      "workMinutes": 3240,
+      "totalMinutes": 3240
     },
     {
-      "id": "00000005",
+      "id": "agent004",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet",
+      "status": "idle",
+      "task": "Изучает CSS Grid",
+      "commits": 203,
+      "workMinutes": 7140,
+      "totalMinutes": 7140
+    },
+    {
+      "id": "agent005",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet",
+      "model": "claude-opus",
       "status": "crashed",
-      "task": "Аудит и защита от уязвимостей",
-      "commits": 87,
-      "workMinutes": 420,
-      "totalMinutes": 420
+      "task": "Поймана в мышеловке",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "00000006",
+      "id": "agent006",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет Playwright тесты и проверяет",
-      "commits": 193,
-      "workMinutes": 750,
-      "totalMinutes": 750
+      "task": "Тестирует новый UI",
+      "commits": 124,
+      "workMinutes": 4680,
+      "totalMinutes": 4680
     },
     {
-      "id": "00000007",
+      "id": "agent007",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует данные и SQL запросы",
-      "commits": 156,
-      "workMinutes": 620,
-      "totalMinutes": 620
+      "task": "Анализирует большие данные",
+      "commits": 67,
+      "workMinutes": 2580,
+      "totalMinutes": 2580
     },
     {
-      "id": "00000008",
+      "id": "agent008",
       "name": "Грызик",
       "role": "Mobile",
       "model": "claude-haiku",
       "status": "idle",
-      "task": "Разрабатывает мобильный клиент",
-      "commits": 134,
-      "workMinutes": 510,
-      "totalMinutes": 510
+      "task": "Грызёт зарядку для телефона",
+      "commits": 45,
+      "workMinutes": 1920,
+      "totalMinutes": 1920
     }
   ]
 }
