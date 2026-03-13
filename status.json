@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T07:15:00Z",
+  "updated": "2026-03-13T07:17:00Z",
   "agents": [
     {
-      "id": "a7f2k9m1",
+      "id": "shnyir01",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus-5",
       "status": "idle",
-      "task": "Жевёт пиццу и планирует таски",
-      "commits": 347,
+      "task": "Ест пиццу",
+      "commits": 247,
       "workMinutes": 1840,
-      "totalMinutes": 2156
-    },
-    {
-      "id": "b3x8p2q5",
-      "name": "Мирон",
-      "role": "Backend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Оптимизирует Database queries",
-      "commits": 892,
-      "workMinutes": 3420,
-      "totalMinutes": 4185
-    },
-    {
-      "id": "c9r4t1w8",
-      "name": "Жиробас",
-      "role": "DevOps",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Спит на сервере (stable)",
-      "commits": 154,
-      "workMinutes": 892,
-      "totalMinutes": 1024
-    },
-    {
-      "id": "d2h6n7v3",
-      "name": "Шустрик",
-      "role": "Frontend",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Чинит CSS и компоненты",
-      "commits": 1263,
-      "workMinutes": 5680,
-      "totalMinutes": 6342
-    },
-    {
-      "id": "e8j5k2g1",
-      "name": "Скользкий",
-      "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "Проверяет вулнерабилити",
-      "commits": 421,
-      "workMinutes": 2160,
-      "totalMinutes": 2560
-    },
-    {
-      "id": "f4m9p6s2",
-      "name": "Тыковка",
-      "role": "QA",
-      "model": "claude-haiku-4-5",
-      "status": "idle",
-      "task": "Пишет Playwright тесты",
-      "commits": 567,
-      "workMinutes": 2850,
-      "totalMinutes": 3200
-    },
-    {
-      "id": "g1l3b8x7",
-      "name": "Хрустик",
-      "role": "Data",
-      "model": "claude-sonnet-4-6",
-      "status": "idle",
-      "task": "Парсит PDFs и генерирует",
-      "commits": 294,
-      "workMinutes": 1560,
       "totalMinutes": 1840
     },
     {
-      "id": "h6c2f9d4",
+      "id": "miron02",
+      "name": "Мирон",
+      "role": "Backend",
+      "model": "claude-opus-5",
+      "status": "idle",
+      "task": "Спит в углу",
+      "commits": 128,
+      "workMinutes": 980,
+      "totalMinutes": 980
+    },
+    {
+      "id": "zhiro03",
+      "name": "Жиробас",
+      "role": "DevOps",
+      "model": "claude-sonnet-5",
+      "status": "idle",
+      "task": "Чинит сервак",
+      "commits": 94,
+      "workMinutes": 720,
+      "totalMinutes": 720
+    },
+    {
+      "id": "shust04",
+      "name": "Шустрик",
+      "role": "Frontend",
+      "model": "claude-sonnet-5",
+      "status": "idle",
+      "task": "Рисует красивые кнопки",
+      "commits": 186,
+      "workMinutes": 1420,
+      "totalMinutes": 1420
+    },
+    {
+      "id": "skliz05",
+      "name": "Скользкий",
+      "role": "Security",
+      "model": "claude-opus-5",
+      "status": "idle",
+      "task": "Ловит уязвимости",
+      "commits": 73,
+      "workMinutes": 560,
+      "totalMinutes": 560
+    },
+    {
+      "id": "tykova6",
+      "name": "Тыковка",
+      "role": "QA",
+      "model": "claude-sonnet-5",
+      "status": "idle",
+      "task": "Тестирует всё подряд",
+      "commits": 112,
+      "workMinutes": 850,
+      "totalMinutes": 850
+    },
+    {
+      "id": "hrustik7",
+      "name": "Хрустик",
+      "role": "Data",
+      "model": "claude-sonnet-5",
+      "status": "idle",
+      "task": "Анализирует датасеты",
+      "commits": 89,
+      "workMinutes": 670,
+      "totalMinutes": 670
+    },
+    {
+      "id": "gryzik8",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku-4-5",
+      "model": "claude-sonnet-5",
       "status": "idle",
-      "task": "Собирает Expo APK пакеты",
-      "commits": 189,
-      "workMinutes": 924,
-      "totalMinutes": 1280
+      "task": "Клюёт код на React Native",
+      "commits": 145,
+      "workMinutes": 1100,
+      "totalMinutes": 1100
     }
   ]
 }
