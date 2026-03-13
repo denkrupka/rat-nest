@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-13T01:01:00Z",
+  "updated": "2026-03-13T01:06:00Z",
   "agents": [
     {
-      "id": "shnyir00",
+      "id": "shnyir-0",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "дежурит в чате",
-      "commits": 0,
+      "task": "Ест пиццу и координирует мышей",
+      "commits": 247,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "miron000",
+      "id": "miron-1",
       "name": "Мирон",
       "role": "Backend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "ест пиццу",
-      "commits": 0,
+      "task": "Пишет REST API на Node.js",
+      "commits": 89,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "zhibas00",
+      "id": "zhirob-2",
       "name": "Жиробас",
       "role": "DevOps",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "чистит серверы",
-      "commits": 0,
+      "task": "Настраивает Docker и CI/CD",
+      "commits": 156,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "shustri0",
+      "id": "shustri-3",
       "name": "Шустрик",
       "role": "Frontend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "спит после спринта",
-      "commits": 0,
+      "task": "Собирает React компоненты в Figma",
+      "commits": 412,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "skolzki0",
+      "id": "skolzki-4",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "чинит дыры",
-      "commits": 0,
+      "task": "Проверяет OWASP top 10 и SSL",
+      "commits": 34,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "tykobka0",
+      "id": "tykobka-5",
       "name": "Тыковка",
       "role": "QA",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "кусает код",
-      "commits": 0,
+      "task": "Пишет Playwright тесты",
+      "commits": 203,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "hrustik0",
+      "id": "hrustik-6",
       "name": "Хрустик",
       "role": "Data",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "анализирует логи",
-      "commits": 0,
+      "task": "Парсит PDF и строит графики",
+      "commits": 78,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     },
     {
-      "id": "gryzik00",
+      "id": "gryzik-7",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "портирует на iOS",
-      "commits": 0,
+      "task": "Собирает React Native приложение",
+      "commits": 165,
       "workMinutes": 0,
-      "totalMinutes": 0
+      "totalMinutes": 1440
     }
   ]
 }
