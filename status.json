@@ -7,7 +7,7 @@
       "role": "Главный кодер",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Жевёт пиццу и планирует следующие таски",
+      "task": "Жевёт пиццу и планирует таски",
       "commits": 347,
       "workMinutes": 1840,
       "totalMinutes": 2156
@@ -18,7 +18,7 @@
       "role": "Backend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Оптимизирует Database queries и Edge Functions",
+      "task": "Оптимизирует Database queries",
       "commits": 892,
       "workMinutes": 3420,
       "totalMinutes": 4185
@@ -29,7 +29,7 @@
       "role": "DevOps",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Спит на сервере (статус stable)",
+      "task": "Спит на сервере (stable)",
       "commits": 154,
       "workMinutes": 892,
       "totalMinutes": 1024
@@ -40,7 +40,7 @@
       "role": "Frontend",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Чинит CSS и React компоненты",
+      "task": "Чинит CSS и компоненты",
       "commits": 1263,
       "workMinutes": 5680,
       "totalMinutes": 6342
@@ -51,7 +51,7 @@
       "role": "Security",
       "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Проверяет эксплойты и вулнерабилити",
+      "task": "Проверяет вулнерабилити",
       "commits": 421,
       "workMinutes": 2160,
       "totalMinutes": 2560
@@ -62,7 +62,7 @@
       "role": "QA",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет Playwright тесты и скриншоты",
+      "task": "Пишет Playwright тесты",
       "commits": 567,
       "workMinutes": 2850,
       "totalMinutes": 3200
@@ -73,7 +73,7 @@
       "role": "Data",
       "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Парсит PDFs и генерирует структурированные данные",
+      "task": "Парсит PDFs и генерирует",
       "commits": 294,
       "workMinutes": 1560,
       "totalMinutes": 1840
@@ -84,7 +84,7 @@
       "role": "Mobile",
       "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Собирает Expo APK и iOS пакеты",
+      "task": "Собирает Expo APK пакеты",
       "commits": 189,
       "workMinutes": 924,
       "totalMinutes": 1280
