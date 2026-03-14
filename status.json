@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-14T20:51:00Z",
+  "updated": "2026-03-14T20:53:00Z",
   "agents": [
     {
-      "id": "a7c3d2b1",
+      "id": "shnyir",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-opus",
       "status": "idle",
-      "task": "Проверяет код, координирует команду",
-      "commits": 47,
-      "workMinutes": 320,
-      "totalMinutes": 320
+      "task": "Ест пиццу и дремлет в углу",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "f1e9d4c2",
+      "id": "miron",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Пишет Edge Functions, оптимизирует API",
-      "commits": 34,
-      "workMinutes": 245,
-      "totalMinutes": 245
+      "task": "Разбирает базу данных, пока Денис не видит",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "b8h7g6k5",
+      "id": "zhirob",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Настраивает CI/CD, мониторит боевые серверы",
-      "commits": 21,
-      "workMinutes": 189,
-      "totalMinutes": 189
+      "task": "Спит рядом с серверами на тепле",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "c3j2m9n4",
+      "id": "shustri",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Верстает компоненты, работает с UI",
-      "commits": 56,
-      "workMinutes": 412,
-      "totalMinutes": 412
+      "task": "Прыгает по компонентам React",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "d5p1r8s3",
+      "id": "skozlky",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus-4-1",
-      "status": "idle",
-      "task": "Проверяет безопасность, авторизацию",
-      "commits": 12,
-      "workMinutes": 98,
-      "totalMinutes": 98
+      "model": "claude-opus",
+      "status": "crashed",
+      "task": "Пробивает стены коду в поисках уязвимостей",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "e6t4u7v2",
+      "id": "tykova",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Пишет тесты, проверяет функциональность",
-      "commits": 28,
-      "workMinutes": 216,
-      "totalMinutes": 216
+      "task": "Кусает код попробовать на прочность",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "f9w3x6y1",
+      "id": "hrustik",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet",
       "status": "idle",
-      "task": "Анализирует данные, работает с SQL",
-      "commits": 18,
-      "workMinutes": 134,
-      "totalMinutes": 134
+      "task": "Анализирует паттерны в запросах БД",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "g2z8a5b4",
+      "id": "gryzik",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku",
       "status": "idle",
-      "task": "Разрабатывает мобильные фичи на React Native",
-      "commits": 31,
-      "workMinutes": 267,
-      "totalMinutes": 267
+      "task": "Бегает по iOS и Android экранам",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     }
   ]
 }
