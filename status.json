@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-14T20:35:00Z",
+  "updated": "2026-03-14T20:37:00Z",
   "agents": [
     {
       "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Ест пиццу и смотрит статус команды",
-      "commits": 42,
-      "workMinutes": 180,
-      "totalMinutes": 180
+      "task": "Координирует команду мышей",
+      "commits": 0,
+      "workMinutes": 0,
+      "totalMinutes": 0
     },
     {
-      "id": "miron00",
+      "id": "miron01",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Спит, восстанавливается после ночных фиксов",
-      "commits": 38,
+      "task": "Завтракает морковью",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 420
+      "totalMinutes": 0
     },
     {
-      "id": "zhirobo",
+      "id": "zhiroba02",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Оптимизирует Docker образы",
-      "commits": 22,
+      "task": "Спит на сервере",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 280
+      "totalMinutes": 0
     },
     {
-      "id": "shustri",
+      "id": "shustri03",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет CSS и ругается на браузерные баги",
-      "commits": 61,
+      "task": "Ест пиццу и пьёт колу",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 540
+      "totalMinutes": 0
     },
     {
-      "id": "sklozki",
+      "id": "skolzki04",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "crashed",
-      "task": "На перезагрузке после аудита безопасности",
-      "commits": 15,
+      "task": "Перезагружается после выпада",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 180
+      "totalMinutes": 0
     },
     {
-      "id": "tykofka",
+      "id": "tykoyko05",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет тесты и находит баги в коде Мирона",
-      "commits": 29,
+      "task": "Тестирует новые сыры",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 320
+      "totalMinutes": 0
     },
     {
-      "id": "hrustik",
+      "id": "hrustic06",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-opus-4-1",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Анализирует метрики и строит графики",
-      "commits": 18,
+      "task": "Анализирует урожай зёрна",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 240
+      "totalMinutes": 0
     },
     {
-      "id": "gryzik0",
+      "id": "gryzik07",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Зависает в React Native версиях",
-      "commits": 12,
+      "task": "Разрабатывает приложение для мышей",
+      "commits": 0,
       "workMinutes": 0,
-      "totalMinutes": 160
+      "totalMinutes": 0
     }
   ]
 }
