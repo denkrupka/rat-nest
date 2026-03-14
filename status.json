@@ -1,93 +1,93 @@
 {
-  "updated": "2026-03-14T21:22:00Z",
+  "updated": "2026-03-14T21:24:00Z",
   "agents": [
     {
-      "id": "shnyir01",
+      "id": "shnyir00",
       "name": "Шнырь",
       "role": "Главный кодер",
-      "model": "claude-opus",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Координирует команду мышей",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "ест пиццу",
+      "commits": 142,
+      "workMinutes": 1247,
+      "totalMinutes": 1247
     },
     {
-      "id": "miron02",
+      "id": "miron001",
       "name": "Мирон",
       "role": "Backend",
-      "model": "claude-sonnet",
+      "model": "claude-opus-4-1",
       "status": "idle",
-      "task": "Отлаживает Supabase миграции",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "спит на диване",
+      "commits": 89,
+      "workMinutes": 756,
+      "totalMinutes": 756
     },
     {
-      "id": "zhirobas03",
+      "id": "zhirokas",
       "name": "Жиробас",
       "role": "DevOps",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Проверяет Docker контейнеры",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "совершенствует инфру",
+      "commits": 67,
+      "workMinutes": 512,
+      "totalMinutes": 512
     },
     {
-      "id": "shustrik04",
+      "id": "shustrik",
       "name": "Шустрик",
       "role": "Frontend",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Дизайнит новый компонент",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "рисует UI компоненты",
+      "commits": 156,
+      "workMinutes": 1389,
+      "totalMinutes": 1389
     },
     {
-      "id": "skolvskiy05",
+      "id": "skozlkiy",
       "name": "Скользкий",
       "role": "Security",
-      "model": "claude-opus",
-      "status": "crashed",
-      "task": "Аудит уязвимостей",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "model": "claude-opus-4-1",
+      "status": "idle",
+      "task": "проверяет уязвимости",
+      "commits": 43,
+      "workMinutes": 378,
+      "totalMinutes": 378
     },
     {
-      "id": "tyklovka06",
+      "id": "tykobka0",
       "name": "Тыковка",
       "role": "QA",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Пишет Playwright тесты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "тестирует функции",
+      "commits": 98,
+      "workMinutes": 834,
+      "totalMinutes": 834
     },
     {
-      "id": "hrustik07",
+      "id": "hrustik01",
       "name": "Хрустик",
       "role": "Data",
-      "model": "claude-sonnet",
+      "model": "claude-sonnet-4-6",
       "status": "idle",
-      "task": "Анализирует логи производства",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "анализирует данные",
+      "commits": 72,
+      "workMinutes": 618,
+      "totalMinutes": 618
     },
     {
-      "id": "gryzik08",
+      "id": "grizik001",
       "name": "Грызик",
       "role": "Mobile",
-      "model": "claude-haiku",
+      "model": "claude-haiku-4-5",
       "status": "idle",
-      "task": "Обновляет React Native компоненты",
-      "commits": 0,
-      "workMinutes": 0,
-      "totalMinutes": 0
+      "task": "разрабатывает мобил",
+      "commits": 54,
+      "workMinutes": 467,
+      "totalMinutes": 467
     }
   ]
 }
